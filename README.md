@@ -7,3 +7,7 @@ let's get started.
 
 This project will use TensorFlow based on RNN to implement. 
 
+
+
+test      --by shouzhenglll
+
