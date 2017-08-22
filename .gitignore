@@ -1,0 +1,4 @@
+## Ignore some files and folders for copyright and other reasons. 
+
+*.model
+[Mm]odel_speech/
