@@ -10,6 +10,8 @@
 
 This project will use TensorFlow based on RNN and CNN to implement. 
 
+本项目尚未完成，想要Fork的同学请手慢。
+
 ## Model
 模型
 
