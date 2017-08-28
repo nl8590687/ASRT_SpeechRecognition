@@ -25,3 +25,7 @@ LSTM + CNN
 
 基于概率图的马尔可夫模型
 
+## Log
+日志
+
+链接：[进展日志](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/log.md)

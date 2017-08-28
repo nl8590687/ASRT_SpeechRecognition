@@ -50,14 +50,20 @@ def fbank(signal, samplerate, conf):
     Compute fbank features from an audio signal.
 	从一个声音信号中计算fbank特征向量
     Args:
+	参数：
         signal: the audio signal from which to compute features. Should be an
             N*1 array
+			要计算特征的声音信号，一个N*1维的数组
         samplerate: the samplerate of the signal we are working with.
+			要处理信号的采样率
         conf: feature configuration
+			特征的配置
 
     Returns:
+	返回值：
         A numpy array of size (NUMFRAMES by nfilt) containing features, a numpy
         vector containing the signal energy
+		返回一个包含特征向量的numpy数组，一个包含信号能量的numpy向量
     '''
 
     highfreq = int(conf['highfreq'])

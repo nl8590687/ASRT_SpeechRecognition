@@ -36,7 +36,7 @@ class ModelSpeech(): # 语音模型类
 		return _model
 
 	def TrainModel(self,datas,epoch = 2,save_step=5000,filename='model_speech/LSTM_CNN_model'): # 训练模型
-		print('test')
+		pass
 
 	def LoadModel(self,filename='model_speech/LSTM_CNN_model'): # 加载模型参数
 		self._model.load_weights(filename)
@@ -45,7 +45,7 @@ class ModelSpeech(): # 语音模型类
 		self._model.save_weights(filename+'.model')
 
 	def TestModel(self): # 测试检验模型效果
-		print('test')
+		pass
 
 	@property
 	def model(self): # 返回keras model
