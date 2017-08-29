@@ -25,6 +25,18 @@ LSTM + CNN
 
 基于概率图的马尔可夫模型
 
+## Python Import
+Python的依赖库
+
+* python_speech_features
+* TensorFlow
+* Keras
+* Numpy
+* wave
+* matplotlib
+* math
+* Scipy
+
 ## Log
 日志
 

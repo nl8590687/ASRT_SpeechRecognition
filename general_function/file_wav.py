@@ -21,20 +21,16 @@ def read_wav_data(filename):
 	wave_data = np.fromstring(str_data, dtype = np.short) # 将声音文件数据转换为数组矩阵形式
 	wave_data.shape = -1, num_channel # 按照声道数将数组整形，单声道时候是一列数组，双声道时候是两列的矩阵
 	wave_data = wave_data.T # 将矩阵转置
-	wave_data = wave_data 
+	#wave_data = wave_data 
 	return wave_data, framerate  
 	
 def wav_scale(energy):
 	'''
 	语音信号能量归一化
 	'''
-	sum=0
-	for i in energy:
-		sum=sum+i*i
-	length=len(energy)
-	print(length,sum)
-	m=math.sqrt(length/sum)
-	e=energy*m
+	means = energy.mean() # 均值
+	var=energy.var() # 方差
+	e=(energy-means)/math.sqrt(var) # 归一化能量
 	return e
 	
 def wav_show(wave_data, fs): # 显示出来声音波形
@@ -78,13 +74,13 @@ def get_wav_symbol(filename):
 	return dic_symbol_list
 	
 if(__name__=='__main__'):
-	#dic=get_wav_symbol('E:\\语音数据集\\doc\\doc\\trans\\train.phone.txt')
+	#dic=get_wav_symbol('E:\\语音数据集\\doc\\doc\\trans\\train.syllable.txt')
 	#print(dic)
 	#dic=get_wav_list('E:\\语音数据集\\doc\\doc\\list\\train.wav.lst')
 	#for i in dic:
 		#print(i,dic[i])
 	wave_data, fs = read_wav_data("A2_0.wav")  
-	wave_data[0]=wav_scale(wave_data[0])
+	#wave_data[0]=wav_scale(wave_data[0])
 	#print(fs)
 	wav_show(wave_data[0],fs)
 	
