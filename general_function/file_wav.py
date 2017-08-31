@@ -52,11 +52,14 @@ def get_wav_list(filename):
 	txt_text=txt_obj.read()
 	txt_lines=txt_text.split('\n') # 文本分割
 	dic_filelist={} # 初始化字典
+	list_wavmark=[] # 初始化wav列表
 	for i in txt_lines:
 		if(i!=''):
 			txt_l=i.split(' ')
-			dic_filelist[txt_l[0]]=txt_l[1]
-	return dic_filelist
+			dic_filelist[txt_l[0]]='wav/'+txt_l[1]
+			list_wavmark.append(txt_l[0])
+	txt_obj.close()
+	return dic_filelist,list_wavmark
 	
 def get_wav_symbol(filename):
 	'''
@@ -67,11 +70,14 @@ def get_wav_symbol(filename):
 	txt_text=txt_obj.read()
 	txt_lines=txt_text.split('\n') # 文本分割
 	dic_symbol_list={} # 初始化字典
+	list_symbolmark=[] # 初始化symbol列表
 	for i in txt_lines:
 		if(i!=''):
 			txt_l=i.split(' ')
 			dic_symbol_list[txt_l[0]]=txt_l[1:]
-	return dic_symbol_list
+			list_symbolmark.append(txt_l[0])
+	txt_obj.close()
+	return dic_symbol_list,list_symbolmark
 	
 if(__name__=='__main__'):
 	#dic=get_wav_symbol('E:\\语音数据集\\doc\\doc\\trans\\train.syllable.txt')

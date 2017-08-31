@@ -40,23 +40,30 @@ class ModelSpeech(): # 语音模型类
 		_model.compile(optimizer="adam", loss='categorical_crossentropy',metrics=["accuracy"])
 		return _model
 
-	def TrainModel(self,datas,epoch = 2,save_step=5000,filename='model_speech/LSTM_CNN_model'):
+	def TrainModel(self,datapath,epoch = 2,save_step=1000,filename='model_speech/LSTM_CNN_model'):
 		'''
 		训练模型
+		参数：
+			datapath: 数据保存的路径
+			epoch: 迭代轮数
+			save_step: 每多少步保存一次模型
+			filename: 默认保存文件名，不含文件后缀名
 		'''
+		for epoch in range(epoch):
+			pass
 		pass
 
-	def LoadModel(self,filename='model_speech/LSTM_CNN_model'):
+	def LoadModel(self,filename='model_speech/LSTM_CNN_model.model'):
 		'''
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
 
-	def SaveModel(self,filename='model_speech/LSTM_CNN_model'):
+	def SaveModel(self,filename='model_speech/LSTM_CNN_model',comment=''):
 		'''
 		保存模型参数
 		'''
-		self._model.save_weights(filename+'.model')
+		self._model.save_weights(filename+comment+'.model')
 
 	def TestModel(self):
 		'''
