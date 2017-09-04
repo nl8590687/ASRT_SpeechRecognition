@@ -93,8 +93,18 @@ class DataSpeech():
 				v=self.NumToVector(n)
 				feat_out.append(v)
 		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵，以及对应的拼音符号矩阵
-		return feat_mfcc,feat_mfcc_d,feat_mfcc_dd,np.array(feat_out)
+		data_input = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
+		data_label = np.array(feat_out)
+		return data_input, data_label
 	
+	def data_genetator(self, data_input, data_label):
+		'''
+		数据生成器函数，用于Keras的generator_fit训练
+		输入GetData函数产生的输出
+		'''
+		
+		pass
+		
 	def GetSymbolList(self):
 		'''
 		加载拼音符号列表，用于标记符号
@@ -109,7 +119,7 @@ class DataSpeech():
 				txt_l=i.split('\t')
 				list_symbol.append(txt_l[0])
 		txt_obj.close()
-		list_symbol.append(' ')
+		list_symbol.append('_')
 		return list_symbol
 
 	def SymbolToNum(self,symbol):
