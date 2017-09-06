@@ -7,7 +7,7 @@
 import keras as kr
 import numpy as np
 
-from keras.models import Sequential
+from keras.models import Sequential, Model
 from keras.layers import Dense, Dropout, Input # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
 from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda #, Merge, Conv2D, MaxPooling2D,Conv1D
 from keras import backend as K
@@ -66,7 +66,7 @@ class ModelSpeech(): # 语音模型类
 		
 	def ctc_lambda_func(args):
 		#labels, y_pred, input_length, label_length = args
-		y_pred = args
+		y_pred = args[:,2:,:]
 		#y_pred = y_pred[:, 2:, :]
 		return K.ctc_decode(y_pred,1279)
 		#return K.ctc_batch_cost(labels, y_pred, input_length, label_length)
@@ -91,7 +91,7 @@ class ModelSpeech(): # 语音模型类
 					
 					pass
 					# 需要写一个生成器函数
-					self._model.fit_generator(yielddatas, save_step)
+					self._model.fit_generator(yielddatas, save_step, nb_worker=2)
 					n_step += 1
 				except StopIteration:
 					print('[error] generator error. please check data format.')

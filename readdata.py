@@ -97,12 +97,23 @@ class DataSpeech():
 		data_label = np.array(feat_out)
 		return data_input, data_label
 	
-	def data_genetator(self, data_input, data_label):
+	def data_genetator(self, batch_size=32):
 		'''
 		数据生成器函数，用于Keras的generator_fit训练
-		输入GetData函数产生的输出
+		batch_size: 一次产生的数据量
+		需要再修改。。。
 		'''
-		
+		X = np.zeros((batch_size, 1500,39), dtype=np.uint8)
+		y = [np.zeros((batch_size, 60, 1279), dtype=np.uint8) for i in range(n_len)]
+		generator = ImageCaptcha(width=width, height=height)
+		while True:
+			for i in range(batch_size):
+				random_str = ''.join([random.choice(characters) for j in range(4)])
+				X[i] = generator.generate_image(random_str)
+				for j, ch in enumerate(random_str):
+					y[j][i, :] = 0
+					y[j][i, characters.find(ch)] = 1
+			yield X, y
 		pass
 		
 	def GetSymbolList(self):
