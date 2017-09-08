@@ -8,6 +8,7 @@ from python_speech_features import mfcc
 from python_speech_features import delta
 from python_speech_features import logfbank
 
+import random
 #import scipy.io.wavfile as wav
 
 class DataSpeech():
@@ -24,9 +25,13 @@ class DataSpeech():
 			self.datapath=self.datapath+'\\'
 		self.dic_wavlist = {}
 		self.dic_symbollist = {}
+		self.SymbolNum = 0 # 记录拼音符号数量
 		self.list_symbol = self.GetSymbolList() # 全部汉语拼音符号列表
 		self.list_wavnum=[] # wav文件标记列表
 		self.list_symbolnum=[] # symbol标记列表
+		
+		self.DataNum = 0 # 记录数据量
+		
 		pass
 	
 	def LoadDataList(self,type):
@@ -54,6 +59,7 @@ class DataSpeech():
 		# 读取数据列表，wav文件列表和其对应的符号列表
 		self.dic_wavlist,self.list_wavnum = get_wav_list(self.datapath+filename_wavlist)
 		self.dic_symbollist,self.list_symbolnum = get_wav_symbol(self.datapath+filename_symbollist)
+		self.DataNum = self.GetDataNum()
 	
 	def GetDataNum(self):
 		'''
@@ -61,9 +67,11 @@ class DataSpeech():
 		当wav数量和symbol数量一致的时候返回正确的值，否则返回-1，代表出错。
 		'''
 		if(len(self.dic_wavlist) == len(self.dic_symbollist)):
-			return len(self.dic_wavlist)
+			DataNum = len(self.dic_wavlist)
 		else:
-			return -1
+			DataNum = -1
+		
+		return DataNum
 		
 	def GetData(self,n_start,n_amount=1):
 		'''
@@ -87,11 +95,13 @@ class DataSpeech():
 		# 获取输出特征
 		list_symbol=self.dic_symbollist[self.list_symbolnum[n_start]]
 		feat_out=[]
+		#print("数据编号",n_start,filename)
 		for i in list_symbol:
 			if(''!=i):
 				n=self.SymbolToNum(i)
 				v=self.NumToVector(n)
 				feat_out.append(v)
+		#print('feat_out:',feat_out)
 		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵，以及对应的拼音符号矩阵
 		data_input = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
 		data_label = np.array(feat_out)
@@ -103,16 +113,19 @@ class DataSpeech():
 		batch_size: 一次产生的数据量
 		需要再修改。。。
 		'''
-		X = np.zeros((batch_size, 1500,39), dtype=np.uint8)
-		y = [np.zeros((batch_size, 60, 1279), dtype=np.uint8) for i in range(n_len)]
-		generator = ImageCaptcha(width=width, height=height)
+		X = np.zeros((batch_size, 1500,39), dtype=np.int16)
+		y = np.zeros((batch_size, 60, self.SymbolNum), dtype=np.int16)
 		while True:
+			#generator = ImageCaptcha(width=width, height=height)
+			ran_num = random.randint(0,self.DataNum - 1) # 获取一个随机数
 			for i in range(batch_size):
-				random_str = ''.join([random.choice(characters) for j in range(4)])
-				X[i] = generator.generate_image(random_str)
-				for j, ch in enumerate(random_str):
-					y[j][i, :] = 0
-					y[j][i, characters.find(ch)] = 1
+				data_input, data_labels = self.GetData((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
+				#print(data_input, data_labels)
+				#print('data_input长度:',len(data_input))
+				X[i,0:len(data_input)] = data_input
+				#print('data_labels长度:',len(data_labels))
+				#print(data_labels)
+				y[i,0:len(data_labels)] = data_labels
 			yield X, y
 		pass
 		
@@ -131,8 +144,15 @@ class DataSpeech():
 				list_symbol.append(txt_l[0])
 		txt_obj.close()
 		list_symbol.append('_')
+		self.SymbolNum = len(list_symbol)
 		return list_symbol
 
+	def GetSymbolNum(self):
+		'''
+		获取拼音符号数量
+		'''
+		return len(self.list_symbol)
+		
 	def SymbolToNum(self,symbol):
 		'''
 		符号转为数字
@@ -149,7 +169,7 @@ class DataSpeech():
 				v_tmp.append(1)
 			else:
 				v_tmp.append(0)
-		v=np.array([v_tmp])
+		v=np.array(v_tmp)
 		return v
 	
 if(__name__=='__main__'):
@@ -168,5 +188,9 @@ if(__name__=='__main__'):
 	#l.LoadDataList('train')
 	#print(l.GetDataNum())
 	#print(l.GetData(0))
+	#aa=l.data_genetator()
+	#for i in aa:
+		#a,b=i
+	#print(a,b)
 	pass
 	

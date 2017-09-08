@@ -87,11 +87,8 @@ class ModelSpeech(): # 语音模型类
 			n_step = 0 # 迭代数据数
 			while True:
 				try:
-					data_input, data_label = data.GetData(n_step) # 读数据
-					
-					pass
-					# 需要写一个生成器函数
-					self._model.fit_generator(yielddatas, save_step, nb_worker=2)
+					# data_genetator是一个生成器函数
+					self._model.fit_generator(data.data_genetator, save_step, nb_worker=2)
 					n_step += 1
 				except StopIteration:
 					print('[error] generator error. please check data format.')
