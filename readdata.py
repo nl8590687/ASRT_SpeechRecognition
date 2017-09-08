@@ -173,16 +173,6 @@ class DataSpeech():
 		return v
 	
 if(__name__=='__main__'):
-	#wave_data, fs = read_wav_data("general_function\\A2_0.wav")  
-	#print(wave_data)
-	#(fs,wave_data)=wav.read('E:\\国创项目工程\代码\\ASRT_SpeechRecognition\\general_function\\A2_0.wav')
-	#wav_show(wave_data[0],fs)
-	#mfcc_feat = mfcc(wave_data[0],fs) # 计算MFCC特征
-	#print(mfcc_feat[0:3,:])
-	#d_mfcc_feat_1 = delta(mfcc_feat, 2)
-	#print(d_mfcc_feat_1[0,:])
-	#d_mfcc_feat_2 = delta(d_mfcc_feat_1, 2)
-	#print(d_mfcc_feat_2[0,:])
 	#path='E:\\语音数据集'
 	#l=DataSpeech(path)
 	#l.LoadDataList('train')

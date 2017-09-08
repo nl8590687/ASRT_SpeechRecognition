@@ -1,18 +1,1 @@
-# ASRT_SpeechRecognition
-基于深度学习的语音识别系统
-
-## Introduction
-
-这里是更新记录日志文件
-
-如果有什么问题，团队内部需要在这里直接写出来
-
-## Log
-### 2017-08-31
-数据处理部分的代码基本完成，现在准备撸模型
-### 2017-08-29
-准备使用现有的包[python_speech_features](https://github.com/jameslyons/python_speech_features)来实现特征的提取，以及求一阶二阶差分。
-### 2017-08-28
-开始准备制作语音信号处理方面的功能
-### 2017-08-22
-准备使用Keras基于LSTM/CNN尝试实现
+# ASRT_SpeechRecognition基于深度学习的语音识别系统## Introduction这里是更新记录日志文件如果有什么问题，团队内部需要在这里直接写出来## Log### 2017-09-08基本完成除了添加模型之外的其他部分代码### 2017-08-31数据处理部分的代码基本完成，现在准备撸模型### 2017-08-29准备使用现有的包[python_speech_features](https://github.com/jameslyons/python_speech_features)来实现特征的提取，以及求一阶二阶差分。### 2017-08-28开始准备制作语音信号处理方面的功能### 2017-08-22准备使用Keras基于LSTM/CNN尝试实现
