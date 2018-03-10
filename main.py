@@ -9,10 +9,11 @@ import numpy as np
 
 from keras.models import Sequential, Model
 from keras.layers import Dense, Dropout, Input # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
-from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda #, Merge, Conv2D, MaxPooling2D,Conv1D
+from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation #, Merge, Conv2D, MaxPooling2D,Conv1D
 from keras import backend as K
 
 from readdata import DataSpeech
+from neural_network import ctc_layer
 
 class ModelSpeech(): # 语音模型类
 	def __init__(self,MS_OUTPUT_SIZE = 1283,BATCH_SIZE = 32):
@@ -33,9 +34,9 @@ class ModelSpeech(): # 语音模型类
 		隐藏层四：循环层、LSTM层
 		隐藏层五：Dropout层，需要断开的神经元的比例为0.2，防止过拟合
 		隐藏层六：全连接层，神经元数量为self.MS_OUTPUT_SIZE，使用softmax作为激活函数，
-		输出层：lambda层，即CTC层，使用CTC的loss作为损失函数，实现多输出
+		输出层：自定义层，即CTC层，使用CTC的loss作为损失函数，实现连接性时序多输出
 		
-		当前未完成，针对多输出的CTC层尚未添加
+		当前未完成，针对多输出的CTC层尚未实现
 		'''
 		# 每一帧使用13维mfcc特征及其13维一阶差分和13维二阶差分表示，最大信号序列长度为1500
 		layer_input = Input((1500,39))
@@ -43,17 +44,32 @@ class ModelSpeech(): # 语音模型类
 		layer_h1 = Conv1D(256, 5, use_bias=True, padding="valid")(layer_input) # 卷积层
 		layer_h2 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h1) # 池化层
 		layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
-		layer_h4 = LSTM(256, activation='relu', use_bias=True)(layer_h3) # LSTM层
+		layer_h4 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h3) # LSTM层
 		layer_h5 = Dropout(0.2)(layer_h4) # 随机中断部分神经网络连接，防止过拟合
 		layer_h6 = Dense(self.MS_OUTPUT_SIZE, activation="softmax")(layer_h5) # 全连接层
 		
+		layer_out = ctc_layer()(layer_h6) # CTC层  尚未实现！
+		
 		#labels = Input(name='the_labels', shape=[60], dtype='float32')
-		layer_out = Lambda(ctc_lambda_func,output_shape=(self.MS_OUTPUT_SIZE, ), name='ctc')(layer_h6) # CTC
+		#layer_out = Lambda(ctc_lambda_func,output_shape=(self.MS_OUTPUT_SIZE, ), name='ctc')(layer_h6) # CTC
+		#layer_out = TimeDistributed(Dense(self.MS_OUTPUT_SIZE, activation="softmax"))(layer_h5)
 		_model = Model(inputs = layer_input, outputs = layer_out)
 		
 		
-		#_model.compile(optimizer="sgd", loss='categorical_crossentropy',metrics=["accuracy"])
-		_model.compile(optimizer="sgd", loss='ctc',metrics=["accuracy"])
+		#_model = Sequential()
+		#_model.add(Conv1D(256, 5, use_bias=True, padding="valid", input_shape=(1500,39)))
+		#_model.add(MaxPooling1D(pool_size=2, strides=None, padding="valid"))
+		#_model.add(Dropout(0.2))
+		#_model.add(LSTM(256, activation='relu', use_bias=True, return_sequences=True))
+		#_model.add(Dropout(0.2))
+		#_model.add(TimeDistributed(Dense(self.MS_OUTPUT_SIZE)))
+		#_model.add(Activation("softmax"))
+		
+		
+		
+		
+		_model.compile(optimizer="sgd", loss='categorical_crossentropy',metrics=["accuracy"])
+		#_model.compile(optimizer="sgd", loss='ctc',metrics=["accuracy"])
 		return _model
 		
 	def ctc_lambda_func(args):
