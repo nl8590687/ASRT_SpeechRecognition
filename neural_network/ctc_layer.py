@@ -21,34 +21,61 @@ import tensorflow as tf
 # 继承父类Layer
 class ctc_layer(Layer):
 	'''
-		对CTC层的实现，具体需要再去参考下论文...以及tensorflow中ctc的实现，
-		并将其通过自定义层加入到keras的神经网络层中
+		本类是对CTC层的实现，具体请去参考下论文...
+		tensorflow中和keras中有ctc的一些实现，
+		并将其通过自定义层加入到keras创建的神经网络层中
+		
+		参数：
+			output_dim: 每一条时间序列中，输出的序列张量的尺寸
+			
+			
+		目前可能有bug
 	'''
-	def __init__(self, input_dim, output_dim, **kwargs):
+	def __init__(self, output_dim, batch_size, **kwargs):
+		'''
+			这里是神经网络CTC层的初始化模块
+		'''
+		#if 'input_shape' not in kwargs and 'input_dim' in kwargs:
+        #    kwargs['input_shape'] = (kwargs.pop('input_dim'), kwargs.pop('input_dim'),)
 		super(ctc_layer, self).__init__(**kwargs)
-		self.input_dim = input_dim
+		#self.input_dim = input_dim
+		#self.input_spec = [InputSpec(dtype=(None,,output_dim),ndim=3, axes={None: input_dim})]
 		self.output_dim = output_dim
+		self.batch_size = batch_size
 		#self.input_spec = InputSpec(min_ndim=3)
+		#super(ctc_layer, self).build(input_shape)  # Be sure to call this somewhere!
 		pass
 	
 	def build(self, input_shape):
+		assert len(input_shape) >= 2
+		input_dim = input_shape[-1]
 		# Create a trainable weight variable for this layer.
-        self.kernel = self.add_weight(name='kernel', 
-                                      shape=('''input_shape[0],''' self.output_dim, -1),
-                                      initializer='uniform',
-                                      trainable=True)
-        super(MyLayer, self).build(input_shape)  # Be sure to call this somewhere!
+		self.kernel = self.add_weight(name='kernel', 
+										shape=(input_dim, self.output_dim), 
+										initializer='uniform', 
+										trainable=True)
 		
+		#super(ctc_layer, self).build(input_shape)  # Be sure to call this somewhere!
+		#self.input_spec = InputSpec(min_ndim=2, axes={-1: input_dim})
+		self.input_spec = [InputSpec(min_ndim=3)] # , axes={1: 748, -1: self.output_dim}
+		self.built = True
 	
 	def call(self, x, mask=None):
-		decoded_dense, log_prob = K.ctc_decode(x,self.input_dim)
-		decoded_sequence = K.ctc_label_dense_to_sparse(decoded_dense, decoded_dense.shape[0])
-		return decoded_sequence
-		
+		output = K.dot(x, self.kernel)
+		#output.shape[0] = self.batch_size
+		decoded_dense, log_prob = K.ctc_decode(output,tf.Variable((output.shape[1],output.shape[2]),dtype=tf.int64))
+		#decoded_dense, log_prob = K.ctc_decode(output,output.shape[1])
+		#decoded_sequence = K.ctc_label_dense_to_sparse(decoded_dense, len(decoded_dense))
+		#return decoded_sequence
+		return decoded_dense
 	
 	def get_config(self):
-		
-		pass
+		config = {
+			'output_dim': self.output_dim
+		}
+		base_config = super(ctc_layer, self).get_config()
+		return dict(list(base_config.items()) + list(config.items()))
 	
-	
+	def compute_output_shape(self, input_shape):
+		return (input_shape[0], input_shape[1], self.output_dim)
 	
