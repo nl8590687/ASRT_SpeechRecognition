@@ -20,14 +20,14 @@ from neural_network.ctc_loss import ctc_batch_loss
 #from keras.backend.tensorflow_backend import ctc_batch_cost
 
 class ModelSpeech(): # 语音模型类
-	def __init__(self,MS_OUTPUT_SIZE = 1284,BATCH_SIZE = 32):
+	def __init__(self,MS_OUTPUT_SIZE = 1417,BATCH_SIZE = 32):
 		'''
 		初始化
 		默认输出的拼音的表示大小是1283，即1282个拼音+1个空白块
 		'''
 		self.MS_OUTPUT_SIZE = MS_OUTPUT_SIZE # 神经网络最终输出的每一个字符向量维度的大小
 		self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
-		self.label_max_string_length = 32
+		self.label_max_string_length = 64
 		self._model = self.CreateModel() 
 
 	
@@ -59,7 +59,7 @@ class ModelSpeech(): # 语音模型类
 		
 		y_pred = Activation('softmax', name='softmax')(layer_h6)
 		model_data = Model(inputs = input_data, outputs = y_pred)
-		model_data.summary()
+		#model_data.summary()
 		
 		
 		#layer_out = ctc_layer(64, self.BATCH_SIZE)(layer_h6) # CTC层  可能有bug
@@ -80,6 +80,8 @@ class ModelSpeech(): # 语音模型类
 		sgd = SGD(lr=0.02, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
 		
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
+		
+		model.summary()
 		
 		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd)
 		
@@ -102,6 +104,7 @@ class ModelSpeech(): # 语音模型类
 		
 		#_model.compile(optimizer="sgd", loss='categorical_crossentropy',metrics=["accuracy"])
 		#_model.compile(optimizer = "sgd", loss = ctc_batch_loss, metrics = ["accuracy"])
+		print('[*提示] 创建模型成功，模型编译成功')
 		return model
 		
 	def ctc_lambda_func(self, args):
@@ -109,7 +112,7 @@ class ModelSpeech(): # 语音模型类
 		#y_pred = args[:,2:,:]
 		#print('++++fuck+++++')
 		#print(y_pred)
-		y_pred = y_pred[:, 2:, :]
+		y_pred = y_pred[:, 1:-2, :]
 		#return K.ctc_decode(y_pred,self.MS_OUTPUT_SIZE)
 		return K.ctc_batch_cost(labels, y_pred, input_length, label_length)
 	
@@ -135,7 +138,8 @@ class ModelSpeech(): # 语音模型类
 					print('[message] epoch %d . Have train datas %d+'%(epoch, n_step*save_step))
 					# data_genetator是一个生成器函数
 					yielddatas = data.data_genetator(self.BATCH_SIZE)
-					self._model.fit_generator(yielddatas, save_step, nb_worker=2)
+					#self._model.fit_generator(yielddatas, save_step, nb_worker=2)
+					self._model.fit_generator(yielddatas, save_step)
 					n_step += 1
 				except StopIteration:
 					print('[error] generator error. please check data format.')

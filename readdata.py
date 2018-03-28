@@ -99,8 +99,9 @@ class DataSpeech():
 		for i in list_symbol:
 			if(''!=i):
 				n=self.SymbolToNum(i)
-				v=self.NumToVector(n)
-				feat_out.append(v)
+				#v=self.NumToVector(n)
+				#feat_out.append(v)
+				feat_out.append(n)
 		#print('feat_out:',feat_out)
 		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵，以及对应的拼音符号矩阵
 		data_input = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
@@ -114,19 +115,41 @@ class DataSpeech():
 		需要再修改。。。
 		'''
 		X = np.zeros((batch_size, 1500,39), dtype=np.int16)
-		y = np.zeros((batch_size, 60, self.SymbolNum), dtype=np.int16)
+		#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)
+		y = np.zeros((batch_size, 64), dtype=np.int16)
+		
+		
+		label_length = []
+		labels = []
+		for i in range(0,batch_size):
+			#input_length.append([1500])
+			label_length.append([39])
+			labels.append([1])
+		
+		
+		label_length = np.matrix(label_length)
+		labels = np.matrix(labels)
+		
+		#print(input_length,len(input_length))
+		
 		while True:
 			#generator = ImageCaptcha(width=width, height=height)
+			input_length = []
+			
 			ran_num = random.randint(0,self.DataNum - 1) # 获取一个随机数
 			for i in range(batch_size):
 				data_input, data_labels = self.GetData((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
+				
+				input_length.append(data_input.shape[1])
 				#print(data_input, data_labels)
 				#print('data_input长度:',len(data_input))
 				X[i,0:len(data_input)] = data_input
 				#print('data_labels长度:',len(data_labels))
 				#print(data_labels)
 				y[i,0:len(data_labels)] = data_labels
-			yield X, y
+			
+			input_length = np.matrix(input_length).T
+			yield [X, y, input_length, label_length ], labels
 		pass
 		
 	def GetSymbolList(self):
