@@ -26,7 +26,7 @@ class ctc_layer(Layer):
 		并将其通过自定义层加入到keras创建的神经网络层中
 		
 		参数：
-			output_dim: 每一条时间序列中，输出的序列张量的尺寸
+			output_dim: 每一条时间序列中，输出的标签序列张量的尺寸长度
 			
 			
 		目前可能有bug
@@ -48,20 +48,23 @@ class ctc_layer(Layer):
 	
 	def build(self, input_shape):
 		assert len(input_shape) >= 2
-		input_dim = input_shape[-1]
+		#input_dim = input_shape[-1]
 		# Create a trainable weight variable for this layer.
 		self.kernel = self.add_weight(name='kernel', 
-										shape=(input_dim, self.output_dim), 
+										shape=(input_shape[1], input_shape[2]), 
 										initializer='uniform', 
 										trainable=True)
 		
 		#super(ctc_layer, self).build(input_shape)  # Be sure to call this somewhere!
 		#self.input_spec = InputSpec(min_ndim=2, axes={-1: input_dim})
 		self.input_spec = [InputSpec(min_ndim=3)] # , axes={1: 748, -1: self.output_dim}
-		self.built = True
+		#self.built = True
+		self.built = False
 	
 	def call(self, x, mask=None):
-		output = K.dot(x, self.kernel)
+		#output = K.dot(x, self.kernel)
+		output = x
+		
 		#output.shape[0] = self.batch_size
 		decoded_dense, log_prob = K.ctc_decode(output,tf.Variable((output.shape[1],output.shape[2]),dtype=tf.int64))
 		#decoded_dense, log_prob = K.ctc_decode(output,output.shape[1])
@@ -77,5 +80,5 @@ class ctc_layer(Layer):
 		return dict(list(base_config.items()) + list(config.items()))
 	
 	def compute_output_shape(self, input_shape):
-		return (input_shape[0], input_shape[1], self.output_dim)
+		return (input_shape[0], self.output_dim, input_shape[2])
 	
