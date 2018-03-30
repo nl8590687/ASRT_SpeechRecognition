@@ -132,7 +132,7 @@ class DataSpeech():
 		for i in range(0,batch_size):
 			#input_length.append([1500])
 			label_length.append([64])
-			labels.append([0])
+			labels.append([1])
 		
 		
 		label_length = np.matrix(label_length)
@@ -147,11 +147,8 @@ class DataSpeech():
 			ran_num = random.randint(0,self.DataNum - 1) # 获取一个随机数
 			for i in range(batch_size):
 				data_input, data_labels = self.GetData((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
-				#data_input, data_labels = self.GetData(1 % self.DataNum)  # 从随机数开始连续向后取一定数量数据
 				
-				#input_length.append(data_input.shape[1] // 4 - 2)
-				#print(data_input.shape[0],len(data_input))
-				input_length.append(data_input.shape[0] // 4 - 3)
+				input_length.append(data_input.shape[0] // 4 - 2)
 				#print(data_input, data_labels)
 				#print('data_input长度:',len(data_input))
 				
@@ -163,7 +160,11 @@ class DataSpeech():
 				#y[i] = y[i].T
 				#print(i,y[i].shape)
 			
-			input_length = np.matrix(input_length).T
+			input_length = np.array(input_length).T
+			#input_length = np.array(input_length)
+			print('input_length:\n',input_length)
+			X=X.reshape(batch_size, audio_length, 39, 1)
+			#print(X)
 			yield [X, y, input_length, label_length ], labels
 		pass
 		

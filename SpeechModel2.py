@@ -8,12 +8,12 @@ import keras as kr
 import numpy as np
 
 from keras.models import Sequential, Model
-from keras.layers import Dense, Dropout, Input # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
-from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation #, Merge, Conv2D, MaxPooling2D,Conv1D
+from keras.layers import Dense, Dropout, Input, Reshape # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
+from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge,Conv1D
 from keras import backend as K
 from keras.optimizers import SGD
 
-from readdata import DataSpeech
+from readdata2 import DataSpeech
 from neural_network.ctc_layer import ctc_layer
 from neural_network.ctc_loss import ctc_batch_loss
 
@@ -49,20 +49,22 @@ class ModelSpeech(): # 语音模型类
 		当前未完成，针对多输出的CTC层尚未实现
 		'''
 		# 每一帧使用13维mfcc特征及其13维一阶差分和13维二阶差分表示，最大信号序列长度为1500
-		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH))
+		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH, 1))
 		
-		layer_h1 = Conv1D(256, 5, use_bias=True, padding="valid")(input_data) # 卷积层
-		layer_h2 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h1) # 池化层
-		layer_h3 = Conv1D(256, 5, use_bias=True, padding="valid")(layer_h2) # 卷积层
-		layer_h4 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h3) # 池化层
-		layer_h5 = Dropout(0.2)(layer_h4) # 随机中断部分神经网络连接，防止过拟合
-		layer_h6 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h5) # 全连接层
-		layer_h7 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h6) # LSTM层
-		layer_h8 = Dropout(0.2)(layer_h7) # 随机中断部分神经网络连接，防止过拟合
-		layer_h9 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h8) # 全连接层
+		layer_h1 = Conv2D(16, 5, use_bias=True, padding="valid")(input_data) # 卷积层
+		layer_h2 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h1) # 池化层
+		layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
+		
+		#test=Model(inputs = input_data, outputs = layer_h3)
+		#test.summary()
+		
+		layer_h4 = Reshape((798, 272))(layer_h3) #Reshape层
+		layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
+		layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
+		layer_h7 = Dense(256, activation="relu")(layer_h6) # 全连接层
 		#layer_h6 = Dense(1283, activation="softmax")(layer_h5) # 全连接层
 		
-		y_pred = Activation('softmax', name='softmax')(layer_h9)
+		y_pred = Activation('softmax', name='softmax')(layer_h7)
 		model_data = Model(inputs = input_data, outputs = y_pred)
 		#model_data.summary()
 		
@@ -82,7 +84,7 @@ class ModelSpeech(): # 语音模型类
 		loss_out = Lambda(self.ctc_lambda_func, output_shape=(1,), name='ctc')([y_pred, labels, input_length, label_length])
 		
 		# clipnorm seems to speeds up convergence
-		sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
+		sgd = SGD(lr=0.002, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
 		
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
 		
