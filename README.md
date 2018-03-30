@@ -39,9 +39,13 @@ Python的依赖库
 
 ## Data Sets 数据集
 清华大学THCHS30中文语音数据集
+
 wav <http://data.cslt.org/thchs30/zip/wav.tgz>
+
 doc <http://data.cslt.org/thchs30/zip/doc.tgz>
+
 lm <http://data.cslt.org/thchs30/zip/lm.tgz>
+
 特别鸣谢！感谢前辈们的公开语音数据集
 
 ## Log
