@@ -4,6 +4,7 @@
 @author: nl8590687
 """
 import platform as plat
+import os
 
 # LSTM_CNN
 import keras as kr
@@ -125,7 +126,7 @@ class ModelSpeech(): # 语音模型类
 	
 	
 	
-	def TrainModel(self,datapath,epoch = 2,save_step=1000,filename='model_speech/LSTM_CNN_model'):
+	def TrainModel(self,datapath,epoch = 2,save_step=1000,filename='model_speech/speech_model'):
 		'''
 		训练模型
 		参数：
@@ -202,22 +203,27 @@ class ModelSpeech(): # 语音模型类
 
 if(__name__=='__main__'):
 	datapath = ''
-	modelpath = ''
-	ms = ModelSpeech()
+	modelpath = 'model_speech'
+	ms = ModelSpeech(BATCH_SIZE = 64)
+	
+	if(not os.path.exists(modelpath)): # 判断保存模型的目录是否存在
+		os.makedirs(path) # 如果不存在，就新建一个，避免之后保存模型的时候炸掉
 	
 	system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 	if(system_type == 'Windows'):
 		datapath = 'E:\\语音数据集'
-		modelpath = 'model_speech\\'
+		modelpath = modelpath + '\\'
 	elif(system_type == 'Linux'):
 		datapath = 'dataset'
-		modelpath = 'model_speech/'
+		modelpath = modelpath + '/'
 	else:
 		print('*[Message] Unknown System\n')
 		datapath = 'dataset'
-		modelpath = 'model_speech/'
+		modelpath = modelpath + '/'
+	
+	
 	
 	#ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
-	ms.TrainModel(datapath)
+	ms.TrainModel(datapath, save_step = 200)
 	#ms.TestModel(datapath)
 	

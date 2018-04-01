@@ -149,7 +149,7 @@ class DataSpeech():
 		for i in range(0,batch_size):
 			#input_length.append([1500])
 			label_length.append([64])
-			labels.append([0])
+			labels.append([0]) # 最终的ctc loss结果，0代表着没有ctc上的loss
 		
 		
 		label_length = np.matrix(label_length)
