@@ -13,6 +13,7 @@ import numpy as np
 from keras.models import Sequential, Model
 from keras.layers import Dense, Dropout, Input # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
 from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation #, Merge, Conv2D, MaxPooling2D,Conv1D
+from keras.layers.normalization import BatchNormalization
 from keras import backend as K
 from keras.optimizers import SGD
 
@@ -56,16 +57,17 @@ class ModelSpeech(): # 语音模型类
 		
 		layer_h1 = Conv1D(256, 5, use_bias=True, padding="valid")(input_data) # 卷积层
 		layer_h2 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h1) # 池化层
-		layer_h3 = Conv1D(256, 5, use_bias=True, padding="valid")(layer_h2) # 卷积层
-		layer_h4 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h3) # 池化层
-		layer_h5 = Dropout(0.2)(layer_h4) # 随机中断部分神经网络连接，防止过拟合
-		layer_h6 = Dense(256, use_bias=True, activation="softmax")(layer_h5) # 全连接层
-		layer_h7 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h6) # LSTM层
-		layer_h8 = Dropout(0.2)(layer_h7) # 随机中断部分神经网络连接，防止过拟合
-		layer_h9 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h8) # 全连接层
+		layer_h3 = BatchNormalization()(layer_h2)
+		layer_h4 = Conv1D(256, 5, use_bias=True, padding="valid")(layer_h3) # 卷积层
+		layer_h5 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h4) # 池化层
+		layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
+		layer_h7 = Dense(256, use_bias=True, activation="softmax")(layer_h6) # 全连接层
+		layer_h8 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h7) # LSTM层
+		layer_h9 = Dropout(0.2)(layer_h8) # 随机中断部分神经网络连接，防止过拟合
+		layer_h10 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h9) # 全连接层
 		#layer_h6 = Dense(1283, activation="softmax")(layer_h5) # 全连接层
 		
-		y_pred = Activation('softmax', name='softmax')(layer_h9)
+		y_pred = Activation('softmax', name='softmax')(layer_h10)
 		model_data = Model(inputs = input_data, outputs = y_pred)
 		#model_data.summary()
 		
