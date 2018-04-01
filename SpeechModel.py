@@ -3,6 +3,8 @@
 """
 @author: nl8590687
 """
+import platform as plat
+
 # LSTM_CNN
 import keras as kr
 import numpy as np
@@ -56,7 +58,7 @@ class ModelSpeech(): # 语音模型类
 		layer_h3 = Conv1D(256, 5, use_bias=True, padding="valid")(layer_h2) # 卷积层
 		layer_h4 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h3) # 池化层
 		layer_h5 = Dropout(0.2)(layer_h4) # 随机中断部分神经网络连接，防止过拟合
-		layer_h6 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h5) # 全连接层
+		layer_h6 = Dense(256, use_bias=True, activation="softmax")(layer_h5) # 全连接层
 		layer_h7 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h6) # LSTM层
 		layer_h8 = Dropout(0.2)(layer_h7) # 随机中断部分神经网络连接，防止过拟合
 		layer_h9 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h8) # 全连接层
@@ -150,16 +152,16 @@ class ModelSpeech(): # 语音模型类
 					print('[error] generator error. please check data format.')
 					break
 				
-				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step))
+				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step * save_step))
 				
 				
-	def LoadModel(self,filename='model_speech/LSTM_CNN_model.model'):
+	def LoadModel(self,filename='model_speech/speech_model_e_0_step_1.model'):
 		'''
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
 
-	def SaveModel(self,filename='model_speech/LSTM_CNN_model',comment=''):
+	def SaveModel(self,filename='model_speech/speech_model',comment=''):
 		'''
 		保存模型参数
 		'''
@@ -199,8 +201,23 @@ class ModelSpeech(): # 语音模型类
 
 
 if(__name__=='__main__'):
-	datapath = 'E:\\语音数据集'
+	datapath = ''
+	modelpath = ''
 	ms = ModelSpeech()
+	
+	system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
+	if(system_type == 'Windows'):
+		datapath = 'E:\\语音数据集'
+		modelpath = 'model_speech\\'
+	elif(system_type == 'Linux'):
+		datapath = 'dataset'
+		modelpath = 'model_speech/'
+	else:
+		print('*[Message] Unknown System\n')
+		datapath = 'dataset'
+		modelpath = 'model_speech/'
+	
+	#ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
 	ms.TrainModel(datapath)
 	#ms.TestModel(datapath)
 	

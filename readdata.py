@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import platform as plat
+
 import numpy as np
 from general_function.file_wav import *
 
@@ -20,15 +22,29 @@ class DataSpeech():
 		参数：
 			path：数据存放位置根目录
 		'''
+		
+		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
+		
 		self.datapath = path; # 数据存放位置根目录
-		if('\\'!=self.datapath[-1]): # 在目录路径末尾增加斜杠
-			self.datapath=self.datapath+'\\'
+		
+		self.slash = ''
+		if(system_type == 'Windows'):
+			self.slash='\\' # 反斜杠
+		elif(system_type == 'Linux'):
+			self.slash='/' # 正斜杠
+		else:
+			print('*[Message] Unknown System\n')
+			self.slash='/' # 正斜杠
+		
+		if(self.slash != self.datapath[-1]): # 在目录路径末尾增加斜杠
+				self.datapath = self.datapath + self.slash
+		
 		self.dic_wavlist = {}
 		self.dic_symbollist = {}
 		self.SymbolNum = 0 # 记录拼音符号数量
 		self.list_symbol = self.GetSymbolList() # 全部汉语拼音符号列表
-		self.list_wavnum=[] # wav文件标记列表
-		self.list_symbolnum=[] # symbol标记列表
+		self.list_wavnum = [] # wav文件标记列表
+		self.list_symbolnum = [] # symbol标记列表
 		
 		self.DataNum = 0 # 记录数据量
 		
@@ -45,20 +61,20 @@ class DataSpeech():
 		'''
 		# 设定选取哪一项作为要使用的数据集
 		if(type=='train'):
-			filename_wavlist='doc\\doc\\list\\train.wav.lst'
-			filename_symbollist='doc\\doc\\trans\\train.syllable.txt'
+			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'train.wav.lst'
+			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'train.syllable.txt'
 		elif(type=='dev'):
-			filename_wavlist='doc\\doc\\list\\cv.wav.lst'
-			filename_symbollist='doc\\doc\\trans\\cv.syllable.txt'
+			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'cv.wav.lst'
+			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'cv.syllable.txt'
 		elif(type=='test'):
-			filename_wavlist='doc\\doc\\list\\test.wav.lst'
-			filename_symbollist='doc\\doc\\trans\\test.syllable.txt'
+			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'test.wav.lst'
+			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'test.syllable.txt'
 		else:
-			filename_wavlist='' # 默认留空
-			filename_symbollist=''
+			filename_wavlist = '' # 默认留空
+			filename_symbollist = ''
 		# 读取数据列表，wav文件列表和其对应的符号列表
-		self.dic_wavlist,self.list_wavnum = get_wav_list(self.datapath+filename_wavlist)
-		self.dic_symbollist,self.list_symbolnum = get_wav_symbol(self.datapath+filename_symbollist)
+		self.dic_wavlist,self.list_wavnum = get_wav_list(self.datapath + filename_wavlist)
+		self.dic_symbollist,self.list_symbolnum = get_wav_symbol(self.datapath + filename_symbollist)
 		self.DataNum = self.GetDataNum()
 	
 	def GetDataNum(self):
@@ -85,7 +101,8 @@ class DataSpeech():
 		# 读取一个文件
 		filename = self.dic_wavlist[self.list_wavnum[n_start]]
 		
-		filename=filename.replace('/','\\') # windows系统下需要添加这一行
+		if('Windows' == plat.system()):
+			filename=filename.replace('/','\\') # windows系统下需要执行这一行，对文件路径做特别处理
 		
 		wavsignal,fs=read_wav_data(self.datapath+filename)
 		# 获取输入特征

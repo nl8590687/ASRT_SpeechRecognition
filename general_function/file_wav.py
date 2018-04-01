@@ -56,7 +56,7 @@ def get_wav_list(filename):
 	for i in txt_lines:
 		if(i!=''):
 			txt_l=i.split(' ')
-			dic_filelist[txt_l[0]]='wav/'+txt_l[1]
+			dic_filelist[txt_l[0]] = txt_l[1]
 			list_wavmark.append(txt_l[0])
 	txt_obj.close()
 	return dic_filelist,list_wavmark
