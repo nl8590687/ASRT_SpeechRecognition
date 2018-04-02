@@ -15,7 +15,7 @@ from keras.layers import Dense, Dropout, Input # , Flatten,LSTM,Convolution1D,Ma
 from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation #, Merge, Conv2D, MaxPooling2D,Conv1D
 from keras.layers.normalization import BatchNormalization
 from keras import backend as K
-from keras.optimizers import SGD
+from keras.optimizers import SGD, Adadelta
 
 from readdata import DataSpeech
 from neural_network.ctc_layer import ctc_layer
@@ -60,10 +60,10 @@ class ModelSpeech(): # 语音模型类
 		layer_h3 = BatchNormalization()(layer_h2)
 		layer_h4 = Conv1D(256, 5, use_bias=True, padding="valid")(layer_h3) # 卷积层
 		layer_h5 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h4) # 池化层
-		layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
+		layer_h6 = Dropout(0.1)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
 		layer_h7 = Dense(256, use_bias=True, activation="softmax")(layer_h6) # 全连接层
-		layer_h8 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h7) # LSTM层
-		layer_h9 = Dropout(0.2)(layer_h8) # 随机中断部分神经网络连接，防止过拟合
+		layer_h8 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h7) # LSTM层
+		layer_h9 = Dropout(0.1)(layer_h8) # 随机中断部分神经网络连接，防止过拟合
 		layer_h10 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h9) # 全连接层
 		#layer_h6 = Dense(1283, activation="softmax")(layer_h5) # 全连接层
 		
@@ -86,14 +86,17 @@ class ModelSpeech(): # 语音模型类
 		#layer_out = Lambda(ctc_lambda_func,output_shape=(self.MS_OUTPUT_SIZE, ), name='ctc')([y_pred, labels, input_length, label_length])#(layer_h6) # CTC
 		loss_out = Lambda(self.ctc_lambda_func, output_shape=(1,), name='ctc')([y_pred, labels, input_length, label_length])
 		
-		# clipnorm seems to speeds up convergence
-		sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
 		
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
 		
 		model.summary()
 		
-		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd)
+		# clipnorm seems to speeds up convergence
+		#sgd = SGD(lr=0.0001, decay=1e-8, momentum=0.9, nesterov=True, clipnorm=5)
+		ada_d = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
+		
+		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd)
+		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=ada_d)
 		
 		#layer_out = TimeDistributed(Dense(self.MS_OUTPUT_SIZE, activation="softmax"))(layer_h5)
 		#_model = Model(inputs = layer_input, outputs = layer_out)
@@ -119,8 +122,6 @@ class ModelSpeech(): # 语音模型类
 		
 	def ctc_lambda_func(self, args):
 		y_pred, labels, input_length, label_length = args
-		#y_pred = args[:,2:,:]
-		#print('++++fuck+++++')
 		#print(y_pred)
 		y_pred = y_pred[:, 1:-2, :]
 		#return K.ctc_decode(y_pred,self.MS_OUTPUT_SIZE)
@@ -206,7 +207,7 @@ class ModelSpeech(): # 语音模型类
 if(__name__=='__main__'):
 	datapath = ''
 	modelpath = 'model_speech'
-	ms = ModelSpeech(BATCH_SIZE = 64)
+	ms = ModelSpeech(BATCH_SIZE = 32)
 	
 	if(not os.path.exists(modelpath)): # 判断保存模型的目录是否存在
 		os.makedirs(path) # 如果不存在，就新建一个，避免之后保存模型的时候炸掉
