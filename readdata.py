@@ -89,6 +89,15 @@ class DataSpeech():
 		
 		return DataNum
 		
+	def GetMfccFeature(self, wavsignal, fs):
+		# 获取输入特征
+		feat_mfcc=mfcc(wavsignal[0],fs)
+		feat_mfcc_d=delta(feat_mfcc,2)
+		feat_mfcc_dd=delta(feat_mfcc_d,2)
+		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵
+		wav_feature = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
+		return wav_feature
+		
 	def GetData(self,n_start,n_amount=1):
 		'''
 		读取数据，返回神经网络输入值和输出值矩阵(可直接用于神经网络训练的那种)
@@ -104,11 +113,10 @@ class DataSpeech():
 		if('Windows' == plat.system()):
 			filename=filename.replace('/','\\') # windows系统下需要执行这一行，对文件路径做特别处理
 		
-		wavsignal,fs=read_wav_data(self.datapath+filename)
-		# 获取输入特征
-		feat_mfcc=mfcc(wavsignal[0],fs)
-		feat_mfcc_d=delta(feat_mfcc,2)
-		feat_mfcc_dd=delta(feat_mfcc_d,2)
+		wavsignal,fs = read_wav_data(self.datapath+filename)
+		
+		data_input = self.GetMfccFeature(wavsignal, fs)
+		
 		# 获取输出特征
 		list_symbol=self.dic_symbollist[self.list_symbolnum[n_start]]
 		feat_out=[]
@@ -120,9 +128,8 @@ class DataSpeech():
 				#feat_out.append(v)
 				feat_out.append(n)
 		#print('feat_out:',feat_out)
+		# 获得对应的拼音符号向量
 		
-		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵，以及对应的拼音符号矩阵
-		data_input = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
 		
 		#arr_zero = np.zeros((1, 39), dtype=np.int16) #一个全是0的行向量
 		
@@ -212,7 +219,9 @@ class DataSpeech():
 		'''
 		符号转为数字
 		'''
-		return self.list_symbol.index(symbol)
+		if(symbol != ''):
+			return self.list_symbol.index(symbol)
+		return self.SymbolNum
 	
 	def NumToVector(self,num):
 		'''

@@ -7,7 +7,7 @@
 
 This project uses keras, TensorFlow based on LSTM, CNN and CTC to implement. 
 
-本项目目前已经可以进行训练了，不过训练时有时候会出现梯度爆炸的问题。
+本项目目前已经可以进行训练了，不过训练时loss一直高居不下。
 
 本项目运行请执行：
 ```shell
