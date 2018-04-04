@@ -32,6 +32,26 @@ def wav_scale(energy):
 	var=energy.var() # 方差
 	e=(energy-means)/math.sqrt(var) # 归一化能量
 	return e
+
+def wav_scale2(energy):
+	'''
+	语音信号能量归一化
+	'''
+	maxnum = max(energy)
+	e = energy / maxnum
+	return e
+
+def wav_scale3(energy):
+	'''
+	语音信号能量归一化
+	'''
+	for i in range(len(energy)):
+		#if i == 1:
+		#	#print('wavsignal[0]:\n {:.4f}'.format(energy[1]),energy[1] is int)
+		energy[i] = float(energy[i]) / 100.0
+		#if i == 1:
+		#	#print('wavsignal[0]:\n {:.4f}'.format(energy[1]),energy[1] is int)
+	return energy
 	
 def wav_show(wave_data, fs): # 显示出来声音波形
 	time = np.arange(0, len(wave_data)) * (1.0/fs)  # 计算声音的播放时间，单位为秒

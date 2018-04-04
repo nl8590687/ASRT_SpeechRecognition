@@ -37,7 +37,7 @@ class ModelSpeech(): # 语音模型类
 		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
-		self.AUDIO_FEATURE_LENGTH = 39
+		self.AUDIO_FEATURE_LENGTH = 400
 		self._model = self.CreateModel() 
 		
 		self.data = DataSpeech(datapath)
@@ -77,21 +77,20 @@ class ModelSpeech(): # 语音模型类
 		
 		layer_h7 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h6) # LSTM层
 		layer_h8 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h7) # LSTM层
+		layer_h9 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h8) # LSTM层
+		layer_h10 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h9) # LSTM层
 		#layer_h10 = Activation('softmax', name='softmax1')(layer_h9)
 		
-		layer_h8_dropout = Dropout(0.1)(layer_h8) # 随机中断部分神经网络连接，防止过拟合
+		layer_h10_dropout = Dropout(0.1)(layer_h10) # 随机中断部分神经网络连接，防止过拟合
 		
-		layer_h9 = Dense(512, use_bias=True, activation="softmax")(layer_h8_dropout) # 全连接层
-		layer_h10 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h9) # 全连接层
+		layer_h11 = Dense(512, use_bias=True, activation="softmax")(layer_h10_dropout) # 全连接层
+		layer_h12 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h11) # 全连接层
 		#layer_h6 = Dense(1283, activation="softmax")(layer_h5) # 全连接层
 		
-		y_pred = Activation('softmax', name='softmax2')(layer_h10)
+		y_pred = Activation('softmax', name='softmax2')(layer_h12)
 		model_data = Model(inputs = input_data, outputs = y_pred)
 		#model_data.summary()
 		
-		
-		#layer_out = ctc_layer(64, self.BATCH_SIZE)(layer_h6) # CTC层  可能有bug
-		#layer_out = ctc_layer(1283, 32)(layer_h6) # CTC层  可能有bug
 		
 		#labels = Input(name='the_labels', shape=[60], dtype='float32')
 		
@@ -212,11 +211,18 @@ class ModelSpeech(): # 语音模型类
 		不过这里现在还有bug
 		'''
 		
-		data = self.data
+		#data = self.data
+		data = DataSpeech('E:\\语音数据集')
+		data.LoadDataList('dev')
 		# 获取输入特征
 		data_input = data.GetMfccFeature(wavsignal, fs)
 		
 		arr_zero = np.zeros((1, 39), dtype=np.int16) #一个全是0的行向量
+		
+		import matplotlib.pyplot as plt
+		plt.subplot(111)
+		plt.imshow(data_input.T, cmap=plt.get_cmap('gray'))
+		plt.show()
 		
 		while(len(data_input)<1600): #长度不够时补全到1600
 			data_input = np.row_stack((data_input,arr_zero))
@@ -233,13 +239,19 @@ class ModelSpeech(): # 语音模型类
 			labels_num.append(data.SymbolToNum(i))
 		
 		
-		data_input = np.array([data_input], dtype=np.int16)
-		labels_num = np.array([labels_num], dtype=np.int16)
-		input_length = np.array([[data_input.shape[0] // 4 - 3]], dtype=np.int16)
-		label_length = np.array([[64]], dtype=np.int16)
-		x=[data_input, labels_num, input_length, label_length]
 		
-		pred = self._model.predict(x, batch_size = None)
+		#data_input = np.array([data_input], dtype=np.int16)
+		#labels_num = np.array([labels_num], dtype=np.int16)
+		input_length = np.array([data_input.shape[0] // 4 - 3], dtype=np.int16)
+		label_length = np.array([64], dtype=np.int16)
+		x = data_input, labels_num, input_length, label_length
+		#x = next(data.data_genetator(1, self.AUDIO_LENGTH))
+		#x = kr.utils.np_utils.to_categorical(x)
+		
+		print(x)
+		x=np.array(x)
+		
+		pred = self._model.predict(x[0], batch_size = None)
 		#pred = self._model.predict_on_batch([data_input, labels_num, input_length, label_length])
 		return [labels,pred]
 		
@@ -286,7 +298,7 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	#ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
-	ms.TrainModel(datapath, epoch = 2, batch_size = 32, save_step = 1)
+	ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
 	#ms.TestModel(datapath, str_dataset='dev', data_count = 32)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
 	#print('*[提示] 语音识别结果：\n',r)
