@@ -14,7 +14,7 @@ from keras.models import Sequential, Model
 from keras.layers import Dense, Dropout, Input, Reshape # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
 from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge,Conv1D
 from keras import backend as K
-from keras.optimizers import SGD
+from keras.optimizers import SGD, Adadelta
 
 from readdata2 import DataSpeech
 from neural_network.ctc_layer import ctc_layer
@@ -77,9 +77,6 @@ class ModelSpeech(): # 语音模型类
 		#model_data.summary()
 		
 		
-		#layer_out = ctc_layer(64, self.BATCH_SIZE)(layer_h6) # CTC层  可能有bug
-		#layer_out = ctc_layer(1283, 32)(layer_h6) # CTC层  可能有bug
-		
 		#labels = Input(name='the_labels', shape=[60], dtype='float32')
 		
 		labels = Input(name='the_labels', shape=[self.label_max_string_length], dtype='float32')
@@ -91,15 +88,18 @@ class ModelSpeech(): # 语音模型类
 		#layer_out = Lambda(ctc_lambda_func,output_shape=(self.MS_OUTPUT_SIZE, ), name='ctc')([y_pred, labels, input_length, label_length])#(layer_h6) # CTC
 		loss_out = Lambda(self.ctc_lambda_func, output_shape=(1,), name='ctc')([y_pred, labels, input_length, label_length])
 		
-		# clipnorm seems to speeds up convergence
-		sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
+		
 		
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
 		
 		model.summary()
 		
-		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd, metrics=["accuracy"])
+		# clipnorm seems to speeds up convergence
+		sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
+		#ada_d = Adadelta(lr = 0.0001, rho = 0.95, epsilon = 1e-06)
 		
+		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd, metrics=["accuracy"])
+		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d, metrics=['accuracy'])
 		
 		
 		# captures output of softmax so we can decode the output during visualization
@@ -198,7 +198,7 @@ if(__name__=='__main__'):
 	
 	
 	if(not os.path.exists(modelpath)): # 判断保存模型的目录是否存在
-		os.makedirs(path) # 如果不存在，就新建一个，避免之后保存模型的时候炸掉
+		os.makedirs(modelpath) # 如果不存在，就新建一个，避免之后保存模型的时候炸掉
 	
 	system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 	if(system_type == 'Windows'):

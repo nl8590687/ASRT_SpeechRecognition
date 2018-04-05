@@ -118,11 +118,11 @@ class ModelSpeech(): # 语音模型类
 		ada_d = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
 		
 		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = sgd, metrics=['accuracy'])
-		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d, metrics=['accuracy'])
+		model.compile(loss={'ctc': lambda labels, y_pred: y_pred}, optimizer = ada_d, metrics=['accuracy'])
 		
 		
 		# captures output of softmax so we can decode the output during visualization
-		test_func = K.function([input_data], [y_pred])
+		self.test_func = K.function([input_data], [y_pred])
 		
 		print('[*提示] 创建模型成功，模型编译成功')
 		return model
@@ -210,6 +210,16 @@ class ModelSpeech(): # 语音模型类
 		return r
 		pass
 		
+	def decode_batch(test_func, word_batch):
+		out = test_func([word_batch])[0]
+		ret = []
+		for j in range(out.shape[0]):
+			out_best = list(np.argmax(out[j, 2:], 1))
+			out_best = [k for k, g in itertools.groupby(out_best)]
+			outstr = labels_to_text(out_best)
+			ret.append(outstr)
+		return ret
+	
 	def RecognizeSpeech(self, wavsignal, fs):
 		'''
 		最终做语音识别用的函数，识别一个wav序列的语音
@@ -220,24 +230,25 @@ class ModelSpeech(): # 语音模型类
 		data = DataSpeech('E:\\语音数据集')
 		data.LoadDataList('dev')
 		# 获取输入特征
-		data_input = data.GetMfccFeature(wavsignal, fs)
+		#data_input = data.GetMfccFeature(wavsignal, fs)
+		data_input = data.GetFrequencyFeature(wavsignal, fs)
 		
-		arr_zero = np.zeros((1, 39), dtype=np.int16) #一个全是0的行向量
+		arr_zero = np.zeros((1, 200), dtype=np.int16) #一个全是0的行向量
 		
-		import matplotlib.pyplot as plt
-		plt.subplot(111)
-		plt.imshow(data_input.T, cmap=plt.get_cmap('gray'))
-		plt.show()
+		#import matplotlib.pyplot as plt
+		#plt.subplot(111)
+		#plt.imshow(data_input, cmap=plt.get_cmap('gray'))
+		#plt.show()
 		
-		while(len(data_input)<1600): #长度不够时补全到1600
-			data_input = np.row_stack((data_input,arr_zero))
+		#while(len(data_input)<1600): #长度不够时补全到1600
+		#	data_input = np.row_stack((data_input,arr_zero))
 		#print(len(data_input))
 		
 		list_symbol = data.list_symbol # 获取拼音列表
 		
 		labels = [ list_symbol[0] ]
-		while(len(labels) < 64):
-			labels.append('')
+		#while(len(labels) < 64):
+		#	labels.append('')
 			
 		labels_num = []
 		for i in labels:
@@ -245,18 +256,28 @@ class ModelSpeech(): # 语音模型类
 		
 		
 		
-		#data_input = np.array([data_input], dtype=np.int16)
-		#labels_num = np.array([labels_num], dtype=np.int16)
+		data_input = np.array(data_input, dtype=np.int16)
+		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1])
+		
+		labels_num = np.array(labels_num, dtype=np.int16)
+		labels_num = labels_num.reshape(labels_num.shape[0])
+		
 		input_length = np.array([data_input.shape[0] // 4 - 3], dtype=np.int16)
-		label_length = np.array([64], dtype=np.int16)
-		x = data_input, labels_num, input_length, label_length
+		input_length = np.array(input_length)
+		input_length = input_length.reshape(input_length.shape[0])
+		
+		label_length = np.array([labels_num.shape[0]], dtype=np.int16)
+		label_length = np.array(label_length)
+		label_length = label_length.reshape(label_length.shape[0])
+		
+		x = [data_input, labels_num, input_length, label_length]
 		#x = next(data.data_genetator(1, self.AUDIO_LENGTH))
 		#x = kr.utils.np_utils.to_categorical(x)
 		
 		print(x)
 		x=np.array(x)
 		
-		pred = self._model.predict(x[0], batch_size = None)
+		pred = self._model.predict(x=x)
 		#pred = self._model.predict_on_batch([data_input, labels_num, input_length, label_length])
 		return [labels,pred]
 		
@@ -286,7 +307,7 @@ if(__name__=='__main__'):
 	
 	
 	if(not os.path.exists(modelpath)): # 判断保存模型的目录是否存在
-		os.makedirs(path) # 如果不存在，就新建一个，避免之后保存模型的时候炸掉
+		os.makedirs(modelpath) # 如果不存在，就新建一个，避免之后保存模型的时候炸掉
 	
 	system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 	if(system_type == 'Windows'):
