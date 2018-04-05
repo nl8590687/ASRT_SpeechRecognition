@@ -17,6 +17,9 @@ from keras.models import Sequential, Model
 from keras.layers import Dense, Dropout, Input # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
 from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation #, Merge, Conv2D, MaxPooling2D,Conv1D
 from keras.layers.normalization import BatchNormalization
+
+from keras.layers.advanced_activations import LeakyReLU
+
 from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
@@ -37,7 +40,7 @@ class ModelSpeech(): # 语音模型类
 		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
-		self.AUDIO_FEATURE_LENGTH = 400
+		self.AUDIO_FEATURE_LENGTH = 200
 		self._model = self.CreateModel() 
 		
 		self.data = DataSpeech(datapath)
@@ -59,14 +62,16 @@ class ModelSpeech(): # 语音模型类
 		# 每一帧使用13维mfcc特征及其13维一阶差分和13维二阶差分表示，最大信号序列长度为1500
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH))
 		
-		layer_h1_c = Conv1D(256, 5, use_bias=True, padding="valid")(input_data) # 卷积层
-		layer_h1_a = Activation('relu', name='relu0')(layer_h1_c)
+		layer_h1_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, padding="valid")(input_data) # 卷积层
+		#layer_h1_a = Activation('relu', name='relu0')(layer_h1_c)
+		layer_h1_a = LeakyReLU(alpha=0.3)(layer_h1_c) # 高级激活层
 		layer_h1 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h1_a) # 池化层
 		
 		layer_h2 = BatchNormalization()(layer_h1)
 		
-		layer_h3_c = Conv1D(256, 5, use_bias=True, padding="valid")(layer_h2) # 卷积层
-		layer_h3_a = Activation('relu', name='relu1')(layer_h3_c)
+		layer_h3_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, padding="valid")(layer_h2) # 卷积层
+		layer_h3_a = LeakyReLU(alpha=0.3)(layer_h3_c) # 高级激活层
+		#layer_h3_a = Activation('relu', name='relu1')(layer_h3_c)
 		layer_h3 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h3_a) # 池化层
 		
 		layer_h4 = Dropout(0.1)(layer_h3) # 随机中断部分神经网络连接，防止过拟合

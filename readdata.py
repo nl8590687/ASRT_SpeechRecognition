@@ -12,6 +12,9 @@ from python_speech_features import logfbank
 
 import random
 #import scipy.io.wavfile as wav
+from scipy.fftpack import fft
+
+import matplotlib.pyplot as plt 
 
 class DataSpeech():
 	
@@ -97,6 +100,26 @@ class DataSpeech():
 		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵
 		wav_feature = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
 		return wav_feature
+	
+	def GetFrequencyFeature(self, wavsignal, fs):
+		# wav波形 加时间窗以及时移10ms
+		time_window = 25 # 单位ms
+		data_input = []
+		
+		#print(int(len(wavsignal[0])/fs*1000 - time_window) // 10)
+		for i in range(0,int(len(wavsignal[0])/fs*1000 - time_window) // 10 ):
+			p_start = i * 160
+			p_end = p_start + 400
+			data_line = []
+			
+			for j in range(p_start, p_end):
+				data_line.append(wavsignal[0][j])
+				#print('wavsignal[0][j]:\n',wavsignal[0][j])
+			data_line = abs(fft(data_line)) / len(wavsignal[0])
+			#data_line = abs(fft(data_line))
+			data_input.append(data_line[0:len(data_line)//2])
+			#print('data_line:\n',data_line)
+		return data_input
 		
 	def GetData(self,n_start,n_amount=1):
 		'''
@@ -118,32 +141,18 @@ class DataSpeech():
 		#print(wavsignal, fs)
 		#print(max(wavsignal[0]))
 		#wavsignal[0] = np.array(wavsignal[0], dtype=np.float32)
+		#wavsignal[0]=wavsignal[0].reshape(wavsignal[0].shape[0])
 		#print('wavsignal[0]:\n',wavsignal[0][1])
 		
 		# 归一化
-		wavsignal[0] = wav_scale(wavsignal[0])
+		#wavsignal[0] = wav_scale(wavsignal[0])
 		#print('wavsignal[0]:\n {:.4f}'.format(wavsignal[0][1]))
 		
 		#print('长度：',len(wavsignal[0]))
 		#print(max(wavsignal[0]))
 		#print(sum(abs(wavsignal[0]))/len(wavsignal[0]))
 		
-		# wav波形 加时间窗以及时移10ms
-		time_window = 25 # 单位ms
-		data_input = []
-		
-		#print(int(len(wavsignal[0])/fs*1000 - time_window) // 10)
-		for i in range(0,int(len(wavsignal[0])/fs*1000 - time_window) // 10 ):
-			p_start = i * 160
-			p_end = p_start + 400
-			data_line = []
-			
-			for j in range(p_start, p_end ):
-				data_line.append(wavsignal[0][j])
-				#print('wavsignal[0][j]:\n',wavsignal[0][j])
-			
-			data_input.append(data_line)
-			#print('data_line:\n',data_line)
+		data_input = self.GetFrequencyFeature(wavsignal, fs)
 		
 		#print('data_input:\n', data_input)
 		
@@ -180,7 +189,7 @@ class DataSpeech():
 		batch_size: 一次产生的数据量
 		需要再修改。。。
 		'''
-		X = np.zeros((batch_size, audio_length, 400), dtype=np.int16)
+		X = np.zeros((batch_size, audio_length, 200), dtype=np.int16)
 		#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)
 		y = np.zeros((batch_size, 64), dtype=np.int16)
 		
@@ -275,7 +284,13 @@ if(__name__=='__main__'):
 	#l=DataSpeech(path)
 	#l.LoadDataList('train')
 	#print(l.GetDataNum())
-	#print(l.GetData(0))
+	#data0=l.GetData(0)
+	#print(data0)
+	#data0=data0[0].reshape(data0[0].shape[0],data0[0].shape[1])
+	#print(data0, data0 is list)
+	#plt.subplot(111)
+	#plt.imshow(data0.T, cmap=plt.get_cmap('Blues_r'))
+	#plt.show()
 	#aa=l.data_genetator()
 	#for i in aa:
 		#a,b=i

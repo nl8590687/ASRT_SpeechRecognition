@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import platform as plat
+import os
+
 import numpy as np
 from general_function.file_wav import *
 
@@ -10,6 +13,7 @@ from python_speech_features import logfbank
 
 import random
 #import scipy.io.wavfile as wav
+from scipy.fftpack import fft
 
 class DataSpeech():
 	
@@ -20,9 +24,26 @@ class DataSpeech():
 		参数：
 			path：数据存放位置根目录
 		'''
+		
+		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
+		
 		self.datapath = path; # 数据存放位置根目录
-		if('\\'!=self.datapath[-1]): # 在目录路径末尾增加斜杠
-			self.datapath=self.datapath+'\\'
+		
+		self.slash = ''
+		if(system_type == 'Windows'):
+			self.slash='\\' # 反斜杠
+		elif(system_type == 'Linux'):
+			self.slash='/' # 正斜杠
+		else:
+			print('*[Message] Unknown System\n')
+			self.slash='/' # 正斜杠
+		
+		if(self.slash != self.datapath[-1]): # 在目录路径末尾增加斜杠
+				self.datapath = self.datapath + self.slash
+		
+		#self.datapath = path; # 数据存放位置根目录
+		#if('\\'!=self.datapath[-1]): # 在目录路径末尾增加斜杠
+		#	self.datapath=self.datapath+'\\'
 		self.dic_wavlist = {}
 		self.dic_symbollist = {}
 		self.SymbolNum = 0 # 记录拼音符号数量
@@ -45,20 +66,20 @@ class DataSpeech():
 		'''
 		# 设定选取哪一项作为要使用的数据集
 		if(type=='train'):
-			filename_wavlist='doc\\doc\\list\\train.wav.lst'
-			filename_symbollist='doc\\doc\\trans\\train.syllable.txt'
+			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'train.wav.lst'
+			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'train.syllable.txt'
 		elif(type=='dev'):
-			filename_wavlist='doc\\doc\\list\\cv.wav.lst'
-			filename_symbollist='doc\\doc\\trans\\cv.syllable.txt'
+			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'cv.wav.lst'
+			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'cv.syllable.txt'
 		elif(type=='test'):
-			filename_wavlist='doc\\doc\\list\\test.wav.lst'
-			filename_symbollist='doc\\doc\\trans\\test.syllable.txt'
+			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'test.wav.lst'
+			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'test.syllable.txt'
 		else:
-			filename_wavlist='' # 默认留空
-			filename_symbollist=''
+			filename_wavlist = '' # 默认留空
+			filename_symbollist = ''
 		# 读取数据列表，wav文件列表和其对应的符号列表
-		self.dic_wavlist,self.list_wavnum = get_wav_list(self.datapath+filename_wavlist)
-		self.dic_symbollist,self.list_symbolnum = get_wav_symbol(self.datapath+filename_symbollist)
+		self.dic_wavlist,self.list_wavnum = get_wav_list(self.datapath + filename_wavlist)
+		self.dic_symbollist,self.list_symbolnum = get_wav_symbol(self.datapath + filename_symbollist)
 		self.DataNum = self.GetDataNum()
 	
 	def GetDataNum(self):
@@ -72,6 +93,26 @@ class DataSpeech():
 			DataNum = -1
 		
 		return DataNum
+		
+	def GetFrequencyFeature(self, wavsignal, fs):
+		# wav波形 加时间窗以及时移10ms
+		time_window = 25 # 单位ms
+		data_input = []
+		
+		#print(int(len(wavsignal[0])/fs*1000 - time_window) // 10)
+		for i in range(0,int(len(wavsignal[0])/fs*1000 - time_window) // 10 ):
+			p_start = i * 160
+			p_end = p_start + 400
+			data_line = []
+			
+			for j in range(p_start, p_end):
+				data_line.append(wavsignal[0][j])
+				#print('wavsignal[0][j]:\n',wavsignal[0][j])
+			data_line = abs(fft(data_line)) / len(wavsignal[0])
+			#data_line = abs(fft(data_line))
+			data_input.append(data_line[0:len(data_line)//2])
+			#print('data_line:\n',data_line)
+		return data_input
 		
 	def GetData(self,n_start,n_amount=1):
 		'''
@@ -89,9 +130,9 @@ class DataSpeech():
 		
 		wavsignal,fs=read_wav_data(self.datapath+filename)
 		# 获取输入特征
-		feat_mfcc=mfcc(wavsignal[0],fs)
-		feat_mfcc_d=delta(feat_mfcc,2)
-		feat_mfcc_dd=delta(feat_mfcc_d,2)
+		#feat_mfcc=mfcc(wavsignal[0],fs)
+		#feat_mfcc_d=delta(feat_mfcc,2)
+		#feat_mfcc_dd=delta(feat_mfcc_d,2)
 		# 获取输出特征
 		list_symbol=self.dic_symbollist[self.list_symbolnum[n_start]]
 		feat_out=[]
@@ -105,8 +146,10 @@ class DataSpeech():
 		#print('feat_out:',feat_out)
 		
 		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵，以及对应的拼音符号矩阵
-		data_input = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
-		
+		#data_input = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
+		data_input = self.GetFrequencyFeature(wavsignal,fs)
+		data_input = np.array(data_input)
+		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
 		#arr_zero = np.zeros((1, 39), dtype=np.int16) #一个全是0的行向量
 		
 		#while(len(data_input)<1600): #长度不够时补全到1600
@@ -122,7 +165,7 @@ class DataSpeech():
 		batch_size: 一次产生的数据量
 		需要再修改。。。
 		'''
-		X = np.zeros((batch_size, audio_length, 39), dtype=np.int16)
+		X = np.zeros((batch_size, audio_length, 200, 1), dtype=np.int16)
 		#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)
 		y = np.zeros((batch_size, 64), dtype=np.int16)
 		
@@ -132,7 +175,7 @@ class DataSpeech():
 		for i in range(0,batch_size):
 			#input_length.append([1500])
 			label_length.append([64])
-			labels.append([1])
+			labels.append([1e-08])
 		
 		
 		label_length = np.matrix(label_length)
@@ -162,8 +205,8 @@ class DataSpeech():
 			
 			input_length = np.array(input_length).T
 			#input_length = np.array(input_length)
-			print('input_length:\n',input_length)
-			X=X.reshape(batch_size, audio_length, 39, 1)
+			#print('input_length:\n',input_length)
+			#X=X.reshape(batch_size, audio_length, 200, 1)
 			#print(X)
 			yield [X, y, input_length, label_length ], labels
 		pass
@@ -196,7 +239,9 @@ class DataSpeech():
 		'''
 		符号转为数字
 		'''
-		return self.list_symbol.index(symbol)
+		if(symbol != ''):
+			return self.list_symbol.index(symbol)
+		return self.SymbolNum
 	
 	def NumToVector(self,num):
 		'''

@@ -3,6 +3,9 @@
 """
 @author: nl8590687
 """
+import platform as plat
+import os
+
 # LSTM_CNN
 import keras as kr
 import numpy as np
@@ -20,16 +23,17 @@ from neural_network.ctc_loss import ctc_batch_loss
 #from keras.backend.tensorflow_backend import ctc_batch_cost
 
 class ModelSpeech(): # 语音模型类
-	def __init__(self,MS_OUTPUT_SIZE = 1417,BATCH_SIZE = 32):
+	def __init__(self, datapath):
 		'''
 		初始化
 		默认输出的拼音的表示大小是1283，即1282个拼音+1个空白块
 		'''
+		MS_OUTPUT_SIZE = 1417
 		self.MS_OUTPUT_SIZE = MS_OUTPUT_SIZE # 神经网络最终输出的每一个字符向量维度的大小
-		self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
+		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
-		self.AUDIO_FEATURE_LENGTH = 39
+		self.AUDIO_FEATURE_LENGTH = 200
 		self._model = self.CreateModel() 
 
 	
@@ -51,20 +55,24 @@ class ModelSpeech(): # 语音模型类
 		# 每一帧使用13维mfcc特征及其13维一阶差分和13维二阶差分表示，最大信号序列长度为1500
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH, 1))
 		
-		layer_h1 = Conv2D(16, 5, use_bias=True, padding="valid")(input_data) # 卷积层
-		layer_h2 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h1) # 池化层
-		layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
+		layer_h1 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same')(input_data) # 卷积层
+		layer_h2 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same')(layer_h1) # 卷积层
+		layer_h3 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h2) # 池化层
+		#layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
+		layer_h4 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same')(layer_h3) # 卷积层
+		layer_h5 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same')(layer_h4) # 卷积层
+		layer_h6 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h5) # 池化层
 		
-		#test=Model(inputs = input_data, outputs = layer_h3)
+		#test=Model(inputs = input_data, outputs = layer_h6)
 		#test.summary()
 		
-		layer_h4 = Reshape((798, 272))(layer_h3) #Reshape层
-		layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
-		layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
-		layer_h7 = Dense(256, activation="relu")(layer_h6) # 全连接层
-		#layer_h6 = Dense(1283, activation="softmax")(layer_h5) # 全连接层
+		layer_h7 = Reshape((400, 3200))(layer_h6) #Reshape层
+		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
+		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
+		layer_h8 = Dense(256, activation="softmax", use_bias=True)(layer_h7) # 全连接层
+		layer_h9 = Dense(1417, activation="softmax", use_bias=True)(layer_h8) # 全连接层
 		
-		y_pred = Activation('softmax', name='softmax')(layer_h7)
+		y_pred = Activation('softmax', name='softmax')(layer_h9)
 		model_data = Model(inputs = input_data, outputs = y_pred)
 		#model_data.summary()
 		
@@ -84,48 +92,31 @@ class ModelSpeech(): # 语音模型类
 		loss_out = Lambda(self.ctc_lambda_func, output_shape=(1,), name='ctc')([y_pred, labels, input_length, label_length])
 		
 		# clipnorm seems to speeds up convergence
-		sgd = SGD(lr=0.002, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
+		sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
 		
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
 		
 		model.summary()
 		
-		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd)
+		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd, metrics=["accuracy"])
 		
-		#layer_out = TimeDistributed(Dense(self.MS_OUTPUT_SIZE, activation="softmax"))(layer_h5)
-		#_model = Model(inputs = layer_input, outputs = layer_out)
-		
-		#_model.summary()
-		#_model = Sequential()
-		#_model.add(Conv1D(256, 5, use_bias=True, padding="valid", input_shape=(1500,39)))
-		#_model.add(MaxPooling1D(pool_size=2, strides=None, padding="valid"))
-		#_model.add(Dropout(0.2))
-		#_model.add(LSTM(256, activation='relu', use_bias=True, return_sequences=True))
-		#_model.add(Dropout(0.2))
-		#_model.add(TimeDistributed(Dense(self.MS_OUTPUT_SIZE)))
-		#_model.add(Activation("softmax"))
 		
 		
 		# captures output of softmax so we can decode the output during visualization
 		test_func = K.function([input_data], [y_pred])
 		
-		#_model.compile(optimizer="sgd", loss='categorical_crossentropy',metrics=["accuracy"])
-		#_model.compile(optimizer = "sgd", loss = ctc_batch_loss, metrics = ["accuracy"])
 		print('[*提示] 创建模型成功，模型编译成功')
 		return model
 		
 	def ctc_lambda_func(self, args):
 		y_pred, labels, input_length, label_length = args
-		#y_pred = args[:,2:,:]
-		#print('++++fuck+++++')
-		#print(y_pred)
+		
 		y_pred = y_pred[:, 1:-2, :]
-		#return K.ctc_decode(y_pred,self.MS_OUTPUT_SIZE)
 		return K.ctc_batch_cost(labels, y_pred, input_length, label_length)
 	
 	
 	
-	def TrainModel(self,datapath,epoch = 2,save_step=1000,filename='model_speech/LSTM_CNN_model'):
+	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/LSTM_CNN_model'):
 		'''
 		训练模型
 		参数：
@@ -144,7 +135,7 @@ class ModelSpeech(): # 语音模型类
 				try:
 					print('[message] epoch %d . Have train datas %d+'%(epoch, n_step*save_step))
 					# data_genetator是一个生成器函数
-					yielddatas = data.data_genetator(self.BATCH_SIZE, self.AUDIO_LENGTH)
+					yielddatas = data.data_genetator(batch_size, self.AUDIO_LENGTH)
 					#self._model.fit_generator(yielddatas, save_step, nb_worker=2)
 					self._model.fit_generator(yielddatas, save_step)
 					n_step += 1
@@ -152,7 +143,7 @@ class ModelSpeech(): # 语音模型类
 					print('[error] generator error. please check data format.')
 					break
 				
-				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step))
+				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step * save_step))
 				
 				
 	def LoadModel(self,filename='model_speech/LSTM_CNN_model.model'):
@@ -201,8 +192,30 @@ class ModelSpeech(): # 语音模型类
 
 
 if(__name__=='__main__'):
-	datapath = 'E:\\语音数据集'
-	ms = ModelSpeech()
-	ms.TrainModel(datapath)
-	#ms.TestModel(datapath)
 	
+	datapath = ''
+	modelpath = 'model_speech'
+	
+	
+	if(not os.path.exists(modelpath)): # 判断保存模型的目录是否存在
+		os.makedirs(path) # 如果不存在，就新建一个，避免之后保存模型的时候炸掉
+	
+	system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
+	if(system_type == 'Windows'):
+		datapath = 'E:\\语音数据集'
+		modelpath = modelpath + '\\'
+	elif(system_type == 'Linux'):
+		datapath = 'dataset'
+		modelpath = modelpath + '/'
+	else:
+		print('*[Message] Unknown System\n')
+		datapath = 'dataset'
+		modelpath = modelpath + '/'
+	
+	ms = ModelSpeech(datapath)
+	
+	#ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
+	ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
+	#ms.TestModel(datapath, str_dataset='dev', data_count = 32)
+	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	#print('*[提示] 语音识别结果：\n',r)
