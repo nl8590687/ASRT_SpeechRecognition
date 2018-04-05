@@ -126,7 +126,8 @@ class DataSpeech():
 		# 读取一个文件
 		filename = self.dic_wavlist[self.list_wavnum[n_start]]
 		
-		filename=filename.replace('/','\\') # windows系统下需要添加这一行
+		if('Windows' == plat.system()):
+			filename=filename.replace('/','\\') # windows系统下需要执行这一行，对文件路径做特别处理
 		
 		wavsignal,fs=read_wav_data(self.datapath+filename)
 		# 获取输入特征
@@ -177,7 +178,7 @@ class DataSpeech():
 			labels.append([1e-08])
 		
 		
-		label_length = np.matrix(label_length)
+		
 		labels = np.matrix(labels)
 		
 		#print(input_length,len(input_length))
@@ -203,6 +204,7 @@ class DataSpeech():
 				#print(i,y[i].shape)
 				label_length.append([len(data_labels)])
 			
+			label_length = np.matrix(label_length)
 			input_length = np.array(input_length).T
 			#input_length = np.array(input_length)
 			#print('input_length:\n',input_length)
