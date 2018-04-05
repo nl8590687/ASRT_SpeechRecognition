@@ -174,7 +174,6 @@ class DataSpeech():
 		labels = []
 		for i in range(0,batch_size):
 			#input_length.append([1500])
-			label_length.append([64])
 			labels.append([1e-08])
 		
 		
@@ -202,6 +201,7 @@ class DataSpeech():
 				#print(i,y[i].shape)
 				#y[i] = y[i].T
 				#print(i,y[i].shape)
+				label_length.append([len(data_labels)])
 			
 			input_length = np.array(input_length).T
 			#input_length = np.array(input_length)
