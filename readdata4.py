@@ -115,8 +115,8 @@ class DataSpeech():
 			for j in range(p_start, p_end):
 				data_line.append(wavsignal[0][j])
 				#print('wavsignal[0][j]:\n',wavsignal[0][j])
-			#data_line = abs(fft(data_line)) / len(wavsignal[0])
-			data_line = fft(data_line) / len(wavsignal[0])
+			data_line = abs(fft(data_line)) / len(wavsignal[0])
+			#data_line = abs(fft(data_line))
 			data_input.append(data_line[0:len(data_line)//2])
 			#print('data_line:\n',data_line)
 		return data_input
@@ -187,6 +187,7 @@ class DataSpeech():
 		'''
 		数据生成器函数，用于Keras的generator_fit训练
 		batch_size: 一次产生的数据量
+		需要再修改。。。
 		'''
 		X = np.zeros((batch_size, audio_length, 200), dtype=np.float)
 		#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)

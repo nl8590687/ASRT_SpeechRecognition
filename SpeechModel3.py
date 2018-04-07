@@ -11,6 +11,7 @@ import numpy as np
 
 # LSTM_CNN
 import keras as kr
+import tensorflow as tf
 import numpy as np
 
 from keras.models import Sequential, Model
@@ -23,7 +24,7 @@ from keras.layers.advanced_activations import LeakyReLU
 from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
-from readdata import DataSpeech
+from readdata3 import DataSpeech
 from neural_network.ctc_layer import ctc_layer
 from neural_network.ctc_loss import ctc_batch_loss
 
@@ -99,27 +100,27 @@ class ModelSpeech(): # 语音模型类
 		
 		#labels = Input(name='the_labels', shape=[60], dtype='float32')
 		
-		labels = Input(name='the_labels', shape=[self.label_max_string_length], dtype='float32')
+		#labels = Input(name='the_labels', shape=[self.label_max_string_length], dtype='float32')
 		input_length = Input(name='input_length', shape=[1], dtype='int64')
-		label_length = Input(name='label_length', shape=[1], dtype='int64')
+		#label_length = Input(name='label_length', shape=[1], dtype='int64')
 		# Keras doesn't currently support loss funcs with extra parameters
 		# so CTC loss is implemented in a lambda layer
 		
 		#layer_out = Lambda(ctc_lambda_func,output_shape=(self.MS_OUTPUT_SIZE, ), name='ctc')([y_pred, labels, input_length, label_length])#(layer_h6) # CTC
-		loss_out = Lambda(self.ctc_lambda_func, output_shape=(1,), name='ctc')([y_pred, labels, input_length, label_length])
+		ctc_out = Lambda(self.ctc_lambda_func2, output_shape = (397, self.MS_OUTPUT_SIZE), name='ctc')([y_pred, input_length])
 		
 		#y_out = Activation('softmax', name='softmax3')(loss_out)
-		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
+		model = Model(inputs=[input_data, input_length], outputs = ctc_out)
 		
 		model.summary()
 		
 		# clipnorm seems to speeds up convergence
 		#sgd = SGD(lr=0.0001, decay=1e-8, momentum=0.9, nesterov=True, clipnorm=5)
-		ada_d = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
+		ada_d = Adadelta(lr = 0.001, rho = 0.95, epsilon = 1e-06)
 		
 		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = sgd, metrics=['accuracy'])
-		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d, metrics=['accuracy'])
-		
+		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d, metrics=['accuracy'])
+		model.compile(loss={'ctc': lambda y_true, y_pred: self.ctc_lambda_func([y_true, y_pred])}, optimizer = ada_d, metrics=['accuracy'])
 		
 		# captures output of softmax so we can decode the output during visualization
 		self.test_func = K.function([input_data], [y_pred])
@@ -128,13 +129,60 @@ class ModelSpeech(): # 语音模型类
 		return model
 		
 	def ctc_lambda_func(self, args):
-		y_pred, labels, input_length, label_length = args
+		#y_pred, labels, input_length, label_length = args
+		y_true, y_pred = args
 		#print(y_pred)
 		y_pred = y_pred[:, :, 0:-2]
 		#return K.ctc_decode(y_pred,self.MS_OUTPUT_SIZE)
-		return K.ctc_batch_cost(labels, y_pred, input_length, label_length)
+		return K.ctc_batch_cost(y_true, y_pred, y_true.shape[1], y_pred.shape[1])
 	
+	def ctc_lambda_func2(self, args):
+		y_pred, input_length = args
+		print('**',y_pred,input_length,'**')
+		#y_pred = y_pred[:, :, 0:-1]
+		#y_pred = K.reverse(y_pred, axes=-1)
+		input_length = K.reshape(input_length, (-1,))
+		print(input_length)
+		#input_length = input_length.reshape(input_length.shape[0],input_length.shape[1])
+		#return K.ctc_decode(y_pred,self.MS_OUTPUT_SIZE)
+		#dict = []
+		#for i in range(0,self.MS_OUTPUT_SIZE + 1):
+		#	dict.append(i)
+		#, input_length
+		
+		top_k_decoded, _ = K.ctc_decode(y_pred, input_length , greedy=True, beam_width=64)
+		print(top_k_decoded, top_k_decoded[0].shape)
+		
+		top_k_decoded = top_k_decoded[0]
+		#num=top_k_decoded.shape[0]
+		#num=len(top_k_decoded0.shape[0])
+		
+		#with tf.Session():
+		#top_k_decoded = top_k_decoded.eval()
 	
+		print(top_k_decoded)
+		print('num: ',num)
+		for j in range(num):
+			print(top_k_decoded)
+			
+			tmp_decoded = top_k_decoded[j,0:-1]
+			
+			max_arg = np.argmax(tmp_decoded, 1)
+			print(max_arg)
+			out_best = list(max_arg)
+			
+			
+			
+			out_best = [k for k, g in itertools.groupby(out_best)]
+			#outstr = labels_to_text(out_best)
+			#ret.append(outstr)
+			ret.append(outbest)
+		
+		ret = np.array(ret)
+		return ret
+	
+	#def GetEditDistance(self, x0, x1):
+		
 	
 	def TrainModel(self, datapath, epoch = 2, batch_size = 32, save_step = 1000, filename = 'model_speech/speech_model'):
 		'''

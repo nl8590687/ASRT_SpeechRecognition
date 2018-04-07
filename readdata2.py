@@ -166,12 +166,13 @@ class DataSpeech():
 		batch_size: 一次产生的数据量
 		需要再修改。。。
 		'''
-		X = np.zeros((batch_size, audio_length, 200, 1), dtype=np.int16)
+		X = np.zeros((batch_size, audio_length, 200, 1), dtype = np.float)
+		#print('data_gen:', X)
 		#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)
 		y = np.zeros((batch_size, 64), dtype=np.int16)
 		
 		
-		label_length = []
+		
 		labels = []
 		for i in range(0,batch_size):
 			#input_length.append([1500])
@@ -179,13 +180,14 @@ class DataSpeech():
 		
 		
 		
-		labels = np.matrix(labels)
+		labels = np.array(labels, dtype = np.float)
 		
 		#print(input_length,len(input_length))
 		
 		while True:
 			#generator = ImageCaptcha(width=width, height=height)
 			input_length = []
+			label_length = []
 			
 			ran_num = random.randint(0,self.DataNum - 1) # 获取一个随机数
 			for i in range(batch_size):

@@ -72,7 +72,7 @@ class ModelSpeech(): # 语音模型类
 		layer_h8 = Dense(256, activation="softmax", use_bias=True)(layer_h7) # 全连接层
 		layer_h9 = Dense(1417, activation="softmax", use_bias=True)(layer_h8) # 全连接层
 		
-		y_pred = Activation('softmax', name='softmax')(layer_h9)
+		y_pred = Activation('linear', name='Activation0')(layer_h9)
 		model_data = Model(inputs = input_data, outputs = y_pred)
 		#model_data.summary()
 		
@@ -215,7 +215,7 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	#ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
-	ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
+	ms.TrainModel(datapath, epoch = 2, batch_size = 4, save_step = 1)
 	#ms.TestModel(datapath, str_dataset='dev', data_count = 32)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
 	#print('*[提示] 语音识别结果：\n',r)
