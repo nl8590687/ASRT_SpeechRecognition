@@ -42,7 +42,7 @@ class ModelSpeech(): # 语音模型类
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
 		self.AUDIO_FEATURE_LENGTH = 200
-		self._model = self.CreateModel() 
+		self._model, self.base_model = self.CreateModel() 
 		
 		self.data = DataSpeech(datapath)
 		
@@ -100,6 +100,7 @@ class ModelSpeech(): # 语音模型类
 		
 		y_pred = Activation('softmax', name='softmax2')(layer_h12)
 		model_data = Model(inputs = input_data, outputs = y_pred)
+		#self.base_model = model_data
 		#model_data.summary()
 		
 		
@@ -131,7 +132,7 @@ class ModelSpeech(): # 语音模型类
 		self.test_func = K.function([input_data], [y_pred])
 		
 		print('[*提示] 创建模型成功，模型编译成功')
-		return model
+		return model, model_data
 		
 	def ctc_lambda_func(self, args):
 		y_pred, labels, input_length, label_length = args
@@ -178,6 +179,7 @@ class ModelSpeech(): # 语音模型类
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
+		self.base_model.load_weights(filename + '.base')
 		print('*[提示] 已加载模型')
 
 	def SaveModel(self, filename = 'model_speech/speech_model', comment = ''):
@@ -185,6 +187,7 @@ class ModelSpeech(): # 语音模型类
 		保存模型参数
 		'''
 		self._model.save_weights(filename + comment + '.model')
+		self.base_model.save_weights(filename + comment + '.model.base')
 
 	def TestModel(self, datapath, str_dataset='dev', data_count = 32):
 		'''

@@ -50,17 +50,16 @@ class ModelSpeech(): # 语音模型类
 		隐藏层六：全连接层，神经元数量为self.MS_OUTPUT_SIZE，使用softmax作为激活函数，
 		输出层：自定义层，即CTC层，使用CTC的loss作为损失函数，实现连接性时序多输出
 		
-		当前未完成，针对多输出的CTC层尚未实现
 		'''
 		# 每一帧使用13维mfcc特征及其13维一阶差分和13维二阶差分表示，最大信号序列长度为1500
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH, 1))
 		
-		layer_h1 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same')(input_data) # 卷积层
-		layer_h2 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same')(layer_h1) # 卷积层
+		layer_h1 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(input_data) # 卷积层
+		layer_h2 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h1) # 卷积层
 		layer_h3 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h2) # 池化层
 		#layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
-		layer_h4 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same')(layer_h3) # 卷积层
-		layer_h5 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same')(layer_h4) # 卷积层
+		layer_h4 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h3) # 卷积层
+		layer_h5 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h4) # 卷积层
 		layer_h6 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h5) # 池化层
 		
 		#test=Model(inputs = input_data, outputs = layer_h6)
@@ -69,10 +68,10 @@ class ModelSpeech(): # 语音模型类
 		layer_h7 = Reshape((400, 3200))(layer_h6) #Reshape层
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
 		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
-		layer_h8 = Dense(256, activation="softmax", use_bias=True)(layer_h7) # 全连接层
-		layer_h9 = Dense(1417, activation="softmax", use_bias=True)(layer_h8) # 全连接层
+		layer_h8 = Dense(256, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h7) # 全连接层
+		layer_h9 = Dense(1417, use_bias=True, kernel_initializer='he_normal')(layer_h8) # 全连接层
 		
-		y_pred = Activation('linear', name='Activation0')(layer_h9)
+		y_pred = Activation('softmax', name='Activation0')(layer_h9)
 		model_data = Model(inputs = input_data, outputs = y_pred)
 		#model_data.summary()
 		
@@ -95,11 +94,11 @@ class ModelSpeech(): # 语音模型类
 		model.summary()
 		
 		# clipnorm seems to speeds up convergence
-		sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
-		#ada_d = Adadelta(lr = 0.0001, rho = 0.95, epsilon = 1e-06)
+		#sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
+		ada_d = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
 		
-		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd, metrics=["accuracy"])
-		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d, metrics=['accuracy'])
+		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd, metrics=["accuracy"])
+		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d, metrics=['accuracy'])
 		
 		
 		# captures output of softmax so we can decode the output during visualization
@@ -111,7 +110,7 @@ class ModelSpeech(): # 语音模型类
 	def ctc_lambda_func(self, args):
 		y_pred, labels, input_length, label_length = args
 		
-		y_pred = y_pred[:, 1:-2, :]
+		y_pred = y_pred[:, 2:, :]
 		return K.ctc_batch_cost(labels, y_pred, input_length, label_length)
 	
 	
