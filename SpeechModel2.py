@@ -116,7 +116,7 @@ class ModelSpeech(): # 语音模型类
 	
 	
 	
-	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/LSTM_CNN_model'):
+	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/speech_model2'):
 		'''
 		训练模型
 		参数：
@@ -146,13 +146,13 @@ class ModelSpeech(): # 语音模型类
 				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step * save_step))
 				
 				
-	def LoadModel(self,filename='model_speech/LSTM_CNN_model.model'):
+	def LoadModel(self,filename='model_speech/speech_model2.model'):
 		'''
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
 
-	def SaveModel(self,filename='model_speech/LSTM_CNN_model',comment=''):
+	def SaveModel(self,filename='model_speech/speech_model2',comment=''):
 		'''
 		保存模型参数
 		'''

@@ -321,12 +321,12 @@ class ModelSpeech(): # 语音模型类
 		print(shape)
 		
 		
-		#print(test_input_data)
+		print('test_input_data:',test_input_data)
 		y_p = self.test_func([test_input_data])
 		print(type(y_p))
 		print('y_p:',y_p)
 		
-		for j in range(0,200):
+		for j in range(0,0):
 			mean = sum(y_p[0][0][j])/len(y_p[0][0][j])
 			print('max y_p:',max(y_p[0][0][j]),'min y_p:',min(y_p[0][0][j]),'mean y_p:',mean,'mid y_p:',y_p[0][0][j][100])
 			print('argmin:',np.argmin(y_p[0][0][j]),'argmax:',np.argmax(y_p[0][0][j]))
@@ -338,15 +338,30 @@ class ModelSpeech(): # 语音模型类
 		
 		
 		print(K.is_sparse(y_p))
-		y_p = K.to_dense(y_p)
+		#y_p = K.to_dense(y_p)
 		print(K.is_sparse(y_p))
+		
+		_list = []
+		for i in y_p:
+			list_i = []
+			for j in i:
+				list_j = []
+				for k in j:
+					list_j.append(np.argmin(k))
+				list_i.append(list_j)
+			_list .append(list_i)
+		
+		#y_p = np.array(_list, dtype = np.float)
+		y_p = _list
+		#print(y_p,type(y_p),y_p.shape)
 		#y_p = tf.sparse_to_dense(y_p,(2,397),1417,0)
 		print(test_input_length.T)
 		test_input_length = test_input_length.reshape(2,1)
 		func_in_len = self.test_func_input_length([test_input_length])
 		print(type(func_in_len))
+		print(func_in_len)
 		#in_len = np.ones(shape[0]) * shape[1]
-		ctc_decoded = K.ctc_decode(y_p, input_length = func_in_len)
+		ctc_decoded = K.ctc_decode(y_p[0][0], input_length = tf.squeeze(func_in_len[0][0][0]))
 		
 		print(ctc_decoded)
 		#ctc_decoded = ctc_decoded[0][0]

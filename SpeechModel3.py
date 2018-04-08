@@ -132,7 +132,7 @@ class ModelSpeech(): # 语音模型类
 		#y_pred, labels, input_length, label_length = args
 		y_true, y_pred = args
 		#print(y_pred)
-		y_pred = y_pred[:, :, 0:-2]
+		y_pred = y_pred[:, 2:, :]
 		#return K.ctc_decode(y_pred,self.MS_OUTPUT_SIZE)
 		return K.ctc_batch_cost(y_true, y_pred, y_true.shape[1], y_pred.shape[1])
 	
