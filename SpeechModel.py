@@ -33,7 +33,7 @@ class ModelSpeech(): # 语音模型类
 	def __init__(self, datapath):
 		'''
 		初始化
-		默认输出的拼音的表示大小是1283，即1282个拼音+1个空白块
+		默认输出的拼音的表示大小是1417，即1416个拼音+1个空白块
 		'''
 		MS_OUTPUT_SIZE = 1417
 		self.MS_OUTPUT_SIZE = MS_OUTPUT_SIZE # 神经网络最终输出的每一个字符向量维度的大小
@@ -62,37 +62,37 @@ class ModelSpeech(): # 语音模型类
 		# 每一帧使用13维mfcc特征及其13维一阶差分和13维二阶差分表示，最大信号序列长度为1500
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH))
 		
-		layer_h1_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, padding="valid")(input_data) # 卷积层
+		layer_h1_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(input_data) # 卷积层
 		#layer_h1_a = Activation('relu', name='relu0')(layer_h1_c)
 		layer_h1_a = LeakyReLU(alpha=0.3)(layer_h1_c) # 高级激活层
 		layer_h1 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h1_a) # 池化层
 		
 		layer_h2 = BatchNormalization()(layer_h1)
 		
-		layer_h3_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, padding="valid")(layer_h2) # 卷积层
+		layer_h3_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(layer_h2) # 卷积层
 		layer_h3_a = LeakyReLU(alpha=0.3)(layer_h3_c) # 高级激活层
 		#layer_h3_a = Activation('relu', name='relu1')(layer_h3_c)
 		layer_h3 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h3_a) # 池化层
 		
 		layer_h4 = Dropout(0.1)(layer_h3) # 随机中断部分神经网络连接，防止过拟合
 		
-		layer_h5 = Dense(256, use_bias=True, activation="softmax")(layer_h4) # 全连接层
-		layer_h6 = Dense(256, use_bias=True, activation="softmax")(layer_h5) # 全连接层
+		layer_h5 = Dense(256, use_bias=True, activation="relu", kernel_initializer='he_normal')(layer_h4) # 全连接层
+		layer_h6 = Dense(256, use_bias=True, activation="relu", kernel_initializer='he_normal')(layer_h5) # 全连接层
 		#layer_h4 = Activation('softmax', name='softmax0')(layer_h4_d1)
 		
-		layer_h7 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h6) # LSTM层
-		layer_h8 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h7) # LSTM层
-		layer_h9 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h8) # LSTM层
-		layer_h10 = LSTM(256, activation='softmax', use_bias=True, return_sequences=True)(layer_h9) # LSTM层
+		layer_h7 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h6) # LSTM层
+		layer_h8 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h7) # LSTM层
+		layer_h9 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h8) # LSTM层
+		layer_h10 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h9) # LSTM层
 		#layer_h10 = Activation('softmax', name='softmax1')(layer_h9)
 		
 		layer_h10_dropout = Dropout(0.1)(layer_h10) # 随机中断部分神经网络连接，防止过拟合
 		
-		layer_h11 = Dense(512, use_bias=True, activation="softmax")(layer_h10_dropout) # 全连接层
-		layer_h12 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, activation="softmax")(layer_h11) # 全连接层
+		layer_h11 = Dense(512, use_bias=True, activation="relu", kernel_initializer='he_normal')(layer_h10_dropout) # 全连接层
+		layer_h12 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h11) # 全连接层
 		#layer_h6 = Dense(1283, activation="softmax")(layer_h5) # 全连接层
 		
-		y_pred = Activation('softmax', name='softmax2')(layer_h12)
+		y_pred = Activation('softmax', name='softmax')(layer_h12)
 		model_data = Model(inputs = input_data, outputs = y_pred)
 		#model_data.summary()
 		

@@ -197,7 +197,7 @@ class DataSpeech():
 		labels = []
 		for i in range(0,batch_size):
 			#input_length.append([1500])
-			labels.append([1e-12]) # 最终的ctc loss结果，0代表着没有ctc上的loss
+			labels.append([0]) # 最终的ctc loss结果，0代表着没有ctc上的loss
 		
 		
 		
@@ -217,7 +217,7 @@ class DataSpeech():
 				
 				#input_length.append(data_input.shape[1] // 4 - 2)
 				#print(data_input.shape[0],len(data_input))
-				input_length.append(data_input.shape[0] // 4 - 3)
+				input_length.append(data_input.shape[0] // 4)
 				#print(data_input, data_labels)
 				#print('data_input长度:',len(data_input))
 				

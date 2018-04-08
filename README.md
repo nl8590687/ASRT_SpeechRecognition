@@ -7,7 +7,7 @@
 
 This project uses keras, TensorFlow based on LSTM, CNN and CTC to implement. 
 
-本项目目前已经可以进行训练了，不过训练时loss一直高居不下。
+本项目目前已经可以正常进行训练了，现在的这几个神经网络模型正在准备评估哪一个模型的效果最好。
 
 本项目运行请执行：
 ```shell

@@ -193,7 +193,7 @@ class DataSpeech():
 			for i in range(batch_size):
 				data_input, data_labels = self.GetData((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
 				
-				input_length.append(data_input.shape[0] // 4 - 2)
+				input_length.append(data_input.shape[0] // 4)
 				#print(data_input, data_labels)
 				#print('data_input长度:',len(data_input))
 				
