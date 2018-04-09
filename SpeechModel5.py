@@ -64,41 +64,45 @@ class ModelSpeech(): # 语音模型类
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH))
 		
 		layer_h1_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(input_data) # 卷积层
-		#layer_h1_a = Activation('relu', name='relu0')(layer_h1_c)
 		layer_h1_a = LeakyReLU(alpha=0.3)(layer_h1_c) # 高级激活层
-		layer_h1 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h1_a) # 池化层
+		layer_h2_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(layer_h1_a) # 卷积层
+		#layer_h1_a = Activation('relu', name='relu0')(layer_h1_c)
+		layer_h2_a = LeakyReLU(alpha=0.3)(layer_h2_c) # 高级激活层
+		layer_h3 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h2_a) # 池化层
 		
-		layer_h2 = BatchNormalization()(layer_h1)
+		layer_h4 = BatchNormalization()(layer_h3)
 		
-		layer_h3_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(layer_h2) # 卷积层
-		layer_h3_a = LeakyReLU(alpha=0.3)(layer_h3_c) # 高级激活层
+		layer_h4_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(layer_h4) # 卷积层
+		layer_h4_a = LeakyReLU(alpha=0.3)(layer_h4_c) # 高级激活层
+		layer_h5_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(layer_h4_a) # 卷积层
+		layer_h5_a = LeakyReLU(alpha=0.3)(layer_h5_c) # 高级激活层
 		#layer_h3_a = Activation('relu', name='relu1')(layer_h3_c)
-		layer_h3 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h3_a) # 池化层
+		layer_h6 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h5_a) # 池化层
 		
 		layer_h4 = Dropout(0.1)(layer_h3) # 随机中断部分神经网络连接，防止过拟合
 		
-		layer_h5 = Dense(256, use_bias=True, kernel_initializer='he_normal', activation="relu")(layer_h4) # 全连接层
-		layer_h6 = Dense(256, use_bias=True, kernel_initializer='he_normal', activation="relu")(layer_h5) # 全连接层
+		layer_h7 = Dense(256, use_bias=True, kernel_initializer='he_normal', activation="relu")(layer_h6) # 全连接层
+		layer_h8 = Dense(256, use_bias=True, kernel_initializer='he_normal', activation="relu")(layer_h7) # 全连接层
 		#layer_h4 = Activation('softmax', name='softmax0')(layer_h4_d1)
 		
-		layer_h7a = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h6) # LSTM层
-		layer_h7b = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, go_backwards=True, kernel_initializer='he_normal')(layer_h6) # LSTM层
+		layer_h8a = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h8) # LSTM层
+		layer_h8b = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, go_backwards=True, kernel_initializer='he_normal')(layer_h8) # LSTM层
 		
-		layer_h7_merged = add([layer_h7a, layer_h7b])
+		layer_h8_merged = add([layer_h8a, layer_h8b])
 		
-		layer_h8a = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h7_merged) # LSTM层
-		layer_h8b = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, go_backwards=True, kernel_initializer='he_normal')(layer_h7_merged) # LSTM层
+		layer_h9a = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h8_merged) # LSTM层
+		layer_h9b = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, go_backwards=True, kernel_initializer='he_normal')(layer_h8_merged) # LSTM层
 		
-		layer_h8 = concatenate([layer_h8a, layer_h8b])
+		layer_h9 = concatenate([layer_h9a, layer_h9b])
 		#layer_h10 = Activation('softmax', name='softmax1')(layer_h9)
 		
 		#layer_h10_dropout = Dropout(0.1)(layer_h10) # 随机中断部分神经网络连接，防止过拟合
 		
 		#layer_h11 = Dense(512, use_bias=True, activation="softmax")(layer_h8) # 全连接层
-		layer_h12 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h8) # 全连接层
+		layer_h10 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h9) # 全连接层
 		#layer_h6 = Dense(1283, activation="softmax")(layer_h5) # 全连接层
 		
-		y_pred = Activation('softmax', name='softmax2')(layer_h12)
+		y_pred = Activation('softmax', name='softmax2')(layer_h10)
 		model_data = Model(inputs = input_data, outputs = y_pred)
 		#self.base_model = model_data
 		#model_data.summary()
