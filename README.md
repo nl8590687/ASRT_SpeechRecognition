@@ -40,11 +40,11 @@ Python的依赖库
 ## Data Sets 数据集
 清华大学THCHS30中文语音数据集
 
-wav <http://data.cslt.org/thchs30/zip/wav.tgz>
+data_thchs30.tgz <http://cn-mirror.openslr.org/resources/18/data_thchs30.tgz>
 
-doc <http://data.cslt.org/thchs30/zip/doc.tgz>
+test-noise.tgz <http://cn-mirror.openslr.org/resources/18/test-noise.tgz>
 
-lm <http://data.cslt.org/thchs30/zip/lm.tgz>
+resource.tgz <http://cn-mirror.openslr.org/resources/18/resource.tgz>
 
 特别鸣谢！感谢前辈们的公开语音数据集
 
