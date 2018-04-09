@@ -172,7 +172,67 @@ class ModelSpeech(): # 语音模型类
 			print(r)
 		except StopIteration:
 			print('[Error] Model Test Error. please check data format.')
-
+	
+	def RecognizeSpeech(self, wavsignal, fs):
+		'''
+		最终做语音识别用的函数，识别一个wav序列的语音
+		不过这里现在还有bug
+		'''
+		
+		#data = self.data
+		data = DataSpeech('E:\\语音数据集')
+		data.LoadDataList('dev')
+		# 获取输入特征
+		#data_input = data.GetMfccFeature(wavsignal, fs)
+		data_input = data.GetFrequencyFeature(wavsignal, fs)
+		input_length = len(data_input)
+		input_length = input_length // 4
+		
+		data_input = np.array(data_input, dtype = np.float)
+		in_len = np.zeros((1),dtype = np.int32)
+		print(in_len.shape)
+		in_len[0] = input_length
+		
+		
+		batch_size = 1 
+		x_in = np.zeros((batch_size, 1600, 200), dtype=np.float)
+		
+		for i in range(batch_size):
+			x_in[i,0:len(data_input)] = data_input
+		
+		
+		
+		base_pred = self.base_model.predict(x = x_in)
+		print('base_pred:\n', base_pred)
+		
+		
+		base_pred =base_pred[:, 2:, :]
+		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=64, top_paths=1)
+		print('r', r)
+		
+		
+		r1 = K.get_value(r[0][0])
+		print('r1', r1)
+		
+		print('r0', r[1])
+		r2 = K.get_value(r[1])
+		print(r2)
+		print('解码完成')
+		list_symbol_dic = data.list_symbol # 获取拼音列表
+		
+		return r1
+		pass
+		
+	def RecognizeSpeech_FromFile(self, filename):
+		'''
+		最终做语音识别用的函数，识别指定文件名的语音
+		'''
+		
+		wavsignal,fs = read_wav_data(filename)
+		return self.RecognizeSpeech(wavsignal, fs)
+		
+		pass
+		
 	def Predict(self,x):
 		'''
 		预测结果
