@@ -41,7 +41,7 @@ class ModelSpeech(): # 语音模型类
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
 		self.AUDIO_FEATURE_LENGTH = 200
-		self._model = self.CreateModel() 
+		self._model, self.base_model = self.CreateModel() 
 		
 		self.data = DataSpeech(datapath)
 		
@@ -125,12 +125,12 @@ class ModelSpeech(): # 语音模型类
 		self.test_func = K.function([input_data], [y_pred])
 		
 		print('[*提示] 创建模型成功，模型编译成功')
-		return model
+		return model, model_data
 		
 	def ctc_lambda_func(self, args):
 		y_pred, labels, input_length, label_length = args
 		#print(y_pred)
-		y_pred = y_pred[:, :, 0:-2]
+		y_pred = y_pred[:, 2:,:]
 		#return K.ctc_decode(y_pred,self.MS_OUTPUT_SIZE)
 		return K.ctc_batch_cost(labels, y_pred, input_length, label_length)
 	
@@ -172,6 +172,7 @@ class ModelSpeech(): # 语音模型类
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
+		self.base_model.load_weights(filename + '.base')
 		print('*[提示] 已加载模型')
 
 	def SaveModel(self, filename = 'model_speech/speech_model', comment = ''):
@@ -179,6 +180,7 @@ class ModelSpeech(): # 语音模型类
 		保存模型参数
 		'''
 		self._model.save_weights(filename + comment + '.model')
+		self.base_model.save_weights(filename + comment + '.model.base')
 
 	def TestModel(self, datapath, str_dataset='dev', data_count = 32):
 		'''
@@ -243,61 +245,64 @@ class ModelSpeech(): # 语音模型类
 		最终做语音识别用的函数，识别一个wav序列的语音
 		不过这里现在还有bug
 		'''
-		
 		#data = self.data
 		data = DataSpeech('E:\\语音数据集')
 		data.LoadDataList('dev')
 		# 获取输入特征
 		#data_input = data.GetMfccFeature(wavsignal, fs)
 		data_input = data.GetFrequencyFeature(wavsignal, fs)
+		input_length = len(data_input)
+		input_length = input_length // 4
 		
-		arr_zero = np.zeros((1, 200), dtype=np.int16) #一个全是0的行向量
+		data_input = np.array(data_input, dtype = np.float)
+		in_len = np.zeros((1),dtype = np.int32)
+		print(in_len.shape)
+		in_len[0] = input_length -2
 		
-		#import matplotlib.pyplot as plt
-		#plt.subplot(111)
-		#plt.imshow(data_input, cmap=plt.get_cmap('gray'))
-		#plt.show()
 		
-		#while(len(data_input)<1600): #长度不够时补全到1600
-		#	data_input = np.row_stack((data_input,arr_zero))
-		#print(len(data_input))
+		batch_size = 1 
+		x_in = np.zeros((batch_size, 1600, 200), dtype=np.float)
 		
-		list_symbol = data.list_symbol # 获取拼音列表
-		
-		labels = [ list_symbol[0] ]
-		#while(len(labels) < 64):
-		#	labels.append('')
-			
-		labels_num = []
-		for i in labels:
-			labels_num.append(data.SymbolToNum(i))
+		for i in range(batch_size):
+			x_in[i,0:len(data_input)] = data_input
 		
 		
 		
-		data_input = np.array(data_input, dtype=np.int16)
-		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1])
+		base_pred = self.base_model.predict(x = x_in)
+		print('base_pred:\n', base_pred)
 		
-		labels_num = np.array(labels_num, dtype=np.int16)
-		labels_num = labels_num.reshape(labels_num.shape[0])
 		
-		input_length = np.array([data_input.shape[0] // 4 - 3], dtype=np.int16)
-		input_length = np.array(input_length)
-		input_length = input_length.reshape(input_length.shape[0])
+		y_p = base_pred
+		print('base_pred0:\n',base_pred[0][0].shape)
 		
-		label_length = np.array([labels_num.shape[0]], dtype=np.int16)
-		label_length = np.array(label_length)
-		label_length = label_length.reshape(label_length.shape[0])
+		#for j in range(200):
+		#	mean = np.sum(y_p[0][j]) / y_p[0][j].shape[0]
+		#	print('max y_p:',np.max(y_p[0][j]),'min y_p:',np.min(y_p[0][j]),'mean y_p:',mean,'mid y_p:',y_p[0][j][100])
+		#	print('argmin:',np.argmin(y_p[0][j]),'argmax:',np.argmax(y_p[0][j]))
+		#	count=0
+		#	for i in range(y_p[0][j].shape[0]):
+		#		if(y_p[0][j][i] < mean):
+		#			count += 1
+		#	print('count:',count)
 		
-		x = [data_input, labels_num, input_length, label_length]
-		#x = next(data.data_genetator(1, self.AUDIO_LENGTH))
-		#x = kr.utils.np_utils.to_categorical(x)
+		base_pred =base_pred[:, 2:, :]
+		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=64, top_paths=1)
+		print('r', r)
+		#r = K.cast(r[0][0], dtype='float32')
+		#print('r1', r)
+		#print('解码完成')
 		
-		print(x)
-		x=np.array(x)
+		r1 = K.get_value(r[0][0])
+		print('r1', r1)
 		
-		pred = self._model.predict(x=x)
-		#pred = self._model.predict_on_batch([data_input, labels_num, input_length, label_length])
-		return [labels,pred]
+		print('r0', r[1])
+		r2 = K.get_value(r[1])
+		print(r2)
+		print('解码完成')
+		list_symbol_dic = data.list_symbol # 获取拼音列表
+		
+		print('解码完成')
+		return r1
 		
 		pass
 		

@@ -6,6 +6,8 @@
 import platform as plat
 import os
 
+from general_function.file_wav import *
+
 # LSTM_CNN
 import keras as kr
 import numpy as np
@@ -191,13 +193,14 @@ class ModelSpeech(): # 语音模型类
 		input_length = input_length // 4
 		
 		data_input = np.array(data_input, dtype = np.float)
+		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
 		in_len = np.zeros((1),dtype = np.int32)
 		print(in_len.shape)
 		in_len[0] = input_length
 		
 		
 		batch_size = 1 
-		x_in = np.zeros((batch_size, 1600, 200), dtype=np.float)
+		x_in = np.zeros((batch_size, 1600, 200, 1), dtype=np.float)
 		
 		for i in range(batch_size):
 			x_in[i,0:len(data_input)] = data_input
@@ -209,7 +212,7 @@ class ModelSpeech(): # 语音模型类
 		
 		
 		base_pred =base_pred[:, 2:, :]
-		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=64, top_paths=1)
+		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
 		print('r', r)
 		
 		
@@ -221,8 +224,15 @@ class ModelSpeech(): # 语音模型类
 		print(r2)
 		print('解码完成')
 		list_symbol_dic = data.list_symbol # 获取拼音列表
+		r1=r1[0]
 		
-		return r1
+		r_str=[]
+		for i in r1:
+			r_str.append(list_symbol_dic[i])
+		
+		print(r_str)
+		
+		return r_str
 		pass
 		
 	def RecognizeSpeech_FromFile(self, filename):
@@ -275,8 +285,8 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	#ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
-	ms.TrainModel(datapath, epoch = 2, batch_size = 4, save_step = 1)
+	ms.LoadModel(modelpath + '2test\\speech_model2_e_0_step_1.model')
+	#ms.TrainModel(datapath, epoch = 2, batch_size = 4, save_step = 1)
 	#ms.TestModel(datapath, str_dataset='dev', data_count = 32)
-	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	#print('*[提示] 语音识别结果：\n',r)
+	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	print('*[提示] 语音识别结果：\n',r)
