@@ -402,7 +402,7 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + 'speech_model5_e_0_step_1.model')
+	ms.LoadModel(modelpath + '5test\\speech_model_e_0_step_100.model')
 	#ms.TrainModel(datapath, epoch = 2, batch_size = 16, save_step = 1)
 	#ms.TestModel(datapath, str_dataset='dev', data_count = 32)
 	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')

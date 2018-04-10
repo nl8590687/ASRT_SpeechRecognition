@@ -117,7 +117,7 @@ class DataSpeech():
 				#print('wavsignal[0][j]:\n',wavsignal[0][j])
 			#data_line = abs(fft(data_line)) / len(wavsignal[0])
 			data_line = fft(data_line) / len(wavsignal[0])
-			data_input.append(data_line[0:len(data_line)//2])
+			data_input.append(data_line[0:len(data_line)//2]) # 除以2是取一半数据，因为是对称的
 			#print('data_line:\n',data_line)
 		return data_input
 		
