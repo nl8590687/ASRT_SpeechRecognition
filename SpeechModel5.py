@@ -7,7 +7,8 @@ import platform as plat
 import os
 
 from general_function.file_wav import *
-import numpy as np
+from general_function.file_dict import *
+
 
 # LSTM_CNN
 import keras as kr
@@ -259,11 +260,11 @@ class ModelSpeech(): # 语音模型类
 		不过这里现在还有bug
 		'''
 		#data = self.data
-		data = DataSpeech('E:\\语音数据集')
-		data.LoadDataList('dev')
+		#data = DataSpeech('E:\\语音数据集')
+		#data.LoadDataList('dev')
 		# 获取输入特征
 		#data_input = data.GetMfccFeature(wavsignal, fs)
-		data_input = data.GetFrequencyFeature(wavsignal, fs)
+		data_input = GetFrequencyFeature(wavsignal, fs)
 		input_length = len(data_input)
 		input_length = input_length // 4
 		
@@ -327,79 +328,18 @@ class ModelSpeech(): # 语音模型类
 		r2 = K.get_value(r[1])
 		print(r2)
 		print('解码完成')
-		list_symbol_dic = data.list_symbol # 获取拼音列表
+		list_symbol_dic = GetSymbolList(self.datapath) # 获取拼音列表
 		
-		print('解码完成')
-		return r1
+		r1=r1[0]
 		
+		r_str=[]
+		for i in r1:
+			r_str.append(list_symbol_dic[i])
 		
+		#print(r_str)
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		#data = self.data
-		#data = DataSpeech('E:\\语音数据集')
-		#data.LoadDataList('dev')
-		# 获取输入特征
-		#data_input = data.GetMfccFeature(wavsignal, fs)
-		#data_input = data.GetFrequencyFeature(wavsignal, fs)
-		
-		#arr_zero = np.zeros((1, 200), dtype=np.int16) #一个全是0的行向量
-		
-		#import matplotlib.pyplot as plt
-		#plt.subplot(111)
-		#plt.imshow(data_input, cmap=plt.get_cmap('gray'))
-		#plt.show()
-		
-		#while(len(data_input)<1600): #长度不够时补全到1600
-		#	data_input = np.row_stack((data_input,arr_zero))
-		#print(len(data_input))
-		
-		#list_symbol = data.list_symbol # 获取拼音列表
-		
-		#labels = [ list_symbol[0] ]
-		#while(len(labels) < 64):
-		#	labels.append('')
-			
-		#labels_num = []
-		#for i in labels:
-		#	labels_num.append(data.SymbolToNum(i))
-		
-		
-		
-		#data_input = np.array(data_input, dtype=np.int16)
-		#data_input = data_input.reshape(data_input.shape[0],data_input.shape[1])
-		
-		#labels_num = np.array(labels_num, dtype=np.int16)
-		#labels_num = labels_num.reshape(labels_num.shape[0])
-		
-		#input_length = np.array([data_input.shape[0] // 4 - 3], dtype=np.int16)
-		#input_length = np.array(input_length)
-		#input_length = input_length.reshape(input_length.shape[0])
-		
-		#label_length = np.array([labels_num.shape[0]], dtype=np.int16)
-		#label_length = np.array(label_length)
-		#label_length = label_length.reshape(label_length.shape[0])
-		
-		#x = [data_input, labels_num, input_length, label_length]
-		#x = next(data.data_genetator(1, self.AUDIO_LENGTH))
-		#x = kr.utils.np_utils.to_categorical(x)
-		
-		#print(x)
-		#x=np.array(x)
-		
-		#pred = self._model.predict(x=x)
-		#pred = self._model.predict_on_batch([data_input, labels_num, input_length, label_length])
-		#return [labels,pred]
-		
+		return r_str
+
 		pass
 		
 	def RecognizeSpeech_FromFile(self, filename):

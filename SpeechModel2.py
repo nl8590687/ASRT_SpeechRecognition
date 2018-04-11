@@ -184,8 +184,8 @@ class ModelSpeech(): # 语音模型类
 		'''
 		
 		#data = self.data
-		data = DataSpeech('E:\\语音数据集')
-		data.LoadDataList('dev')
+		#data = DataSpeech('E:\\语音数据集')
+		#data.LoadDataList('dev')
 		# 获取输入特征
 		#data_input = data.GetMfccFeature(wavsignal, fs)
 		data_input = data.GetFrequencyFeature(wavsignal, fs)
@@ -195,8 +195,8 @@ class ModelSpeech(): # 语音模型类
 		data_input = np.array(data_input, dtype = np.float)
 		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
 		in_len = np.zeros((1),dtype = np.int32)
-		print(in_len.shape)
-		in_len[0] = input_length
+		#print(in_len.shape)
+		in_len[0] = input_length - 2
 		
 		
 		batch_size = 1 
@@ -208,29 +208,29 @@ class ModelSpeech(): # 语音模型类
 		
 		
 		base_pred = self.base_model.predict(x = x_in)
-		print('base_pred:\n', base_pred)
+		#print('base_pred:\n', base_pred)
 		
 		
 		base_pred =base_pred[:, 2:, :]
 		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
-		print('r', r)
+		#print('r', r)
 		
 		
 		r1 = K.get_value(r[0][0])
-		print('r1', r1)
+		#print('r1', r1)
 		
-		print('r0', r[1])
+		#print('r0', r[1])
 		r2 = K.get_value(r[1])
-		print(r2)
-		print('解码完成')
-		list_symbol_dic = data.list_symbol # 获取拼音列表
+		#print(r2)
+		#print('解码完成')
+		list_symbol_dic = GetSymbolList(self.datapath) # 获取拼音列表
 		r1=r1[0]
 		
 		r_str=[]
 		for i in r1:
 			r_str.append(list_symbol_dic[i])
 		
-		print(r_str)
+		#print(r_str)
 		
 		return r_str
 		pass

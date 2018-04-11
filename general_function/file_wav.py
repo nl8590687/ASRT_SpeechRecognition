@@ -7,6 +7,12 @@ import numpy as np
 import matplotlib.pyplot as plt  
 import math
 
+from python_speech_features import mfcc
+from python_speech_features import delta
+from python_speech_features import logfbank
+
+from scipy.fftpack import fft
+
 def read_wav_data(filename):
 	'''
 	读取一个wav文件，返回声音信号的时域谱矩阵和播放时间
@@ -23,7 +29,36 @@ def read_wav_data(filename):
 	wave_data = wave_data.T # 将矩阵转置
 	#wave_data = wave_data 
 	return wave_data, framerate  
+
+def GetMfccFeature(wavsignal, fs):
+	# 获取输入特征
+	feat_mfcc=mfcc(wavsignal[0],fs)
+	feat_mfcc_d=delta(feat_mfcc,2)
+	feat_mfcc_dd=delta(feat_mfcc_d,2)
+	# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵
+	wav_feature = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
+	return wav_feature
+
+def GetFrequencyFeature(wavsignal, fs):
+	# wav波形 加时间窗以及时移10ms
+	time_window = 25 # 单位ms
+	data_input = []
 	
+	#print(int(len(wavsignal[0])/fs*1000 - time_window) // 10)
+	for i in range(0,int(len(wavsignal[0])/fs*1000 - time_window) // 10 ):
+		p_start = i * 160
+		p_end = p_start + 400
+		data_line = []
+		
+		for j in range(p_start, p_end):
+			data_line.append(wavsignal[0][j])
+			#print('wavsignal[0][j]:\n',wavsignal[0][j])
+		#data_line = abs(fft(data_line)) / len(wavsignal[0])
+		data_line = fft(data_line) / len(wavsignal[0])
+		data_input.append(data_line[0:len(data_line)//2]) # 除以2是取一半数据，因为是对称的
+		#print('data_line:\n',data_line)
+	return data_input
+
 def wav_scale(energy):
 	'''
 	语音信号能量归一化

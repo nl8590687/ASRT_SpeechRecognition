@@ -5,30 +5,35 @@ import platform as plat
 
 import numpy as np
 from general_function.file_wav import *
-
-from python_speech_features import mfcc
-from python_speech_features import delta
-from python_speech_features import logfbank
+from general_function.file_dict import *
 
 import random
 #import scipy.io.wavfile as wav
-from scipy.fftpack import fft
+
 
 import matplotlib.pyplot as plt 
 
 class DataSpeech():
 	
 	
-	def __init__(self,path):
+	def __init__(self, path, type, LoadToMem = False, MemWavCount = 10000):
 		'''
 		初始化
 		参数：
 			path：数据存放位置根目录
+			LoadToMem: 是否将大量数据一次性读入内存
+			MemWavCount: 一次性载入内存的数据数量
+			
+			type：选取的数据集类型
+				train 训练集
+				dev 开发集
+				test 测试集
 		'''
 		
 		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 		
 		self.datapath = path; # 数据存放位置根目录
+		self.type = type # 数据类型，分为三种：训练集(train)、验证集(dev)、测试集(test)
 		
 		self.slash = ''
 		if(system_type == 'Windows'):
@@ -44,32 +49,38 @@ class DataSpeech():
 		
 		self.dic_wavlist = {}
 		self.dic_symbollist = {}
-		self.SymbolNum = 0 # 记录拼音符号数量
-		self.list_symbol = self.GetSymbolList() # 全部汉语拼音符号列表
+		
+		self.list_symbol = GetSymbolList(self.datapath) # 全部汉语拼音符号列表
+		self.SymbolNum = len(self.list_symbol) # 记录拼音符号数量
+		
 		self.list_wavnum = [] # wav文件标记列表
 		self.list_symbolnum = [] # symbol标记列表
 		
 		self.DataNum = 0 # 记录数据量
+		self.LoadDataList()
 		
+		self.wavs_data = []
+		self.LoadToMem = LoadToMem
+		self.MemWavCount = MemWavCount
+		if(LoadToMem == True):
+			print('*[提示] 正在准备将全部数据加载到内存...Count: ', MemWavCount)
+			self.LoadWavData()
+			pass
 		pass
 	
-	def LoadDataList(self,type):
+	def LoadDataList(self):
 		'''
 		加载用于计算的数据列表
-		参数：
-			type：选取的数据集类型
-				train 训练集
-				dev 开发集
-				test 测试集
+		
 		'''
 		# 设定选取哪一项作为要使用的数据集
-		if(type=='train'):
+		if(self.type=='train'):
 			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'train.wav.lst'
 			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'train.syllable.txt'
-		elif(type=='dev'):
+		elif(self.type=='dev'):
 			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'cv.wav.lst'
 			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'cv.syllable.txt'
-		elif(type=='test'):
+		elif(self.type=='test'):
 			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'test.wav.lst'
 			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'test.syllable.txt'
 		else:
@@ -80,6 +91,23 @@ class DataSpeech():
 		self.dic_symbollist,self.list_symbolnum = get_wav_symbol(self.datapath + filename_symbollist)
 		self.DataNum = self.GetDataNum()
 	
+	def LoadWavData(self):
+		'''
+		将所有数据读入内存
+		'''
+		for i in range(self.MemWavCount):
+			# 读取一个文件
+			filename = self.dic_wavlist[self.list_wavnum[i]]
+			
+			if('Windows' == plat.system()):
+				filename=filename.replace('/','\\') # windows系统下需要执行这一行，对文件路径做特别处理
+		
+			wavsignal,fs = read_wav_data(self.datapath+filename)
+			self.wavs_data.append([wavsignal,fs])
+			
+			print('*[提示] 全部数据已经加载到内存')
+		pass
+		
 	def GetDataNum(self):
 		'''
 		获取数据的数量
@@ -92,36 +120,31 @@ class DataSpeech():
 		
 		return DataNum
 		
-	def GetMfccFeature(self, wavsignal, fs):
-		# 获取输入特征
-		feat_mfcc=mfcc(wavsignal[0],fs)
-		feat_mfcc_d=delta(feat_mfcc,2)
-		feat_mfcc_dd=delta(feat_mfcc_d,2)
-		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵
-		wav_feature = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
-		return wav_feature
-	
-	def GetFrequencyFeature(self, wavsignal, fs):
-		# wav波形 加时间窗以及时移10ms
-		time_window = 25 # 单位ms
-		data_input = []
+	def GetDataFromMem(self, n_start, n_amount = 1):
+		'''
+		从内存中的self.wavs_data里读取数据
+		'''
+		assert len(self.wavs_data) > 0
 		
-		#print(int(len(wavsignal[0])/fs*1000 - time_window) // 10)
-		for i in range(0,int(len(wavsignal[0])/fs*1000 - time_window) // 10 ):
-			p_start = i * 160
-			p_end = p_start + 400
-			data_line = []
-			
-			for j in range(p_start, p_end):
-				data_line.append(wavsignal[0][j])
-				#print('wavsignal[0][j]:\n',wavsignal[0][j])
-			#data_line = abs(fft(data_line)) / len(wavsignal[0])
-			data_line = fft(data_line) / len(wavsignal[0])
-			data_input.append(data_line[0:len(data_line)//2]) # 除以2是取一半数据，因为是对称的
-			#print('data_line:\n',data_line)
-		return data_input
+		[wavsignal,fs] = self.wavs_data[n_start]
 		
-	def GetData(self,n_start,n_amount=1):
+		data_input = GetFrequencyFeature(wavsignal, fs)
+		
+		# 获取输出特征
+		list_symbol=self.dic_symbollist[self.list_symbolnum[n_start]]
+		feat_out=[]
+		#print("数据编号",n_start,filename)
+		for i in list_symbol:
+			if(''!=i):
+				n=self.SymbolToNum(i)
+				feat_out.append(n)
+
+		data_input = np.array(data_input)
+		data_label = np.array(feat_out)
+		return data_input, data_label
+		pass
+		
+	def GetData(self, n_start, n_amount = 1):
 		'''
 		读取数据，返回神经网络输入值和输出值矩阵(可直接用于神经网络训练的那种)
 		参数：
@@ -138,23 +161,7 @@ class DataSpeech():
 		
 		wavsignal,fs = read_wav_data(self.datapath+filename)
 		
-		#print(wavsignal, fs)
-		#print(max(wavsignal[0]))
-		#wavsignal[0] = np.array(wavsignal[0], dtype=np.float32)
-		#wavsignal[0]=wavsignal[0].reshape(wavsignal[0].shape[0])
-		#print('wavsignal[0]:\n',wavsignal[0][1])
-		
-		# 归一化
-		#wavsignal[0] = wav_scale(wavsignal[0])
-		#print('wavsignal[0]:\n {:.4f}'.format(wavsignal[0][1]))
-		
-		#print('长度：',len(wavsignal[0]))
-		#print(max(wavsignal[0]))
-		#print(sum(abs(wavsignal[0]))/len(wavsignal[0]))
-		
-		data_input = self.GetFrequencyFeature(wavsignal, fs)
-		
-		#print('data_input:\n', data_input)
+		data_input = GetFrequencyFeature(wavsignal, fs)
 		
 		#data_input = self.GetMfccFeature(wavsignal, fs)
 		
@@ -212,7 +219,11 @@ class DataSpeech():
 			
 			ran_num = random.randint(0,self.DataNum - 1) # 获取一个随机数
 			for i in range(batch_size):
-				data_input, data_labels = self.GetData((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
+				if(self.LoadToMem == False):
+					data_input, data_labels = self.GetData((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
+				else:
+					data_input, data_labels = self.GetDataFromMem((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
+					
 				#data_input, data_labels = self.GetData(1 % self.DataNum)  # 从随机数开始连续向后取一定数量数据
 				
 				#input_length.append(data_input.shape[1] // 4 - 2)
@@ -235,23 +246,7 @@ class DataSpeech():
 			yield [X, y, input_length, label_length ], labels
 		pass
 		
-	def GetSymbolList(self):
-		'''
-		加载拼音符号列表，用于标记符号
-		返回一个列表list类型变量
-		'''
-		txt_obj=open(self.datapath+'dict.txt','r',encoding='UTF-8') # 打开文件并读入
-		txt_text=txt_obj.read()
-		txt_lines=txt_text.split('\n') # 文本分割
-		list_symbol=[] # 初始化符号列表
-		for i in txt_lines:
-			if(i!=''):
-				txt_l=i.split('\t')
-				list_symbol.append(txt_l[0])
-		txt_obj.close()
-		list_symbol.append('_')
-		self.SymbolNum = len(list_symbol)
-		return list_symbol
+	
 
 	def GetSymbolNum(self):
 		'''

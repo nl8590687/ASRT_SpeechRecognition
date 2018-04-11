@@ -27,25 +27,61 @@ def read_wav_data(filename):
 	return wave_data, framerate  
 	
 def GetFrequencyFeature(self, wavsignal, fs):
-		# wav波形 加时间窗以及时移10ms
-		time_window = 25 # 单位ms
-		data_input = []
+	# wav波形 加时间窗以及时移10ms
+	time_window = 25 # 单位ms
+	data_input = []
+	
+	for i in range(0,int(len(wavsignal[0])/fs*1000 - time_window) // 10 ):
+		p_start = i * 160
+		p_end = p_start + 400
+		data_line = []
 		
-		#print(int(len(wavsignal[0])/fs*1000 - time_window) // 10)
-		for i in range(0,int(len(wavsignal[0])/fs*1000 - time_window) // 10 ):
-			p_start = i * 160
-			p_end = p_start + 400
-			data_line = []
-			
-			for j in range(p_start, p_end):
-				data_line.append(wavsignal[0][j])
-				#print('wavsignal[0][j]:\n',wavsignal[0][j])
-			#data_line = abs(fft(data_line)) / len(wavsignal[0])
-			data_line = fft(data_line) / len(wavsignal[0])
-			data_input.append(data_line[0:len(data_line)//2]) # 除以2是取一半数据，因为是对称的
-			#print('data_line:\n',data_line)
-		return data_input
+		for j in range(p_start, p_end):
+			data_line.append(wavsignal[0][j])
 		
+		data_line = fft(data_line) / len(wavsignal[0])
+		data_input.append(data_line[0:len(data_line)//2]) # 除以2是取一半数据，因为是对称的
+		
+	return data_input
+		
+def get_wav_list(filename):
+	'''
+	读取一个wav文件列表，返回一个存储该列表的字典类型值
+	ps:在数据中专门有几个文件用于存放用于训练、验证和测试的wav文件列表
+	'''
+	txt_obj=open(filename,'r') # 打开文件并读入
+	txt_text=txt_obj.read()
+	txt_lines=txt_text.split('\n') # 文本分割
+	dic_filelist={} # 初始化字典
+	for i in txt_lines:
+		if(i!=''):
+			txt_l=i.split(' ')
+			dic_filelist[txt_l[0]] = txt_l[1]
+	txt_obj.close()
+	return dic_filelist
+
+def GetWavDataList(type):
+	'''
+	加载用于计算的数据列表
+	参数：
+		type：选取的数据集类型
+			train 训练集
+			dev 开发集
+			test 测试集
+	'''
+	# 设定选取哪一项作为要使用的数据集
+	if(type=='train'):
+		filename_wavlist = 'doc\\list\\train.wav.lst'
+	elif(type=='dev'):
+		filename_wavlist = 'doc\\list\\cv.wav.lst'
+	elif(type=='test'):
+		filename_wavlist = 'doc\\list\\test.wav.lst'
+	else:
+		filename_wavlist = '' # 默认留空
+	# 读取数据列表，wav文件列表和其对应的符号列表
+	self.dic_wavlist = get_wav_list(self.datapath + filename_wavlist)
+	return filename_wavlist
 
 print('main')
+
 pass

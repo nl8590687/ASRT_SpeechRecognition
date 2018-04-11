@@ -7,7 +7,7 @@ import platform as plat
 import os
 
 from general_function.file_wav import *
-import numpy as np
+from general_function.file_dict import *
 
 # LSTM_CNN
 import keras as kr
@@ -43,13 +43,26 @@ class ModelSpeech(): # 语音模型类
 		self.AUDIO_FEATURE_LENGTH = 200
 		self._model, self.base_model = self.CreateModel() 
 		
-		self.data = DataSpeech(datapath)
+		self.datapath = datapath
+		
+		self.slash = ''
+		if(system_type == 'Windows'):
+			self.slash='\\' # 反斜杠
+		elif(system_type == 'Linux'):
+			self.slash='/' # 正斜杠
+		else:
+			print('*[Message] Unknown System\n')
+			self.slash='/' # 正斜杠
+		if(self.slash != self.datapath[-1]): # 在目录路径末尾增加斜杠
+			self.datapath = self.datapath + self.slash
+		
+		#self.data = DataSpeech(datapath, 'train')
 		
 	def CreateModel(self):
 		'''
 		定义CNN/LSTM/CTC模型，使用函数式模型
-		输入层：39维的特征值序列，一条语音数据的最大长度设为1500（大约15s）
-		隐藏层一：1024个神经元的卷积层
+		输入层：39维的特征值序列，一条语音数据的最大长度设为1600（大约16s）
+		隐藏层一：256个神经元的卷积层
 		隐藏层二：池化层，池化窗口大小为2
 		隐藏层三：Dropout层，需要断开的神经元的比例为0.2，防止过拟合
 		隐藏层四：循环层、LSTM层
@@ -97,18 +110,14 @@ class ModelSpeech(): # 语音模型类
 		#model_data.summary()
 		
 		
-		#labels = Input(name='the_labels', shape=[60], dtype='float32')
-		
 		labels = Input(name='the_labels', shape=[self.label_max_string_length], dtype='float32')
 		input_length = Input(name='input_length', shape=[1], dtype='int64')
 		label_length = Input(name='label_length', shape=[1], dtype='int64')
 		# Keras doesn't currently support loss funcs with extra parameters
 		# so CTC loss is implemented in a lambda layer
 		
-		#layer_out = Lambda(ctc_lambda_func,output_shape=(self.MS_OUTPUT_SIZE, ), name='ctc')([y_pred, labels, input_length, label_length])#(layer_h6) # CTC
 		loss_out = Lambda(self.ctc_lambda_func, output_shape=(1,), name='ctc')([y_pred, labels, input_length, label_length])
 		
-		#y_out = Activation('softmax', name='softmax3')(loss_out)
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
 		
 		model.summary()
@@ -129,14 +138,14 @@ class ModelSpeech(): # 语音模型类
 		
 	def ctc_lambda_func(self, args):
 		y_pred, labels, input_length, label_length = args
-		#print(y_pred)
+		
 		y_pred = y_pred[:, 2:,:]
-		#return K.ctc_decode(y_pred,self.MS_OUTPUT_SIZE)
+		
 		return K.ctc_batch_cost(labels, y_pred, input_length, label_length)
 	
 	
 	
-	def TrainModel(self, datapath, epoch = 2, batch_size = 32, save_step = 1000, filename = 'model_speech/speech_model'):
+	def TrainModel(self, datapath='', epoch = 2, batch_size = 32, save_step = 1000, filename = 'model_speech/speech_model'):
 		'''
 		训练模型
 		参数：
@@ -145,16 +154,16 @@ class ModelSpeech(): # 语音模型类
 			save_step: 每多少步保存一次模型
 			filename: 默认保存文件名，不含文件后缀名
 		'''
-		#data=DataSpeech(datapath)
-		data = self.data
-		data.LoadDataList('train')
-		num_data = data.GetDataNum() # 获取数据的数量
+		data = DataSpeech(self.datapath, 'train', LoadToMem = False)
+		#data = self.data
+		#data.LoadDataList()
+		num_data = data.DataNum # 获取数据的数量
 		for epoch in range(epoch): # 迭代轮数
 			print('[running] train epoch %d .' % epoch)
 			n_step = 0 # 迭代数据数
-			while (n_step * save_step < num_data):
+			while (n_step * save_step * batch_size < num_data):
 				try:
-					print('[message] epoch %d . Have train datas %d+'%(epoch, n_step*save_step))
+					print('[message] epoch %d . Have train datas %d * %d+'%(epoch, batch_size, n_step * save_step))
 					# data_genetator是一个生成器函数
 					yielddatas = data.data_genetator(batch_size, self.AUDIO_LENGTH)
 					#self._model.fit_generator(yielddatas, save_step, nb_worker=2)
@@ -182,13 +191,13 @@ class ModelSpeech(): # 语音模型类
 		self._model.save_weights(filename + comment + '.model')
 		self.base_model.save_weights(filename + comment + '.model.base')
 
-	def TestModel(self, datapath, str_dataset='dev', data_count = 32):
+	def TestModel(self, datapath='', str_dataset='dev', data_count = 32):
 		'''
 		测试检验模型效果
 		'''
-		#data=DataSpeech(datapath)
-		data = self.data
-		data.LoadDataList(str_dataset) 
+		data = DataSpeech(self.datapath, str_dataset)
+		#data = self.data
+		#data.LoadDataList(str_dataset) 
 		num_data = data.GetDataNum() # 获取数据的数量
 		if(data_count <= 0 or data_count > num_data): # 当data_count为小于等于0或者大于测试数据量的值时，则使用全部数据来测试
 			data_count = num_data
@@ -203,24 +212,65 @@ class ModelSpeech(): # 语音模型类
 		except StopIteration:
 			print('[Error] Model Test Error. please check data format.')
 
-	def Predict(self,x):
+	def Predict(self, batch_size, data_input, in_len):
 		'''
 		预测结果
+		返回语音识别后的拼音符号列表
 		'''
-		r = self._model.predict_on_batch(x)
-		print(r)
-		return r
-		pass
+		batch_size = 1 
 		
-	def decode_batch(self, test_func, word_batch):
-		out = test_func([word_batch])[0]
-		ret = []
-		for j in range(out.shape[0]):
-			out_best = list(np.argmax(out[j, 2:], 1))
-			out_best = [k for k, g in itertools.groupby(out_best)]
-			outstr = labels_to_text(out_best)
-			ret.append(outstr)
-		return ret
+		in_len = np.zeros((batch_size),dtype = np.int32)
+		print(in_len.shape)
+		in_len[0] = in_len[0] - 2
+		
+		
+		x_in = np.zeros((batch_size, 1600, 200), dtype=np.float)
+		
+		for i in range(batch_size):
+			x_in[i,0:len(data_input)] = data_input
+		
+		base_pred = self.base_model.predict(x = x_in)
+		print('base_pred:\n', base_pred)
+		
+		y_p = base_pred
+		print('base_pred0:\n',base_pred[0][0].shape)
+		
+		#for j in range(200):
+		#	mean = np.sum(y_p[0][j]) / y_p[0][j].shape[0]
+		#	print('max y_p:',np.max(y_p[0][j]),'min y_p:',np.min(y_p[0][j]),'mean y_p:',mean,'mid y_p:',y_p[0][j][100])
+		#	print('argmin:',np.argmin(y_p[0][j]),'argmax:',np.argmax(y_p[0][j]))
+		#	count=0
+		#	for i in range(y_p[0][j].shape[0]):
+		#		if(y_p[0][j][i] < mean):
+		#			count += 1
+		#	print('count:',count)
+		
+		base_pred =base_pred[:, 2:, :]
+		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
+		print('r', r)
+		#r = K.cast(r[0][0], dtype='float32')
+		#print('r1', r)
+		#print('解码完成')
+		
+		r1 = K.get_value(r[0][0])
+		print('r1', r1)
+		
+		print('r0', r[1])
+		r2 = K.get_value(r[1])
+		print(r2)
+		print('解码完成')
+		list_symbol_dic = GetSymbolList(self.datapath) # 获取拼音列表
+		
+		r1=r1[0]
+		
+		r_str=[]
+		for i in r1:
+			r_str.append(list_symbol_dic[i])
+		
+		#print(r_str)
+		
+		return r_str
+		pass
 	
 	def show_edit_distance(self, num):
 		num_left = num
@@ -245,65 +295,19 @@ class ModelSpeech(): # 语音模型类
 		最终做语音识别用的函数，识别一个wav序列的语音
 		不过这里现在还有bug
 		'''
-		#data = self.data
-		data = DataSpeech('E:\\语音数据集')
-		data.LoadDataList('dev')
+		
 		# 获取输入特征
-		#data_input = data.GetMfccFeature(wavsignal, fs)
-		data_input = data.GetFrequencyFeature(wavsignal, fs)
+		#data_input = GetMfccFeature(wavsignal, fs)
+		data_input = GetFrequencyFeature(wavsignal, fs)
 		input_length = len(data_input)
 		input_length = input_length // 4
 		
 		data_input = np.array(data_input, dtype = np.float)
-		in_len = np.zeros((1),dtype = np.int32)
-		print(in_len.shape)
-		in_len[0] = input_length -2
 		
 		
-		batch_size = 1 
-		x_in = np.zeros((batch_size, 1600, 200), dtype=np.float)
+		r = self.Predict(1, data_input, input_length)
 		
-		for i in range(batch_size):
-			x_in[i,0:len(data_input)] = data_input
-		
-		
-		
-		base_pred = self.base_model.predict(x = x_in)
-		print('base_pred:\n', base_pred)
-		
-		
-		y_p = base_pred
-		print('base_pred0:\n',base_pred[0][0].shape)
-		
-		#for j in range(200):
-		#	mean = np.sum(y_p[0][j]) / y_p[0][j].shape[0]
-		#	print('max y_p:',np.max(y_p[0][j]),'min y_p:',np.min(y_p[0][j]),'mean y_p:',mean,'mid y_p:',y_p[0][j][100])
-		#	print('argmin:',np.argmin(y_p[0][j]),'argmax:',np.argmax(y_p[0][j]))
-		#	count=0
-		#	for i in range(y_p[0][j].shape[0]):
-		#		if(y_p[0][j][i] < mean):
-		#			count += 1
-		#	print('count:',count)
-		
-		base_pred =base_pred[:, 2:, :]
-		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=64, top_paths=1)
-		print('r', r)
-		#r = K.cast(r[0][0], dtype='float32')
-		#print('r1', r)
-		#print('解码完成')
-		
-		r1 = K.get_value(r[0][0])
-		print('r1', r1)
-		
-		print('r0', r[1])
-		r2 = K.get_value(r[1])
-		print(r2)
-		print('解码完成')
-		list_symbol_dic = data.list_symbol # 获取拼音列表
-		
-		print('解码完成')
-		return r1
-		
+		return r
 		pass
 		
 	def RecognizeSpeech_FromFile(self, filename):
@@ -346,8 +350,8 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	#ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
-	ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
+	ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
+	#ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
 	#ms.TestModel(datapath, str_dataset='dev', data_count = 32)
-	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	#print('*[提示] 语音识别结果：\n',r)
+	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	print('*[提示] 语音识别结果：\n',r)
