@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import platform as plat
+import threading
+from queue import Queue
 
 import numpy as np
 from general_function.file_wav import *
@@ -66,6 +68,8 @@ class DataSpeech():
 			print('*[提示] 正在准备将全部数据加载到内存...Count: ', MemWavCount)
 			self.LoadWavData()
 			pass
+		
+		self.dataqueue = Queue()
 		pass
 	
 	def LoadDataList(self):
@@ -105,7 +109,7 @@ class DataSpeech():
 			wavsignal,fs = read_wav_data(self.datapath+filename)
 			self.wavs_data.append([wavsignal,fs])
 			
-			print('*[提示] 全部数据已经加载到内存')
+		print('*[提示] 全部数据已经加载到内存')
 		pass
 		
 	def GetDataNum(self):
@@ -195,11 +199,6 @@ class DataSpeech():
 		数据生成器函数，用于Keras的generator_fit训练
 		batch_size: 一次产生的数据量
 		'''
-		X = np.zeros((batch_size, audio_length, 200), dtype=np.float)
-		#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)
-		y = np.zeros((batch_size, 64), dtype=np.int16)
-		
-		
 		
 		labels = []
 		for i in range(0,batch_size):
@@ -213,6 +212,10 @@ class DataSpeech():
 		#print(input_length,len(input_length))
 		
 		while True:
+			X = np.zeros((batch_size, audio_length, 200), dtype=np.float)
+			#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)
+			y = np.zeros((batch_size, 64), dtype=np.int16)
+		
 			#generator = ImageCaptcha(width=width, height=height)
 			input_length = []
 			label_length = []
@@ -225,6 +228,7 @@ class DataSpeech():
 					data_input, data_labels = self.GetDataFromMem((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
 					
 				#data_input, data_labels = self.GetData(1 % self.DataNum)  # 从随机数开始连续向后取一定数量数据
+				#for i in range(batch_size):	
 				
 				#input_length.append(data_input.shape[1] // 4 - 2)
 				#print(data_input.shape[0],len(data_input))
@@ -246,7 +250,9 @@ class DataSpeech():
 			yield [X, y, input_length, label_length ], labels
 		pass
 		
-	
+	def thread_get_data(self, i):
+		
+		pass
 
 	def GetSymbolNum(self):
 		'''

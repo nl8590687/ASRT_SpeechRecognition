@@ -23,7 +23,7 @@ from keras.layers.advanced_activations import LeakyReLU
 from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
-from readdata import DataSpeech
+from readdata_parallel import DataSpeech
 from neural_network.ctc_layer import ctc_layer
 from neural_network.ctc_loss import ctc_batch_loss
 
@@ -350,8 +350,8 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
-	#ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
+	#ms.LoadModel(modelpath + 'speech_model_e_0_step_1.model')
+	ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
 	#ms.TestModel(datapath, str_dataset='dev', data_count = 32)
-	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	print('*[提示] 语音识别结果：\n',r)
+	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	#print('*[提示] 语音识别结果：\n',r)
