@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import platform as plat
-import threading
-from queue import Queue
 
 import numpy as np
 from general_function.file_wav import *
@@ -69,7 +67,6 @@ class DataSpeech():
 			self.LoadWavData()
 			pass
 		
-		self.dataqueue = Queue()
 		pass
 	
 	def LoadDataList(self):
@@ -228,7 +225,7 @@ class DataSpeech():
 					data_input, data_labels = self.GetDataFromMem((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
 					
 				#data_input, data_labels = self.GetData(1 % self.DataNum)  # 从随机数开始连续向后取一定数量数据
-				#for i in range(batch_size):	
+				
 				
 				#input_length.append(data_input.shape[1] // 4 - 2)
 				#print(data_input.shape[0],len(data_input))
@@ -247,12 +244,10 @@ class DataSpeech():
 			
 			label_length = np.array(label_length)
 			input_length = np.array(input_length).T
+			
 			yield [X, y, input_length, label_length ], labels
 		pass
 		
-	def thread_get_data(self, i):
-		
-		pass
 
 	def GetSymbolNum(self):
 		'''
