@@ -13,6 +13,7 @@ from general_function.gen_func import *
 # LSTM_CNN
 import keras as kr
 import numpy as np
+import random
 
 from keras.models import Sequential, Model
 from keras.layers import Dense, Dropout, Input, Reshape # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
@@ -21,8 +22,8 @@ from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
 from readdata2 import DataSpeech
-from neural_network.ctc_layer import ctc_layer
-from neural_network.ctc_loss import ctc_batch_loss
+#from neural_network.ctc_layer import ctc_layer
+#from neural_network.ctc_loss import ctc_batch_loss
 
 #from keras.backend.tensorflow_backend import ctc_batch_cost
 

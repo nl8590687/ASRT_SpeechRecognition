@@ -26,8 +26,8 @@ from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
 from readdata import DataSpeech
-from neural_network.ctc_layer import ctc_layer
-from neural_network.ctc_loss import ctc_batch_loss
+#from neural_network.ctc_layer import ctc_layer
+#from neural_network.ctc_loss import ctc_batch_loss
 
 #from keras.backend.tensorflow_backend import ctc_batch_cost
 
