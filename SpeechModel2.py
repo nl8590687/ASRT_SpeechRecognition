@@ -7,6 +7,8 @@ import platform as plat
 import os
 
 from general_function.file_wav import *
+from general_function.file_dict import *
+from general_function.gen_func import *
 
 # LSTM_CNN
 import keras as kr
@@ -37,7 +39,18 @@ class ModelSpeech(): # 语音模型类
 		self.AUDIO_LENGTH = 1600
 		self.AUDIO_FEATURE_LENGTH = 200
 		self._model, self.base_model = self.CreateModel() 
-
+		
+		self.datapath = datapath
+		self.slash = ''
+		if(system_type == 'Windows'):
+			self.slash='\\' # 反斜杠
+		elif(system_type == 'Linux'):
+			self.slash='/' # 正斜杠
+		else:
+			print('*[Message] Unknown System\n')
+			self.slash='/' # 正斜杠
+		if(self.slash != self.datapath[-1]): # 在目录路径末尾增加斜杠
+			self.datapath = self.datapath + self.slash
 	
 		
 	def CreateModel(self):
@@ -145,7 +158,8 @@ class ModelSpeech(): # 语音模型类
 					break
 				
 				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step * save_step))
-				
+				self.TestModel(self.datapath, str_dataset='train', data_count = 16)
+				self.TestModel(self.datapath, str_dataset='dev', data_count = 16)
 				
 	def LoadModel(self,filename='model_speech/speech_model2.model'):
 		'''
@@ -161,21 +175,81 @@ class ModelSpeech(): # 语音模型类
 		self._model.save_weights(filename+comment+'.model')
 		self.base_model.save_weights(filename + comment + '.model.base')
 
-	def TestModel(self, datapath, str_dataset='dev'):
+	def TestModel(self, datapath='', str_dataset='dev'):
 		'''
 		测试检验模型效果
 		'''
-		data=DataSpeech(datapath)
-		data.LoadDataList(str_dataset) 
-		num_data = DataSpeech.GetDataNum() # 获取数据的数量
+		data=DataSpeech(self.datapath, str_dataset)
+		#data.LoadDataList(str_dataset) 
+		num_data = data.GetDataNum() # 获取数据的数量
+		if(data_count <= 0 or data_count > num_data): # 当data_count为小于等于0或者大于测试数据量的值时，则使用全部数据来测试
+			data_count = num_data
+		
 		try:
-			gen = data.data_genetator(num_data)
-			for i in range(1):
-				X, y = gen
-			r = self._model.test_on_batch(X, y)
-			print(r)
+			ran_num = random.randint(0,num_data - 1) # 获取一个随机数
+			
+			words_num = 0
+			word_error_num = 0
+			for i in range(data_count):
+				data_input, data_labels = data.GetData((ran_num + i) % num_data)  # 从随机数开始连续向后取一定数量数据
+				pre = self.Predict(data_input, data_input.shape[0] // 4)
+				
+				words_num += max(data_labels.shape[0], pre.shape[0])
+				word_error_num += GetEditDistance(data_labels, pre)
+			
+			print('*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率：', word_error_num / words_num * 100, '%')
 		except StopIteration:
 			print('[Error] Model Test Error. please check data format.')
+	
+	def Predict(self, data_input, input_len):
+		'''
+		预测结果
+		返回语音识别后的拼音符号列表
+		'''
+		batch_size = 1 
+		in_len = np.zeros((batch_size),dtype = np.int32)
+		#print(in_len.shape)
+		in_len[0] = input_len - 2
+		
+		
+		
+		x_in = np.zeros((batch_size, 1600, 200, 1), dtype=np.float)
+		
+		for i in range(batch_size):
+			x_in[i,0:len(data_input)] = data_input
+		
+		
+		
+		base_pred = self.base_model.predict(x = x_in)
+		#print('base_pred:\n', base_pred)
+		
+		#y_p = base_pred
+		#for j in range(200):
+		#	mean = np.sum(y_p[0][j]) / y_p[0][j].shape[0]
+		#	print('max y_p:',np.max(y_p[0][j]),'min y_p:',np.min(y_p[0][j]),'mean y_p:',mean,'mid y_p:',y_p[0][j][100])
+		#	print('argmin:',np.argmin(y_p[0][j]),'argmax:',np.argmax(y_p[0][j]))
+		#	count=0
+		#	for i in range(y_p[0][j].shape[0]):
+		#		if(y_p[0][j][i] < mean):
+		#			count += 1
+		#	print('count:',count)
+		
+		base_pred =base_pred[:, 2:, :]
+		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
+		#print('r', r)
+		
+		
+		r1 = K.get_value(r[0][0])
+		#print('r1', r1)
+		
+		#print('r0', r[1])
+		r2 = K.get_value(r[1])
+		#print(r2)
+		#print('解码完成')
+		r1=r1[0]
+		
+		return r1
+		pass
 	
 	def RecognizeSpeech(self, wavsignal, fs):
 		'''
@@ -194,37 +268,11 @@ class ModelSpeech(): # 语音模型类
 		
 		data_input = np.array(data_input, dtype = np.float)
 		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
-		in_len = np.zeros((1),dtype = np.int32)
-		#print(in_len.shape)
-		in_len[0] = input_length - 2
 		
+		r1 = self.Predict(data_input, input_length)
 		
-		batch_size = 1 
-		x_in = np.zeros((batch_size, 1600, 200, 1), dtype=np.float)
-		
-		for i in range(batch_size):
-			x_in[i,0:len(data_input)] = data_input
-		
-		
-		
-		base_pred = self.base_model.predict(x = x_in)
-		#print('base_pred:\n', base_pred)
-		
-		
-		base_pred =base_pred[:, 2:, :]
-		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
-		#print('r', r)
-		
-		
-		r1 = K.get_value(r[0][0])
-		#print('r1', r1)
-		
-		#print('r0', r[1])
-		r2 = K.get_value(r[1])
-		#print(r2)
-		#print('解码完成')
 		list_symbol_dic = GetSymbolList(self.datapath) # 获取拼音列表
-		r1=r1[0]
+		
 		
 		r_str=[]
 		for i in r1:
@@ -245,14 +293,7 @@ class ModelSpeech(): # 语音模型类
 		
 		pass
 		
-	def Predict(self,x):
-		'''
-		预测结果
-		'''
-		r = self._model.predict_on_batch(x)
-		print(r)
-		return r
-		pass
+	
 		
 	@property
 	def model(self):

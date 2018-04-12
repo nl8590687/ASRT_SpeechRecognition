@@ -106,7 +106,7 @@ class ModelSpeech(): # 语音模型类
 		#layer_h10 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h9) # LSTM层
 		#layer_h10 = Activation('softmax', name='softmax1')(layer_h9)
 		
-		layer_h10_dropout = Dropout(0.1)(layer_h10) # 随机中断部分神经网络连接，防止过拟合
+		layer_h10_dropout = Dropout(0.1)(layer_h8) # 随机中断部分神经网络连接，防止过拟合
 		
 		layer_h11 = Dense(512, use_bias=True, activation="relu", kernel_initializer='he_normal')(layer_h10_dropout) # 全连接层
 		layer_h12 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h11) # 全连接层
@@ -181,7 +181,8 @@ class ModelSpeech(): # 语音模型类
 					break
 				
 				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step * save_step))
-				ms.TestModel(self.datapath, str_dataset='dev', data_count = 16)
+				self.TestModel(self.datapath, str_dataset='train', data_count = 16)
+				self.TestModel(self.datapath, str_dataset='dev', data_count = 16)
 				
 				
 	def LoadModel(self, filename = 'model_speech/speech_model_e_0_step_1.model'):
@@ -222,7 +223,7 @@ class ModelSpeech(): # 语音模型类
 				words_num += max(data_labels.shape[0], pre.shape[0])
 				word_error_num += GetEditDistance(data_labels, pre)
 			
-			print('*[测试结果] 语音识别语音单字错误率：', word_error_num / words_num * 100, '%')
+			print('*[测试结果] 语音识别' + str_dataset + '集语音单字错误率：', word_error_num / words_num * 100, '%')
 		except StopIteration:
 			print('[Error] Model Test Error. please check data format.')
 
@@ -246,7 +247,7 @@ class ModelSpeech(): # 语音模型类
 		base_pred = self.base_model.predict(x = x_in)
 		#print('base_pred:\n', base_pred)
 		
-		y_p = base_pred
+		#y_p = base_pred
 		#print('base_pred0:\n',base_pred[0][0].shape)
 		
 		#for j in range(200):
@@ -273,7 +274,7 @@ class ModelSpeech(): # 语音模型类
 		r2 = K.get_value(r[1])
 		#print('r2', r2)
 		#print('解码完成')
-		list_symbol_dic = GetSymbolList(self.datapath) # 获取拼音列表
+		
 		
 		r1=r1[0]
 		
@@ -299,6 +300,8 @@ class ModelSpeech(): # 语音模型类
 		
 		
 		r1 = self.Predict(data_input, input_length)
+		
+		list_symbol_dic = GetSymbolList(self.datapath) # 获取拼音列表
 		
 		r_str=[]
 		for i in r1:

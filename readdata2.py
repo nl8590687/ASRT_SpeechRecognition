@@ -6,10 +6,7 @@ import os
 
 import numpy as np
 from general_function.file_wav import *
-
-from python_speech_features import mfcc
-from python_speech_features import delta
-from python_speech_features import logfbank
+from general_function.file_dict import *
 
 import random
 #import scipy.io.wavfile as wav
@@ -94,25 +91,6 @@ class DataSpeech():
 		
 		return DataNum
 		
-	def GetFrequencyFeature(self, wavsignal, fs):
-		# wav波形 加时间窗以及时移10ms
-		time_window = 25 # 单位ms
-		data_input = []
-		
-		#print(int(len(wavsignal[0])/fs*1000 - time_window) // 10)
-		for i in range(0,int(len(wavsignal[0])/fs*1000 - time_window) // 10 ):
-			p_start = i * 160
-			p_end = p_start + 400
-			data_line = []
-			
-			for j in range(p_start, p_end):
-				data_line.append(wavsignal[0][j])
-				#print('wavsignal[0][j]:\n',wavsignal[0][j])
-			data_line = abs(fft(data_line)) / len(wavsignal[0])
-			#data_line = abs(fft(data_line))
-			data_input.append(data_line[0:len(data_line)//2])
-			#print('data_line:\n',data_line)
-		return data_input
 		
 	def GetData(self,n_start,n_amount=1):
 		'''
@@ -148,7 +126,7 @@ class DataSpeech():
 		
 		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵，以及对应的拼音符号矩阵
 		#data_input = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
-		data_input = self.GetFrequencyFeature(wavsignal,fs)
+		data_input = GetFrequencyFeature(wavsignal,fs)
 		data_input = np.array(data_input)
 		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
 		#arr_zero = np.zeros((1, 39), dtype=np.int16) #一个全是0的行向量
