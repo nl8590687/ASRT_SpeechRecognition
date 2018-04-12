@@ -188,7 +188,7 @@ class ModelSpeech(): # 语音模型类
 		#data.LoadDataList('dev')
 		# 获取输入特征
 		#data_input = data.GetMfccFeature(wavsignal, fs)
-		data_input = data.GetFrequencyFeature(wavsignal, fs)
+		data_input = GetFrequencyFeature(wavsignal, fs)
 		input_length = len(data_input)
 		input_length = input_length // 4
 		

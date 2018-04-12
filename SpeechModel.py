@@ -80,14 +80,19 @@ class ModelSpeech(): # 语音模型类
 		layer_h1_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(input_data) # 卷积层
 		#layer_h1_a = Activation('relu', name='relu0')(layer_h1_c)
 		layer_h1_a = LeakyReLU(alpha=0.3)(layer_h1_c) # 高级激活层
-		layer_h1 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h1_a) # 池化层
+		layer_h1_cc = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(layer_h1_a) # 卷积层
+		#layer_h1_a = Activation('relu', name='relu0')(layer_h1_c)
+		layer_h1_aa = LeakyReLU(alpha=0.3)(layer_h1_cc) # 高级激活层
+		layer_h1 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h1_aa) # 池化层
 		
 		layer_h2 = BatchNormalization()(layer_h1)
 		
 		layer_h3_c = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(layer_h2) # 卷积层
 		layer_h3_a = LeakyReLU(alpha=0.3)(layer_h3_c) # 高级激活层
+		layer_h3_cc = Conv1D(filters=256, kernel_size=5, strides=1, use_bias=True, kernel_initializer='he_normal', padding="same")(layer_h3_a) # 卷积层
+		layer_h3_aa = LeakyReLU(alpha=0.3)(layer_h3_cc) # 高级激活层
 		#layer_h3_a = Activation('relu', name='relu1')(layer_h3_c)
-		layer_h3 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h3_a) # 池化层
+		layer_h3 = MaxPooling1D(pool_size=2, strides=None, padding="valid")(layer_h3_aa) # 池化层
 		
 		layer_h4 = Dropout(0.1)(layer_h3) # 随机中断部分神经网络连接，防止过拟合
 		
@@ -97,8 +102,8 @@ class ModelSpeech(): # 语音模型类
 		
 		layer_h7 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h6) # LSTM层
 		layer_h8 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h7) # LSTM层
-		layer_h9 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h8) # LSTM层
-		layer_h10 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h9) # LSTM层
+		#layer_h9 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h8) # LSTM层
+		#layer_h10 = LSTM(256, activation='tanh', use_bias=True, return_sequences=True, kernel_initializer='he_normal')(layer_h9) # LSTM层
 		#layer_h10 = Activation('softmax', name='softmax1')(layer_h9)
 		
 		layer_h10_dropout = Dropout(0.1)(layer_h10) # 随机中断部分神经网络连接，防止过拟合
@@ -344,8 +349,8 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + 'm1\\speech_model_e_1_step_100.model')
-	#ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
-	ms.TestModel(datapath, str_dataset='dev', data_count = 8)
+	#ms.LoadModel(modelpath + 'm1\\speech_model_e_1_step_100.model')
+	ms.TrainModel(datapath, epoch = 2, batch_size = 8, save_step = 1)
+	#ms.TestModel(datapath, str_dataset='dev', data_count = 8)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
 	#print('*[提示] 语音识别结果：\n',r)
