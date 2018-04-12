@@ -15,7 +15,7 @@ from scipy.fftpack import fft
 class DataSpeech():
 	
 	
-	def __init__(self,path):
+	def __init__(self, path, type, LoadToMem = False, MemWavCount = 10000):
 		'''
 		初始化
 		参数：
@@ -25,6 +25,7 @@ class DataSpeech():
 		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 		
 		self.datapath = path; # 数据存放位置根目录
+		self.type = type # 数据类型，分为三种：训练集(train)、验证集(dev)、测试集(test)
 		
 		self.slash = ''
 		if(system_type == 'Windows'):
@@ -49,10 +50,14 @@ class DataSpeech():
 		self.list_symbolnum=[] # symbol标记列表
 		
 		self.DataNum = 0 # 记录数据量
+		self.LoadDataList()
 		
+		self.wavs_data = []
+		self.LoadToMem = LoadToMem
+		self.MemWavCount = MemWavCount
 		pass
 	
-	def LoadDataList(self,type):
+	def LoadDataList(self):
 		'''
 		加载用于计算的数据列表
 		参数：
@@ -62,13 +67,13 @@ class DataSpeech():
 				test 测试集
 		'''
 		# 设定选取哪一项作为要使用的数据集
-		if(type=='train'):
+		if(self.type=='train'):
 			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'train.wav.lst'
 			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'train.syllable.txt'
-		elif(type=='dev'):
+		elif(self.type=='dev'):
 			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'cv.wav.lst'
 			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'cv.syllable.txt'
-		elif(type=='test'):
+		elif(self.type=='test'):
 			filename_wavlist = 'doc' + self.slash + 'list' + self.slash + 'test.wav.lst'
 			filename_symbollist = 'doc' + self.slash + 'trans' + self.slash + 'test.syllable.txt'
 		else:
@@ -148,7 +153,7 @@ class DataSpeech():
 		labels = []
 		for i in range(0,batch_size):
 			#input_length.append([1500])
-			labels.append([1e-08])
+			labels.append([0.0])
 		
 		
 		

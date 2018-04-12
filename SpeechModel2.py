@@ -175,7 +175,7 @@ class ModelSpeech(): # 语音模型类
 		self._model.save_weights(filename+comment+'.model')
 		self.base_model.save_weights(filename + comment + '.model.base')
 
-	def TestModel(self, datapath='', str_dataset='dev'):
+	def TestModel(self, datapath='', str_dataset='dev', data_count = 32):
 		'''
 		测试检验模型效果
 		'''
