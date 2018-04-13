@@ -21,7 +21,7 @@ from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Acti
 from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
-from readdata2 import DataSpeech
+from readdata21 import DataSpeech
 #from neural_network.ctc_layer import ctc_layer
 #from neural_network.ctc_loss import ctc_batch_loss
 
@@ -197,7 +197,7 @@ class ModelSpeech(): # 语音模型类
 			word_error_num = 0
 			for i in range(data_count):
 				data_input, data_labels = data.GetData((ran_num + i) % num_data)  # 从随机数开始连续向后取一定数量数据
-				pre = self.Predict(data_input, data_input.shape[0] // 4)
+				pre = self.Predict(data_input, data_input.shape[0] // 8)
 				
 				words_num += max(data_labels.shape[0], pre.shape[0])
 				word_error_num += GetEditDistance(data_labels, pre)
@@ -214,7 +214,7 @@ class ModelSpeech(): # 语音模型类
 		batch_size = 1 
 		in_len = np.zeros((batch_size),dtype = np.int32)
 		#print(in_len.shape)
-		in_len[0] = input_len - 2
+		in_len[0] = input_len
 		
 		
 		
@@ -269,7 +269,7 @@ class ModelSpeech(): # 语音模型类
 		#data_input = data.GetMfccFeature(wavsignal, fs)
 		data_input = GetFrequencyFeature(wavsignal, fs)
 		input_length = len(data_input)
-		input_length = input_length // 4
+		input_length = input_length // 8
 		
 		data_input = np.array(data_input, dtype = np.float)
 		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)

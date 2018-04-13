@@ -210,7 +210,7 @@ class ModelSpeech(): # 语音模型类
 		batch_size = 1 
 		in_len = np.zeros((batch_size),dtype = np.int32)
 		#print(in_len.shape)
-		in_len[0] = input_len - 2
+		in_len[0] = input_len
 		
 		
 		
