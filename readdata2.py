@@ -162,7 +162,7 @@ class DataSpeech():
 		#print(input_length,len(input_length))
 		
 		while True:
-			X = np.zeros((batch_size, audio_length, 200, 1), dtype = np.float)
+			X = np.zeros((batch_size, audio_length, 200 * 2, 1), dtype = np.float)
 			#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)
 			y = np.zeros((batch_size, 64), dtype=np.int16)
 			

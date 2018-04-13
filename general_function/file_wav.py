@@ -51,11 +51,18 @@ def GetFrequencyFeature(wavsignal, fs):
 		data_line = []
 		
 		for j in range(p_start, p_end):
-			data_line.append(wavsignal[0][j])
+			data_line.append(wavsignal[0][j]) 
 			#print('wavsignal[0][j]:\n',wavsignal[0][j])
 		#data_line = abs(fft(data_line)) / len(wavsignal[0])
 		data_line = fft(data_line) / len(wavsignal[0])
-		data_input.append(data_line[0:len(data_line)//2]) # 除以2是取一半数据，因为是对称的
+		data_line2 = []
+		for fre_sig in data_line: 
+			# 分别取出频率信号的实部和虚部作为语音信号的频率特征
+			# 直接使用复数的话，之后会被numpy将虚部丢弃，造成信息丢失
+			data_line2.append(fre_sig.real)
+			data_line2.append(fre_sig.imag)
+		
+		data_input.append(data_line[0:len(data_line2)//2]) # 除以2是取一半数据，因为是对称的
 		#print('data_line:\n',data_line)
 	return data_input
 

@@ -7,11 +7,11 @@
 
 This project uses keras, TensorFlow based on LSTM, CNN and CTC to implement. 
 
-本项目目前已经可以正常进行训练了，现在的这几个神经网络模型正在准备评估哪一个模型的效果最好。
+本项目目前已经可以正常进行训练了，现在准备基于模型2来改进。
 
 本项目运行请执行：
 ```shell
-$ python3 SpeechModel.py
+$ python3 SpeechModel2.py
 ```
 
 ## Model 模型

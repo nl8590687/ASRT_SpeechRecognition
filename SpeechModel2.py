@@ -38,7 +38,7 @@ class ModelSpeech(): # 语音模型类
 		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
-		self.AUDIO_FEATURE_LENGTH = 200
+		self.AUDIO_FEATURE_LENGTH = 200 * 2
 		self._model, self.base_model = self.CreateModel() 
 		
 		self.datapath = datapath
@@ -81,7 +81,7 @@ class ModelSpeech(): # 语音模型类
 		#test=Model(inputs = input_data, outputs = layer_h6)
 		#test.summary()
 		
-		layer_h7 = Reshape((400, 3200))(layer_h6) #Reshape层
+		layer_h7 = Reshape((400, 6400))(layer_h6) #Reshape层
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
 		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
 		layer_h8 = Dense(256, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h7) # 全连接层
@@ -140,8 +140,8 @@ class ModelSpeech(): # 语音模型类
 			save_step: 每多少步保存一次模型
 			filename: 默认保存文件名，不含文件后缀名
 		'''
-		data=DataSpeech(datapath)
-		data.LoadDataList('train')
+		data=DataSpeech(datapath, 'train')
+		#data.LoadDataList()
 		num_data = data.GetDataNum() # 获取数据的数量
 		for epoch in range(epoch): # 迭代轮数
 			print('[running] train epoch %d .' % epoch)
@@ -214,7 +214,7 @@ class ModelSpeech(): # 语音模型类
 		
 		
 		
-		x_in = np.zeros((batch_size, 1600, 200, 1), dtype=np.float)
+		x_in = np.zeros((batch_size, 1600, self.AUDIO_FEATURE_LENGTH, 1), dtype=np.float)
 		
 		for i in range(batch_size):
 			x_in[i,0:len(data_input)] = data_input
@@ -327,8 +327,8 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + '2test\\speech_model2_e_0_step_1.model')
-	#ms.TrainModel(datapath, epoch = 2, batch_size = 4, save_step = 1)
-	#ms.TestModel(datapath, str_dataset='dev', data_count = 32)
-	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	print('*[提示] 语音识别结果：\n',r)
+	#ms.LoadModel(modelpath + '2test\\speech_model2_e_0_step_1.model')
+	ms.TrainModel(datapath, epoch = 2, batch_size = 4, save_step = 1)
+	#ms.TestModel(datapath, str_dataset='test', data_count = 32)
+	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	#print('*[提示] 语音识别结果：\n',r)
