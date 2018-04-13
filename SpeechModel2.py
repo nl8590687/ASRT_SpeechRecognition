@@ -159,8 +159,8 @@ class ModelSpeech(): # 语音模型类
 					break
 				
 				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step * save_step))
-				self.TestModel(self.datapath, str_dataset='train', data_count = 16)
-				self.TestModel(self.datapath, str_dataset='dev', data_count = 16)
+				self.TestModel(self.datapath, str_dataset='train', data_count = 4)
+				self.TestModel(self.datapath, str_dataset='dev', data_count = 4)
 				
 	def LoadModel(self,filename='model_speech/speech_model2.model'):
 		'''
@@ -328,7 +328,7 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	#ms.LoadModel(modelpath + '2test\\speech_model2_e_0_step_1.model')
-	ms.TrainModel(datapath, epoch = 2, batch_size = 4, save_step = 1)
+	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 100)
 	#ms.TestModel(datapath, str_dataset='test', data_count = 32)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
 	#print('*[提示] 语音识别结果：\n',r)
