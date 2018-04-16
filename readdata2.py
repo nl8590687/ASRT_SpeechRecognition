@@ -39,9 +39,7 @@ class DataSpeech():
 		if(self.slash != self.datapath[-1]): # 在目录路径末尾增加斜杠
 				self.datapath = self.datapath + self.slash
 		
-		#self.datapath = path; # 数据存放位置根目录
-		#if('\\'!=self.datapath[-1]): # 在目录路径末尾增加斜杠
-		#	self.datapath=self.datapath+'\\'
+		
 		self.dic_wavlist = {}
 		self.dic_symbollist = {}
 		self.SymbolNum = 0 # 记录拼音符号数量

@@ -22,7 +22,7 @@ from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Acti
 from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
-from readdata2 import DataSpeech
+from readdata22 import DataSpeech
 #from neural_network.ctc_layer import ctc_layer
 #from neural_network.ctc_loss import ctc_batch_loss
 
@@ -39,7 +39,7 @@ class ModelSpeech(): # 语音模型类
 		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
-		self.AUDIO_FEATURE_LENGTH = 200 * 2
+		self.AUDIO_FEATURE_LENGTH = 200
 		self._model, self.base_model = self.CreateModel() 
 		
 		self.datapath = datapath
@@ -82,7 +82,7 @@ class ModelSpeech(): # 语音模型类
 		#test=Model(inputs = input_data, outputs = layer_h6)
 		#test.summary()
 		
-		layer_h7 = Reshape((400, 6400))(layer_h6) #Reshape层
+		layer_h7 = Reshape((400, 3200))(layer_h6) #Reshape层
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
 		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
 		layer_h8 = Dense(256, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h7) # 全连接层
@@ -164,14 +164,14 @@ class ModelSpeech(): # 语音模型类
 				self.TestModel(self.datapath, str_dataset='train', data_count = 4)
 				self.TestModel(self.datapath, str_dataset='dev', data_count = 4)
 				
-	def LoadModel(self,filename='model_speech/speech_model2.model'):
+	def LoadModel(self,filename='model_speech/speech_model22.model'):
 		'''
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
 		self.base_model.load_weights(filename + '.base')
 
-	def SaveModel(self,filename='model_speech/speech_model2',comment=''):
+	def SaveModel(self,filename='model_speech/speech_model22',comment=''):
 		'''
 		保存模型参数
 		'''
@@ -353,9 +353,9 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + '2test\\speech_model2_e_0_step_34400.model')
-	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 100)
+	#ms.LoadModel(modelpath + '2test\\speech_model22_e_0_step_1.model')
+	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 100)
 	#ms.TestModel(datapath, str_dataset='train', data_count = 32, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
-	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	print('*[提示] 语音识别结果：\n',r)
+	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	#print('*[提示] 语音识别结果：\n',r)

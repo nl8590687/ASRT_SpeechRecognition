@@ -129,8 +129,8 @@ class DataSpeech():
 		
 		# 返回值分别是mfcc特征向量的矩阵及其一阶差分和二阶差分矩阵，以及对应的拼音符号矩阵
 		#data_input = np.column_stack((feat_mfcc, feat_mfcc_d, feat_mfcc_dd))
-		data_input = GetFrequencyFeature(wavsignal,fs)
-		data_input = np.array(data_input)
+		data_input = GetFrequencyFeature2(wavsignal,fs)
+		#data_input = np.array(data_input)
 		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
 		#arr_zero = np.zeros((1, 39), dtype=np.int16) #一个全是0的行向量
 		
@@ -160,7 +160,7 @@ class DataSpeech():
 		#print(input_length,len(input_length))
 		
 		while True:
-			X = np.zeros((batch_size, audio_length, 200 * 2, 1), dtype = np.float)
+			X = np.zeros((batch_size, audio_length, 200, 1), dtype = np.float)
 			#y = np.zeros((batch_size, 64, self.SymbolNum), dtype=np.int16)
 			y = np.zeros((batch_size, 64), dtype=np.int16)
 			
@@ -172,7 +172,7 @@ class DataSpeech():
 			for i in range(batch_size):
 				data_input, data_labels = self.GetData((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
 				
-				input_length.append(data_input.shape[0] // 8)
+				input_length.append(data_input.shape[0] // 4)
 				#print(data_input, data_labels)
 				#print('data_input长度:',len(data_input))
 				

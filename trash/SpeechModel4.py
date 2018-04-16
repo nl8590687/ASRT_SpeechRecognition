@@ -292,6 +292,7 @@ class ModelSpeech(): # 语音模型类
 		list_symbol_dic = data.list_symbol # 获取拼音列表
 		
 		labels = ['dong1', 'bei3', 'jun1', 'de5', 'yi4', 'xie1', 'ai4', 'guo2', 'jiang4', 'shi4', 'ma3', 'zhan4', 'shan1', 'li3', 'du4', 'tang2', 'ju4', 'wu3', 'su1', 'bing3', 'ai4', 'deng4', 'tie3', 'mei2', 'deng3', 'ye3', 'fen4', 'qi3', 'kang4', 'zhan4' ]
+		#y=['bei4','jun1','xian4','ai4','gong1','jian4','shi4','zhan4','sheng1','shan1','dong1','ta1','ju4','bi4','ai4','bei4','mei2','zai4','qi3','kai1','zhan4']
 		#labels = [ list_symbol_dic[-1] ]
 		#labels = [ list_symbol_dic[-1] ]
 		#while(len(labels) < 32):
