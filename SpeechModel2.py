@@ -115,7 +115,7 @@ class ModelSpeech(): # 语音模型类
 		ada_d = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
 		
 		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd, metrics=["accuracy"])
-		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d, metrics=['accuracy'])
+		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d)
 		
 		
 		# captures output of softmax so we can decode the output during visualization
@@ -203,8 +203,13 @@ class ModelSpeech(): # 语音模型类
 				data_input, data_labels = data.GetData((ran_num + i) % num_data)  # 从随机数开始连续向后取一定数量数据
 				pre = self.Predict(data_input, data_input.shape[0] // 4)
 				
-				words_num += max(data_labels.shape[0], pre.shape[0])
-				word_error_num += GetEditDistance(data_labels, pre)
+				words_n = data_labels.shape[0] # 获取每个句子的字数
+				words_num += words_n # 把句子的总字数加上
+				edit_distance = GetEditDistance(data_labels, pre) # 获取编辑距离
+				if(edit_distance <= words_n): # 当编辑距离小于等于句子字数时
+					word_error_num += edit_distance # 使用编辑距离作为错误字数
+				else: # 否则肯定是增加了一堆乱七八糟的奇奇怪怪的字
+					word_error_num += words_n # 就直接加句子本来的总字数就好了
 				
 				if(out_report == True):
 					txt += str(i) + '\n'
@@ -353,9 +358,9 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + '2test\\speech_model2_e_0_step_34400.model')
+	ms.LoadModel(modelpath + '2test\\speech_model2_e_0_step_62600.model')
 	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 100)
-	#ms.TestModel(datapath, str_dataset='train', data_count = 32, out_report = True)
+	ms.TestModel(datapath, str_dataset='train', data_count = 32, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
-	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	print('*[提示] 语音识别结果：\n',r)
+	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	#print('*[提示] 语音识别结果：\n',r)
