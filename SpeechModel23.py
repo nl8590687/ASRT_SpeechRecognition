@@ -22,7 +22,7 @@ from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Acti
 from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
-from readdata22 import DataSpeech
+from readdata23 import DataSpeech
 #from neural_network.ctc_layer import ctc_layer
 #from neural_network.ctc_loss import ctc_batch_loss
 
@@ -39,7 +39,7 @@ class ModelSpeech(): # 语音模型类
 		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
-		self.AUDIO_FEATURE_LENGTH = 200
+		self.AUDIO_FEATURE_LENGTH = 39
 		self._model, self.base_model = self.CreateModel() 
 		
 		self.datapath = datapath
@@ -82,10 +82,10 @@ class ModelSpeech(): # 语音模型类
 		#test=Model(inputs = input_data, outputs = layer_h6)
 		#test.summary()
 		
-		layer_h7 = Reshape((400, 3200))(layer_h6) #Reshape层
+		layer_h7 = Reshape((400, 576))(layer_h6) #Reshape层
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
 		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
-		layer_h8 = Dense(256, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h7) # 全连接层
+		layer_h8 = Dense(128, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h7) # 全连接层
 		layer_h9 = Dense(1417, use_bias=True, kernel_initializer='he_normal')(layer_h8) # 全连接层
 		
 		y_pred = Activation('softmax', name='Activation0')(layer_h9)
@@ -133,7 +133,7 @@ class ModelSpeech(): # 语音模型类
 	
 	
 	
-	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/speech_model2'):
+	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/speech_model23'):
 		'''
 		训练模型
 		参数：
@@ -164,14 +164,14 @@ class ModelSpeech(): # 语音模型类
 				self.TestModel(self.datapath, str_dataset='train', data_count = 4)
 				self.TestModel(self.datapath, str_dataset='dev', data_count = 4)
 				
-	def LoadModel(self,filename='model_speech/speech_model22.model'):
+	def LoadModel(self,filename='model_speech/speech_model23.model'):
 		'''
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
 		self.base_model.load_weights(filename + '.base')
 
-	def SaveModel(self,filename='model_speech/speech_model22',comment=''):
+	def SaveModel(self,filename='model_speech/speech_model23',comment=''):
 		'''
 		保存模型参数
 		'''
@@ -289,7 +289,7 @@ class ModelSpeech(): # 语音模型类
 		# 获取输入特征
 		#data_input = GetMfccFeature(wavsignal, fs)
 		#t0=time.time()
-		data_input = GetFrequencyFeature2(wavsignal, fs)
+		data_input = GetFrequencyFeature(wavsignal, fs)
 		#t1=time.time()
 		#print('time cost:',t1-t0)
 		
@@ -358,9 +358,9 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + 'm22\\speech_model22_e_0_step_6500.model')
-	#ms.TrainModel(datapath, epoch = 50, batch_size = 24, save_step = 500)
-	ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
+	#ms.LoadModel(modelpath + 'speech_model23_e_0_step_1.model')
+	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	#ms.TestModel(datapath, str_dataset='train', data_count = 32, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
 	#print('*[提示] 语音识别结果：\n',r)
