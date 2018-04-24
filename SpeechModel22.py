@@ -177,6 +177,9 @@ class ModelSpeech(): # 语音模型类
 		'''
 		self._model.save_weights(filename+comment+'.model')
 		self.base_model.save_weights(filename + comment + '.model.base')
+		f = open('step.txt','w')
+		f.write(filename+comment)
+		f.close()
 
 	def TestModel(self, datapath='', str_dataset='dev', data_count = 32, out_report = False):
 		'''
@@ -232,17 +235,17 @@ class ModelSpeech(): # 语音模型类
 		预测结果
 		返回语音识别后的拼音符号列表
 		'''
+		
 		batch_size = 1 
 		in_len = np.zeros((batch_size),dtype = np.int32)
-		#print(in_len.shape)
+		
 		in_len[0] = input_len
-		
-		
 		
 		x_in = np.zeros((batch_size, 1600, self.AUDIO_FEATURE_LENGTH, 1), dtype=np.float)
 		
 		for i in range(batch_size):
 			x_in[i,0:len(data_input)] = data_input
+		
 		
 		base_pred = self.base_model.predict(x = x_in)
 		
@@ -261,17 +264,19 @@ class ModelSpeech(): # 语音模型类
 		
 		base_pred =base_pred[:, :, :]
 		#base_pred =base_pred[:, 2:, :]
+		
 		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
+		
 		#print('r', r)
 		
 		
 		r1 = K.get_value(r[0][0])
 		#print('r1', r1)
 		
-		#print('r0', r[1])
-		r2 = K.get_value(r[1])
+		
+		#r2 = K.get_value(r[1])
 		#print(r2)
-		#print('解码完成')
+		
 		r1=r1[0]
 		
 		return r1
@@ -299,9 +304,10 @@ class ModelSpeech(): # 语音模型类
 		data_input = np.array(data_input, dtype = np.float)
 		#print(data_input,data_input.shape)
 		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
-		
+		#t2=time.time()
 		r1 = self.Predict(data_input, input_length)
-		
+		#t3=time.time()
+		#print('time cost:',t3-t2)
 		list_symbol_dic = GetSymbolList(self.datapath) # 获取拼音列表
 		
 		
@@ -337,6 +343,13 @@ class ModelSpeech(): # 语音模型类
 
 if(__name__=='__main__'):
 	
+	import tensorflow as tf
+	from keras.backend.tensorflow_backend import set_session
+	config = tf.ConfigProto()
+	config.gpu_options.per_process_gpu_memory_fraction = 0.6
+	set_session(tf.Session(config=config))
+	
+	
 	datapath = ''
 	modelpath = 'model_speech'
 	
@@ -360,7 +373,8 @@ if(__name__=='__main__'):
 	
 	ms.LoadModel(modelpath + 'm22\\speech_model22_e_0_step_6500.model')
 	#ms.TrainModel(datapath, epoch = 50, batch_size = 24, save_step = 500)
-	ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
+	#ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
+	#r = ms.RecognizeSpeech_FromFile('E:\语音数据集\ST-CMDS\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
-	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	#print('*[提示] 语音识别结果：\n',r)
+	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	print('*[提示] 语音识别结果：\n',r)

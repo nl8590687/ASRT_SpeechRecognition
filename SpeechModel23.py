@@ -177,6 +177,9 @@ class ModelSpeech(): # 语音模型类
 		'''
 		self._model.save_weights(filename+comment+'.model')
 		self.base_model.save_weights(filename + comment + '.model.base')
+		f = open('step23.txt','w')
+		f.write(filename+comment)
+		f.close()
 
 	def TestModel(self, datapath='', str_dataset='dev', data_count = 32, out_report = False):
 		'''
@@ -234,7 +237,7 @@ class ModelSpeech(): # 语音模型类
 		'''
 		batch_size = 1 
 		in_len = np.zeros((batch_size),dtype = np.int32)
-		#print(in_len.shape)
+		
 		in_len[0] = input_len
 		
 		
@@ -268,10 +271,10 @@ class ModelSpeech(): # 语音模型类
 		r1 = K.get_value(r[0][0])
 		#print('r1', r1)
 		
-		#print('r0', r[1])
-		r2 = K.get_value(r[1])
+		
+		#r2 = K.get_value(r[1])
 		#print(r2)
-		#print('解码完成')
+		
 		r1=r1[0]
 		
 		return r1
@@ -287,9 +290,9 @@ class ModelSpeech(): # 语音模型类
 		#data = DataSpeech('E:\\语音数据集')
 		#data.LoadDataList('dev')
 		# 获取输入特征
-		#data_input = GetMfccFeature(wavsignal, fs)
+		data_input = GetMfccFeature(wavsignal, fs)
 		#t0=time.time()
-		data_input = GetFrequencyFeature(wavsignal, fs)
+		#data_input = GetFrequencyFeature(wavsignal, fs)
 		#t1=time.time()
 		#print('time cost:',t1-t0)
 		
@@ -336,6 +339,13 @@ class ModelSpeech(): # 语音模型类
 
 
 if(__name__=='__main__'):
+	
+	import tensorflow as tf
+	from keras.backend.tensorflow_backend import set_session
+	config = tf.ConfigProto()
+	config.gpu_options.per_process_gpu_memory_fraction = 0.6
+	set_session(tf.Session(config=config))
+	
 	
 	datapath = ''
 	modelpath = 'model_speech'
