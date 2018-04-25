@@ -7,6 +7,7 @@
 尚未完成
 """
 import http.server
+import urllib
 import keras
 #from SpeechModel22 import ModelSpeech
 
@@ -37,8 +38,28 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		print(path)  
 		#获取post提交的数据  
 		datas = self.rfile.read(int(self.headers['content-length']))  
-		datas = urllib.unquote(datas).decode("utf-8", 'ignore')  
-		print(datas)
+		#datas = urllib.unquote(datas).decode("utf-8", 'ignore') 
+		datas = datas.decode('utf-8')
+		datas_split = datas.split('&')
+		token = ''
+		fs = 0
+		wavs = []
+		
+		for line in datas_split:
+			[key, value]=line.split('=')
+			if('wavs' = key):
+				wavs.append(int(value))
+			elif('fs' == key):
+				fs = value
+			elif('token' == key ):
+				token = value
+			
+		if(token == 'asd'):
+			buf = '成功\n'+'wavs:\n'+str(wavs)+'\nfs:\n'+str(fs)
+		else:
+			buf = '403'
+		
+		#print(datas)
 		
 		self._set_response()
 		
@@ -51,9 +72,11 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		r_speech = ms.RecognizeSpeech_FromFile(wav_filename)
 		'''
 		
-		buf = '<!DOCTYPE HTML> \n<html> \n<head>\n<title>Post page</title>\n</head> \n<body>Post Data:%s  <br />Path:%s\n</body>  \n</html>'%(datas,self.path)  
+		#buf = '<!DOCTYPE HTML> \n<html> \n<head>\n<title>Post page</title>\n</head> \n<body>Post Data:%s  <br />Path:%s\n</body>  \n</html>'%(datas,self.path)  
 		buf = bytes(buf,encoding="utf-8")
 		self.wfile.write(buf)  
+		
+	def recognize(self, wav)
 	
 def start_server(ip, port):  
 	http_server = http.server.HTTPServer((ip, int(port)), TestHTTPHandle)  

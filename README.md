@@ -7,11 +7,11 @@
 
 This project uses keras, TensorFlow based on LSTM, CNN and CTC to implement. 
 
-本项目目前已经可以正常进行训练了，现在准备基于模型2来改进。
+本项目目前已经可以正常进行训练了。
 
 本项目运行请执行：
 ```shell
-$ python3 SpeechModel2.py
+$ python3 SpeechModel22.py
 ```
 
 ## Model 模型
@@ -38,13 +38,21 @@ Python的依赖库
 * h5py
 
 ## Data Sets 数据集
-清华大学THCHS30中文语音数据集
+* 清华大学THCHS30中文语音数据集
 
-data_thchs30.tgz <http://cn-mirror.openslr.org/resources/18/data_thchs30.tgz>
+data_thchs30.tgz 
+<http://cn-mirror.openslr.org/resources/18/data_thchs30.tgz>
 
-test-noise.tgz <http://cn-mirror.openslr.org/resources/18/test-noise.tgz>
+test-noise.tgz 
+<http://cn-mirror.openslr.org/resources/18/test-noise.tgz>
 
-resource.tgz <http://cn-mirror.openslr.org/resources/18/resource.tgz>
+resource.tgz 
+<http://cn-mirror.openslr.org/resources/18/resource.tgz>
+
+* Free ST Chinese Mandarin Corpus
+
+ST-CMDS-20170001_1-OS.tar.gz 
+<http://cn-mirror.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>
 
 特别鸣谢！感谢前辈们的公开语音数据集
 
