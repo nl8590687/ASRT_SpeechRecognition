@@ -6,3 +6,5 @@
 __pycache__
 *.wav
 Test_Report_*
+
+testClient.py

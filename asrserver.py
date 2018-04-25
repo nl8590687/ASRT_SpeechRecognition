@@ -47,15 +47,20 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		
 		for line in datas_split:
 			[key, value]=line.split('=')
-			if('wavs' = key):
+			if('wavs' == key):
 				wavs.append(int(value))
 			elif('fs' == key):
 				fs = value
 			elif('token' == key ):
 				token = value
+			else:
+				print(key, value)
 			
-		if(token == 'asd'):
-			buf = '成功\n'+'wavs:\n'+str(wavs)+'\nfs:\n'+str(fs)
+		r = self.recognize(wavs)
+		
+		if(token == 'qwertasd'):
+			#buf = '成功\n'+'wavs:\n'+str(wavs)+'\nfs:\n'+str(fs)
+			buf = r
 		else:
 			buf = '403'
 		
@@ -63,20 +68,28 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		
 		self._set_response()
 		
-		'''
-		datapath = 'data/'
-		modelpath = 'model_speech'
-		ms = ModelSpeech(datapath)
-		ms.LoadModel(modelpath + 'speech_model22_e_0_step_37000.model')
-		wav_filename = ''
-		r_speech = ms.RecognizeSpeech_FromFile(wav_filename)
-		'''
+		
+		
+		
 		
 		#buf = '<!DOCTYPE HTML> \n<html> \n<head>\n<title>Post page</title>\n</head> \n<body>Post Data:%s  <br />Path:%s\n</body>  \n</html>'%(datas,self.path)  
 		buf = bytes(buf,encoding="utf-8")
 		self.wfile.write(buf)  
 		
-	def recognize(self, wav)
+	def recognize(self, wavs):
+		datapath = 'data/'
+		modelpath = 'model_speech'
+		ms = ModelSpeech(datapath)
+		ms.LoadModel(modelpath + 'speech_model22_e_0_step_6500.model')
+		wav_filename = ''
+		r_speech = ms.RecognizeSpeech_FromFile(wav_filename)
+		
+		ml = ModelLanguage('model_language')
+		ml.LoadModel()
+		str_pinyin = r
+		r = ml.SpeechToText(str_pinyin)
+		return r
+		pass
 	
 def start_server(ip, port):  
 	http_server = http.server.HTTPServer((ip, int(port)), TestHTTPHandle)  
