@@ -38,6 +38,7 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		#获取post提交的数据  
 		datas = self.rfile.read(int(self.headers['content-length']))  
 		datas = urllib.unquote(datas).decode("utf-8", 'ignore')  
+		print(datas)
 		
 		self._set_response()
 		

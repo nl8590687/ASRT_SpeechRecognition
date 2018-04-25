@@ -44,6 +44,7 @@ class ModelSpeech(): # 语音模型类
 		
 		self.datapath = datapath
 		self.slash = ''
+		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 		if(system_type == 'Windows'):
 			self.slash='\\' # 反斜杠
 		elif(system_type == 'Linux'):
@@ -368,9 +369,9 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	#ms.LoadModel(modelpath + 'speech_model23_e_0_step_1.model')
-	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
-	#ms.TestModel(datapath, str_dataset='train', data_count = 32, out_report = True)
+	ms.LoadModel(modelpath + 'm23\\speech_model23_e_0_step_7600.model')
+	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	ms.TestModel(datapath, str_dataset='train', data_count = 64, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
 	#print('*[提示] 语音识别结果：\n',r)

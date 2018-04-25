@@ -37,7 +37,7 @@ class DataSpeech():
 			self.slash='/' # 正斜杠
 		
 		if(self.slash != self.datapath[-1]): # 在目录路径末尾增加斜杠
-				self.datapath = self.datapath + self.slash
+			self.datapath = self.datapath + self.slash
 		
 		
 		self.dic_wavlist = {}
