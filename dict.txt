@@ -770,6 +770,7 @@ ping1	乒
 ping2	坪苹萍平凭瓶评屏
 po1	坡泼颇
 po2	婆
+po3	颇叵
 po4	破魄迫粕
 pou1	剖
 pu1	扑铺

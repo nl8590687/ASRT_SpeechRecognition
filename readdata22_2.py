@@ -127,12 +127,12 @@ class DataSpeech():
 		# 读取一个文件
 		if(n_start % bili == 0):
 			filename = self.dic_wavlist_thchs30[self.list_wavnum_thchs30[n_start // bili]]
-			list_symbol=self.dic_symbollist_thchs30[self.list_symbolnum[n_start // bili]]
+			list_symbol=self.dic_symbollist_thchs30[self.list_symbolnum_thchs30[n_start // bili]]
 		else:
 			n = n_start // bili * (bili - 1)
 			yushu = n_start % bili
 			filename = self.dic_wavlist_stcmds[self.list_wavnum_stcmds[n + yushu - 1]]
-			list_symbol=self.dic_symbollist_stcmds[self.list_symbolnum[n + yushu - 1]]
+			list_symbol=self.dic_symbollist_stcmds[self.list_symbolnum_stcmds[n + yushu - 1]]
 		
 		if('Windows' == plat.system()):
 			filename = filename.replace('/','\\') # windows系统下需要执行这一行，对文件路径做特别处理
