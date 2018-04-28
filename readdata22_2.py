@@ -74,9 +74,9 @@ class DataSpeech():
 			filename_symbollist_thchs30 = 'thchs30' + self.slash + 'train.syllable.txt'
 			filename_symbollist_stcmds = 'st-cmds' + self.slash + 'train.syllable.txt'
 		elif(self.type=='dev'):
-			filename_wavlist_thchs30 = 'thchs30' + self.slash + 'dev.wav.lst'
+			filename_wavlist_thchs30 = 'thchs30' + self.slash + 'cv.wav.lst'
 			filename_wavlist_stcmds = 'st-cmds' + self.slash + 'dev.wav.txt'
-			filename_symbollist_thchs30 = 'thchs30' + self.slash + 'dev.syllable.txt'
+			filename_symbollist_thchs30 = 'thchs30' + self.slash + 'cv.syllable.txt'
 			filename_symbollist_stcmds = 'st-cmds' + self.slash + 'dev.syllable.txt'
 		elif(self.type=='test'):
 			filename_wavlist_thchs30 = 'thchs30' + self.slash + 'test.wav.lst'

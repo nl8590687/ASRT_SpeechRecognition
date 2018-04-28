@@ -34,7 +34,7 @@ class ModelSpeech(): # 语音模型类
 		初始化
 		默认输出的拼音的表示大小是1283，即1282个拼音+1个空白块
 		'''
-		MS_OUTPUT_SIZE = 1417
+		MS_OUTPUT_SIZE = 1419
 		self.MS_OUTPUT_SIZE = MS_OUTPUT_SIZE # 神经网络最终输出的每一个字符向量维度的大小
 		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
@@ -87,7 +87,7 @@ class ModelSpeech(): # 语音模型类
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
 		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
 		layer_h8 = Dense(256, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h7) # 全连接层
-		layer_h9 = Dense(1417, use_bias=True, kernel_initializer='he_normal')(layer_h8) # 全连接层
+		layer_h9 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h8) # 全连接层
 		
 		y_pred = Activation('softmax', name='Activation0')(layer_h9)
 		model_data = Model(inputs = input_data, outputs = y_pred)

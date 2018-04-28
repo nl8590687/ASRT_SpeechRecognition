@@ -703,6 +703,7 @@ nin2	您
 ning2	柠狞凝宁拧咛
 ning3	拧
 ning4	拧泞宁
+ni1	妞
 niu2	牛
 niu3	扭钮纽
 nin4	拗
