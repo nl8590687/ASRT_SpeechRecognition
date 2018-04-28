@@ -146,6 +146,9 @@ class ModelSpeech(): # 语音模型类
 		data=DataSpeech(datapath, 'train')
 		#data.LoadDataList()
 		num_data = data.GetDataNum() # 获取数据的数量
+		
+		yielddatas = data.data_genetator(batch_size, self.AUDIO_LENGTH)
+		
 		for epoch in range(epoch): # 迭代轮数
 			print('[running] train epoch %d .' % epoch)
 			n_step = 0 # 迭代数据数
@@ -153,7 +156,7 @@ class ModelSpeech(): # 语音模型类
 				try:
 					print('[message] epoch %d . Have train datas %d+'%(epoch, n_step*save_step))
 					# data_genetator是一个生成器函数
-					yielddatas = data.data_genetator(batch_size, self.AUDIO_LENGTH)
+					
 					#self._model.fit_generator(yielddatas, save_step, nb_worker=2)
 					self._model.fit_generator(yielddatas, save_step)
 					n_step += 1
@@ -343,8 +346,9 @@ if(__name__=='__main__'):
 	
 	import tensorflow as tf
 	from keras.backend.tensorflow_backend import set_session
+	os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 	config = tf.ConfigProto()
-	config.gpu_options.per_process_gpu_memory_fraction = 0.6
+	config.gpu_options.per_process_gpu_memory_fraction = 0.7
 	set_session(tf.Session(config=config))
 	
 	

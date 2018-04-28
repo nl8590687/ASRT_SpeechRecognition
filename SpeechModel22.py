@@ -22,7 +22,7 @@ from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Acti
 from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
-from readdata22 import DataSpeech
+from readdata22_2 import DataSpeech
 #from neural_network.ctc_layer import ctc_layer
 #from neural_network.ctc_loss import ctc_batch_loss
 
@@ -146,6 +146,9 @@ class ModelSpeech(): # 语音模型类
 		data=DataSpeech(datapath, 'train')
 		#data.LoadDataList()
 		num_data = data.GetDataNum() # 获取数据的数量
+		
+		yielddatas = data.data_genetator(batch_size, self.AUDIO_LENGTH)
+		
 		for epoch in range(epoch): # 迭代轮数
 			print('[running] train epoch %d .' % epoch)
 			n_step = 0 # 迭代数据数
@@ -153,7 +156,7 @@ class ModelSpeech(): # 语音模型类
 				try:
 					print('[message] epoch %d . Have train datas %d+'%(epoch, n_step*save_step))
 					# data_genetator是一个生成器函数
-					yielddatas = data.data_genetator(batch_size, self.AUDIO_LENGTH)
+					
 					#self._model.fit_generator(yielddatas, save_step, nb_worker=2)
 					self._model.fit_generator(yielddatas, save_step)
 					n_step += 1
@@ -346,8 +349,11 @@ if(__name__=='__main__'):
 	
 	import tensorflow as tf
 	from keras.backend.tensorflow_backend import set_session
+	os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+	#进行配置，使用70%的GPU
 	config = tf.ConfigProto()
-	config.gpu_options.per_process_gpu_memory_fraction = 0.6
+	config.gpu_options.per_process_gpu_memory_fraction = 0.7
+	#config.gpu_options.allow_growth=True   #不全部占满显存, 按需分配
 	set_session(tf.Session(config=config))
 	
 	
@@ -372,10 +378,10 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + 'm22\\speech_model22_e_0_step_6500.model')
-	#ms.TrainModel(datapath, epoch = 50, batch_size = 24, save_step = 500)
+	#ms.LoadModel(modelpath + 'm22\\speech_model22_e_0_step_6500.model')
+	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
 	#ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\语音数据集\ST-CMDS\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
-	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	print('*[提示] 语音识别结果：\n',r)
+	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	#print('*[提示] 语音识别结果：\n',r)
