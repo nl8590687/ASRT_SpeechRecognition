@@ -7,6 +7,7 @@ __pycache__
 *.wav
 Test_Report_*
 
-datalist/
+dataset
+data_pinyin.txt
 
 testClient.py

@@ -1,0 +1,2000 @@
+20170001P00172A0023 ta1 huai2 nian4 yi3 qian2 wo3 ti4 ta1 zhe1 feng1 dang3 yu3 de5 ri4 zi5
+20170001P00033A0084 ni3 zhi1 dao4 you3 yi1 ge4 ci2 jiao4 xin1 gan1 qing2 yuan4 ma5
+20170001P00074A0016 lai2 fu4 weng1 jia1 chi1 fan4
+20170001P00132I0072 qun2 zhu3 shuo1 ta1 huai2 yun4 le5 a5
+20170001P00173I0063 shen2 me5 shi2 hou4 qu4 jiao4 tang2 huo4 zhe3 yong1 he2 gong1 ba5
+20170001P00281I0107 wo3 zhe4 shi4 duo1 xian4 cheng2 yi1 bian1 gong1 zuo4 yi1 bian1 che3 dan4
+20170001P00242A0057 ni3 ying1 gai1 zhi1 dao4 wo3 bu4 yun2 xu3 ma4 wo3 mei4 de5
+20170001P00379I0051 hao3 gui4 a5 wo3 jue2 de2 xiang3 mai3 yang2 huai2 hua1 mi4
+20170001P00320A0005 ni3 yi3 qian2 jiang1 jun1 ling4 xu4 lie4 hao4 duo1 shao3
+20170001P00350A0041 bu4 ran2 ming2 tian1 yin3 xue3 pa4 shi4 yao4 diao4 da4 ya2 luo1
+20170001P00436A0063 tai4 bu4 gei3 li4 le5 zhi1 chi2 a5 xuan1 chuan2 a5 wo3 deng3 ni3
+20170001P00080I0109 ming2 tian1 tong2 xiao3 xuan1 guo4 sheng1 ri4 ba5
+20170001P00261I0012 hao3 wan2 jiu4 shi4 ka3 a5
+20170001P00228A0009 mo1 ni3 xiong1 la5 zai4 li3 mian4 mo1 la5
+20170001P00160A0021 sui1 ran2 qing1 chun1 bu4 neng2 yong3 heng2 dan4 yuan4 shi2 guang1
+20170001P00190A0036 hui4 qi4 mei2 jian4 guo4 nan2 sheng1 qu4 yue1 hui4 hai2 yao4 ren2 pei2 de5
+20170001P00115A0007 nv3 ren2 dou1 ke3 wang4 qing1 chun1 yong3 zhu4
+20170001P00139I0101 xian4 gei3 wo3 men5 zhe4 qun2 ku3 bi1 de5 wa2
+20170001P00122I0075 xiang3 bu4 dao4 hai2 shi4 tao2 bu4 guo4 mo2 zhua3
+20170001P00334A0111 na4 you2 yong3 ka3 de5 shi4 hai2 shi4 xie3 qing3 zhi4 dian4 zi1 xun2 ba5
+20170001P00344A0064 shi4 bu2 shi4 ying1 zi1 sa4 shuang3 hui2 dao4 jun1 xun4 shi2 dai4 le5 ba5
+20170001P00304I0083 bu4 hao3 yi4 si5 xue3 fang3 qun2 mai4 le5
+20170001P00006A0077 mei2 fa1 xian4 zai4 weng4 an1 a5 zhe4 ge4 chang2 de5 tai4 shuai4 le5
+20170001P00109A0080 gei3 ni3 yong1 bao4 bao3 bei4 ni3 hao3 qin1
+20170001P00108A0055 ya3 juan1 shuo1 ni3 mei2 shi2 jian1 bu4 ju4 le5
+20170001P00242A0105 zai4 shen1 bian1 cai2 suan4 yong1 you3 yin1 wei4 ni3 bu4 zai4 wo3 shen1 bian1
+20170001P00260I0058 wo3 zhe4 li3 gai4 bu4 le5 zhang1
+20170001P00182I0084 xue2 nong2 jun1 xun4 ke4 jian1 cao1 xiao4 yun4 hui4 ri4 chang2
+20170001P00048A0094 wo3 qu4 kan4 pin2 min2 ku1 de5 bai3 wan4 fu4 weng1 qu4
+20170001P00214A0103 ni2 er3 shu1 shu1 yong3 yuan3 shi4 wo3 tong2 nian2 zui4 chong2 bai4 de5 ren2
+20170001P00236A0076 xue3 lian2 wang2 na4 shi4 wo3 rang4 wu4 kong1 sa1 xia4 de5 xian1 qi4
+20170001P00022I0073 shi4 yu2 xia4 de5 bu4 jun1 yun2
+20170001P00178A0015 lou2 dong1 ce4 qiang2 mian4 tong3 yi1 guai3 jiao3 chu4 shi3 yong4 guai3 jiao3 zhuan1
+20170001P00424A0100 suo3 yi3 jia1 ni3 de5 lu4 xue3 xiang2 xian4 zai4 zai4 na3 er2 ne5
+20170001P00390I0050 wen3 ding4 jun1 xin1 a5
+20170001P00190I0110 gan4 wu4 ren2 yuan2 ming2 dan1 xiong1 ka3
+20170001P00316I0075 bian4 de2 ri4 yi4 fu4 za2 he2 yong3 zhong3
+20170001P00317A0102 ni3 pei2 zhang1 li4 xia2 ba5 wo3 pa4 niao4 ku4 zi5
+20170001P00367I0057 tui1 jian4 da4 hua2 xi1 que1 nan2 bei3 tong1 tou4 liang3 fang2
+20170001P00108I0077 hai2 yao4 dang1 you2 yong3 lao3 shi1 huo4 zhe3 wu3 dao3 lao3 shi1
+20170001P00133I0085 qi4 wei4 guo3 ran2 shi4 ge4 ai4 qun2 de5 hao3 ci2
+20170001P00161I0073 weng4 zhong1 zhuo1 bie1 ba5 na4 xie1 bie1 you4 bu4 sha3
+20170001P00338A0021 kuai4 zi5 xiong1 di4 chang4 de5 wang3 shang4 ge4 zhong3 ban3 ben3
+20170001P00262I0052 xin1 neng2 yuan2 jun1 yi3 ti2 qian2 ban4 li3
+20170001P00438A0003 ni3 yun2 gou4 bu4 dao4 ha1 ha1 xue3 qiao1 duo1 qian2
+20170001P00318I0016 san1 xia2 guang3 chang2 da4 ju4 yuan4
+20170001P00032I0113 wo3 de5 ling3 dao3 tong2 shi4 quan4 wo3 bu4 yao4 ci2 zhi2
+20170001P00068I0033 wo3 hui4 lao2 ji4 you3 ge4 xiong1 di4
+20170001P00160I0070 wo3 zhe4 chun2 cui4 shi4 shou4 hai4 zhe3 a5
+20170001P00388I0016 wo3 yu4 yue1 dao4 ci2 yun2 si4 le5
+20170001P00145A0090 hai2 shi4 gun3 ba5 zhe4 liang3 tian1 xia4 xue3 ye3 bu4 hao3 kai1
+20170001P00134A0026 jian4 dao4 guo4 kuang2 shuai3 zhuang4 bi4 de5
+20170001P00377A0064 shang4 wu3 bu4 yun2 xu3 hui2 jia1 shui4 jiao4
+20170001P00340A0041 shi4 tiao2 jian4 bu4 yun2 xu3 le5 na4 yi4 si5 shi4 xiang3 dao3 gu3
+20170001P00152A0067 pei2 wo3 wan2 shua3 ba3 dian4 shi4 ju4 shan1 diao4 jiu4 hai1 pi2
+20170001P00020I0087 xin1 jiang1 shang1 tai4 yu3 di4 li3 yan2 jiu1 suo3 zhang1 xiang4 jun1
+20170001P00372I0115 shua3 biao1 zhun3 ban3 de5 hai2 shi4 jun1 zheng1 de5
+20170001P00440A0007 kai1 fa1 qu1 xu2 hu2 yun2 juan1
+20170001P00015I0118 qin2 shou4 bi3 wei3 jun1 zi3 hao3 duo1 le5 ba5
+20170001P00221I0055 ri4 ben3 di4 zhen4 zhong1 guo2 juan1 le5 duo1 shao3 qian2
+20170001P00204A0099 lv4 shi1 wo3 yao4 xun2 wen4 yi1 ge4 guan1 yu2 ci2 zhi2 de5 wen4 ti2
+20170001P00419A0017 hu1 lve4 wo3 wo3 yao4 yi1 ge4 ren2 yu2 kuai4 de5 wan2 shua3
+20170001P00194A0077 jin1 tian1 shang4 wu3 zai4 gong1 si1 xue2 xi2 ai4 xue3 chan3 pin3 zhi1 shi4
+20170001P00159A0068 mei3 tian1 dou1 yao4 xie3 ri4 bao4 de5 xiao4 er2 bu4 yu3
+20170001P00113A0035 jiu3 dian3 wo3 ying1 gai1 qu4 yi1 yuan4 kan4 ya2 le5
+20170001P00050A0053 weng1 wen2 sen1 nan2 nv3 ge4 da4 he2 zhao4
+20170001P00069I0027 bu4 guai1 ni3 men5 zhun3 bei4 wan3 shang4 de5 liang3 ju2 bi3 sai4 a5
+20170001P00076A0091 zhun3 bei4 xia4 ban1 hui2 jia1 dai4 wa2 er2 qu4 le5
+20170001P00219I0107 yang2 bo1 tao1 dui4 huang2 wei2 shuo1
+20170001P00258I0033 ri4 jun1 xian4 shang4 xia4 bo1 dong4
+20170001P00282A0070 rang4 xiao3 hai2 zi5 men5 da3 qu4 ba5 wo3 zai4 tang2 shan1
+20170001P00369A0072 gang1 kan4 yan4 hui1 fa1 de5 yang2 wa2 jiu4 zuo4 na4
+20170001P00368A0004 qian1 wan4 fu4 weng1 shi2 bie2 qiu2 wo3 hui2 lai2
+20170001P00182I0119 zui4 jin4 you3 he2 xiao4 qian4 dou1 kuang2 que1 yi1 fu5
+20170001P00419A0060 ni3 cai1 a5 gun3 ba5 wo3 he2 wo3 xiong1 di4 qu4
+20170001P00148I0043 zhang1 cai3 xia2 fan4 yu3 bo2 jian3 fei2
+20170001P00157I0004 wo3 hen3 huai2 nian4 wo3 zai4 ri4 ben3 chi1 de5 ke3 le4 bing3
+20170001P00139I0021 huai2 hua1 zhao2 chuang2 jiang4 wen1 le5
+20170001P00003A0018 wan3 shang4 zai4 er3 bian1 weng1 weng1 de5
+20170001P00261I0007 wo3 shi4 yun2 nan2 jia1 tu2 guo2 lv3 feng2 yong3 chun1
+20170001P00333A0003 gei3 wo3 ge4 mian4 zi5 ri4 ben3 xiong1 di4
+20170001P00216A0038 ni3 de5 quan1 zi5 li3 you3 mei2 you3 wen1 rou2 de5 mei3 nv3 dan1 shen1
+20170001P00397I0031 jiao3 zhi4 wen1 niu2 te4 qi2 jie2 he2 bing4 fang2 yu4 suo3 cai2 hui4 shi4
+20170001P00220A0069 ni3 men5 na4 ge4 wen1 quan2 jiu4 he2 yong3 chi2 si4 de2 mei2 yi4 si5
+20170001P00369I0064 dou1 shi4 xiong1 di4 shuo1 zhe3 gan4 sha4
+20170001P00061A0085 ke3 yi3 zai4 ji2 ta1 na2 huo4 zhe3 jun1 tuan2 bu3 gei3 dian3
+20170001P00428A0109 wo3 bang1 ni3 shua1 ri4 jun1 cun2 kuan3
+20170001P00196I0077 xiao4 xun2 yong3 de5 na4 ge4 bu4 neng2 can1 yu3 ba5
+20170001P00325I0114 bie2 zai4 qun2 li3 ji1 ji1 wai1 wai1
+20170001P00078A0103 huang2 da4 fu1 shuo1 ta1 zai4 jian1 hu4 shi4 guang1 shua3 shou3 ji1
+20170001P00199I0035 yuan4 fu4 zhe4 ge4 ci2 dui4 ni3 zhen1 de5 hen3 qia4 qie1
+20170001P00253A0004 gong4 jian4 wen2 ming2 he2 xie2 de5 ai4 guo2 zhu3 yi4 wen2 ming2 qun2
+20170001P00047A0073 xu1 yao4 di4 er4 jiao1 yi4 ri4 cai2 ke3 yi3 qian1 yue1
+20170001P00306I0024 wen4 wen4 ta1 zhi1 dao4 bu4 zhi1 dao4 jun1 qu1 zong3 yi1 yuan4
+20170001P00075I0107 ran2 hou4 zai4 huai2 hai3 le4 di2 ya3 zhi4 yong4 me5
+20170001P00133I0021 huang2 bo2 wei4 le5 bao3 hu4 zhu4 gua3 fu4 he2 hai2 zi5 de5 ming4
+20170001P00250I0104 jiu4 yi1 qun2 ren2 bei4 fa1 dao4 liang3 ge4 xiang1 si4 de5 ci2
+20170001P00127A0044 wo3 xian4 zai4 tian1 tian1 jiu3 dian3 ban4 xia4 ban1
+20170001P00382I0035 ping2 jun1 fen1 duo1 shao3 a5 zhe4 ge4 wang3 shi4 hei1 le5
+20170001P00155I0106 le4 shan1 lu4 yu3 xue3 song1 lu4 jiao1 cha1 kou3 hai3 yun2 er4 qi1
+20170001P00306I0055 bei4 ri4 jun1 guan1 jian1 yu4 de2 le5 fei4 jie2 he2 si3 le5
+20170001P00017A0096 wo3 bu4 yun2 xu3 wo3 de5 peng2 you3 quan1 li3 chu1 xian4 shua1 ping2
+20170001P00310A0105 na2 sheng1 ming4 hun4 quan1 er2 zhen1 te4 me5 chun3 tou4 kuai4
+20170001P00310I0017 bie2 guan3 xiao3 xue3 zen3 me5 zhou1 xuan2
+20170001P00385A0052 ma1 ma1 chuai4 wo3 qi3 chuang2 shua1 ya2 xi3 lian3
+20170001P00432A0107 chi1 fan4 de5 shi2 hou4 gu3 tou2 ka3 zai4 ya2 chi3 li3
+20170001P00289I0110 ni3 jiu4 zhe4 me5 huai2 nian4 gen1 xiao3 wu3 yi1 ri4 de5 ri4 zi5 ma5
+20170001P00112A0097 huang2 hai3 bo1 yong3 bu4 mo2 mie4 de5 fan1 hao4
+20170001P00105I0087 guo2 jia1 xin1 wen2 chu1 ban3
+20170001P00215A0075 ni3 cai2 zhi1 dao4 chang3 zhang3 hai2 shuo1 wo3 men5 lao3 ban3 shi4 hun1 jun1
+20170001P00249I0092 qu4 gun3 zi3 jia1 li3 yun3 xu3 ni3 da3 xiao3 ma2 jiang1 e2
+20170001P00106I0097 wo3 dou1 bu4 yuan4 yi4 gen1 yuan2 fen1 de5 ren2 yi1 qi3 wan2 le5
+20170001P00052A0037 tiao2 jian4 yun3 xu3 le5 zai4 shuo1
+20170001P00180I0001 wo3 nen4 zi5 zong3 mei2 jun1 yun2 de5
+20170001P00113A0079 you3 yu3 shu4 ying1 shi2 zai4 shi4 xuan4 ku4 jun1 xun4
+20170001P00139A0093 xin1 li3 hai2 shi4 xi1 wang4 na4 shi4 huang2 lai4 jun1 de5
+20170001P00130I0088 jin1 tian1 zhun3 bei4 you2 yong3 qu4
+20170001P00321I0017 na4 ge4 bu4 wa2 wa5 ta1 zong3 shi4 zuo4 bu4 wen3
+20170001P00252I0030 xia4 mian4 jiu4 you2 huai2 an1 bo2 ai4 yi1 yuan4 de5
+20170001P00322I0012 pi3 zi5 ying1 xiong2 na3 li3 you3 qian2 qu4 dian4 ying3 yuan4
+20170001P00369A0041 guo4 shang4 kuai4 le4 de5 bei4 dan1 ci2 de5 ri4 zi5
+20170001P00237I0036 wo3 gei3 ni3 gai4 le5 zhang1 le5
+20170001P00082I0005 hai2 you3 ta1 de5 yong1 hu4 zhe3
+20170001P00086I0052 ru2 guo3 yao4 ge1 ci2 jiu4 wen3 e2
+20170001P00416A0039 zuo4 ge4 yin1 le4 bo1 fang4 qi4 wang3 ye4 ban3
+20170001P00140I0100 ni3 yi3 wei4 qiong2 ku3 ren2 ri4 zi5 hao3 guo4
+20170001P00192I0039 wo3 qu4 qu3 huan2 zhun3 bei4 huai2 yun4
+20170001P00144A0092 hai2 shi4 ni3 xin4 kou3 ci2 huang2 de5
+20170001P00085I0092 ding1 shi4 yong3 ri4 ben3 she4 bei4
+20170001P00243A0003 qing4 ge1 da4 liang2 liang2 qiu2 ju1 jiu4 xiao4 qu1 dian3
+20170001P00348I0069 chi1 xue3 gao1 ye3 bu4 niao4 chuang2 a5
+20170001P00230I0113 liu4 yi1 yuan4 de5 fei4 yong4 yi1 fa3 bu4 neng2 cheng2 li4 de5 jun1
+20170001P00076A0040 dan4 shi4 hai2 shi4 hen3 huai2 nian4 yi3 qian2 kao3 shi4 de5 ri4 zi5
+20170001P00035A0086 mo1 mo1 tou2 bu4 yong4 huai2 yi2
+20170001P00380I0002 nong2 ye4 yin2 xing2 ba3 ni3 dian4 hua4 fa1 lai2 yue1 hui4
+20170001P00002I0043 duo1 ting1 ting1 ri4 yu3 de5 ci2 dai4
+20170001P00425A0018 bie2 re3 wo3 wo3 huo3 qi4 da4 wo3 xiong1 kou3
+20170001P00206A0027 mei2 mei2 jin1 tian1 ni3 gu4 yi4 pian4 zhao4 xue3 mei2 lai2 kan4 ni3 me5
+20170001P00250A0040 gan3 de2 shang4 di4 tie3 hui2 qu4 guang3 zhou1 nan2 jiu4 ke3 yi3 le5
+20170001P00355A0050 ni3 gan3 jin3 he2 yang2 yu3 xuan1 gao3 dui4 xiang4 ba5
+20170001P00074I0039 xiang3 zi1 xun2 yi1 xia4 ni3
+20170001P00352I0010 wo3 shi4 ji4 suan4 ji1 xue2 yuan4 jiao4 shi1 yang2 yong3
+20170001P00221A0078 ni3 shi4 you4 yao4 jie1 ge1 ci2 ma5 lin2 cheng2 jiu4 shi4 ge4 sao1 huo4
+20170001P00343A0041 na4 yi3 hou4 mei2 xi1 ban1 ya2 la5
+20170001P00238I0008 ka3 qi2 zi3 de5 yin3 xue3 kuang2 shou4 miao1
+20170001P00289I0019 tian1 hui4 bu4 hui4 fu4 gai4 yong3 jiu3
+20170001P00381A0034 min3 jun1 da4 ren2 bu4 ji4 xiao3 ren2 guo4
+20170001P00069I0117 wo3 cai2 bu4 que1 na4 dian3 ka3 qian2
+20170001P00204A0037 long2 yu4 mei2 na4 zhong3 ye3 shi4 da3 di3 ku4 ni3 qiang2 ci2 duo2 li3
+20170001P00209A0060 mo4 shua3 lao3 zi5 de5 hao4 le5 lao3 zi5 cun2 le5 hao3 jiu3 de5 qian2
+20170001P00058I0108 wo3 zhun3 bei4 gu3 qi3 yong3 qi4 kan4
+20170001P00034A0115 bu4 zhun3 sheng1 wo3 de5 qi4 wo3 jia1 quan1 quan1 zui4 hao3 le5 ai4 ni3
+20170001P00329I0026 lin2 chuang2 ying2 yang3 ke1 jiang3 li4 jun1
+20170001P00329A0011 er2 jun1 ren2 yi1 ban1 dou1 shi4 bei4 guan1 qi3 lai2 de5
+20170001P00408I0010 lan2 wu1 zha4 qian2 hou4 shui3 liu2 fen1 bu4 jiao4 wei4 jun1 yun2
+20170001P00436A0076 ni3 sha4 shi2 hou4 hui2 lai2 jie2 hun1 wu2 xue3 zhe4 liang3 tian1
+20170001P00190A0112 huo2 gai1 liang2 xi3 de5 xuan1 chuan2 pian4 yi3 jing1 gei3 yang2 chi4 feng1 le5
+20170001P00209A0084 na3 ge4 shuo1 de5 shi4 chong1 yao4 tiao2 jian4 qiu2 jie3 shi4 ye4 er4 wa2
+20170001P00298A0092 jiu4 nin2 hai2 zai4 zhe4 er2 meng2 quan1 ne5
+20170001P00292I0105 she4 li4 xuan1 chuan2 zi1 xun2 zhan4
+20170001P00270A0034 dang1 ying1 xiong2 de5 ri4 zi5 zai4 hou4 mian4 ne5
+20170001P00225I0015 wo3 yue4 di3 huo4 zhe3 xia4 yue4 chu1 zai4 mai3
+20170001P00311I0077 ben3 lai2 qu4 nian2 zhun3 bei4 huai2 yun4 de5
+20170001P00299A0068 shi4 wo3 yi3 xiao3 ren2 zhi1 xin1 du4 jun1 zi3 zhi1 fu4
+20170001P00006I0083 ni3 jiu4 xia4 lou2 jiu4 you3 tang1 he1 le5
+20170001P00426A0003 ai1 wo3 zen3 me5 hui4 xuan1
+20170001P00210A0008 na4 ge4 wang3 shang4 yu4 yue1 guo4 le5 jiu4 you4 de2 zhong4 xin1 yu4 yue1
+20170001P00162I0085 zhun3 da4 si4 de5 wa2 yao4 kao3 jiao4 shi1 zheng4 le5
+20170001P00350I0033 wo3 xian4 zai4 zhun3 bei4 zuo4 lun2 hua2 de5 miao2 shu4
+20170001P00192A0114 jiang1 su1 huai2 an1 shi4 qing1 he2 qu1 xi1 an1 lu4 da4 he2 xin1 cheng2
+20170001P00271A0024 qian1 nian2 jiang1 shi1 wang2 zhe4 dian3 xue3 hua1
+20170001P00329A0054 wei4 jing1 guo4 wo3 de5 yun3 xu3 luan4 dong4 wo3 dong1 xi1
+20170001P00198I0029 bu4 ka3 de5 hua4 jiu4 shen1 yuan1 qu4 la5
+20170001P00300A0052 kong1 shou3 hui2 lai2 a5 xue3 yang2 you4 bu4 li3 wo3
+20170001P00290A0110 he2 liang2 sheng4 yong3 shi4 yi2 xin4 gong1 si1 de5 tong2 xing2
+20170001P00281I0070 sui4 hua1 xue3 fang3 lian2 yi1 qun2 xia4
+20170001P00181A0001 jing1 chang2 lian2 xi4 hao3 ba5 huang2 yong3 jiang1
+20170001P00300A0105 kong1 jun1 jian4 jun1 jie2 de2 yang2 za2 zhong3 e4 e4
+20170001P00064A0066 du4 meng2 huo4 zhe3 hai3 la1 er3
+20170001P00120I0099 wo3 yao4 kan4 qun2 zi5 huo4 zhe3 duan3 ku4 le5
+20170001P00136A0037 wo3 za3 jue2 de2 qun2 li3 bian1 nv3 wa2 wa5 hao3 duo1
+20170001P00075A0002 ji4 zhu2 fu4 ze2 ren2 gai3 cheng2 huang2 guo2 xiong2
+20170001P00356A0110 wo3 zhe4 zhong3 ti3 wen1 di1 de5 ren2 qu4 dong1 yong3 dong4 cheng2 bing1 kuai4
+20170001P00210I0013 na4 yang4 wo3 you4 yao4 sun3 shi1 yi1 hua1 quan1
+20170001P00376A0025 mei2 shi3 jing4 xian4 zai4 gan3 zhang1 zui3 yuan1 wang3 le5
+20170001P00429A0062 bu4 yun2 xu3 na4 xuan3 ze2 ba5 wei4 sha4
+20170001P00010I0046 wo3 yao4 de5 tu3 ji1 gai4 fan4
+20170001P00318I0099 wo3 lao3 po2 po2 shuo1 zui4 hao3 qu4 zhong1 yi1 yuan4 dong3 bo1 na4
+20170001P00042A0114 ni3 men5 na4 li3 da4 er4 cai2 jun1 xun4 jian3 zhi2 shuang3 dao4 bao4
+20170001P00430A0050 ha1 er3 bin1 xia4 xue3 le5 zan2 lia3 mai3 dai4 er3 duo1 de5 mao4 zi5
+20170001P00103A0111 jiu4 yi3 guo2 jun1 kong1 zhan4 kang4 ri4 ti2 cai2 ying3 shi4 ju4 wei4 li4
+20170001P00327I0113 wo3 zai4 chuang2 shang4 jia1 ge4 xiao3 dian4 shan4
+20170001P00391I0093 xian4 zai4 zhi3 you3 ya3 huan4 xue3 shang4 le5
+20170001P00355I0048 ni3 gei3 zhao3 ge4 fu4 weng1 huo4 fu4 er4 dai4 dou1 ke3
+20170001P00326I0063 jiang1 yan1 hao3 de5 zhu1 rou4 pian4 jun1 yun2 zhan1 shang4 gan4 dian4 fen3
+20170001P00175A0043 er2 qie3 wo3 xiang3 ba3 wa2 er2
+20170001P00174A0053 bu2 guo4 yong3 qi4 ke3 jia1 a5 zhang4 zhao2 yang2 duo1 jiu4 xiang4
+20170001P00047I0042 na4 zhi1 hao4 zi5 zen3 me5 zhuan3 quan1 gun3 ne5
+20170001P00063A0086 hai2 ke3 yi3 pi1 ri4 ma5
+20170001P00188I0058 ta1 men5 hao3 yu2 weng1 de2 li4
+20170001P00422A0015 ni3 rang4 ta1 he2 jiong3 ju2 liao2 tian1 ma5
+20170001P00177I0008 li3 yun2 pen2 de5 shu1 dao4 ou3 er3 dou1 shi4 cuo4 de5
+20170001P00213I0091 wo3 ning2 yuan4 ni3 yong3 yuan3 bie2 gai3 bian4 zhen1 xi1 wang4
+20170001P00141A0059 qu4 tang4 jin1 si1 xia2 huo4 zhe3 di2 bi3 si1
+20170001P00323A0087 xin1 xi3 ruo4 bu4 shi4 kuang2 xi3 de5 hua4 yong3 bian4 quan2 shen1
+20170001P00186I0021 wo3 jie3 he2 wo3 di4 wan2 da4 fu4 weng1
+20170001P00387I0014 tian1 yan3 ben3 ka3 xian4 chang2 hui4 zhu4 jiu3 ci2
+20170001P00113I0013 che1 jian1 dang3 zhi1 bu4 huang2 you3 cai2
+20170001P00200I0043 weng1 xiao3 ren2 shi2 zai4 qian4 bian3
+20170001P00350A0089 qing3 wen4 gang1 cai2 nin2 ti2 dao4 de5 ci2 dian3
+20170001P00166A0097 ni3 mei4 de5 shui2 yun2 xu3 ni3 jian3 fei2 le5
+20170001P00047I0118 ta1 wa2 wa5 zhe4 duan4 shi2 jian1 ri4 zi5 nan2 guo4
+20170001P00135I0048 hai2 you3 xue3 hua1 ming2 xin4 pian4 pi2 jiu3 quan4
+20170001P00328A0103 hai2 pao3 qun2 li3 xuan1 chuan2 bu4 xiang3 huo2 le5
+20170001P00057I0098 zai4 ye3 mei2 you3 shen2 me5 qiong2 kai1 xin1 de5 ri4 zi5 le5
+20170001P00315A0112 ni3 bie2 yuan1 wang3 wo3 gang1 cai2 lao3 yang2 fa1 de5
+20170001P00129I0050 qun2 zhong4 yan3 jing1 guo3 ran2 xue3 liang4
+20170001P00219I0005 zhun3 bei4 qu4 fu4 yue1 a5
+20170001P00089A0049 yi2 hui4 er2 kai1 hui4 zhun3 bei4 hao3 ke4 jian4 er2 he2 chuan4 ci2
+20170001P00412I0052 li3 guan1 wen2 shi4 jie3 fang4 jun1 li3 gong1 xue2 yuan4
+20170001P00009I0032 ta1 jiao4 ni3 qu4 weng4 an1 wen4 ni3 qu4 bu4 qu4
+20170001P00153I0023 quan4 shi1 xiong1 jin1 hou4 yong3 meng3 jing1 jin4
+20170001P00064I0024 wei3 kang1 xi1 huang2 di4 de5 zhong4 da4 jun1 shi4 huo2 dong4
+20170001P00022I0106 wo3 zhe4 bian1 bang1 ni3 qu4 shen1 qing3 he2 tong2 gai4 zhang1
+20170001P00271I0073 jin1 tian1 jiu4 bei4 wo3 cong2 chuang2 shang4 shuai1 xia4 lai2 yi1 ci4
+20170001P00184A0061 er2 qie3 shi4 na4 ge4 shi2 hou4 de5 xiong1
+20170001P00253A0029 gua4 guang3 gao4 de5 bu4 yao4 de5 hai2 yi1 zhi2 wen4 mai4 gou3 gou3
+20170001P00362A0085 gang1 xi3 wan2 zao3 zhun3 bei4 qu4 shua3
+20170001P00437A0018 xiong2 er4 xiang4 lai2 niu2 bi1 zhe4 shi4 gong1 ren4 di1
+20170001P00206I0025 guan1 yu2 si3 zhe3 da4 yue1 san1 shi2 sui4 zuo3 you4
+20170001P00392A0072 bu2 yao4 yuan1 wang3 an3 wu2 yu4 xia2 yu4 xia2
+20170001P00181A0007 wo3 mei3 nian2 sheng1 ri4 dou1 shi4 hai3 jun1 ji4 nian4 ri4
+20170001P00109A0007 he2 lin2 yi2 na4 ge4 xiong2 hai2 zi5 lian2 xi4 le5 ma5
+20170001P00343A0017 nai3 xiong2 hai2 zi5 zhi1 luan4 wu3 shi4 ye3
+20170001P00152I0120 jian4 zhu2 qun2 nei4 you3 cai4 shi4 zong1 ci2
+20170001P00395I0083 hai2 you3 wei4 shu4 bu4 shao3 de5 yong1 hu4 zhe3
+20170001P00324A0044 bei3 jing1 shi4 weng1 si1 wei2 shi4 wei3
+20170001P00023I0102 jiao3 ban4 jun1 yun2 jiu4 ke3 yi3 le5
+20170001P00298A0053 shun4 bian4 shua3 hui4 er2 bu4 zhun3 bei4 chu1 qu4 le5
+20170001P00111A0029 jia3 fang1 ke3 ti2 qian2 jie3 yue1
+20170001P00089A0045 ba3 qun2 ming2 pian4 gai3 le5 xue1 you3 zhi4
+20170001P00032A0054 dan4 shi4 xiao3 shuo1 geng4 jia1 hui1 huang2 xiong2 zhuang4
+20170001P00198A0072 kan4 duo1 le5 ba5 ni3 de5 hua4 ti2 yong3 yuan3 li2 bu4 kai1 ri4 ben3
+20170001P00303I0057 ru2 guo3 shi4 ni3 huo4 zhe3 jun4 xiong2 de5 hua4
+20170001P00436A0038 yong3 yuan3 shen1 ti3 jian4 kang1
+20170001P00063I0090 zhe4 bei4 zi5 bie2 xiang3 tao2 chu1 ben3 gong1 de5 mo2 zhua3 le5
+20170001P00252I0109 qin2 shi3 huang2 bing1 ma3 yong3 xian4 chang2 jiang3 jie3 ci2
+20170001P00094I0096 wo3 gei3 ni3 ke4 ge4 luo2 bu3 gai4 ge4 chuo1
+20170001P00292A0100 qin2 qin2 zai4 ma3 tong3 li3 zhao3 shou3 ji1 zhen1 ying1 xiong2
+20170001P00351A0039 huo4 zhe3 liang3 ge4 dou1 qu4 ren4 jun1 xuan3
+20170001P00049I0054 nin2 xi1 gai4 he2 jiao3 huai2 zen3 me5 le5 ne5
+20170001P00029A0096 kan4 da4 jia1 yi4 jian4 zhang1 jia1 yang2 jia1 bao4 ming2
+20170001P00021I0107 tiao2 jian4 bu4 yun2 xu3 le5 guan3 ta1 ne4
+20170001P00165A0079 lia3 guai3 mai4 le5 zhi4 yu2 ni3 shi4 huai4 ren2
+20170001P00274A0075 ni3 chuan1 yong3 yi1 hao3 xing4 gan3 a5 wo3 gang1 qi3 chuang2
+20170001P00018A0087 tian2 cai4 shao3 nian2 qing1 chun1 qi1 ren2 ren2 dou1 hui4 dao4
+20170001P00398A0023 xi2 fu4 ni3 yao4 qu4 na3 li3 a5
+20170001P00404I0111 an1 hui1 sheng3 gao1 kao3 ying1 yu3 shi4 juan4 zhong1 de5 sheng1 ci2 liang4
+20170001P00318A0120 ni3 rang4 liang2 juan1 rang4 ni3 jia1 ru4 xie2 hui4 a5
+20170001P00411A0101 ming2 tian1 qu4 huang2 long2 xi1 shua3
+20170001P00087A0045 sui1 ran2 wo3 jing1 chang2 shuo1 yi1 ba1 zhang3 gai4 guo4 qu4 jiu4 guai1 le5
+20170001P00094I0013 wo3 zuo4 de5 yu4 jue2 suan4 hai2 yao4 qu4 zhao3 bie2 de5 zhang1 gai4
+20170001P00408I0078 mei4 mei5 xiang4 yun3 er2 de5 shi4 bu2 shi4 jie2 xi1 ka3
+20170001P00306A0091 ma2 jiang1 wo3 po2 po2 gong1 gong1 ta1 men5 dou1 wan2
+20170001P00080I0117 la1 che3 le5 xiong1 kou3 de5 shang1 kou3
+20170001P00105I0001 zhun3 bei4 shi2 wu3 hao4 er2 zuo3 you4 shen1 qing3 ci2 zhi2
+20170001P00158A0074 tang3 zai4 chuang2 shang4 he1 zhao2 xue3 bi4
+20170001P00079A0038 wan4 e4 de5 bing1 xue3 huang2 hou4
+20170001P00032I0069 na4 wei4 shen2 me5 yun2 fei1 hai2 shuo1 ni3 shua3 ta1
+20170001P00294A0001 ni3 you4 bu4 dei3 bu4 you4 yao4 wo3 pei2 de5
+20170001P00254A0087 guang3 zhou1 jiu4 mei2 xia4 guo4 xue3 yi1 kan4 jiu4 shi4 li3 ke1 sheng1
+20170001P00107I0102 ri4 jun1 de5 zheng4 mian4 jin4 gong1
+20170001P00038I0018 ni3 tian2 zhi4 yuan4 wei4 he2 bu4 liang4 li4 er2 xing2
+20170001P00081A0052 gang1 gang1 qu4 le5 yuan4 zi5 li3 niu3 le5 yi1 quan1
+20170001P00091A0063 ding4 dan1 bei4 qu3 xiao1 huo4 mei2 you3 fang2 shu3 dan1 fang1 mian4 wei3 yue1
+20170001P00039A0066 huang2 jian4 tao1 he2 wang2 zhi4 xia2 di3 xin1
+20170001P00020I0011 gang1 gang1 you4 zai4 wang3 shang4 ding4 le5 dian4 zi3 ci2 dian3
+20170001P00154A0113 fan4 dou1 chi1 bu4 qi3 le5 xiong2 hai2 zi5
+20170001P00385A0106 ni3 er2 zi5 shuo1 hua4 ba3 wo3 xiao4 de2 er3 mai4 na2 hui2 lai2 le5
+20170001P00068I0067 wo3 zhun3 dian3 shang4 ban1 de5 ya1
+20170001P00050I0029 wo3 xiang3 qu4 xi1 bei3 jiao3 na4 er2 mai3 juan4 quan1
+20170001P00082I0087 wo3 wan2 er2 zhi3 jia3 you2 qu4 le5
+20170001P00165A0097 wan2 le5 wo3 kan4 zhao2 su1 xue3 xiao3 hong2 qun2
+20170001P00411A0064 ni3 jia1 shi4 na4 ge4 cun1 de5 you3 xia4 xue3 ma5
+20170001P00059I0105 weng1 weng1 xiang3 wai4 mian4 de5 ji1 zi5
+20170001P00128A0021 suo3 yi3 wo3 zai4 kao3 lv4 yao4 bu4 yao4 da3 ge4 er3 dong4
+20170001P00154I0105 wo3 hai2 shi4 zhong1 xin1 zhu4 yuan4 ta1 tian2 xiong1 cheng2 gong1 de5
+20170001P00223I0073 jiu4 shi4 na4 ge4 weng1 le4 le4
+20170001P00325A0097 lai2 yun2 nan2 shua3 ye3 bu4 shuo1 yi1 sheng1
+20170001P00247A0026 er2 qie3 wo3 men5 shi4 wu3 jing3 gen1 jie3 fang4 jun1 bu4 yi1 yang4
+20170001P00308A0038 mei2 you3 zhi2 jie1 mo1 ni3 xiong1 jiu4 bu4 cuo4 le5
+20170001P00438A0115 shen2 me5 zui3 e4 xin1 ni4 wai1 liu2 zhi3 jia3 de5
+20170001P00294A0025 tong2 shi2 ye3 zhu4 nin2 shen1 ti3 jian4 kang1 yong3 yuan3 kuai4 le4 xie4 xie4
+20170001P00249I0054 lun2 tai1 ben3 shen1 zhi2 liang4 fen1 bu4 bu4 jun1 yun2
+20170001P00233A0073 wo3 dan4 yuan4 yong3 yuan3 dou1 bu4 yao4 you3 zhe4 fen4 yuan2
+20170001P00412I0091 xian3 zhao2 jian3 chan3 sheng3 he2 huang2 huai2 nan2 pian4
+20170001P00007A0063 mai3 xia4 lai2 gei3 wo3 mo1 mo1 xiong1 he2 tun2 jiu4 xing2
+20170001P00435A0044 bu2 jiu4 shi4 hao3 jiu3 mei2 kan4 dao4 ni3 le5 ma5
+20170001P00111A0024 shang4 ci4 xiong2 zhu3 ren4 zhu4 yuan4 bao4 xiao1 shou3 xu4 shou3 xu4
+20170001P00059I0027 ni3 bu4 shuo1 an1 jun1 hui1 mai3 de5 ka3 qi2 se4 me5
+20170001P00127A0058 jia3 ri4 de5 qing1 chen2 pao3 hao3 ji3 quan1 geng4 mei3 hao3 de5 shi4 a5
+20170001P00190A0086 huo3 qi2 lin2 bu4 hao3 ting1 shuo1 yao4 chu1 lai2 yong3 jiu3 de5 da4 pao4
+20170001P00371I0029 ni3 you3 he2 lao3 weng1 jiang3 le5 ma5
+20170001P00365A0039 wan3 shang4 dai4 yun3 ji1 yuan2 wei4 gei3 ni3 chi1
+20170001P00325A0013 shi4 bu2 zhun3 bei4 da4 hun1 yao4 wa2 a5
+20170001P00406I0016 ri4 duan3 qi1 jun1 xian4 shang4 chuan1 chang2 qi1 jun1 xian4
+20170001P00123A0027 dian4 ci2 lu2 de5 chu1 chang3 ri4 qi1 kan4 le5 ma5
+20170001P00323I0002 ta1 guai3 wan1 mo3 jiao3 bu4 yuan4 yi4 shuo1
+20170001P00272A0101 neng2 bu4 neng2 yu2 kuai4 de5 wan2 shua3 shui2 you3 zhou1 yong3 jie2 dian4 hua4
+20170001P00317I0002 wo3 yi3 wei4 zai4 xian4 shi2 li3 huo4 zhe3 quan1 wai4 beng4
+20170001P00272A0027 xiong2 da4 ni3 bu4 dong4 le5 ni3 de5 wang3 luo4 bu4 hao3
+20170001P00299I0060 ni3 he2 cai4 jia1 wei3 huang2 le5 a5
+20170001P00387I0089 yao4 bu4 wo3 men5 xiang1 yue1 mou3 ri4
+20170001P00310I0004 xi1 yin3 le5 geng4 duo1 de5 ou1 zhou1 ren2 jin4 ru4 bo2 ci2 wa3 na4
+20170001P00147A0106 wo3 men5 huang2 ye4 ye3 you3 xiang4 mu4 bu4
+20170001P00121I0045 piao1 liang4 de5 ri4 yu3 ge1 ci2
+20170001P00354A0002 ke3 neng2 jin1 ri4 ta1 qing3 jia3 pei2 wo3 qu4 guang4 jie1
+20170001P00005A0013 ni3 shi4 zhun3 bei4 zhe4 yang4 zai4 ci2 yi1 ci4
+20170001P00428A0050 yun2 long2 xiong1 zai4 zhe4 li3 zuo4 sha4 zi5 ne5
+20170001P00206A0120 mei2 zhun3 ni3 ci2 zhi2 me5 ni3 xiang3 ting1 wo3 jiao4 ni3 shen2 me5 e2
+20170001P00179I0072 jia1 jiao1 juan4 deng3 za2 fei4
+20170001P00169I0031 ci2 shan4 yi1 ri4 juan1 wo3 juan1 le5
+20170001P00348A0091 jian4 dao4 ni3 peng2 you3 le5 huang2 juan1
+20170001P00249A0008 er4 wa2 zi5 yi3 jing1 mei2 qian2 le5 bu4 yao4 zhi3 wang4 ta1 le5
+20170001P00369I0026 huang2 he2 jin4 ru4 he2 nan2 jing4 nei4 de5 guai3 jiao3
+20170001P00091A0050 qun2 le5 xiong1 di4 jie3 mei4 men5
+20170001P00033A0080 nan2 dao4 zhi3 yun2 xu3 nan2 de5 hua1 xin1 ya1
+20170001P00161I0060 bu2 shi4 xian4 zai4 dou1 xi3 huan1 kai3 jia3 yong3 shi4 ma5
+20170001P00398I0011 xian4 zai4 xiang4 ri4 kui2 he2 xun1 yi1 cao3 kai1 le5 mei2 you3
+20170001P00247A0079 er2 qie3 xiao3 feng1 zhong1 yi4 shi2 zi3 xia2 zhi1 qian2 xiang3 shi4 le5
+20170001P00017I0094 deng3 yu2 yun3 xu3 ni3 yong4 xue2 xiao4 de5 wang3 luo4 le5
+20170001P00137A0022 xiao3 weng1 kan4 jian4 ni3 dou1 lan3 de2 fei1
+20170001P00191A0092 jia1 li3 hai2 shi4 yi1 qiong2 er4 bai2 zhuang1 xiu1 qian4 le5 yi1 wan4 duo1
+20170001P00087A0036 qu3 jue2 sheng4 fu4 wang3 wang3 jiu4 kan4 di4 yi1 guan1
+20170001P00162A0066 ci2 shan4 yi1 ri4 juan1 tong1 zhi1
+20170001P00168A0084 bu4 zhang3 wen4 wo3 yuan4 bu4 yuan4 yi4 dang1 kong1 jun1
+20170001P00438A0049 min3 jun1 ni3 jing4 ran2 mei2 you3 shui4 jiao4
+20170001P00315I0111 tian1 xian4 jun1 gu4 ding4 zai4 luo1 jing1 jia3 ban3 zuo3 ce4
+20170001P00152A0032 ni3 qu4 xia4 zai4 tian1 tian1 fu4 weng1 bai4
+20170001P00129I0045 fu3 shun4 shi4 ya2 yuan4 zhong1 wu3 xiu1 xi1 ma5
+20170001P00215A0020 ni3 bu4 xing2 a5 xia2 yi4 mei2 wu3 qi4 ding4 guo2 ye3 hui4 jiang4 jia4
+20170001P00225I0095 xing1 qi1 tian1 shi4 yu4 yue1 de5 ri4 zi5
+20170001P00115I0005 dan4 you3 xie1 ying1 xiong2 ka3 pian4 shi4 yao4 mai3 de5
+20170001P00172I0098 che3 dan4 de5 ren2 yong3 yuan3 bu4 hui4 dan4 teng2
+20170001P00244A0095 chu1 qiang2 wu2 liao2 chu1 qu4 pao3 ji3 quan1 wo3 dou1 shi4 zhe4 yang4
+20170001P00236I0059 mang2 shi4 wei3 xuan1 chuan2 bu4 wang2 an1 wei3
+20170001P00034A0044 er2 bu4 shi4 huai2 yi2 ta1 bu4 gou4 xi2 guan4
+20170001P00331A0025 jian4 wo3 dou1 hui4 mo1 wo3 yao4 jing1 chang2 mo1 ni3 de5 xiong1
+20170001P00303I0027 ri4 jun1 xian4 zuo4 bu4 shi4 zhou1 xian4 yi1 zhi2 dou1 shi4
+20170001P00358A0110 xia4 zhou1 yue1 le5 nan2 gang3 fu4 chan3 yi1 yuan4
+20170001P00187A0116 he2 he2 yin3 jun1 zai4 yi1 qi3 de5 na4 ge4 nv3 de5 jiao4 shen2 me5
+20170001P00275A0034 ni3 hui2 lai2 le5 er3 ji1 mai3 dao4 wo3 gao1 shen1 pei2 mi2 lu4
+20170001P00306I0119 ji3 hao3 shao3 yuan4 yi4 tong2 ya2 jiang3 xin1 di3 hua4 ge2
+20170001P00044A0113 chen2 ci2 lan4 diao4 bu4 yuan4 zai4 qu4 zhong4 fu4
+20170001P00378I0080 zhi3 dao3 zhun3 bei4 huai2 yun4 fu1 fu4 cai3 qu3 gan4 yu4 cuo4 shi1
+20170001P00066I0029 zhi2 ben1 you1 lai2 ka3 de5 huai2 bao4
+20170001P00231A0014 ni3 he2 li2 jia1 lin2 yi1 qi3 zai4 tong2 sheng1 hu2 fu4 du2 ma5
+20170001P00124A0051 wo3 zhun3 bei4 rao4 zhao2 yang2 tai2 zou3 yi1 quan1
+20170001P00253I0089 ni3 ba4 ma1 hai2 xun2 wo3 yao4 wa2
+20170001P00179I0056 jin1 ri4 li4 xiang1 nei4 xian4 zhi2 he2 xiang1 zhen4 fen1 guan3 xuan1
+20170001P00241I0012 ming2 tian1 lai2 wo3 jia1 wan2 da4 fu4 weng1
+20170001P00250A0101 gan3 jin3 gei3 wo3 ci2 le5 ting1 jian4 mei2 ba4 ma1 zhi1 dao4 bu4
+20170001P00309I0034 jiu4 shi4 huai2 di3 yuan2 lai2 de5 wei4 sheng1 yuan4 ba5
+20170001P00145A0027 wo3 men5 zhou1 er4 qu4 na3
+20170001P00070I0067 ni3 men5 huang2 yong3 jun1 de5 wen2 zhang1 you3 mei2 you3 dian4 zi3 gao3 de5
+20170001P00095A0050 guo2 xuan1 da4 fan4 dian4 dian4 ying3 yuan4
+20170001P00156I0078 guo1 yuan4 zhong4 qing4 jia1 he2 yi2 biao3 you3 xian4 jia1 he2
+20170001P00159A0073 xiang4 ni3 zhe4 zhong3 gen1 lao3 po2 chao3 jia4 jiu4 shuai1 xian3 shi4 qi4
+20170001P00330A0017 ni3 cai2 shi4 da4 fu4 weng1 shi4 ma5 shen2 me5 bie2 xue2 wo3
+20170001P00111A0059 huang2 se4 de5 zhua3 zhua3 yao4 ji3 ge4
+20170001P00389A0040 bei3 jing1 zhong1 yu2 xia4 xue3 le5 zuo2 tian1 qu4 tian1 jin1 le5
+20170001P00167A0034 gan3 qing2 shang4 wen3 he2 wo3 you3 xie1 meng2 quan1 le5
+20170001P00202A0013 lei2 zhen4 deng3 wa2 gei3 dou1 dou1 kan4 de5 ma3 shang4 xia4 tian1 le5 e2
+20170001P00077I0011 wo3 zai4 shang4 da4 xue2 de5 shi2 hou4 jiu4 zhun3 bei4 gao3 ya2 chi3 le5
+20170001P00008A0039 wo3 de5 hao3 peng2 you3 dou1 zai4 guang3 zhou1 zai4 shuo1 ba5
+20170001P00217A0075 ni3 hai2 xiong1 ai1 ye3 zhi3 you3 ta1 cai2 neng2 jiang4 le5 ni3 kan4 ha1
+20170001P00115I0063 ta1 men5 zai4 yu2 le4 quan1 er2 zhou1 xuan2 de5 de5 que4 hen3 wo3 gan3 dao4
+20170001P00058I0089 wo3 wang4 ji4 weng1 chang2 sha4 yang4 le5
+20170001P00323A0081 ying1 gai1 jiu4 shi4 san1 huang2 zi5 wan2 er2 shuai4 pian4 le5 chun2
+20170001P00269I0081 wo3 hao3 xi3 huan1 zhe4 ge4 zuo4 zhe3
+20170001P00215A0081 ni3 bu4 shi4 shuo1 ren2 jia1 shu3 yu2 bu4 rong2 yi4 huai2 yun4 ren2 ma5
+20170001P00242I0076 liu4 yuan4 jun1 pin3 he2 tong2 zhan3 xian4 biao3 yang4
+20170001P00211I0083 ta1 men5 na4 tian1 ba3 wo3 han3 dao4 ya3 an1 qu4 wan2
+20170001P00364I0030 na4 jiu4 dao4 jia1 zhi1 hou4 yong1 bao4 re4 wen3
+20170001P00381A0108 ni3 xian1 mo1 qing1 xu3 wen2 xu1 yao4 de5 shi4 na3 yi1 zhong3 guan1 huai2
+20170001P00028A0099 wo3 zhe4 bian1 gai4 zhang1 hai2 xu1 yao4 zou3 ge4 liu2 cheng2
+20170001P00139A0046 ni3 zhun3 bei4 na4 zhen4 chu1 qu4 wan2 ma5
+20170001P00329I0038 ning2 yuan4 zou3 jin4 bao3 hu4 quan1
+20170001P00212A0003 na4 tian1 bu4 shi4 ren2 jia1 yi1 ge4 ren2 yong3 heng2 qun2 li3 ye3 zai4
+20170001P00364A0038 cai2 he2 nan2 peng2 you3 chao3 le5 jia4
+20170001P00004I0107 wo3 xi1 pu3 qun2 de5 tie3 xiong1 di4 ta1 bu4 wan2 le5 jiu4 gei3 wo3
+20170001P00128I0009 na4 xiao3 xia2 ci1 yan3 gai4 bu4 le5 zan2 de5 gao1 gui4
+20170001P00349A0078 weng1 yu4 dou1 bu4 zhi1 dao4 zai4 mei2 you3
+20170001P00411I0058 shen3 ren4 kong1 jun1 zong3 yi1 yuan4
+20170001P00351I0103 na4 bu4 shi4 sai1 weng1 shi1 ma3 yan1 zhi1 fei1 fu2 ma5
+20170001P00232A0047 tuan2 dui4 xing4 zhi2 tai4 qiang2 le5 zi4 ran2 yuan1 wang3
+20170001P00288I0109 san1 guo2 sha1 li3 zhu1 ge2 de5 tai2 ci2 shi4 shen2 me5 lai2 zhao2
+20170001P00033A0101 ba3 wa2 song4 hui2 lai2 ya1 you4 shang4 si4 he2 yuan4 ya1 dan4 dan4
+20170001P00153I0057 ni3 yao4 cheng2 wei4 ri4 ben3 jun1 guan1 ma3 xue1 xia4 de5 nu2 li4 le5
+20170001P00123A0096 ran2 hou4 zai4 jun1 yun2 pai2 lie4
+20170001P00297A0041 ni3 qu4 zhan4 jiang1 gen1 li4 jun1 de5 lao3 gong1 yi1 qi3 gan4 huo2
+20170001P00241I0015 lian2 tai2 ci2 dou1 zhun3 bei4 hao3 le5
+20170001P00332A0062 deng3 xiong2 xiong2 hui2 lai2 qu4 kan4 qie4 ting1 feng1 yun2
+20170001P00355I0004 weng1 lao3 shi1 jin1 tian1 bi3 jiao4 you1 xian2 a5
+20170001P00288A0012 hao3 kai1 xin1 you1 huang2 yue1 ni3 wo3 you4 ren4 cuo4 ren2 le5
+20170001P00209A0026 na3 you3 zhe4 yang4 de5 a5 wo3 yao4 da4 xiong2 xiao3 bie2 sheng4 xin1 hun1
+20170001P00157A0050 dang1 ran2 ben3 zhi2 hai2 shi4 yao4 shu4 li4 zhu3 ren2 weng1 yi4 shi4
+20170001P00061A0090 shuo1 xian4 zai4 shi4 ying1 gai1 wen3 ding4 jun1 xin1 de5 shi2 hou4
+20170001P00274A0032 sheng1 le5 wa2 jie2 le5 hun1 xin1 tai4 jiu4 you3 bian4 le5
+20170001P00211A0033 na4 ni3 ci2 zhi2 zhi1 hou4 zhun3 bei4 gan4 ma5 ne5 hui2 lao3 jia1 ma5
+20170001P00094A0030 na4 zen3 me5 neng2 zai4 huang2 jia1 jie2 mian4 qian2 ying2 yi1 ba3
+20170001P00156I0008 guan1 yu2 xun2 qiu2 ci2 zhuan1 qing1 xi3 ji4 he2 zuo4
+20170001P00096I0120 huai2 an1 de5 bu4 tai4 zhun3 que4
+20170001P00143A0115 er2 qie3 rong2 yi4 bei4 huai2 yi2
+20170001P00279I0108 wo3 wen4 le5 na4 ge4 huang2 fu3 yong3
+20170001P00104A0065 huang2 shan1 wang2 yong3 wang1 dan1 hao4
+20170001P00412I0030 gang1 cai2 wo3 zai4 qun2 li3 gen1 mou2 wen2 xia2 liao2 tian1
+20170001P00217I0091 bing4 ying1 que1 de2 jian1 li3 gong1 cheng2 shi1 de5 pi1 zhun3
+20170001P00353A0119 da4 juan1 zao3 shang4 da3 dian4 hua4 rang4 wo3 gen1 ta1 qu4
+20170001P00108I0091 kang4 ri4 guo2 jun1 shi4 zhu3 li4
+20170001P00299A0089 jiu4 wo3 sheng1 ri4 na4 tian1 zao3 shang4 lao3 po2
+20170001P00206I0078 xi1 wang4 zi4 ji3 zao3 ri4 shi4 huai2
+20170001P00258A0041 huang2 jin1 de5 mian4 mo4 ni3 zhi2 de2 yong1 you3 jia4 ge2 you1 hui4
+20170001P00204I0079 gu3 quan2 reng2 wei4 jia3 fang1 suo3 yong1 you3
+20170001P00133I0017 xian4 zai4 dou1 qian1 wan4 fu4 weng1 la5
+20170001P00021I0039 bie2 ji2 lu4 jun1 xue2 yuan4 zen3 me5 le5
+20170001P00133A0024 ri4 hou4 bai2 tou2 yong3 jiu3
+20170001P00286I0115 xian4 zai4 bu4 shi4 zi4 yuan4 juan1 le5
+20170001P00183I0010 kan4 dao4 ming2 yue4 xin1 quan4 fu4 hong2 xue3 de5 pian4
+20170001P00263I0006 guang3 dong1 sheng3 jun1 yi1 yuan4 zuo4 de5 hen3 duo1 le5
+20170001P00386A0006 yu4 yue1 le5 xiong1 ke1 he2 zhong3 liu2 yi1 yuan4 de5 yi1 sheng1
+20170001P00354A0098 zhong1 yan3 bo1 shi4 juan1 kuan3
+20170001P00405I0061 wo3 qu4 nian2 zai4 yue4 wan4 jiao3 di3 da3 hua2
+20170001P00143I0099 yu2 qi1 bu4 jiao1 zhe3
+20170001P00180I0097 wo3 xi3 huan1 xi2 lian2 di2 weng1 de5
+20170001P00388I0083 jian4 hun2 xiong1 jia3 jia1 shen2 me5
+20170001P00024A0076 xia4 lou2 shi2 bu4 shen4 shuai1 dao3
+20170001P00162I0041 bie2 zi4 yuan4 guai1 mei2 shi4 de5
+20170001P00060I0110 jin1 tian1 ming2 jun1 sheng1 ri4 li3 ma5
+20170001P00189I0012 bu4 zhun3 huai2 yi2 wo3 hei1 hei1 shen1 fen4 en1
+20170001P00376A0114 jiang1 bei3 ci2 cheng2 xin1 ju4 zhang1 lou2 da4 jiu3 dian4
+20170001P00331A0023 dao4 jiao3 huai2 ba3 tui3 dou1 gai4 zhu4 na4 zhong3 dai4 yi1 ceng2 sha1 de5
+20170001P00386A0082 wo3 gen1 wo3 zhan4 you3 yue1 hao3 yi1 qi3 qu4 li4 jiang1 le5
+20170001P00343I0043 ni3 ke3 yi3 qu4 fu4 shu3 er4 yuan4 jian3 cha2 xia4
+20170001P00271A0072 jiang1 jun1 ni3 zui4 duo1 chou1 guo4 ji3 ge4 sa1
+20170001P00248A0080 er4 hao4 zai4 jia1 deng3 wo3 wo3 dou1 hai2 mei2 qu4 xiong1 di4 jia1
+20170001P00254I0032 chen2 rong2 jie2 shi4 xi3 huan1 huang2 yong3 li4 de5 a5
+20170001P00326A0033 jia3 fang1 ke3 yi3 ti2 qian2 jie3 yue1
+20170001P00189I0084 ni3 ye3 zhun3 bei4 ge4 you2 yong3 ku4 cha4 er2
+20170001P00005I0050 zuo3 ce4 er3 duo1 weng1 weng1 xiang3
+20170001P00127A0084 na4 wei4 sha4 fang1 hui4 hui4 huai2 shang4 chen2 xun2 de5 hai2 zi5
+20170001P00338A0058 gei3 wo3 guai1 dian3 er2 wo3 zhi3 shi4 xiang3 pei2 ni3
+20170001P00014A0044 wo3 zhen1 de5 bu4 xiang3 zhao1 re3 na4 xie1 shi4 fei1
+20170001P00113I0001 qu4 xin1 shou3 qu1 you3 fu4 weng1 ka3
+20170001P00334A0013 jian4 wo3 sun3 guo4 weng1 xian2
+20170001P00319A0004 ni3 shi4 yin1 wei4 yang2 jie2 suo3 yi3 jie2 kua1 zi3
+20170001P00169A0011 ning2 yuan4 wei4 guo2 juan1 qu1 qian2 suan4 shen2 me5
+20170001P00321A0080 suo3 yi3 xian4 zai4 huai2 de5 shi2 hou4 dou1 kan4 le5 bu4 shao3 yi1 yuan4
+20170001P00115A0054 shi3 ren2 de5 han2 re4 bu4 jun1 yun2
+20170001P00040I0088 bi4 nv3 bu4 gan3 xian4 zai4 qu4 ba5 shi4 xue3 qin2 huang2 gong1 zhu3
+20170001P00261I0054 ta1 tian2 le5 hai3 jun1 hang2 kong1 gong1 cheng2 xue2 yuan4 yi1 ben3
+20170001P00218A0109 ni3 he2 zheng4 yun3 hao4 tu3 hao2 shu1 le5 qian2 ye3 bu4 hao3 yi4 si5
+20170001P00375A0059 ka3 wa2 wei1 zi4 ji3 qu4 zhu3 de5 la5
+20170001P00406A0107 shui2 yun2 xu3 ni3 jian3 cheng2 zhe4 yang4 de5
+20170001P00109I0035 ri4 ben3 zuo4 ci2 zuo4 qu1 jia1
+20170001P00143I0115 ru2 guo3 xiong1 di4 hai2 yuan4 yi4 de5 hua4
+20170001P00198A0065 ju2 jie3 shuo1 wo3 men5 zhe4 yang4 ci2 zhi2 le5 hai2 you3 gong1 zi1 shou1
+20170001P00194A0107 jin1 sheng1 jin1 shi4 wo3 jiang1 nan2 wang4 huai2 wo3 wang4 le5 wo3 shuo1 guo4
+20170001P00145I0066 yao4 bu4 qu4 feng4 huang2 shan1 da4 xia2 gu3
+20170001P00125I0041 shen1 zhen4 shi4 bao3 an1 qu1 guan1 lan2 jun1 zi3 bu4 zhun3 yu3
+20170001P00022A0065 dan4 ni3 yao4 che3 shang4 yi1 ge4 na4 quan1 li3 de5 ren2
+20170001P00348I0066 wo3 men5 ban4 gong1 shi4 de5 na4 ge4 zhun3 bei4 ci2 zhi2 le5
+20170001P00047A0045 mei3 yi1 ge4 ying1 xiong2 dou1 shi4 ji1 hui4 zhu3 yi4 zhe3
+20170001P00410I0043 bi4 jie2 xue2 yuan4 bai3 li3 du4 juan1 gong1 nong2 ye4
+20170001P00398A0060 zui4 jin4 er4 ban1 zen3 me5 yang4 wen4 le5 xia4 xiong1 da4 jiu4 shi4 hao3
+20170001P00270A0022 mei3 ge4 ying1 xiong2 kong4 zhi4 zui4 hao3 shi4 hai3 yang2 zhi1 zai1
+20170001P00274A0069 ting1 yin1 pin2 ting1 dao4 zhe4 ge4 ci2 wo3 ye3 shi4 xia4
+20170001P00018A0034 jiu3 er2 jiu3 zhi1 zai4 quan1 li3 jiu4 you3
+20170001P00375I0012 ti2 qian2 gei3 pin4 jie2 guo3 ming2 ci2 jiu4 ka3 dao4
+20170001P00364I0037 ni3 de5 yin2 xing2 ka3 xiao3 xue3 shou3 li3 you3
+20170001P00232I0077 bu2 shi4 zi4 ji3 de5 yong3 yuan3 dou1 shi4 fu2 yun2
+20170001P00175I0084 wo3 yong4 gai4 lun2 chu1 tian1 keng1 tao4
+20170001P00178A0037 shi3 mei2 jun1 ne5 zhen1 de5 jia3 de5 wo3 bu4 ji2
+20170001P00082A0078 chao1 ji2 ke3 ai4 tai4 di2 xiong2 xun2 zhao3 xin1 zhu3 ren2
+20170001P00100A0066 er2 qie3 yun3 ba5 bu4 zhao3 tong2 gong1 e4
+20170001P00350A0021 jiu4 shi4 sheng1 huo2 bu4 yun2 xu3 wo3 men5
+20170001P00359A0012 ni3 you4 diao4 bu4 guo4 wo3 de5
+20170001P00327A0027 luo4 bang3 zhe3 de5 zui4 jia1 xuan3 ze2 su1 gong1 yi4
+20170001P00054I0021 quan1 le5 huang2 se4 de5 shi4 que1 huo4
+20170001P00171A0012 hai2 bu4 dao4 yi1 zhi1 shou3 bu4 guo4 xiong1 mo1 le5 hao3 duo1 ci4
+20170001P00128I0062 qi2 ta1 dang1 ri4 qi3 fei1 hang2 ban1 bu4 yun2 xu3 zuo4 fei4
+20170001P00019I0095 wo3 die1 mao4 si4 bu4 pi1 zhun3 wo3 chu1 qu4 shua3
+20170001P00136A0119 shi1 zi5 zhe4 hui2 hui4 bei4 hou4 kai1 dong4 huo4 zhe3 ci2 tie3 ba5
+20170001P00373A0024 jin1 tian1 huo4 zhe3 ming2 tian1 cai2 neng2 gei3 wo3
+20170001P00356I0086 qiao3 qi2 de5 ta1 ri4 ben3 de5 xiong1 di4
+20170001P00242I0011 jin1 tian1 zhong1 yu2 zhi1 dao4 que1 jia3 de5 gan3 jue2 le5
+20170001P00045I0026 jing1 ju4 yuan4 shi4 wei3 xuan1 chuan2 bu4 dang3 jian4 ping2 tai2 can2 lian2
+20170001P00127A0116 li3 xue2 yuan4 na4 bian1 duo1 xuan1 chuan2 xuan1 chuan2 zhe4 ge4
+20170001P00358A0018 lin2 xue3 wo3 gei3 ta1 dai4 lv4 mao4 zi5 gan4 ma5 lao3 le5 lao3 le5
+20170001P00198A0103 kan4 dao4 ge4 tian1 ya2 ba1 gua4 tie1 xiang1 gang3 yu2 le4 quan1 shui3 shen1
+20170001P00134I0117 jiu4 dao4 huang2 gong1 you2 yong3 guan3
+20170001P00303I0104 bian4 di4 ying1 xiong2 ju2 de5 ban4 yan3 zhe3
+20170001P00399I0114 wo3 hao3 zai4 yi4 ge2 zhang1 zhi3 de5
+20170001P00326I0075 wo3 yao4 ba3 ta1 tou2 fa4 dou1 che3 diao4
+20170001P00122A0033 wo3 bu4 shi4 jia1 ru4 le5 yi1 ge4 yi4 sheng1 jun1 de5 qun2 ma5
+20170001P00229I0062 wu2 xia4 xia2 xian4 zhi1 gong1 si1 cha2 xun2 quan2 xian4
+20170001P00175I0027 bu3 chong1 ci2 yu3 shen2 me5 de5 ri4 ying3
+20170001P00036A0067 wo3 men5 xiang3 qu4 pu3 zhe3 hei1 ling3 wa2 wa5 qu4
+20170001P00364I0098 ni3 qu4 ri4 ben3 de5 shi2 hou4 ba3 wan3 xiong2 ye3 dai4 shang4 ba5
+20170001P00049A0017 da3 san1 que1 yi1 a5 yuan4 yuan4 bu4 jie1 dian4 hua4 zai4 shang4 ban1
+20170001P00195I0045 ji4 hua2 sheng1 yu4 shi4 jie4 ren2 kou3 xuan1 chuan2 ri4 jian3 bao4
+20170001P00322A0066 dian4 hua4 ni3 wen4 wen4 li3 lao3 ban3 huo4 zhe3 xue3 fei1
+20170001P00113I0051 xiang3 zhao2 jian4 ka3 shi4 yu4 yue1
+20170001P00040A0106 di4 shang4 huang2 se4 de5 xiao3 xiong2 mian2 yi1 yi3 zhi2 jian3
+20170001P00294A0028 hao3 ba5 na4 wo3 yue1 ni3
+20170001P00055I0084 xu2 xi1 yuan4 huai2 yun4 le5 ma5 ying1 cai3 er2
+20170001P00213I0047 wo3 jiao4 xiao3 weng1 fa1 gei3 ni3
+20170001P00117I0059 huan4 zhe3 xiong1 tong4 jiao4 shao3 fa1 zuo4
+20170001P00102I0015 na4 wo3 shua3 qi2 ta1 de5 dong1 xi1 shi2 bu4 shen4 ka3 si3
+20170001P00204I0047 biao1 zhun3 pan2 que1 yi1 ge4 ping2 shou3 pei2 lv4 pai4 cai3
+20170001P00291A0021 ni3 yong3 yuan3 bu4 jie2 hun1 na4 wo3 hui4 geng4 shang1 xin1
+20170001P00038I0004 wo3 huai2 yi2 shi4 zhang1 ri4 cheng2 liang3 xiong1 di4
+20170001P00149I0024 gong1 gong4 chang2 he2 qin1 wen3 he2 yong1 bao4 shi4 bu2 li3 mao4 xing2 wei4
+20170001P00009I0073 mai4 meng2 you3 yong4 de5 hua4 jie3 yi3 jing1 shi4 bai3 wan4 fu4 weng1 le5
+20170001P00347I0060 ni3 shen2 me5 shi2 hou4 bian4 fu4 weng1
+20170001P00279I0025 ka3 dao4 xiong2 dou1 sha1 bu4 le5 ren2
+20170001P00387A0021 lin2 chuang2 shang4 cheng1 shang4 hu1 xi1 dao4 gan3 ran3
+20170001P00263A0094 yu2 zi3 hei1 lian3 wa2 wa5 mian4 mo4 quan2 guo2 tong3 yi1 jia4
+20170001P00444A0020 an1 quan2 sheng1 chan3 xuan1 chuan2 ri4 fa1 yan2 gao3
+20170001P00011A0007 ci2 yun2 si4 li2 de2 hen3 yuan3
+20170001P00117A0051 xiao3 huang2 jin1 tian1 man2 xiang3 da3 pai2 jiu4 que1 ni3
+20170001P00372A0025 lin2 xia4 ke4 qian2 hao3 rang4 ni3 yong3 yuan3 ji4 de2 wo3
+20170001P00013A0070 wo3 zhe4 zhou1 zhao3 zhao3 huo4 zhe3 huo4 zhe3 de5 shuo1 shuo1
+20170001P00040A0069 ni3 man4 man4 mo1 suo3 wo3 qu4 shua1 ya2
+20170001P00133I0120 wo3 zai4 gei3 zhang1 ya3 xia2 mai3 zhe4 tiao2
+20170001P00392A0117 ba3 sheng1 wa2 de5 zhun3 bei4 gong1 zuo4 zuo4 le5
+20170001P00113A0084 ta1 men5 yi3 wei4 hai2 shi4 zhang1 yun2 xia2 ne5
+20170001P00333I0042 kai3 jia3 yong3 shi4 zhong1 guo2 gu3 dai4 guai4 shou4
+20170001P00021A0003 mei3 guo2 niu2 pi2 xian3 huan4 zhe3 de5 zui4 jia1 zhi4 liao2 pi2 mei3 guo2
+20170001P00383A0031 he2 ye4 hua1 bian1 ling3 bai3 zhe2 xue3 fang3 xiu4
+20170001P00259A0018 hui2 qin3 ba5 yang2 liang4 jian4 zai4 ming2 tian1 xiong1 di4 chu1 shi4 e2
+20170001P00376A0112 chen2 cong1 san1 er2 wang1 mei3 xu4 wa2 wa5
+20170001P00010A0016 ta1 she4 ji4 de5 bu4 guo4 ji4 ran2 shen2 yun3 xu3
+20170001P00168A0011 dan4 yuan4 kai1 xue2 neng2 zou3 lu4 bu4 xiao3 xin1 shuai1 de5
+20170001P00309I0087 wo3 jiu4 shuo1 bu4 xiao3 de2 shan1 wa2 de5 chu1 wen3 hai2 zai4 bu4
+20170001P00435A0053 shi4 xiao3 che1 kuai4 di4 ni3 you4 bu4 zai4 yong3 fu2
+20170001P00210A0080 na4 ge4 xue3 hua1 xiu4 xiao3 tao4 he2 duo1 shao3 mi3 he2 li4 mei2 bi3
+20170001P00020A0049 wo3 dai4 wa2 wa5 qu4 dou1 yun2 wan2 er2 qu4 le5
+20170001P00357I0024 wo3 men5 de5 juan1 zhu4 biao1 zhun3 ru2 xia4
+20170001P00113A0071 nan2 dao4 shi4 wo3 yuan1 wang3 ni3 le5 ni3 you3 shen2 me5 chou2 jia1
+20170001P00379A0014 jie2 guo3 bu4 da3 le5 er2 qie3 fa3 shi1 lao3 jian1 ju4 hua2
+20170001P00336A0041 nv3 de5 rou2 duo1 le5 xiong1 hui4 niao4
+20170001P00226A0098 gei3 xiong1 di4 nong4 ge4 you1 hui4 ka3 ma5
+20170001P00278I0092 mai3 ben3 ya3 si1 dan1 ci2 xian1 bei4 zhao2 ba5
+20170001P00251A0074 ge1 yun3 xu3 ni3 ke3 yi3 chuan1 dian3 er2 xiao3 yi1 fu5 fa1 yi1 zhang1
+20170001P00083A0098 gou3 ri4 you4 de2 wan2 er2 you2 xi4
+20170001P00020I0118 sheng1 ri4 kuai4 le4 me5 me5 da1 wo3 ai4 de5 jun1 jun1
+20170001P00074I0053 zhua1 bu4 wen3 shou3 ji1 jiu4 bei4 shuai3 le5 chu1 qu4
+20170001P00078A0014 ji4 de2 wo3 ye3 tong2 yang4 shi4 ge4 nan2 de5 bu4 zhi1 dao4
+20170001P00146I0058 shen3 yi4 jun1 shu2 lian4 de5 zuo4 dao4 ta1 de5 chuang2 shang4
+20170001P00367A0032 bao3 bei4 jin1 tian1 yun3 xu3 wo3 pei2 pei2 ni3 hao3 bu4 hao3
+20170001P00245I0091 wo3 men5 yun2 nan2 gao3 lv3 you2 wen2 hua4 xuan1 chuan2 me5
+20170001P00273A0072 bu4 dei3 ni3 ya1 de5 dong1 che3 xi1 che3 a5
+20170001P00199I0098 xi3 huan1 bu4 xi3 huan1 xiong1 bu4 an4 mo2 a5
+20170001P00077A0079 yao4 bu4 shi4 jun1 ma3 de5 hua4 wo3 yao4 bai2 qun2 zi5 na4 tao4
+20170001P00157I0059 na4 ni3 yao4 tian1 tian1 duo1 zhun3 bei4 dian3 shui3 de5 wai1
+20170001P00113A0002 wo3 yao4 ci2 zhi2 wo3 zhi2 jie1 zhao3 ni3 ke3 bu4 ke3 yi3 ya1
+20170001P00015I0063 jiu4 qu4 lou5 ren2 kuai4 shou3 ji1 jiang1 jun1 ling4
+20170001P00205A0088 mang2 wan2 hui2 lai2 le5 zai4 shuo1 ni3 zuo4 shen2 me5 gong1 zuo4 yang2 xue3
+20170001P00225A0034 nian2 qing1 shi2 jian4 wang3 you3 de5 shi4 he2 xia2 dou1 shi4 shuo1 a5 en4
+20170001P00239I0101 ci2 yun2 si4 qiao2 ni3 zong3 zhi1 dao4 ba5
+20170001P00338A0103 gen1 zhou1 yuan1 dao4 shi2 hou4 zai4 lian2 xi4 ba5
+20170001P00197A0070 jiu4 zhe4 me5 yu2 kuai4 de5 jue2 ding4 le5 yong4 bu4 yong4 dai4 yong3 ku4
+20170001P00243A0014 ni3 wu2 di4 guo4 huang2 jin1 yong3 zhe3 a5
+20170001P00053I0036 ai1 ya1 jin1 ri4 hao3 wan2 e2
+20170001P00409I0063 wo3 ke3 neng2 zhuan3 wei4 jian1 zhi2
+20170001P00367I0086 bing4 yue1 ding4 ming2 ri4 kan4 fang2
+20170001P00342A0102 jin3 fei1 de5 nan2 wa2 er2 ni3 bu4 gei3 wo3
+20170001P00164I0008 wo3 zai4 bei4 dan1 ci2 la5 lao3 po2 po2
+20170001P00082I0046 wan4 zhun3 bei4 juan1 gei3 lian2 meng2 de5
+20170001P00101I0076 ni3 yi1 qian2 shui3 er4 bu4 fa1 zuo4 pin3 dao4 qun2 you2 rang4 ren2 chang4
+20170001P00174I0047 ni3 zhun3 bei4 sha4 shi2 hou4 ci2 zhi2 ya1
+20170001P00307I0030 jiao4 ni3 zhao3 ge4 hen3 qiong2 de5 ni3 yuan4 yi4 ma5
+20170001P00006A0073 han2 wa2 de5 dian4 hua4 jiu4 shi4 ju2 huang2 se4 de5 ma5
+20170001P00269A0042 mai3 shou3 ji1 hou4 bian4 cheng2 qiong2 guang1 dan4 yi1 mei2
+20170001P00286A0049 jin1 tian1 shi4 gan4 de5 zui4 duo1 de5 yi1 tian1
+20170001P00242A0054 ni3 qu4 suan4 ni3 gei3 wo3 dai4 dao4 cao3 yu2 xiong1 jia1
+20170001P00276I0054 zhong1 wu3 qing3 ji1 ji2 xuan1 chuan2 he2 can1 jia1
+20170001P00079A0052 ben3 lai2 shi4 zhun3 bei4 yue1 ni3 de5 shi4 ma5
+20170001P00249A0012 er4 shi4 ni3 de5 xue2 ye4 ni3 mei2 you3 tai4 duo1 de5 xian2 xia2
+20170001P00418A0118 tuo1 ni3 jiu4 shuo1 jun1 xun4 hui2 lai2 xiao3 ying1 yao4 guo4 sheng1 ri4
+20170001P00150I0029 xiao3 di1 quan2 chang2 dou1 you3 yi1 zhong3 ni1 wen1 shang4 sheng1
+20170001P00418A0009 huang2 wu3 xia2 guo4 le5 qing1 ming2 cai2 qu4
+20170001P00176I0097 dian4 fei4 jiao3 na4 que1 xian4 shi4 bu2 neng2 shu1 ru4 xing4 ming2 cha2 xun2
+20170001P00198A0094 kan4 bu4 jian4 kan4 jian4 de5 shun4 jian1 yong3 heng2 de5 da4 xue3 piao1 yang2
+20170001P00015A0097 hai2 wei4 wo3 quan4 peng2 tie3 jun1
+20170001P00183I0093 lai2 yuan4 ping2 yu4 yue1 hao4 he2 xing4 ming2 jiu4 zhen3
+20170001P00361I0006 ni3 jin1 tian1 ken3 ding4 mei2 jiao4 huang2 juan1 qi3 chuang2 le5
+20170001P00093A0005 shen1 zhen4 shi4 jun1 da2 shi2 dai4 yi2 qi4 you3 xian4 gong1 si1
+20170001P00279I0056 lian4 na4 ge4 ying1 xiong2 shi4 ge4 ku3 ri4 zi5 a5
+20170001P00001A0085 weng1 jiu4 yao4 yi1 ge4 ni3 gei3 nong4 shi2 ge4 qian4 qian4
+20170001P00200I0037 na2 chu1 lai2 xuan4 yao4 de5 dou1 shi4 zui4 que1 shao3 de5
+20170001P00239I0062 ran2 hou4 ni3 zai4 ba3 zhong1 guo2 ri4 bao4 de5 ci2 hui4 gei3 bei4 le5
+20170001P00022I0004 zhi1 chi2 chuan1 ji2 nv3 ji4 zhe3 yue1 zhan4 wu2 fa3 tian1
+20170001P00316A0071 ni3 jiu4 shi4 mei2 yu2 jia1 long2 zhe4 me5 ting1 hua4
+20170001P00236A0048 bu4 tong2 xue2 xiao4 bu4 shi4 geng4 nan2 er4 que1 yi1 ma5
+20170001P00273A0103 bu2 rang4 wo3 jin4 ni3 de5 kong1 jian1 en4
+20170001P00007I0037 wo3 men5 zhun3 bei4 hao3 jiu3 yue1 chu1 lai2 wan2 yi1 xia4 zhao3 gan3 jue2
+20170001P00150A0040 wo3 zhe4 shang4 ban1 huo4 zhe3 zhong1 wu3 cai2 xing2
+20170001P00005I0011 wo3 men5 qun2 wai1 wai1 shi4 shen2 me5
+20170001P00183I0106 wo3 zhun3 bei4 kan4 pi3 zi5 ying1 xiong2 le5
+20170001P00005A0075 deng3 wo3 jia1 li3 wang3 su4 wen3 ding4 ne5 zai4 shuo1 ba5
+20170001P00018A0045 nin2 lao3 ren2 jia1 peng2 you3 quan1 zhe4 nian2 ling2
+20170001P00159A0076 ken3 ding4 shi4 bu2 yun2 xu3 cun2 zai4 di4 san1 zhe3
+20170001P00396I0037 lu2 gu3 que1 sun3 chu4 pi2 fu1 de5 guan1 cha2
+20170001P00399I0061 wo3 ning2 yuan4 qu4 ying1 xiong2 lian2 meng2 gei3 ren2 jia1 nve4 wo3
+20170001P00128A0024 fu4 ze2 pin3 pai2 xuan1 chuan2 he2 hui4 yuan2 tui1 guang3
+20170001P00059I0002 yan2 se4 jun1 yun2 de5 gei3 wo3 pei4
+20170001P00311A0058 na4 gei3 ni3 yi1 ge4 wen3 yi1 ge4 yong1 bao4 ba5
+20170001P00403A0117 ting1 le5 me5 e2 e2 e2 shua3 de5 shuang3 me5 e2
+20170001P00351I0081 yong3 jiu3 de5 shi4 lie4 gu1 zhe3
+20170001P00237A0064 shi4 a5 wo3 yao4 shi4 huai2 le5 wo3 jiu4 zhu4 xiang1 xia4 qu4 le5 zhu4
+20170001P00121I0036 kun1 ming2 lu4 jia1 dian4 ti1 you3 xian4 gong1 si1
+20170001P00216A0067 ni3 duo1 jiu3 xue2 de5 you2 yong3 yo5 na3 tian1 chu1 lai2 da3 ma2 jiang1
+20170001P00384I0089 qin1 jia1 lao3 gong1 wo3 hui4 yong3 yuan3 pei2 zhao2 ni3 de5
+20170001P00226I0056 re3 dao4 wo3 he2 wo3 xiong1 di4 de5 ren2 wo3 bu4 hui4 fang4 guo4
+20170001P00416A0037 bu2 guo4 wo3 hai2 shi4 ning2 yuan4 yong3 yuan3 yi1 ge4 ren2
+20170001P00005A0060 jie1 huang2 yong3 qin2 li3 shi4 zhang3
+20170001P00006I0067 ta1 men5 shuo1 ying1 er2 zhi3 jia3 jia1 fan3 er2 bu4 fang1 bian4
+20170001P00150I0084 zhang1 jia1 fen1 la1 wo3 jin4 qun2 de5 ba5
+20170001P00096I0024 huo2 dong4 xuan1 chuan2 yu3 yi1 yuan4
+20170001P00346A0015 ken3 ding4 hui4 you3 ge4 yin3 xing2 tiao2 jian4
+20170001P00297A0057 tuo1 le5 dong1 xiang2 shi1 xiong1 de5 ming2 yu4 le5
+20170001P00059I0101 ni3 bu4 ru2 jia1 yi1 ge4 huai2 an1 jun1 wei1 qun2
+20170001P00284A0088 ru2 guo3 yao4 de5 hua4 ke3 yi3 bang1 ni3 xuan1 chuan2 e2
+20170001P00001A0040 you3 shi2 jue2 de2 ni3 dou1 mei2 you3 qin1 wen3 yong1 bao4 de5 yu4 wang4
+20170001P00184I0014 wo3 zhi1 dao4 ni3 hen3 ke3 wang4 ai4
+20170001P00279I0057 ru2 guo3 ka3 jia1 li4 mei2 shuo1 na4 ming2 tai2 ci2
+20170001P00172A0005 qing1 chu3 shua3 shou3 ji1 hao4
+20170001P00146A0092 ge1 men5 ni3 ye3 qu4 yi1 yuan4 juan1 kuan3 le5
+20170001P00353I0075 ni3 yuan4 yi4 jia4 gei3 wo3 zhe4 yang4 yi1 ge4 qiong2 guang1 dan4 ma5
+20170001P00028I0028 hao3 hou4 hui3 mei2 duo1 yong1 bao4 ni3
+20170001P00293I0054 wo3 ye3 zhun3 bei4 shua1 ya2 chi1 qi1 bao3 yi1 ding1
+20170001P00303A0076 li3 rui4 xiang2 lin2 er4 huo4 lin2 sha3 que1 dou4 bi3
+20170001P00301I0039 bu4 guan3 shi4 shui2 dui4 xian4 zai4 zhe4 ge4 hao4 de5 yong1 you3 zhe3
+20170001P00048A0006 ai4 zhao2 ni3 de5 hao3 qi1 zi3
+20170001P00409A0080 jin1 tian1 hui2 liang3 qian1 shi4 ban4 zhe4 ge4 xiong1 ka3
+20170001P00302I0110 wo3 ye3 hen3 huai2 nian4 ni3 zuo4 fan4 de5 ri4 zi5 a5
+20170001P00314A0002 neng2 ba3 wo3 shuai3 le5 hai2 bu4 gei3 wo3 zun1 yan2
+20170001P00056A0038 gao1 ji2 guan3 li3 bu4 men2 zhao1 dao4 ren2 mei2
+20170001P00371I0085 ya3 hao2 xuan1 huo4 zhe3 hong2 ji4 yuan4
+20170001P00152I0010 lian2 xi4 huang2 juan1 he2 wang2 jian4
+20170001P00383I0064 qi2 shi2 jiang1 xi1 zui4 qiong2 de5 di4 fang1 shi4 ji2 an1
+20170001P00057A0026 wo3 hai2 yao4 he2 na4 bian1 na4 qun2 de5 hei1 jun1 chao3 le5 yi1 jia4
+20170001P00296I0071 wo3 na4 ge4 shi2 hou4 zhun3 bei4 ci2 zhi2 le5
+20170001P00152I0022 shi3 yong4 zhong1 ke1 yuan4 fen1 ci2 ruan3 jian4 jin4 xing2 fen1 ci2
+20170001P00375A0100 na4 jiu4 shi4 le5 guai1 guai1 qu4 yi1 yuan4
+20170001P00383A0079 dang1 jing3 cha2 huo4 zhe3 jin4 jun1 dui4 jia1 li3 bu4 hui4 rang4 wo3 qu4
+20170001P00131A0047 ru2 guo3 wen3 ding4 shang4 fen1 ying1 xiong2 bu4 nan2
+20170001P00359A0064 shuo1 bu4 guo4 ni3 ni3 shi4 weng1 zong3 li3 zong3 shi4 you3 li3
+20170001P00213A0099 nan2 zhu3 jue2 shi4 jun1 ren2 wo3 zai4 kan4 guan1 yu2 zhi4 du4 you4 huo4
+20170001P00035I0002 lian2 xi4 nan2 xun2 bie2 shu4 de5 ye4 zhu3 zhao4 xiong1
+20170001P00297A0085 fan3 zheng4 wo3 er4 xiong1 di4 jiao4 wo3 yi1 qi3 shang4 qu4
+20170001P00146A0101 sui4 sheng1 ri4 xu3 de5 shen2 me5 yuan4 wang4
+20170001P00425A0067 ming2 tian1 hai2 di1 dao4 huang2 ye4 de5
+20170001P00356A0101 na4 shui2 dai4 wa2 a1 ba3 ni3 de5 huo3 che1 piao4 fa1 gei3 wo3
+20170001P00079I0010 wo3 zai4 wan2 xue3 di4 tao2 wang2
+20170001P00327I0117 wo3 mai3 zhe4 ge4 yin1 guo3 ri4 ji4 de5 wa2 wa5
+20170001P00152A0109 na4 wo3 qu4 gei3 ni3 dian3 wen1 du4 ba5 guai1
+20170001P00281I0016 zuo4 wei4 zhu3 ti2 xuan1 chuan2 huo2 dong4 ri4 ni3
+20170001P00439A0005 bu4 cun2 zai4 bu4 jun1 yun2 bian4 xing2 wen4 ti2
+20170001P00169I0069 yi4 juan1 wo3 shi4 huang2 rong2 jia1 wo3 ha1
+20170001P00271A0025 dong3 de5 zhen1 xi1 cai2 pei4 yong1 you3 dong3 zen3 me5 huan4 wang3 ming4
+20170001P00210I0067 shang4 tian1 mei2 you3 chui2 lian2 wo3 men5 zhe4 qun2 wa2 er2
+20170001P00035A0056 wo3 mo1 ni3 xiong1 ni3 jie4 yi4 ma5
+20170001P00315I0014 shan1 ci2 na3 ge4 nv3 hai2 er2 han3 ni3 che3 zheng4
+20170001P00197A0057 jiu4 shi4 you3 ying1 er2 fei2 de5 deng4 zi3 qi2 a5 gang1 shua1 wan2 ya2
+20170001P00278I0022 dao4 zhe4 duan4 shi2 jian1 weng1 jian4 xiong2
+20170001P00118I0095 yao4 bu4 shi4 xun2 yang2 jian4 bu4 yun2 xu3 kai1 jin4 qu4
+20170001P00285I0096 ni3 shuo1 xiong1 ke1 yi1 yuan4 de5 da4 fu1
+20170001P00069A0058 shui4 jiao4 da3 gun3 zai4 jun1 qu1 shui4 shang4 pu1
+20170001P00012I0091 na4 tian1 ban4 ka3 de5 nv3 hai2 zi5 yi3 jing1 ci2 zhi2 le5
+20170001P00278I0104 huang2 li4 juan1 de5 lao3 gong1 hui2 lai2 le5
+20170001P00312A0004 na4 ni3 ba3 ge1 bo2 shuai3 shuai3 huo4 zhe3 rou2 rou2
+20170001P00004A0079 kan4 zai4 ni3 yong3 yu2 cheng2 ren4 ni3 bu4 shi4
+20170001P00107I0103 huai2 nan2 pai2 ming2 xia4 lai2 ri4
+20170001P00233A0107 hai2 shi4 xi3 huan1 huo3 ying3 yang2 qi4 yong3 yuan3 de5 tong4
+20170001P00411A0065 bu4 yun2 xu3 zhe4 yang4 yun3 xu3 wo3 na3 yang4 a5
+20170001P00093I0069 cong2 guang3 xi1 yong3 xin1 chu4 mu4 ji2 tuan2 you3 xian4 gong1 si1
+20170001P00324A0089 ni3 xian1 mai3 mei3 ji2 huo4 zhe3 ka3 ni2 er3 yong4 dao4
+20170001P00084I0116 na3 wei4 tong2 xue2 yong4 guo4 de2 er3 fei1 fa3 bian1 zhi4 wen4 juan4
+20170001P00248A0032 er4 ge1 gou4 yi4 si5 huo3 ji4 zhe4 ci4 bu4 shua3 zhe4 nv3 de5
+20170001P00018A0118 huang2 ru2 yi1 xiong1 shen2 me5 xiong1
+20170001P00046A0003 kuai4 zi5 xiong1 di4 tai4 ku4 xuan4 le5 ba3 wo3 dang1 zuo4 peng2 you3
+20170001P00370I0003 wo3 kai1 shi3 huai2 nian4 wen4 jia1 li3 yao4 qian2 de5 ri4 zi5 le5
+20170001P00407I0012 wo3 ye3 man2 huai2 nian4 yi3 qian2 de5 ri4 zi5 de5
+20170001P00129A0114 neng2 jun1 yun2 ge4 sheng3 dou1 pao3 liang4
+20170001P00212A0103 na4 tian1 shuo1 de5 wo3 xiang4 bei4 zi5 dan4 chuan1 xiong1 er2 guo4 yi1 yang4
+20170001P00396I0010 ben3 ci4 shi2 yan4 shi4 jia3 ding4 yan1 cong1 wei4 jun1 yun2 de5 bian4 xing2
+20170001P00280A0024 qu4 xi1 xia2 shang4 yin3 ya1 qu4 you3 sha4 wan2 de5 ya1
+20170001P00215A0069 ni3 cai2 shi4 wo3 de5 wo3 yi1 you3 shi2 jian1 hai2 xiang3 pei2 pei2 ni3
+20170001P00312A0036 na4 nan2 de5 gang1 ci2 zhi2 hui2 wu3 jia1 qu2 le5
+20170001P00049A0010 min3 wa2 mei2 shang4 ban1 mai4 wa2 qi3 lai2 wo1 niao4 da1
+20170001P00230I0090 ping2 jun1 mei3 yue4 kui1 sun3
+20170001P00235I0060 jian4 qiao2 shao3 er2 ying1 yu3 yi1 ji2 dan1 ci2 ka3
+20170001P00398A0079 bu4 zhi1 dao4 lin2 jun1 wei3 sheng1 ri4 wo3 bu4 xiang3 xiao3 bao3 qu4 a5
+20170001P00021I0025 ji2 du4 gao1 da4 wei3 an4 de5 xiong2 da4 wo3 shi4 xiong2 er4
+20170001P00162I0079 wo3 yao4 de5 shi4 yi1 ge4 ka3 tong1 wa2 wa5
+20170001P00276A0017 lia3 yue4 fang2 zu1 mei2 le5 ta1 jiu4 na4 me5 que1 qian2
+20170001P00223I0023 xi4 hang2 yan4 sun1 de2 jun1 min2 feng1 yuan4 xi1 qu1
+20170001P00382A0045 suo3 yi3 shou3 bi4 hei1 de5 hen3 jun1 yun2
+20170001P00044A0020 tu1 ran2 jue2 de2 hao3 huai2 nian4 zai4 xue2 xiao4 de5 ri4 zi5
+20170001P00036I0003 feng4 huang2 shuang1 shou3 shen2 me5 de5 ye3 ting3 hao3
+20170001P00444A0008 er2 ni3 shi4 bai3 wan4 fu4 weng1 gei3 ni3 hua1 ji3 wan4
+20170001P00141I0096 mei2 you3 xuan2 zhuan3 ya2 xiao2 quan1 hao3 mai4
+20170001P00189A0115 huang2 jia1 lin2 jie1 dian4 hua4 jie1 de5 er3 duo1 dou1 chu1 wen4 ti2 le5
+20170001P00389I0038 te4 bie2 huai2 nian4 zai4 jing3 gu3 de5 ri4 zi5
+20170001P00411I0117 wo3 yi2 jia1 zai4 yu2 weng1 sa1 wang3 er2 yi3
+20170001P00188I0004 jia3 fang1 shi4 ben3 qi4 yue1 de5 zhu3
+20170001P00250A0034 ga1 ga1 sun3 se4 bu4 cuo4 jiu4 sheng4 dou4 ya2 le5 zao3 shuo1 ma5
+20170001P00301I0115 jin1 nian2 ni3 men5 zhun3 bei4 qu4 na3 li3 wan2
+20170001P00083I0039 ji4 zhe3 yi1 ding4 bie2 wang4 le5
+20170001P00392I0087 yan2 jiu1 yuan4
+20170001P00099A0004 ba1 dian3 zhun3 shi2 kai1 chang2 wang2 xue3 yi1 ren2 yi1 shou3
+20170001P00168A0101 hai2 zuo4 lan2 ya2 er3 ji1 bu4
+20170001P00013I0098 pao4 ge1 bu4 yuan4 yi1 qi3 wan2 shua3 le5 tai4 rang4 ren2 shi1 wang4 le5
+20170001P00192I0042 wo3 xian4 zai4 duo1 shao3 dian3 juan4 le5 xiong1 di4
+20170001P00384I0023 qin3 shi4 gou1 da1 mei4 zi5 jin4 fang2 jian1 shuai3 le5 wo3
+20170001P00333I0099 xue2 xi2 zhe3 he2 pei2 xun4 shi1 dou1 yong1 you3 kong4 zhi4 quan2
+20170001P00148I0108 qing3 yu3 dang3 qun2 gong1 zuo4 bu4 yang2 wen2 yong3 lian2 xi4 xiang1 ge2 yu2
+20170001P00359A0022 dao4 man2 wei1 xian3 wo3 men5 ye3 qu4 jiang1 jun1 lu4
+20170001P00080A0018 xiao1 fei4 zhe3 ren2 tou2 yong3 dong4
+20170001P00403A0033 hu2 jun1 jun1 ni3 zhen1 de5 bu4 lai2 jiang1 ping2 you3 shi4
+20170001P00289A0095 neng2 bu4 neng2 gou4 hao3 hao3 wan2 shua3 le5 e2
+20170001P00232I0006 nv3 wa2 wa5 jiu4 shi4 yao4 liu2 guo1 gai4 mei4 mei5 tou2 cai2 hao3 kan4
+20170001P00340A0065 wa2 er2 tai4 bu4 sheng3 xin1 le5 wan3 an1
+20170001P00225I0066 ni3 yao4 yuan4 yi4 he2 wo3 wan2 hai2 bu4 shi4 ke3 yi3
+20170001P00340A0083 deng3 guo4 wan2 shi2 wu3 zai4 guo4 wo3 wa2 de5 sheng1 ri4
+20170001P00287I0050 wo3 yi3 jing1 zhun3 bei4 hao3 yan1 xun1 zhuang1
+20170001P00041A0016 mo2 huan4 xue3 xuan4 cai3 zu3 he2
+20170001P00019I0060 hao3 xiong2 wei3 de5 hua4 juan4 a5
+20170001P00399I0099 xiao1 ya4 xuan1 shan3 shan3 re3 ren2 ai4
+20170001P00281I0075 qun2 xiong2 zhu2 lu4 de5 shi2 dai4
+20170001P00365A0101 bu2 shi4 re4 shi4 xia4 de2 bu4 xing2 deng3 yu2 bai2 shuo1 ying1 xiong2 le5
+20170001P00288I0037 qun2 li3 a1 xue3 qu4 si1 liao2
+20170001P00179I0093 wo3 yao4 shi4 zhe4 duan4 shi2 jian1 re3 dao4 ta1
+20170001P00112A0077 ri4 you2 zi4 ran2 da4 xue2 xiao4 zhang3 feng2 yong3 feng1 fa1 qi3
+20170001P00348A0114 ma1 ma1 zhi3 yun2 xu3 wo3 chi1 yi1 ke1
+20170001P00178A0020 ni3 de5 pin3 zhong3 shi4 bu2 shi4 xiong2 mao1
+20170001P00337A0017 peng2 you3 quan1 bei4 dou1 bei4 ni3 men5 liang3 ge4 shua1 ping2 le5
+20170001P00084A0029 shi4 wang2 zhe3 de5 da4 jiang1 jun1
+20170001P00339I0080 na3 ge4 da4 re4 tian1 de5 pao3 xiang1 ka3 ka3 qie1 wan2 er2 a5
+20170001P00067A0019 ni3 yao4 bu4 yao4 wo3 xian1 gei3 ni3 chuang2 dan1 xi3 le5
+20170001P00393I0005 ni3 jie3 fu1 bu4 zai4 huang2 hua2
+20170001P00125A0061 mei2 you3 xi3 huan1 huo4 zhe3 bu4 xi3 huan1
+20170001P00220A0073 ni3 men5 na4 li3 jin1 nian2 xuan3 ju3 cun1 min2 hai2 yong1 hu4 xian4 zai4
+20170001P00050I0103 wan3 shang4 qu4 huai2 yin1 de5 yi1 yuan4 ne5
+20170001P00306A0114 ma1 de5 wo3 jiu4 bu4 gun3 le5 bei4 shui2 shua3 le5
+20170001P00053I0047 yao4 me5 ya2 chi3 huang2 de5 bu4 dei3 le5
+20170001P00246I0010 xi1 gai4 de5 hua2 mo4 yan2 you4 fan4 le5
+20170001P00189I0031 wei4 ci2 xing4 yun2 yun2 bu4 gan3 gou3 tong2
+20170001P00245I0010 xiao3 mei2 zi5 ni3 dou1 zai4 yi1 yuan4 guan3 you2 yong3
+20170001P00061I0006 huang2 pu3 xue2 yuan4 xuan1 chuan2 nei4 rong2
+20170001P00084A0082 zhun3 bei4 yao4 chuan1 tou4 sang1 niang2 jiao3 huai2 shi2
+20170001P00195I0020 ju1 ran2 gan3 zai4 lao3 zi5 qun2 li3 xuan1 qun2 bu4 xiang3 huo2 le5 ya1
+20170001P00288A0100 shui2 wan2 ying1 xiong2 lian2 meng2 pei2 wo3 wan2 er2
+20170001P00052I0048 ni3 zi4 ji3 xiang3 shuai1 de5 bu4 yuan4 ni3 yuan4 shui2
+20170001P00181I0046 wo3 zao3 shang4 gen1 wai4 qun2 de5 di4 xiong1 men5 shuo1
+20170001P00345A0083 ta1 wa2 er2 ming2 tang2 hai2 da4 e2
+20170001P00057I0115 qing1 ming2 jian4 fa1 chu1 yi1 sheng1 di1 chen2 de5 weng1 ming2
+20170001P00152I0064 wo3 men5 yuan4 yi1 gong4 si4 ge4 xuan1 jiang3 de5
+20170001P00026I0009 dang1 wo3 xiang3 dao4 yi1 ju4 wo3 er2 yan2 dui4 xian1 xin1 de5 ci2
+20170001P00114A0103 yuan2 dan4 zhao4 gong1 shan1 yi1 ri4 you2 kan4 xue3 qing1 cheng2 shan1 zhu1 feng1
+20170001P00357I0069 qun2 zhong4 yan3 yuan2 ta1 dang1 ran2 xiong1 le5
+20170001P00253I0047 dao4 xian4 zai4 nao3 dai4 weng1 weng1 de5
+20170001P00140A0044 mai3 cai3 piao4 qu4 yao4 shi4 huai2 yun4 gun3 dan4
+20170001P00376A0120 wen3 ding4 de5 ming2 zai3 er2 yong3 yuan3 shi4 shui3 rang4
+20170001P00163I0053 ya1 xian4 yao4 qiu2 jun1 yun2 ping2 zhi2
+20170001P00308I0105 wo3 zhen4 shi2 pin3 an1 quan2 xuan1 chuan2 zhou1
+20170001P00112A0114 qu4 jun1 qu1 zong3 yi1 yuan4 ba5
+20170001P00193I0069 ran2 hou4 wo3 zai4 yang2 juan1 dian4 li3 mai3 le5 tiao2 qun2 zi5
+20170001P00201I0086 hua4 shuo1 da4 jia1 xiang3 xia4 zhou1 qu4 ya3 an1 wan2 er2
+20170001P00251I0105 na4 ni3 you4 zhun3 bei4 cheng2 xiong2 mao1 yan3 ma5
+20170001P00315I0015 wo3 zhe4 ci4 mei2 re3 ta1 a5
+20170001P00412I0078 wo3 zhou1 ri4 zao3 shang4 he2 a1 xia2 qu4 song1 shan1 hu2
+20170001P00170A0010 ni3 men5 ri4 zhuan4 duo1 shao3 shuo1 shuo1 bai4
+20170001P00337I0054 wo3 zhi3 hui4 pa2 shang4 chuang2 kan4 tian1 ya2 ming2 yue4 dao1 er2 yi3
+20170001P00082I0065 da4 jia1 zhun3 bei4 qu4 na3 er2 le5 wan2 er2 ya1
+20170001P00209I0024 zi4 ji3 bei4 wan2 zhao2 dang1 hou2 wan2 ye3 xin1 gan1 qing2 yuan4
+20170001P00359I0014 nei4 jian1 yuan2 shao4 yi1 hui2 he2 wan4 jian4 yu2 weng1 de2 li4
+20170001P00087I0061 qun2 zhong4 de5 yan3 guang1 xi4 xue3 liang4 de5
+20170001P00006A0112 ta1 zhun3 bei4 po4 guan4 zi5 po4 shuai1
+20170001P00011A0005 wo3 xuan3 ge4 xue3 fang3 shang4 yi1 he2 ku4 qun2
+20170001P00101A0107 ma1 jiu4 yun2 xu3 ni3 zai4 qun2 li3 chao3 bu4 yun2 xu3 wo3 men5 chao3
+20170001P00341A0048 gan3 jue2 ceng2 juan1 er2 ta1 men5 gen1 wen2 ya3 hai2 shu2 dian3
+20170001P00400A0106 ta1 jiu4 jue1 qi3 pi4 yan3 guo4 lai2 kan4 lao3 zi5
+20170001P00041A0018 hai2 zai4 qun2 li3 de5 xiong1 di4
+20170001P00378A0097 wo3 gan3 jue2 jiang1 bin1 li2 hua2 ci2 yi1 yuan4 jin4 dian3
+20170001P00269A0012 cai2 hui4 he2 yang2 li4 juan1 yi1 qi3 qu4
+20170001P00200A0074 lai2 wan2 ni3 ye3 bu4 hui4 huai2 yun4 wang3 shang4 shi4 zhe4 yang4 shuo1 de5
+20170001P00306A0013 luo1 jun1 feng1 rang4 wo3 lian2 xi4 nin2 li3 xian1 sheng1
+20170001P00337I0105 wo3 shi4 huang2 jun1 min2 shi2 jun1
+20170001P00432A0068 cong2 er4 yuan4 qu4 na4 da4 yue1 duo1 shao3 shi2 jian1
+20170001P00124A0003 ti3 yu4 xue2 yuan4 bao3 xuan1 chuan2 bu4 xiang1 guan1 cai2 liao4
+20170001P00399A0065 nei4 diao4 chan3 pin3 ni3 zhi2 de2 yong1 you3
+20170001P00202A0095 li3 yang2 huai2 yun4 liu4 ge4 yue4 jin1 tian1 shang4 ban1 shi2 shuai1 dao3 le5
+20170001P00395A0024 teng2 xun4 xiao3 xue3 yang2 mi4 xiao3 jie3 jin1 wan3
+20170001P00046A0104 shen1 ti3 yun3 xu3 zi4 ran2 jiu4 he1 le5
+20170001P00389A0037 ni3 ba4 ma1 yun3 xu3 kao3 hen3 yuan3 de5
+20170001P00210I0070 zhi3 yuan1 zai4 dong1 bei3 qun2 jiao4 shen2 me5
+20170001P00126I0027 bie2 ke4 qi4 yuan4 ni3 yong3 yuan3 jiao4 mei3 li4
+20170001P00290A0094 ken3 ding4 yi3 wei4 shi4 er4 shi1 xiong1 shuo1 ta1 tian1 shi3 sha1 du2
+20170001P00067A0100 ni3 ye3 tou2 ru4 le5 ni3 shuai3 le5 hai3 bo1
+20170001P00043A0018 fan1 yi4 yuan2 wen2 er2 fan1 yi4
+20170001P00076A0008 wo3 de5 shi4 you4 lian3 jia2 de5 wen3
+20170001P00239A0093 han2 jiang1 xue3 zai4 yue4 ju4 li3 shi4 wo3 zui4 xi3 huan1 de5
+20170001P00136A0051 ni3 da4 xiong1 di4 shuo1 ni3 you3 ge4 ri4 ji4 ben3
+20170001P00254I0076 zhun3 bei4 dao4 gu1 gu1 she4 qu1 kan4 kan4
+20170001P00379I0075 wo3 ke3 bu4 yun2 xu3 wo3 de5 nv3 ren2 bei4 pan4
+20170001P00118I0032 shi4 san1 yuan4 zi4 ding4 san1 xia2 yi1 zhuan1 shi2 xi2 da4 gang1
+20170001P00160A0084 qun2 li3 you3 duo1 shao3 shi1 xiong1 qu4 nian2 dan1 zhao1 guo4 le5 de5
+20170001P00077I0067 wo3 xiang3 kan4 ta1 he2 xiao3 li4 xun2 yan3 de5 yu3 zhou4 xiong1 di4
+20170001P00350A0010 ni3 jiao4 shang4 xiao3 yong3 bai4
+20170001P00276A0021 lin2 ci2 de5 xiang1 pian4 lai2 gei3 ni3 mei2 you3 chi1 le5
+20170001P00372I0031 shang4 hai3 de5 jun1 qi2 ai4 hao3 zhe3
+20170001P00436A0044 hai2 shi4 qiong2 you2 de5 shi4 he2 wo3 shou3 er3
+20170001P00405A0037 er2 qie3 hai2 shi4 liang3 nian2 he2 yue1
+20170001P00070A0118 wo3 zhe4 li3 zheng4 que1 ge4 lao3 po2 a5
+20170001P00005I0003 wo3 shi4 cai2 tong1 zheng4 quan4 yi1 yao4 yan2 jiu1 yuan2 xiong2 wen2
+20170001P00180A0090 deng3 wo3 zhou1 ri4 gei3 ni3 chu1 lia3 she2 ya2 de5
+20170001P00355I0087 wang1 qiong2 shuo1 ta1 hou4 tian1 guo4 sheng1 ri4
+20170001P00370I0001 ta1 xiang3 nao4 na3 yang4 jiao4 juan1 gong4 bu4 juan1 jiao4 jia1 qun2 bu4 jia1
+20170001P00243I0024 zhe4 shi4 kan4 xian4 huo4 ka3
+20170001P00122A0026 shang4 zhen1 zheng4 shu4 li4 zhu3 ren2 weng1 de5 si1 xiang3
+20170001P00362I0055 ni3 rang4 qun2 li3 de5 xiong1 di4 jie3 mei4
+20170001P00275I0033 zun1 jing4 de5 xiong1 ke1 yi1 yuan4
+20170001P00233A0091 wo3 zai4 deng3 hong2 deng1 guai3 ge4 wan1 jiu4 dao4 ni3 men5 ju2 le5
+20170001P00110I0060 chun1 shi2 zhu2 xun1 yi1 cao3
+20170001P00225A0070 nin2 zai4 wo3 xin1 li3 bie2 de5 nv3 ren2 yong3 yuan3 ti4 dai4 bu4 le5
+20170001P00332I0087 na4 xie1 fu4 yong1 feng1 ya3 de5 suo3 wei4
+20170001P00444A0013 ni3 he2 xue3 yuan4 shu2 xi1 me5
+20170001P00129A0119 chen2 xin1 shan1 yong3 chuan1 yi1 yuan4
+20170001P00156I0048 wo3 hai2 yao4 qu4 yi1 yuan4 nong4 ya2 chi3
+20170001P00406A0069 ri4 chan3 bian4 xing2 jin1 gang1 ming2 deng1 ge1
+20170001P00296A0024 ni3 xiong1 zhao4 wei4 shen2 me5 yao4 yong4 yin3 xing2 de5 dai4 zi5
+20170001P00325I0035 jiu4 shi4 wei4 le5 yue1 shu4 wo3 men5 ping2 ri4 de5 wei2 gui1 xing2 wei4
+20170001P00212I0036 suo3 yi3 na4 ge4 tian1 shang4 yuan4 chui1 xue3
+20170001P00347I0047 shang4 ci4 mai3 le5 ji3 ge4 sao3 xue3 gun3 jiu4 ma2 fan2 de5 hen3
+20170001P00200A0115 kuai4 lai2 wo3 huai2 bao4 wo3 dao4 sheng1 yuan2 shi2 dai4 guang3 chang2 san1 lou2
+20170001P00268A0059 bu2 yong4 qu4 shao1 xiang1 sa4 zai4 shua3 guan1 ying1 shao1 xiang1
+20170001P00225A0105 ni3 zuo4 de5 tian1 zhi1 di4 zhi1 ni3 zhi1 wo3 zhi1 ke4 gu3 ming2 xin1
+20170001P00177I0055 xiu3 mu4 lu4 qi2 ya4 cai2 jie4 xiu4 bai2 xue3 gun3 zhao2
+20170001P00381A0064 ta1 men5 qin1 zui3 le5 ha1 ha1
+20170001P00265A0067 ao4 xue3 wo3 po2 po2 mei3 nian2 dou1 pao4 yang2 mei2 jiu3
+20170001P00135A0111 jia3 fang1 you3 quan2 yao4 qiu2 yi3 fang1 ting2 zhi3 wei2 yue1 xing2 wei4
+20170001P00370A0051 sheng1 ri4 kuai4 le4 ni3 jin1 wan3 da4 yue1 ji3 dian3 you3 shi2 jian1
+20170001P00321A0065 yi4 ban1 lao3 bai3 xing4 mai3 wan2 dou1 shi4 fu4 weng1
+20170001P00345A0033 ha1 ha1 na4 ni3 lai2 hua1 xi1 ni3 hui2 weng4 an1 le5
+20170001P00271A0040 xue3 xia4 de5 ye3 hen3 da4 gan3 jue2 jin4 ru4 le5 dong1 tian1
+20170001P00089I0019 gan4 yi1 ge4 yue4 jiu4 shi4 yi4 wan4 fu4 weng1 a5
+20170001P00246I0037 weng1 ye3 bu4 li3 ta1 le5 de5
+20170001P00424A0042 mei2 di4 fang1 cha1 ya1 en4 en4 shu1 fu2
+20170001P00079A0088 ta4 xue3 wu2 hen2 jie3 san4 gai1 qun2 le5
+20170001P00015I0044 ni3 shi4 xiang3 yong1 you3 ka3 yan4
+20170001P00433A0037 ni3 zhao3 qiang1 wang2 zan4 zhu4 ni3 mai3 ying1 xiong2 ji2 wu3 qi4 ma5
+20170001P00255I0037 wo3 dou1 yi3 jing1 zi1 xun2 guo4 shao4 li4 jun1 le5
+20170001P00340I0102 wo3 yi1 hui4 jiu4 guai1 guai1 shang4 chuang2
+20170001P00173I0031 suo3 yi3 jiu4 jin1 ri4 qu4 bo1
+20170001P00378I0072 huang2 xue3 shi4 bei3 jing1 jiao1 tong1 da4 xue2 de5 cai2 wu4 shuo4 shi4
+20170001P00010A0017 jin1 wan3 wu3 dian3 wu3 shi2 pin3 wei4 xuan1 chi1 fan4
+20170001P00046I0069 ta1 lai2 huang2 hua2 hai2 shi4 ni3 qu4 han2 dan1
+20170001P00398I0083 wo3 zhe4 ba3 pai2 zi5 hao3 che3 ba3 zi5
+20170001P00024A0036 shi3 lu2 nei4 wen1 du4 geng4 jia1 jun1 yun2
+20170001P00155A0104 fu4 weng1 de5 pao3 che1 ju4 le4 bu4
+20170001P00291A0041 na4 wo3 qu4 ni3 jia1 xi3 yuan1 yang1 yu4 bie2 he1 jiu3 chang2 rou4
+20170001P00001A0078 bu3 fa1 xia4 yin1 yun3 cheng2 zuo2 tian1 de5 meng2 zhao4
+20170001P00235A0104 ben3 xiao3 jie3 jin1 wan3 zai4 yong3 hui1 da4 jiu3 dian4 chi1 ma2 la4 yu2
+20170001P00143A0097 yun3 zai4 fen1 kai1 de5 shi2 hou4 shi4 chun1 tian1 ba5
+20170001P00043I0100 qiong2 hai3 weng1 jun4 de5 si1 zhai2
+20170001P00427A0115 wo3 men5 ke3 yi3 jie2 ban4 er2 er2 xing2 gao1 san1 bu4 shi4 jun1 xun4 ma5
+20170001P00066I0046 ri4 jia1 ban1 ping2 jun1 shi2 chang2
+20170001P00313A0065 na4 yi1 qi3 zou3 ba5 yong3 he2 dou4 jiang1 zai4 na3
+20170001P00252I0091 suo3 yi3 ni3 yong3 yuan3 dou1 shi4 bai4 zhe3
+20170001P00277A0011 na4 shi2 hou4 min3 jia1 jia1 he2 wo3 wan2 de5 hai2 xing2
+20170001P00265A0047 ba3 ta1 men5 fang4 zai4 guo2 jun1 li3 ru2 he2 kang4 ri4
+20170001P00305I0049 de2 jun1 hai2 shi4 ri4 jun1 a5
+20170001P00299A0008 bu4 guan3 shuo1 shen2 me5 wo3 men5 hai2 shi4 xiong1 di4 chen2 er4 pang4
+20170001P00151I0067 xiang4 qun2 zhong4 jiang3 shu4 ma3 zhan1 shan1 lv4 jun1 kang4 ri4 de5 zhuang4 ju3
+20170001P00055A0100 dou1 shi4 qu4 mei4 mei5 xue2 xiao4 huo4 zhe3 xiong2 mao1 xue2 xiao4
+20170001P00201A0078 lao3 yang2 ni3 ye3 mei2 gei3 wo3 zan4 ya1 wo3 jiu4 que1 wu3 ge4 ren2
+20170001P00368I0012 fo2 shan1 zui4 weng1 bu4 bai4 fo2
+20170001P00442A0031 guo2 wu4 yuan4 guo2 zi1 wei3 wang2 yong3 zhu3 ren4 jiang1 qian1 fa1 wen2 jian4
+20170001P00206I0044 ming2 tian1 gun3 dao4 bu4 er3 jin1
+20170001P00398I0102 mei2 zhun3 ta1 men5 you4 yao4 shuo1 que1 xie3
+20170001P00024I0050 lian2 qi3 chuang2 dou1 xu1 yao4 mo4 da4 de5 yong3 qi4
+20170001P00229A0045 fa1 de5 sha4 wo3 shi4 shuo1 er4 shi1 xiong1 feng1 le5
+20170001P00393A0022 dian4 ying3 yuan4 shi4 qu4 nian2 yu4 yue1 ba5
+20170001P00226A0052 long2 wei1 ma3 ju4 fen1 fen1 zhong1 shan3 xia1 yan3 yang2 chun1 xue3
+20170001P00283A0010 ren2 jia1 yue1 ni3 bu4 zhun3 mo2 mo2 ji1 ji1 de5 le5
+20170001P00301A0027 lang4 man4 de5 qing2 huai2 zhi3 neng2 liu2 yu2 wo3 xin1
+20170001P00284I0032 ni3 shi4 bu2 shi4 huai2 yi2 zi4 ji3 de2 le5 jia3 kang4
+20170001P00122I0103 zhe4 liang3 tian1 gen1 xiong2 xiong2 zai4 da3 mo2 shou4
+20170001P00034I0085 huai2 bei3 shi4 zhang3 shan1 lu4 dong1 hai3 yuan4 nan2 dong1 yi4 yuan2
+20170001P00305I0016 huang2 li4 juan1 jiao4 wo3 wen4 xia4 ni3 de5
+20170001P00118A0115 wo3 xuan2 lv4 he2 ge1 ci2 dou1 xi1 fan4
+20170001P00221A0103 ni3 shi4 na3 li3 de5 a5 zhang1 yang2 yang2 wang3 you3 ni3 shi4 jian4 xiong2
+20170001P00393A0089 pi4 gu3 dan4 dan4 shou3 dou1 mei2 mo1 guo4
+20170001P00023I0063 duo1 chuan2 ge4 zhao4 pian4 o1 dai4 na3 er2 qie1 you2 yong3 a5
+20170001P00266I0090 jia1 da4 zhi4 yuan4 fu2 wu4 gong1 zuo4 de5 xuan1 chuan2 li4 du4
+20170001P00283I0039 ran2 hou4 wo3 ban4 le5 zhang1 you2 yong3 ka3
+20170001P00142A0103 ni3 er3 duo1 chang2 de2 na4 me5 you3 fu2 qi4
+20170001P00091A0062 ni3 de5 qin3 shi4 wei4 zhi4 bu4 jia1
+20170001P00212I0037 hai2 you3 ge4 xiong2 mao1 tou2 de5 chang2 qun2 zi5 ne5
+20170001P00290A0033 ni3 zao3 shuo1 kan4 zan2 lia3 xi3 ge4 yuan1 yang1 zao3 ma5
+20170001P00242I0010 shu1 yun2 xia2 xian4 zheng4 zai4 ta1 na4 shua3
+20170001P00243A0085 xuan1 chuan2 dan1 zai4 wo3 zhe4 er2 dou1 gan3 jin3 lai2 qu3 ba5
+20170001P00023I0041 wang3 shang4 cha2 le5 shuo1 shi4 yao4 jian3 cha2 xin1 ji1 que1
+20170001P00330I0035 ni3 qu4 qing3 wo3 he1 mang2 guo3 yue1 yan4 chu1 lai2
+20170001P00436A0091 hai2 you3 jian4 chang2 xiu4 xue3 fang3 qun2
+20170001P00216I0052 wo3 xiang3 jian4 ge4 xiong1 di4 jie3 mei4 qun2
+20170001P00161A0086 xiao3 jun1 gei3 wo3 men5 cha2 yi1 xia4 chen2 hong2 shi4 shen2 me5 ka3
+20170001P00183I0017 ran2 hou4 yue1 le5 huang2 tao1 qu4 kan4 zhi1 zhu1 xia2
+20170001P00110I0010 chang2 chang2 bang1 sun1 yan4 zi1 he2 cai4 jian4 ya3 xie3 ci2 de5 na4 ge4
+20170001P00132I0021 ni3 shuo1 guan3 ta1 shi4 bu2 shi4 fu4 weng1
+20170001P00002A0061 bu2 guo4 zhi3 yun2 xu3 ta1 yi1 ge4 ren2 qu4 ye3 shi4 ke3 yi3 de5
+20170001P00263A0053 you3 ka3 hai2 qiong2 zhe4 jiu4 shi4 xian4 zai4 wo3 de5 zhuang4 tai4
+20170001P00007A0030 shang4 ci4 shen3 yun3 xuan1 ye3 shi4 shou3 zu2 kou3 bing4
+20170001P00037I0031 sen1 lin2 xia4 wa2 shao3 nian2 chuang2
+20170001P00067I0111 ri4 jun1 de5 chi1 fan4 qian2 he2 mian4 qian2
+20170001P00009I0035 ling4 yi1 fang1 mian4 shi4 yin1 wei4 dai4 zhao1 zuo2 ri4 ci2 zhi2 le5
+20170001P00071I0094 qi3 fan2 qun2 xiong2 zhao4 yun2 zen3 me5 wan2 er2
+20170001P00353A0086 bu2 hui4 sui2 bian4 mo1 ta1 men5 gui1 xiao2 de5 la5
+20170001P00324A0015 shi4 jie4 re4 kou3 ri4 xuan1 chuan2 gong1 ren2
+20170001P00317A0035 ni3 na4 xie1 da4 jie3 zhong1 yu2 yue1 dao4 ni3 le5
+20170001P00229I0030 na4 gu3 chou2 hen4 yong3 yuan3 ka3 zhu4 hou2 long2 le5
+20170001P00304A0021 li4 di4 cheng2 fo2 le5 yun3 xu3 ni3 xiao4 le5 ma5
+20170001P00231I0012 shi4 rou4 fen1 bu4 bu4 jun1 yun2
+20170001P00435A0064 na4 ge4 zuo4 zhe3 bu4 bang1 wo3 zuo4 xuan1 chuan2 pian4 de5 na4 ge4
+20170001P00404I0042 qing1 jun1 dang1 shi2 ke3 shi4 qin1 lve4 zhe3
+20170001P00263I0072 shen3 yang2 xiong1 ke1 yi1 yuan4 di4 tu2
+20170001P00410I0026 ou1 ze2 huang2 jiao4 gei3 wo3 wan2 wai1 wai1 lei5
+20170001P00395I0095 gong1 zuo4 huai2 an1 fei1 xing2 ying3 yuan4 xiang4 mu4 ce4 hua2 an4 gai4 nian4
+20170001P00255I0083 jin3 gong1 can1 kao3 cou4 he2 xiong1 mei2 you3 yong4 sheng1 ka3 chu1 sheng1
+20170001P00018A0081 jing1 ji4 xue2 na4 shi1 xiong1 wo3 zuo4 le5 zhun3 bei4
+20170001P00322I0051 wo3 yi1 ban1 gei3 wo3 ma1 mai3 yi1 fu5 huo4 zhe3 song4 hua4 zhuang1 pin3
+20170001P00225A0013 ni3 zong3 jie2 de5 geng4 hen3 you3 ge4 nan2 de5 hai2 liao2 meng2 quan1 er2 le5
+20170001P00321A0060 huai2 an1 xin4 xi1 zhi2 ye4 ji4 zhu2 xue2 yuan4 dian4 zi3 yu3 xin4 xi1
+20170001P00386A0054 li3 yu4 xuan1 gan3 jin3 gei3 wo3 ge4 li3 you2 ba5
+20170001P00207A0103 mian3 fei4 de5 yong1 yi1 bu4 zi1 xun2 mian3 de2 na3 tian1 du2 si3 le5
+20170001P00254I0081 qing1 yi4 jiu4 neng2 ji2 tui4 na4 qun2 bu4 kan1 yi1 ji2 de5 ye3 jun1
+20170001P00097A0032 kan4 le5 kan4 qian1 wan4 fu4 weng1 de5 jia1 li3
+20170001P00360A0042 ni3 zui4 hao3 qu4 kan4 kan4 le5 er3 duo1 ting1 bu4 jian4
+20170001P00282I0011 bu2 hui4 zai4 yun3 xu3 ling4 wai4 de5 shou4 jing1 luan3 zhao2 chuang2
+20170001P00431A0018 wei4 fu1 hui2 qin3 shi4 zhao3 shi3 zen3 me5 shuo1 hua4 de5 fu1 jun1
+20170001P00267A0080 bu2 yao4 dui4 bi3 ci3 de5 yi3 qian2 geng3 geng3 yu2 huai2
+20170001P00165I0030 huang2 zhi4 yong3 lao3 shi1 ye3 zai4 gai3 juan4
+20170001P00020I0055 na4 ni3 shi4 yun2 xu3 wo3 song4 ni3 le5 ma5
+20170001P00043I0056 wo3 zhe4 bian1 gai4 hao3 zai4 ji4 gei3 nin2
+20170001P00275A0093 ka3 tong1 dian3 de5 yao4 bi3 wo3 de5 fu2 lu4 wa2 hai2 neng2
+20170001P00396I0081 bu2 yuan4 yi4 gan4 ni3 shuai3 gei3 ta1 men5 gan4
+20170001P00232A0041 ni3 ye3 zai4 chuang2 shang4 shi4 ba5 ya2 shua1 le5 mei2 you3
+20170001P00140I0004 ting1 huang2 li4 juan1 jiang3 de5 a5 shuo1 ni3 yao4 bu3 ban4
+20170001P00175A0006 shi4 bu2 shi4 bu2 yun2 xu3 wo3 he2 bi4
+20170001P00066A0037 nong4 hao3 le5 mei2 you3 ci2 ka3
+20170001P00387A0083 ni3 ji3 dian3 yao4 lai2 jian3 cha2
+20170001P00100I0060 shi4 bu2 shi4 ni3 men5 na4 zhong3 yi1 yuan4 dou1 yao4 jun1 xun4
+20170001P00039I0004 bei3 jing1 dao4 huang2 ye4 gang3 you4 zen3 me5 zou3
+20170001P00392A0080 ming2 tian1 bo1 ge1 sheng1 ri4
+20170001P00084I0010 chuang2 ya2 tao4 zhuang1 de5 shi2 hou4 chao1 ma2 fan2
+20170001P00215A0092 ni3 bu4 yao4 wo3 bang1 mang2 yi1 qiong2 er4 bai2 shi4 shen2 me5 yi4 si5
+20170001P00060I0096 ni3 you3 ben3 shi4 qu4 bai2 jin1 sai4 na2 di4 yi1
+20170001P00227A0085 na4 ni3 yong3 yuan3 dou1 bu4 hui4 shi4 sun1 zi5
+20170001P00243A0032 sun1 jia1 nan2 zhi2 jie1 chu1 lai2 wei4 mao2 sun1 jian1 nan2 sun3 jian1 an1
+20170001P00277A0065 na4 qian1 xi1 ka3 de5 ba5 na4 chang2 chu2 le5 yun3 er2
+20170001P00126A0109 zhun3 bei4 zen3 me5 guo4 de5 wa2
+20170001P00218I0112 wo3 qi3 chuang2 shua1 ya2
+20170001P00145I0085 ni3 hao3 yun2 xia2 gan4 sha4 ne5
+20170001P00321A0076 wo3 zhe4 ge4 yue4 zhun3 bei4 ci2 zhi2
+20170001P00162A0042 wei4 huang2 di4 dan4 xia4 gong1 zhu3 you3 gong1 jin4 wei4 ya3 xun1 ce4 hou4
+20170001P00093A0105 zui4 zhu3 yao4 wo3 xiang3 yao4 shua3 shui3 guo3 ren3 zhe3
+20170001P00274A0114 min3 gan3 ci2 a1 bao3 ke3 yi3 bang3 ding4
+20170001P00403A0102 na4 dang1 ran2 shi4 gen1 xue3 zai4 ren2 min2 gong1 yuan2 xue2 de5
+20170001P00095I0037 weng1 xiong2 xian4 zai4 shi4 ke1 san1 nan2
+20170001P00227A0002 na4 shi2 wo3 he2 jun1 hao2 shui4 yi1 zhang1 chuang2
+20170001P00324I0090 wei2 zhao2 huang2 he2 zhuan3 yi1 quan1 er2 suan4 le5
+20170001P00346I0008 shen1 zhen4 shen1 zhen4 shi4 fu2 tian2 qu1 bao3 shui4 qu1 huang2 huai2 dao4
+20170001P00292A0026 he2 nan2 sheng3 wan3 cheng2 qu1 li4 he2 xiang1 fu2 niu2 lu4
+20170001P00272I0005 ni3 shi4 shuo1 yu2 jia1 yuan4 a5
+20170001P00173I0016 lao3 xiong1 ke3 bu4 ke3 yi3 zuo4 zhai4 quan4 de5 shen1 gou4
+20170001P00255A0024 hai2 dei3 gei3 qian2 bai3 you4 zhu3 yu2 le5 a5 ke3 lian2 de5 wa2
+20170001P00244I0014 shi4 bu2 shi4 kai1 wan2 xiao4
+20170001P00089A0040 er4 wa2 zi5 wan2 er2 you2 xi4 jiao4 le5 ban4 tian1 bu4 dong4
+20170001P00026A0066 qu4 da4 zhong4 dian3 pin3 sou1 huai2 hai3 zhong1 lu4
+20170001P00308A0091 mei2 xuan1 mei4 zi5 shou3 ji1 hao4 zai4 lai2 yi1 bian4
+20170001P00185I0033 shou3 jia1 xin1 sheng1 er2 you2 yong3 fu3 hong2 shi4 zai4 yi1 yuan4 luo4 cheng2
+20170001P00227I0057 wo3 ning2 yuan4 chi1 le5 yong3 yuan3 dou1 bu4 yao4 xing3
+20170001P00071A0095 xue3 fang3 pin1 jie1 lian2 yi1 qun2 bu4 gui1 ze2
+20170001P00367I0084 wan2 hu1 la5 quan1 da4 xing2 wan2 ju4
+20170001P00188A0119 hen3 zhi2 de2 jiao1 liu2 zhe4 ge4 bi3 ci2 shan4 wan3 yan4 xi1 yin3 wo3
+20170001P00253I0043 da4 jia1 yao4 zuo4 hao3 fang2 shu3 zhun3 bei4 o1
+20170001P00139A0119 ni3 men5 zhe4 pai2 zi5 jiu4 jiao4 fang3 yun2 xuan1 shi4 ba5
+20170001P00427A0025 na4 jiu4 rang4 ni3 lao3 po2 gan3 jin3 huai2 ge4 ba5
+20170001P00034A0025 juan4 hai2 you3 mo3 cha2 de5 ling4 wai4 ke3 yi3 jia1 huang2 you2
+20170001P00299A0033 na4 kuai4 shui4 ba5 shui4 wan3 le5 you3 hei1 yan3 quan1 wan3 an1 hui4 lin2
+20170001P00275I0103 ni3 gan3 shuo1 kang4 ri4 qi2 xia2 bu4 shi4 zhe4 zhong3
+20170001P00275A0023 er2 qie3 zhi3 shi4 he2 zai4 you2 yong3 chi2 li3 you2
+20170001P00345I0011 jiu4 shi4 xiang3 zuo4 bo1 duan4 jian3 cang1 ye3 jian3 shao3 kui1 sun3
+20170001P00233A0064 sang1 can2 si1 de5 qi2 ta1 hai2 you3 xiang1 xun1
+20170001P00123I0019 wo3 lia3 dou1 zai4 chuang2 shang4 bao4 zhao2 zi4 ji3 de5 dian4 nao3 wan2 er2
+20170001P00160A0014 huang2 se4 quan1 li3 na4 ge4 na4 jiu4 xing2
+20170001P00035I0018 chi2 xu4 wen3 jian4 jun1 heng2 fa1 zhan3
+20170001P00154I0002 xiao3 huang2 jun1 you4 chang2 guai1 le5 yo5
+20170001P00389I0077 tai4 xiang3 ci2 zhi2 zhun3 bei4 kao3 shi4 suan4 le5
+20170001P00412I0086 ni3 shi4 bu2 shi4 huang2 gui4 xia2
+20170001P00321I0045 wo3 xiang3 mai3 xue3 fang3 de5 bai2 se4 de5 lian2 yi1 qun2
+20170001P00200I0082 shang4 wu3 na4 ge4 huang2 xuan1 fa1 de5 zhao4 pian4 fa1 cuo4 le5
+20170001P00200I0058 na4 wo3 hai2 shi4 he2 weng1 bu4 zhang3 dui4 jie1 gong1 zuo4 ha1
+20170001P00095A0093 chuan1 qun2 zi5 shi4 xu1 yao4 yong3 qi4 de5 e4 ha1 ha1
+20170001P00151A0095 ke3 yi3 en1 yuan4 ke3 yi3 huai2 yi2 dui4 fang1 zhi4 shang1
+20170001P00027A0101 xiao3 huang2 wo3 xian4 zai4 que1 ge4 shen2 me5 shen2 me5
+20170001P00302I0049 wo3 you3 dian3 xin4 kou3 ci2 huang2 le5
+20170001P00156A0028 ni3 bu4 yuan4 yi4 gen1 wo3 qu4 yue1 hui4
+20170001P00020I0050 ta1 hui4 yun2 xu3 wo3 wan2 er2 ma5
+20170001P00026A0092 hao3 shuang3 wo3 hao3 huai2 nian4 shang4 hai3 e2 a5
+20170001P00224I0075 wo3 shi4 zhun3 bei4 zui4 hao3 jin1 nian2 huai2 ge4 bao3 bao3
+20170001P00386A0092 juan1 bu4 shu1 fu2 xiang1 yin1 chang4 ge1 jin4 bu4 you3 jiu4 you3 ba5
+20170001P00318I0120 ye3 ke3 yi3 dai4 hua1 juan4 lai2 huai2 rou2
+20170001P00299A0050 jiu4 yao4 zai4 guan1 wang3 cha2 le5 zhe4 shi4 cai2 jing1 xi4
+20170001P00201I0087 ran2 hou4 cong2 huai2 li3 na2 chu1 yi1 juan3 tu2 zhi3
+20170001P00266A0078 bi3 er3 ji2 wo3 ye3 you3 wo3 hai2 shi4 ai4 jun1 heng2
+20170001P00282I0019 gu4 wen4 xi3 huan1 liu4 ri4 yue1 ke4 hu4 jiao1
+20170001P00232A0026 kan4 wang3 shang4 shuo1 ya2 chi3 dou1 yao4 jian3 cha2
+20170001P00129A0071 hui4 yuan2 ka3 de5 zhi4 zuo4 he2 dan1 ye4 de5 xuan1 chuan2
+20170001P00065A0088 wo3 dian4 li3 dian4 nao3 bu4 yun2 xu3 wan2 er2
+20170001P00302A0008 lao3 po2 de5 xiong1 bu4 yao4 gei3 lao3 gong1 mo1 mo1
+20170001P00436A0071 xin1 weng1 zi3 mei2 xiang3 xiang4 na4 me5 gao1
+20170001P00236I0077 wo3 ye3 shi4 huai2 yun4 hou4 cai2 ban4 de5 zhun3 sheng1 zheng4
+20170001P00436A0101 huang2 yong3 ta1 zai4 gao3 na3 yang4
+20170001P00361I0021 nan2 kai1 yi1 yuan4 wai4 ke1 ge2 zhi4 jun1 de5 fu1 ren2
+20170001P00152I0017 na4 tiao2 qun2 zi5 shi4 si4 pian4 pin1 jie1 de5 pian4 de5 ya1
+20170001P00262I0093 shan1 li3 de5 wa2 biao3 shi4 ke3 wang4 kan4 hai3 lo5
+20170001P00223I0067 gun3 chuang2 dan1 bu4 shi4 ge4 hao3 ci2 e2
+20170001P00029A0075 ming2 tian1 ni3 zao3 ban1 yun2 juan1 shang4 dui4 ba5
+20170001P00054A0103 shou4 xi1 hu2 de5 peng2 you3 lai2 zou3 yi1 bo1
+20170001P00159I0119 te4 da4 de5 huo4 zhe3 hou4 shi2 de5 ye3 hen3 liu2 xing2
+20170001P00341A0057 ri4 hou4 hui4 huai2 nian4 bi3 ci3 ceng2 jing1 de5 ri4 zi5
+20170001P00030A0012 wang2 xue3 xiang2 qing3 wen4 ci3 he2 tong2 shu1 gai4 guo4 le5 me5
+20170001P00381I0058 pei2 ni3 la1 gu1 ru2 guo3 ni3 zhen1 de5 shuo1 chu1 kou3
+20170001P00211I0069 wo3 ba3 ni3 si4 ge4 zhua3 kun3 zai4 yi1 qi3
+20170001P00335A0072 wo3 ci2 hui4 liang4 ben3 lai2 jiu4 ke3 lian2 dao4 bao4
+20170001P00187A0075 he2 nan2 hua2 xue3 chang2 bu4 da4 ni3 zhu3 yao4 zuo4 shen2 me5 pei2 xun4
+20170001P00308I0018 rang4 wo3 xiang3 qi3 gao1 san1 de5 weng1
+20170001P00162A0107 yun2 xuan1 jin3 yi4 jiu3 jia1
+20170001P00106A0013 mei2 you3 jiao1 yu4 ya3 zhen1 xue3 li4 dou1 dao4 le5
+20170001P00206A0080 mei2 you3 yuan1 wang3 ni3 zen3 me5 zhi1 dao4 chen2 jun1 bang1 wo3 na2 de5
+20170001P00229I0106 wo3 lao3 ma1 zhun3 bei4 rang4 ta1 ci2 zhi2 yang3 hai2 zi5
+20170001P00109A0029 qing2 kuang4 shu3 shi2 wo3 ke3 bu4 shi4 shan1 xi1 ren2 xu2 jun1
+20170001P00216A0001 ni3 de5 sang3 zi5 hao3 qi3 lai2 mei2 you3 a5 yuan1 wang3 wo3 sha4 a5
+20170001P00026A0028 da4 shuai3 mai4 qian2 yin2 qing1 cang1 shui2 wan2 shui2 yao4 jin4 qun2 ye3
+20170001P00435A0078 yong3 chun1 li3 xiao3 long2 zai4 yong3 chun1 de5 ji1 chu3 shang4
+20170001P00262I0041 wo3 xiang3 qun2 li3 de5 san1 shi2 liu4 zu3 rang4 xiong1 di4 men5 lian2 zhong1
+20170001P00366I0099 wo3 yong4 shou3 gei3 ni3 gai4 zhao2 ne5
+20170001P00189I0017 ni3 tai4 yong1 su2 wo3 tai4 gao1 ya3
+20170001P00185A0039 ran2 hou4 jiu4 san1 ge4 yuan4 ji2 zui4 jia1 bian4 shou3
+20170001P00378I0032 liang2 hou4 jiang1 jun1 du4 cheng2 jiu3 jia1 ru4 hun4 he2 jun1 yun2 fang4 liang2
+20170001P00247A0054 er2 qie3 gen1 ni3 shuo1 hua4 mei2 bi4 yao4 guai3 wan1 mo3 jiao3 de5
+20170001P00166I0120 pai1 huang2 gua1 zhi3 shi4 zuo4 fa3 er2 yi3
+20170001P00078I0070 wo3 men5 ba3 huang2 sao3 han3 dao4 na3 er2 qu4 shua3
+20170001P00172A0029 gang1 ci2 zhi2 zhe4 zhou1 ri4 chu1 qu4 gen1 tuan2
+20170001P00116I0049 zhun3 bei4 gen1 wo3 yi1 qi3 you2 yong3
+20170001P00408A0045 cong2 er2 da2 dao4 yi1 ge4 liang2 hao3 de5 kou3 bei1 xuan1 chuan2
+20170001P00038I0022 xian3 ka3 bu4 yun2 xu3 gai3 ying4 jian4 jia1 su4
+20170001P00362I0114 nan2 dao4 ye4 kai1 huo4 zhe3 jiu4 shi4 wei4 le5 fu4 hong2 xue3 a5
+20170001P00088I0017 jian3 shu4 xuan1 gao4 si3 wang2 che4 xiao1 de5 fa3 lv4 hou4 guo3
+20170001P00393A0023 ni3 de5 shuang1 tui3 shi4 jia1 zhao2 de5 shen2 zhi4 jia1 jin3 jin3 de5
+20170001P00157I0034 jia1 qiang2 shen2 zhou1 xing2 jia4 yuan2 ka3 de5 xuan1 chuan2
+20170001P00205A0043 mao4 you3 zhuan1 xi3 xi3 mei2 ha1 ha1 ni3 yao4 bu4 zai4 jia1 de2 bao3
+20170001P00412A0080 jiu4 gei3 ta1 xuan1 chuan2 lan2 de5 lei4 si4 yu2 xin1 zhong1 ba5
+20170001P00399I0069 xiao3 ying1 zai4 nv3 zhu3 ren2 weng1 jia1 gan4 huo2 zheng1 qian2
+20170001P00311I0074 wo3 zhe4 li3 zhi3 you3 you2 ju2 huo4 zhe3 shen1 tong1
+20170001P00301A0044 lai2 ma5 wo3 men5 zhe4 si4 que1 yi1 gan3 jin3 ba5
+20170001P00264A0043 ai4 tao1 he2 da4 pang4 zi5 shi4 shi4 fu4 weng1 an4 mo2
+20170001P00123A0016 wo3 zhi1 qian2 jiu4 zhun3 bei4 yao4 huai2 yun4
+20170001P00071I0019 ru2 he2 yong4 jia1 ban3 zuo4 juan4
+20170001P00045A0096 hai2 hui4 you2 yong3 de5 ni4 shui3 zhe3 le4
+20170001P00371I0062 wo3 yuan4 yi4 juan1 xian4 yi1 ge4 yue4 de5 gong1 zi1
+20170001P00387A0101 shun4 li4 dian3 jiu4 shi4 bu2 yun2 xu3 a5
+20170001P00087A0115 huang2 zi5 ying1 xiong2 gang1 chu1 lai2 shi2 wan2 jia1 dou1 bu4 zhi1 dao4
+20170001P00424A0066 huo4 zhe3 yong3 yuan3 dou1 bu4 hui4 zai4 jian4 mian4 le5
+20170001P00181A0004 qu4 ren2 huai2 de5 yi1 ge4 yuan4 er2
+20170001P00056A0118 ke3 neng2 ge2 bu4 dao4 hao3 jiu3 wo3 yao4 qu4 yun2 nan2 teng2 chong1 wan2 er3
+20170001P00344A0090 dao4 shi2 hou4 pei2 ni3 guai1 ni3 ye3 mang2 shi4 a5 liu2 bei3 jing1
+20170001P00016A0044 ni3 bie2 zhang1 ya2 wu3 zhua3 de5 xuan4 yao4
+20170001P00078I0052 ni3 hui2 lai2 qu4 kong1 jun1 zong3 yuan4 kan4 yi1 xia4 pi2 fu1 ba5
+20170001P00071I0028 nin2 shi4 fou3 yong1 you3 ka3 te4 bi3 le4 de5 ji1 qi4
+20170001P00011A0028 wu2 du2 de5 jin1 yong1 qun2 xia2 zhuan4
+20170001P00187A0014 he1 he1 wo3 lao3 gong1 de5 tiao2 jian4 bu4 yun2 xu3 ta1 na4 yang4 ba5
+20170001P00036A0083 yong4 gun3 lun2 hua2 dong4 yi1 yang4 hua2 bu4 dong4
+20170001P00115I0036 guang3 dong1 sheng3 guang3 zhou1 shi4 bai2 yun2 qu1 yong3 tai4 xin1 cun1
+20170001P00179A0096 rang4 ri4 ben3 yong1 you3 shi4 jie4 zui4 hao3 de5 ren2 min2
+20170001P00375A0086 na4 ni3 bu4 shi4 yao4 cheng2 fu4 weng1 le5
+20170001P00213A0068 nan2 dao4 hai2 neng2 ci2 xiong2 gong4 ti3 pei2 yu4 chu1 lai2 yi1 ge4 ma5
+20170001P00383A0046 ke3 yi3 jiao4 wo3 peng2 you3 huo4 zhe3 wo3 qu4 you2 yong3
+20170001P00109I0014 wo3 yun2 xu3 jie1 shou4 ni3 dui4 wo3 de5 yuan4 hen4
+20170001P00124I0095 wa2 wei4 shen2 me5 bu4 yuan4 yi4 hui2 qu4 ne5
+20170001P00334I0011 xian4 chang2 jing1 ying2 zhe3 xuan1 zhou1 qu1 lin2 ye4 ju2
+20170001P00173I0021 zhu4 ni3 zao3 ri4 cheng2 qin1 huai2 yun4
+20170001P00184I0067 guo4 liang3 tian1 wo3 zhun3 bei4 chu1 qu4 wan2 er2 liang3 tian1
+20170001P00203I0052 nan2 chang1 gong1 cheng2 xue2 yuan4 zhen1 qiong2 feng1 le5
+20170001P00034I0083 zui4 hou4 dou1 cheng2 fan1 gai4 jia1 hua2 gai4 le5
+20170001P00223A0102 ni3 yao4 bu4 yao4 na2 zou3 wo3 xiang3 zai4 pei2 xiao3 juan1 zuo4 wo3 de5
+20170001P00053I0081 nin2 ke3 yi3 gei3 dian3 zheng4 mian4 de5 li4 liang4 gei3 huang2 xiong1 me5
+20170001P00043I0061 hao3 huai2 nian4 xia4 xiang1 de5 ri4 zi5
+20170001P00198A0096 kan4 dao4 fei1 ma3 tiao4 qi3 lai2 zai4 an4 kong1 ge2 jiu4 hui4 hua2 xiang2
+20170001P00353A0076 jin1 wan3 he2 xiao3 jia1 xiao3 yu4 lai2 wo3 jia1 wan2 er2
+20170001P00245A0062 ni3 er3 duo1 you3 wen4 ti2 hai2 shi4 yan3 jing1 you3 wen4 ti2 a5
+20170001P00250I0033 ni3 zhun3 bei4 yue1 ren2 jia1 gan4 ma5 ya1
+20170001P00098A0117 wo3 ke3 wang4 ni3 de5 zhen1 shi2 yong1 bao4
+20170001P00312I0074 qin2 huang2 dao3 ge1 hua2 ying2 di4 yao1 qing3 han2 ji2 huo2 dong4 xuan1 chuan2
+20170001P00211I0015 xi1 wang4 ke3 yi3 ma3 shang4 shi2 xi2 huo4 zhe3 qian1 yue1 gong1 zuo4
+20170001P00037I0116 e2 mei2 xue3 ya2 xiao1 shou4 qun2 dong3 zong3
+20170001P00019A0101 cai2 xia4 ban1 yu2 yong3 shui4 jiao4 ba5 ni3 ming2 tian1 shang4 ban1
+20170001P00086A0026 bu4 xiang3 jin4 gong1 hui4 ni3 na3 ge4 shi1 xiong1
+20170001P00277A0005 na4 shi4 wo3 men5 xia2 qu1 huo4 zhe3 ni3 de5 shan1 qu1
+20170001P00233A0052 mei2 ren2 qiang3 wang3 yong4 le5 xue3 gou3 gen1 ni3 wo3 zhuan4 le5
+20170001P00142A0060 shang4 ci4 wo3 hao3 xiang4 ye3 yin3 yin3 yue1 yue1 ting1 dao4
+20170001P00019I0015 he2 lan2 de2 guo2 ya4 jun1
+20170001P00427A0082 wo3 xi3 huan1 ya2 feng2 kuan1 de5 nan2 de5
+20170001P00147A0007 shen2 me5 shi2 hou4 hui2 weng1 yuan2 le5
+20170001P00426A0070 bu4 guan3 zen3 yang4 hai2 shi4 xi1 wang4 huang2 zu2 na2 guan1 jun1
+20170001P00220A0007 ni3 mei2 you3 yong3 qi4 bu4 yi2 yu2 li4 de5 xi3 huan1 yi1 ge4 ren2
+20170001P00215A0017 ni3 bu4 gao1 bu4 ai3 bu4 pang4 bu4 shou4 jiao4 shen2 me5 er4 shi1 xiong1
+20170001P00094A0092 er2 qie3 qiong2 zhao2 bu4 cheng2 le5 sha1 te4 le5
+20170001P00395A0095 gao1 er4 de5 er4 shi2 ba1 hao4 qu4 ta1 men5 jun1 xun4 san1 tian1
+20170001P00193A0113 jue2 de2 bu4 neng2 gen1 chai2 jie3 yi1 qi3 yu2 kuai4 de5 wan2 shua3 le5
+20170001P00243I0012 wo3 yao4 dai4 wo3 shen1 bian1 de5 ji2 wa2 wa5 qu4 gei3 ni3 ma5
+20170001P00170A0113 ai1 ya1 shen2 chi2 xia4 yu3 xia4 de5 dou1 shan1 po1 hua2 luo4 le5
+20170001P00125I0056 wo3 xian4 zai4 lian2 ying1 xiong2 huang2 jin1 dou1 guo4 qu4
+20170001P00039A0009 mei2 you3 ha1 zhun3 bei4 wan2 duan4 shi2 jian1 zai4 shuo1 ha1
+20170001P00393I0067 ni3 bie2 che3 shen2 me5 you1 yue4 gan3
+20170001P00097I0009 ju2 zi5 ning2 meng2 mang2 guo3 bo1 luo2 xiao3 bai2 cai4
+20170001P00326A0071 hui4 shang4 xuan1 du2 le5 de5 zhi3 dao3 si1 xiang3
+20170001P00392I0108 wo3 shi4 jiang1 xi1 ren2
+20170001P00070I0048 wo3 hui4 gao4 su4 wo3 xiong1 di4 zhao3 ni3
+20170001P00048I0084 zhun3 bei4 qu4 zhao3 yi1 jia1 gu4 ding4 de5 hui1 fu4 you2 yong3 le5
+20170001P00061A0102 jiu4 ba3 jie3 jie5 shuai1 le5
+20170001P00347A0101 lai2 da4 xiong1 di4 kan4 zhi2 bo1
+20170001P00267I0107 wo3 qu4 nian2 hai2 mai4 le5 yong3 yi1 zhun3 bei4 xue2 ne5
+20170001P00345A0094 gei3 ni3 jin1 nian2 gu3 zhi2 shu1 song1 zheng4 de5 xuan1 chuan2 ce4
+20170001P00154A0032 wang2 juan1 juan1 da3 suan4 li2 hun1 ni3 xiao3 de2 bu4
+20170001P00193A0058 jiang4 wen1 le5 ma5 zai4 na3 li3 fa1 sheng1 de5 dou1 xin1 zhao4 bu4 xuan1
+20170001P00357I0108 ya3 zhu4 xuan1 xuan1 sheng1 ri4 kuai4 le4 ha1
+20170001P00256A0023 hai2 xia4 wo3 yi1 tiao4 huang3 bao4 jun1 qing2 ni3 mei2 shang4 ke4 a5
+20170001P00080A0015 tu2 jie2 bu4 gan3 re3 wo3 xiong1 di4 le5
+20170001P00343A0115 gang1 cheng1 de5 ti3 zhong4 wo3 huai2 yi2 cheng1 bu4 zhun3
+20170001P00287A0005 ke3 lian2 de5 min2 zu2 wa2 wa5
+20170001P00341I0009 feng2 bi4 xia2 zai4 ru4 yuan4 shi2 bei4 cha2 chu1 ai2 zheng4 le5
+20170001P00113A0099 dong1 tian1 fang4 jia3 tie3 xi1 hua2 xiang2 ni3 zhi1 dao4 ma5
+20170001P00208I0081 qun2 zhu3 yi1 zhi2 zai4 bao4 feng1 xue3
+20170001P00237A0038 ni3 dao4 di3 xi3 bu4 xi3 huan1 yang2 xue3 wo3 ben3 lai2 jiu4 xing4 yao2
+20170001P00053I0051 zhun3 bei4 hui2 qu4 hou4 xian1 duo3 xue3 ping2 fang2 jian1 kan4 kan4 qing2 kuang4
+20170001P00202A0058 li3 bai4 er4 wan3 shang4 suo3 you3 xiong1 di4 jie3 mei4 yi1 qi3 ju4 hui4
+20170001P00372A0098 suan4 ni3 wa2 hen3 you3 duo1 yuan3 gun3 duo1 yuan3
+20170001P00189I0005 ci3 chu4 ta1 men5 de5 wen3 ding4 zhi2 de2 huai2 yi2
+20170001P00193A0089 jie2 zou4 zhang3 wo4 bu4 hao3 you3 yi1 dian3 ge1 ci2 hai2 chang4 bu4 zhun3
+20170001P00390A0059 na4 wo3 zai4 na3 li3 deng3 ni3 xia4 che1
+20170001P00046A0056 shang4 ci4 tong2 shi4 qu4 ba2 yu2 quan1 er2 dai4 ta1 xi2 fu4 qu4 de5
+20170001P00338I0080 ri4 ben3 yuan2 zhuang1 jin4 kou3 chong1 qi4 wa2 wa5
+20170001P00317I0054 wo3 zhe4 shi4 yu2 zhe3 qian1 lv4 bi4 you3 yi1 de2
+20170001P00024A0021 guo1 yun2 xia2 ni3 hai2 you3 ba5
+20170001P00264A0058 a5 ni3 jiu4 yong3 yuan3 bu4 yao4 sheng1 qi4 ni3 sheng1 ri4
+20170001P00183A0027 hai2 zi5 bei4 fu2 ti1 jia1 dao4 zhi4 xi1 si3 wang2
+20170001P00160A0060 yuan4 ni3 wo3 cong2 ci3 ri4 mu4 tian1 ya2
+20170001P00130I0018 suo3 yi3 wo3 xian1 shua3 dian3 wen3 dang1 dian3 de5
+20170001P00163A0043 qi2 shi2 yun2 nan2 bu4 cuo4 li4 jiang1 yu4 long2 xue3 shan1 leng3
+20170001P00154A0036 wei4 sha4 you4 chou1 dao4 ta1 le5 shi4 de5 jie3 bu4 que1 qian2
+20170001P00042I0089 wo3 xian4 zai4 te4 huai2 nian4 xue2 xiao4 de5 ri4 zi5
+20170001P00031A0103 wo3 yao4 hu4 zhao4 sao3 miao2 jian4
+20170001P00085A0004 ba3 gong1 zuo4 ci2 le5 zuo4 zhu3 bo1 qian2 duo1
+20170001P00216A0006 ni3 de5 shen1 ti3 yao4 shi4 yun2 xu3 wo3 ye3 jiu4 bu4 shuo1 sha4 le5
+20170001P00326I0059 gang1 huai2 yun4 jiu4 chuan1 yun4 fu4 qun2 a5
+20170001P00342A0056 dan4 bu4 yun2 xu3 you3 fan3 guan1
+20170001P00408A0110 bie2 zhe4 yang4 wen4 ni3 zhe4 yang4 wen4 wo3 you4 deng3 yu2 que1
+20170001P00229I0078 qu4 you2 yong3 zhun3 bei4 yi1 xie1 shen2 me5 a5
+20170001P00321I0057 weng1 jie2 kai3 shuo1 ta1 jiao4 kai3 lun2
+20170001P00410A0021 weng1 ge1 you3 zhe4 zhong3 ma3 da2 ma5
+20170001P00347I0065 qi2 ya3 qiong2 qu4 wen4 ba4 ma1 le5
+20170001P00318I0017 jiu4 zhi1 qian2 jue2 de2 dou1 shu3 yu2 zhe4 liang3 ge4 qun2 he2 quan1 zi5
+20170001P00073I0110 wo3 gang1 ci2 zhi2 wan2 zhun3 bei4 huan4 gong1 zuo4 ne5
+20170001P00070A0064 ming2 tian1 lai2 chu3 xiong2 huo4 zhe3 hui2 da4 yao2
+20170001P00025A0115 ni3 xu1 yao4 qu4 qiang3 ding4 cai2 neng2 yong1 you3 wang3 luo4 de5 huo2 dong4
+20170001P00394A0020 ni3 yao4 zou3 lu4 guo4 qu4 ru2 guo3 da3 che1 yue1 er4 shi2 ji3 yuan2
+20170001P00222A0099 ni3 wei4 ge4 nv3 ren2 er2 gai3 bian4 wo3 bu4 hui4 wei4 le5 tong2 xing4
+20170001P00183A0036 bie2 ren2 gei3 wo3 fa1 de5 you3 te4 xiao4 luo4 xue3 hua1
+20170001P00249A0090 fa1 le5 ya2 de5 bu4 neng2 chi1 huo4 zhe3 pi2 shi4 lv4 se4 de5
+20170001P00252A0112 gei3 ni3 dian4 zi3 ci2 dian3 zhan4 zai4 wo3 pang2 bian1 de5 shuang1 yu2
+20170001P00239A0108 da3 bu4 cheng2 le5 dou1 yuan4 wo3 le5 mei2 you3 ne5
+20170001P00332I0095 na4 jiu4 bai2 tian1 qu4 wan2 yun2 nan2
+20170001P00159I0109 qing3 ni3 yong3 gan3 di4 wo3 jue2 de2 dou1 kuai4 yao4 wen3 xia4 qu4 le5
+20170001P00256I0103 ri4 chang2 jian3 ce4 jiao1 gei3 xuan1 chuan2 bu4 wang3 luo4 xin4 xi1 ban4
+20170001P00402A0066 shui2 jiao4 ni3 yuan1 wang3 wo3 bu4 ke3 neng2 wo3 jiao4 huai4 ni3 de5
+20170001P00172A0002 jiu4 shi4 ni3 men5 zai4 chang4 jun1 ge1 de5 ma5
+20170001P00190I0118 zui4 hou4 de5 zhi2 xing2 zhe3 jiu4 shi4 jie1 dao4
+20170001P00019I0116 ni3 yao4 chao1 guo4 gai4 ci2 le5
+20170001P00398A0105 gun3 de2 yuan3 yuan3 de5 gun3 dan4
+20170001P00220A0088 ni3 men5 bu4 chi1 kui1 xiang3 de2 mei3 ni3 men5 zhe4 qun2 xiong2 hai2 zi5
+20170001P00128A0029 bu4 ran2 ru2 guo3 wa2 wa5 hai2 yao4 mai2 yuan4 wo3 ma1
+20170001P00005A0063 neng2 wan2 shui3 guo3 bu4 ka3 de5
+20170001P00374I0115 ting1 shuo1 zai4 xi1 ban1 ya2 mai3 fang2 song4 lv4 ka3
+20170001P00072I0064 huang2 zhong1 xing1 ye3 ci2 le5 ma5
+20170001P00197A0012 jiu4 shi4 wo3 ling3 zuo3 ci2 zhi1 ri4 dan1 ji1 de5 wo3 ye3 mei2 wan2 guo4
+20170001P00284A0019 rou4 ma2 si3 le5 ga1 ga1 shui2 pei2 ge1 la1 la1 gua3
+20170001P00031A0069 ni3 ci2 le5 zhun3 bei4 qu4 na3
+20170001P00200I0088 ke1 ji4 zhi1 shi4 xuan1 chuan2 ri4 xue2 zhi1 shi4
+20170001P00018I0075 wo3 peng2 you3 bang1 wo3 shua3 de5
+20170001P00134I0091 luo4 qi2 ying1 xiong2 zhuan4 zu3 dui4 shi2 yi1 zhi2 ka3
+20170001P00137A0041 fou3 ze2 bei4 shuai3 dao4 ying1 gai1 yao4 song4 yi1 yuan4
+20170001P00202A0026 li3 yu2 ni3 wa2 er2 zhen1 de5 bu4 yao4 hui2 lai2 rang4 wo3 kan4 dao4 ni3
+20170001P00215A0076 ni3 cai2 zhi1 dao4 yuan1 wang3 le5 shi4 bang1 qi2 ta1 xiong1 di4 shuo1 de5
+20170001P00399I0110 zui4 weng1 zhi1 yi4 bu4 zai4 jiu3
+20170001P00288I0110 wo3 zhun3 bei4 hui2 qu4 ci2 zhi2
+20170001P00018A0007 ha1 ha1 yao4 kan4 ye3 shi4 jun1 shi4 pin2 dao4 de5 ji4 lu4 pian4 en4
+20170001P00337A0077 weng1 tian2 lu4 jing4 gen1 shang4 ci4 de5 yi1 yang4 wei1 ma3 xun4
+20170001P00201A0075 lao3 yang2 jin1 tian1 dui4 ni3 meng2 yuan1 ai1 pi1 biao3 shi4 le5 liang4 jie3
+20170001P00251A0109 gao1 pin2 ci2 hui4 yao4 hui4 xie3 di4 yi1 bian4 ci2 hui4 ting1 zhao2
+20170001P00199A0083 ke3 wo3 zhi1 dao4 bu4 nu3 li4 ming2 tian1 yong3 yuan3 bu4 shu3 yu2 ni3
+20170001P00204I0070 na4 shi4 jia1 zi5 huo4 zhe3 yu2 shi4 fang1 de5 ma5
+20170001P00003I0027 ou1 mei3 jian3 yue1 wu2 xiu4 lian2 yi1 qun2
+20170001P00102I0020 wo3 ban4 le5 wo3 men5 xue2 xiao4 de5 you2 yong3 ka3
+20170001P00294A0091 san1 bu4 wo3 men5 shi4 xiong1 di4 de5 di4 er4 bu4 zui4 hao3 kan4
+20170001P00147A0081 shui2 gang1 kai1 shi3 jiu4 shi4 fu4 weng1 a5
+20170001P00170A0103 jian4 bao3 jiang1 huai2 xing2 kan4 guo4 shi4 zhen1 ji1
+20170001P00090A0044 pin3 chang2 zai4 gao4 su4 gua3 ren2 ba5
+20170001P00121I0012 shuang1 fang1 jun1 yu2 nian2 yue4 ri4 nong2 zhuan3 fei1
+20170001P00355I0070 wo3 bu4 yuan4 yi4 xuan1 bin1 duo2 zhu3
+20170001P00042I0090 ran2 hou4 wo3 quan2 jun1 deng3 zai4 ta1 zhi4 yuan4 jun1 de5 chu1 kou3
+20170001P00078A0046 you3 kong1 duo1 duan4 lian4 zuo4 kuo4 xiong1 yun4 dong4
+20170001P00114I0006 xiao1 hua4 xing4 kui4 yang2 dan1 ci2
+20170001P00142I0102 ban4 gong1 shi4 na4 fu4 weng1 jie3 jie5 jiu4 yao4 hui2 lai2 shang4 ban1 le5
+20170001P00263A0103 yu4 yue1 le5 xiong1 ke1 he2 zhong3 liu2 yi1 yuan4 de5 yi1 sheng1
+20170001P00045I0109 ni3 zhun3 bei4 ci2 zhi2 le5 ma5
+20170001P00175I0005 ni3 shi4 zen3 me5 fen1 bie2 bing4 dui4 ying4 ri4 yong4 de5 ci2
+20170001P00017I0070 ni3 de5 ai4 hao3 jin3 jia1 de5 wo3 de5 ji1 ba1 hao3 shuang3
+20170001P00341A0054 de2 le5 ba5 yi1 qun2 huai2 ruo4
+20170001P00120I0055 ju4 shuo1 juan1 jing1 gen1 ben3 bu4 ke3 neng2 dao3 zhi4 si3 wang2
+20170001P00120A0066 ka3 su1 zhou1 mei2 cong2 na3 er2 chu1 fa1 kao4 shua3 wo3
+20170001P00038A0038 dan4 wo3 neng2 li3 jie3 ni3 de5 qing2 kuang4 bu4 yun2 xu3
+20170001P00339I0023 yi1 yuan4 ting1 jian4 xia2 de5 gao4 bai2
+20170001P00150A0053 wo3 gei3 ni3 zai4 fa1 yi1 zhang1 gai4 le5 zhang1 zi5 de5
+20170001P00111I0075 wo3 hao3 qi2 fa3 guo2 xue2 hui4 ji4 huo4 zhe3 jin1 rong2 de5
+20170001P00008I0066 wo3 gang1 gang1 hui2 yuan4 li3 zhuan3 le5 yi1 quan1
+20170001P00211A0081 na4 ni3 hai2 pian4 wo3 xue3 mei2 wei4 le5 zuo4 yi1 ge4 hao3 jie3 jie5
+20170001P00282A0114 rang4 lin2 jia1 song4 bie2 zhe4 yang4 shuo1 wo3 zai4 zhe4 li3
+20170001P00405I0031 ta1 zen3 me5 dui4 cang1 qiong2 yuan4 qi4 na4 me5 da4
+20170001P00070A0003 kai3 jia3 yong3 shi4 xing2 tian1 bai3 du4 bai3 ke1
+20170001P00109A0019 tie3 jia3 xiao3 bao3 kai3 jia3 yong3 shi4 shu4 ma3 bao3 bei4
+20170001P00156I0034 huang2 huai2 qu1 yu4 dou1 bao1 kuo4 na3 xie1 sheng3
+20170001P00374I0031 wo3 gan1 yuan4 qu1 fu2 gun4 xiong1 de5 shi2 liu2 qun2 xia4
+20170001P00169A0086 zuo2 wan3 you3 mai3 ya2 gao1 ma5
+20170001P00048I0073 ta1 shuo1 jian4 shen1 you2 yong3 de5 na4 ge4 shuang1 ren2 ka3
+20170001P00158I0021 yao4 bu4 ran2 jiu4 ji4 xu4 guo4 qiong2 ri4 zi5
+20170001P00272I0100 ye3 yong3 yuan3 zai4 zhao3 bu4 hui2 hui1 huang2 shi2 de5 gan3 jue2
+20170001P00228A0013 gan3 jin3 de5 la1 zhao2 ni3 ba4 ba4 chu1 lai2 shua3
+20170001P00109A0059 gao4 bai2 zhi3 zai4 yu2 shun4 jian1 wo3 yao4 ba3 ta1 bian4 cheng2 wei4 yong3 heng2
+20170001P00109A0032 shi4 xian4 shi2 bu4 yun2 xu3 ya1
+20170001P00179A0022 wu3 han4 zong3 yi1 yuan4 li3 mian4 de5 yi1 sheng1
+20170001P00366I0118 wo3 bu4 yuan4 yi4 shou4 yue1 shu4
+20170001P00072I0059 mi4 yun2 wu4 mei3 yi1 ceng2 mai4 wen2 xiong1
+20170001P00120I0083 yi1 yuan4 hui4 jiao4 qu4 juan1 xie3
+20170001P00088A0096 yao4 ji3 tian1 ne5 yong3 yun2
+20170001P00066A0011 qi3 dong4 huan2 bao3 xuan1 chuan2 zhi4 yuan4 fu2 wu4 dui4
+20170001P00169A0014 kong3 wen2 chu1 lai2 ben3 qun2 xu1 yao4 ni3
+20170001P00166A0013 fu2 yun3 hai2 ni3 xian4 zai4 you3 shen2 me5 da3 suan4 ne5
+20170001P00091A0097 di4 yi1 ge4 tu2 shi4 zhuang1 di4 er4 ge4 wen2 jian4 jia1 de5
+20170001P00154I0033 wo3 yao4 chun1 zhuang1 huo4 zhe3 qiu1 zhuang1
+20170001P00069I0018 huang2 he2 pan4 ying1 xiong2 shi4 ji1
+20170001P00304A0088 li4 zhi1 yao4 gen1 wo3 qian1 yue1 du2 jia1 zhu3 bo1
+20170001P00072A0070 ni3 qian4 da3 bu4 yun2 xu3 yuan2 liang4 ni3
+20170001P00112I0052 ru2 guo3 ni3 zhen1 xiang3 guo4 ri4 zi5 jiu4 hao3 hao3 wan2
+20170001P00255A0060 guo4 lai2 wan2 guo4 lai2 shai4 tai4 yang2 shi4 sa1 ren4 bu4 dao4 wa1
+20170001P00123A0039 wo3 rang4 weng1 song4 wo3 liang3 ben3 man4 hua4
+20170001P00041I0021 ni3 cong2 da4 lian2 you2 yong3 qu4 ri4 ben3 hao3 xiang4 jin4 dian3
+20170001P00081A0088 jing1 guo4 you3 tiao2 hen3 xiong1 meng3 de5 gou3
+20170001P00315I0072 hai2 you3 na3 li3 you3 nian2 yu2 huo4 zhe3 wa2 wa5 a5
+20170001P00066I0018 re3 de5 xiao3 di4 xiong1 men5 he2 er3 meng2 fen1 mi4 de5 tai4 duo1
+20170001P00082I0075 ma3 shang4 zhun3 bei4 yao4 wa2 wa5 de5 ren2 le5
+20170001P00185A0071 di4 xiong1 er3 jiu4 shi4 cha4 wang2 zhi1 wang2 cha4 chuan1 chang2 shi4 bu2 shi4
+20170001P00037I0078 yan1 tai2 shi4 nong2 ke1 yuan4 he2 zuo4 xie2 yi4 qian1 yue1 zhi4 ci2
+20170001P00128I0096 ju4 you3 xiong2 bian4 cai2 neng2 de5 gong1 gong4 yan3 shuo1 zhe3
+20170001P00280I0032 bu2 yuan4 cheng2 ren4 zai4 tai2 shang4 yan3 chu1 shi2 shuai1 dao3
+20170001P00124I0042 kan4 qun2 li3 ge4 wei4 jun1 mi2 jiu4 zhi1 dao4 le5
+20170001P00229A0094 wei4 you3 ren2 yue1 o1 ni3 jin1 wan3 pei2 ta1 guo4 le5
+20170001P00215A0021 ni3 bu4 que1 bao1 bu4 ru2 yi1 ci4 ge1 rou4 mai3 ge4 zhen1 pi2 de5
+20170001P00138A0117 huang2 jian4 xiong2 wu1 zhi4 you3 lu4 ce4
+20170001P00116I0002 wo3 yong4 shou3 gei3 ni3 gai4 zhao2 ne5
+20170001P00192I0050 wo3 men5 zhong1 guo2 wei4 ci3 bei4 ri4 jun1 tu2 sha1 le5
+20170001P00260A0059 huo4 zhe3 yue1 huang2 pu3 ye3 xing2 wo3 da4 xue2 qu4 guo4 ye3 jin4
+20170001P00137I0026 gu3 weng1 ke3 yi3 da3 gao1 da2 xiao3 dui4
+20170001P00189A0024 hui2 fu4 shi4 jie3 shi4 wo3 fa1 na4 ge4 zhe4 ge4 peng2 you3 quan1 de5 yuan2 yin1
+20170001P00125A0075 kou3 jiao1 que4 shi2 xiong1 ni3 xia4 zhou1 yi1 er4 xiu1 xi1
+20170001P00278A0115 ni3 de5 xiong1 za3 le5 ren2 jia1 hui4 mo1 ni3 xiong1 de5
+20170001P00096A0072 ni3 you3 mei2 you3 tong2 shi2 yong1 you3 gong1 xing2 he2 jian4 xing2 de5 ka3
+20170001P00196I0110 na4 ge4 lan2 ya2 er3 ji1 zen3 me5 she4 zhi4 zhao2
+20170001P00314A0081 neng2 bu4 neng2 shi4 xiao3 xiao4 wo3 ting1 hu2 shuang3 shuo1
+20170001P00050I0015 wo3 yao4 shi4 bao4 she4 ji4 zhe3
+20170001P00036A0117 bu4 ru2 huang2 pu3 jun1 xiao4 na4 zhi1
+20170001P00160A0009 jia1 ting2 he2 huan2 jing4 ye3 bu4 yun2 xu3
+20170001P00309I0069 cha2 xun2 bao1 guo3 xin4 xi1 ke3 gen1 ju4 hong2 quan1 li3 de5 xin4 xi1
+20170001P00426A0116 jiang1 jing3 juan1 er2 zai4 wo3 nao3 zi5 li3 bu4 zen3 me5 shen1
+20170001P00294I0062 gui1 ding4 de5 si4 hui4 ci2 yu3 ji2 ri4 chang2 jiao1 ji4 yong4 yu3
+20170001P00402I0028 jing3 de2 zhen4 tao2 ci2 xue2 yuan4
+20170001P00069A0063 hao3 ba5 na4 mei2 zhao1 le5 jiu4 shi4 sheng4 li4 bu4 yun2 xu3
+20170001P00066I0088 ru2 guo3 jiao3 xia4 you3 huo3 quan1 le5 zhi2 jie1 nie4 yun2 chu1 qu4
+20170001P00139I0045 dou1 shi4 yi1 qun2 hen3 xiong2 wei3 de5 jian4 zhu2
+20170001P00386I0008 qiang2 qun2 ci2 ban3 nian2 tie1 wan2 yi1 ceng2
+20170001P00165A0115 ban4 ye4 jue2 dui4 bu4 yun2 xu3 zai4 zai4 wai4 mian4 wan2
+20170001P00037I0093 de2 dao4 le5 guang3 da4 qun2 zhong4 de5 yong1 hu4 he2 zan4 cheng2
+20170001P00225A0088 nin2 chi1 fan4 ba5 die1 di4 chi1 le5 huo3 guo1 zhe4 li3 xia4 xue3 le5
+20170001P00438A0042 jiu4 yun2 xu3 ni3 zhui1 shi4 jie4 bei1 tong1 xiao1
+20170001P00411I0006 wei4 zhi4 yi1 ban1 yang2 xue3 ying1 ling2 shou4 ri4 yong4 pin3
+20170001P00288A0055 sheng1 wan2 wa2 er4 san1 chu1 bu4 le5 men2 dou1
+20170001P00244I0071 ke3 neng2 shi4 chuan1 mo3 xiong1 qun2 de5
+20170001P00012I0065 ran2 hou4 zi4 ji3 bian1 le5 na4 me5 duo1
+20170001P00295I0059 xuan4 wu3 li3 mian4 de5 xiong2 mao1 wa2 wa5
+20170001P00373A0097 kan4 de2 mi2 mi2 de5 xiong1 shou3
+20170001P00084A0055 wen2 hua4 lu4 lu4 jun1 zong3 yuan4
+20170001P00385A0069 wo3 dang1 shi2 mei2 zhun3 bei4 ci2 hui4
+20170001P00241A0078 er2 qie3 wo3 xian4 zai4 lai2 ye3 wan2 bu4 neng2 duo1 jiu3
+20170001P00219A0079 ni3 kan4 kan4 zhe4 liang3 tian1 li3 chen2 yang2 qu4 bu4 qu4 zhao3 jin3 xia2
+20170001P00305I0013 dian4 shi4 ju4 yong3 zhe3 wu2 di2 zai4 xian4 guan1 kan4
+20170001P00251I0092 ni3 zhun3 bei4 qu4 yue1 hui4 ba5
+20170001P00220I0072 ta1 de5 qun2 zi5 jia1 zai4 mo2 tuo1 che1 li3
+20170001P00076A0031 jing3 ti4 bi4 rang4 jiang1 zhong1 you2 yong3 zhe3 deng3
+20170001P00378I0050 ni3 ming2 tian1 zhun3 bei4 ci2 zhi2 ba5
+20170001P00343I0016 ri4 ben3 de5 shi4 fou3 yi3 jing1 xun1 zheng1
+20170001P00187I0016 yi1 yuan4 ke3 yi3 jian3 cha2 chu1 huai2 yun4 ma5
+20170001P00401I0067 kai1 zhan3 fu4 nv3 qun2 zhong4 jin4 du2 fang2 ai4 zhi1 shi4 xuan1 chuan2
+20170001P00323A0042 ke4 hu4 zhao3 dao4 zhang1 jun1 yao4 qiu2 qi2 teng2 gui1 hui2 dai4 kuan3
+20170001P00306A0045 ma2 bi4 ni3 ge4 gou3 ri4 de5 ma2 bi4 gun3 xiong2
+20170001P00086A0066 shi2 dai4 de5 chao2 liu2 bu4 yun2 xu3 wo3 tai4 guo4
+20170001P00170I0046 ke3 xi1 huang2 jun1 hui2 lai2 le5
+20170001P00355I0046 jiu4 shi4 shuai1 zai4 qi1 gai4 zhe4 li3
+20170001P00092A0008 bu4 hui2 li3 le5 kan4 dian4 shi4 qu4 le5
+20170001P00437A0112 hun1 jun1 ye3 shi4 jun1 na4 ni3 qu4 da3 gao1 er3 fu1
+20170001P00262I0112 xiang4 dan1 ci2 ka3 yi1 yang4 de5
+20170001P00130I0021 hai2 you3 yong3 yuan3 de5 zhu1 ya3 ba1 ya1
+20170001P00248I0081 wo3 zhi3 xiang3 yao4 hui2 yi3 qian2 na4 ge4 guai1 lao3 po2
+20170001P00308A0097 mei2 hua2 lu4 feng1 lu4 ni3 yao4 dou1 hao3 da4 quan1
+20170001P00172I0052 ni3 men5 zhe4 qun2 bu4 chun2 jie2 di1 wa2
+20170001P00035A0064 gang1 chi1 wan2 fan4 wang2 meng4 ci2 bu4 shi4 shuo1 zhao3 bi3 er3
+20170001P00229A0056 cao2 xue3 qin2 wen2 bi3 de5 wo3 bu4 xu1 yao4 zhao3 wo3
+20170001P00167I0041 liu2 ai4 lian2 yue1 zhe4 zhou1 ri4 yi1 qi3 chi1 fan4
+20170001P00028I0027 san4 bu4 jian3 fei2 yao4 shi4 na3 tian1 ni3 shen1 ti3 kua3 le5 za3 ban4
+20170001P00148A0002 luo1 hu2 fa3 yuan4 dai4 shao3 xiong2
+20170001P00048A0018 jiu4 pa4 nin2 liang4 de5 xiong1 wei2 bu4 zhun3 que4
+20170001P00398A0029 jiang1 jun1 lao3 tai4 tai4 zui4 jin4 shen1 ti3 bu4 hao3
+20170001P00209I0030 gui1 hua2 yuan4 wu3 yong3 gang1 mei2 ka3
+20170001P00400A0046 sui1 ran2 kan4 man4 jing4 tou2 kan4 nei4 ma3 er3 shuai1 de2 hao3 can3
+20170001P00349I0025 ni3 ke3 yi3 zuo4 bai3 wan4 fu4 weng1 le5
+20170001P00031I0058 chou2 chu2 he2 pang2 huang2 shi4 jin4 yi4 ci2 ma5
+20170001P00433A0021 xie3 luo1 ma3 shuai1 wang2 de5 yuan2 yin1 de5 wen2 zhang1
+20170001P00412I0092 ran2 hou4 zhu3 jue2 shan3 liang4 de5 de5 zai4 ri4 ben3 jun1 dui4
+20170001P00192A0078 jiang1 yong3 yuan3 dai4 zou3 wo3 men5 zhi1 qian2 de5 mei3 hao3 yu3 zi4 you2
+20170001P00013I0006 wo3 lao3 gong1 shang4 ban1 wu3 dian3 jiu4 qi3 chuang2 le5
+20170001P00339A0095 jin1 tian1 zao3 shang4 qu4 ma2 yong3 yi1 yuan4 chou1 xie3 yan4 yi1 yan4
+20170001P00071A0084 sun1 yue4 bu4 shi4 na2 le5 yi1 mei2 guan1 jun1 jie4 zhi3 ma5
+20170001P00030I0006 guo4 qi1 shi4 tong2 mo4 ren4 ci2 zhi2 huo4 zhe3 shen2 me5 de5
+20170001P00105I0013 suan4 hao3 ri4 zi5 rong2 yi4 huai2 shang4
+20170001P00211A0018 na4 me5 kuai4 jiu4 chi1 wu3 fan4 la5 ni2 yu4 fei1 juan1 le5 er4 shi2
+20170001P00222I0052 ye3 jiu4 ke3 yi3 wen4 shi1 xiong1 xu1 yao4 shen2 me5 zhun3 bei4 le5
+20170001P00206I0118 wo3 ba3 ye4 wu4 yue1 ding4 shu1 na2 gei3 yang2 ke3 gai4 zhang1 le5
+20170001P00033A0086 shang4 ban1 zhe4 me5 zao3 jun1 er2 xie4 xie4 sen1 sen1 lin2 ge1 de5 jiao4 hui4
+20170001P00352I0012 dian1 xian2 guan1 ai4 ri4 xuan1 chuan2 huo2 dong4 zong3 jie2
+20170001P00226I0026 ni3 huai2 nan2 ka3 zen3 me5 la5
+20170001P00108A0041 si4 ge4 nai3 ma1 zhao4 gu4 yi1 qun2 ying1 xiong2
+20170001P00092I0051 jie2 guo3 zhou1 ri4 ta1 yue1 ta1
+20170001P00224I0055 wo3 zhe4 ban4 nian2 lai2 guo4 de2 hen3 kan3 ke3
+20170001P00430A0060 jin1 tian1 bu4 qu4 le5 jiao4 yang2 qiu1 jia1 jia1
+20170001P00082I0097 wo3 men5 yi1 ban1 yao4 shi4 kai1 shi3 shuo1 yi1 xie1 wen2 ya3 de5 ci2
+20170001P00306I0067 bu4 ran2 fen3 ka3 yong3 yuan3 ying2
+20170001P00324I0058 ren2 men5 xin1 huai2 ge4 xing4 yu3 cha4 yi4 de5 mei3 hao3 yuan4 wang4
+20170001P00199A0056 ke3 shi4 she4 hui4 gui1 ze2 ye3 bu4 yun2 xu3 zhe4 yang4 de5 shi4 qing2
+20170001P00094A0050 wo3 mei2 ji4 tai4 qing1 jiu4 shi4 ya2 zong3 de5 bu4 shi4 le5
+20170001P00088A0055 yi2 ge4 yong1 bao4 huo4 zhe3 qian1 shou3 dou1 yao4 bu4 dao4
+20170001P00113A0115 er2 qie3 qian2 bao1 bu4 yun2 xu3
+20170001P00098I0017 ba3 wo3 la1 jin4 ya4 jun1 de5 qun2 li3 wan2
+20170001P00345A0004 fu4 du2 sheng1 yi1 ban1 dou1 zai4 san1 ban1 he2 er4 ban1
+20170001P00335I0113 jin1 ri4 zhou1 zi5 xuan1 sheng1 ri4 e2
+20170001P00057I0105 mo2 wang2 xue2 xiao4 li3 zhi3 you3 wo3 shi4 yong3 zhe3
+20170001P00404A0010 he1 jiu4 yu3 qi4 ci2 er2 yi3
+20170001P00190I0078 hua4 shuo1 xiong2 mao1 hai2 zai4 bu4 zai4 qun2 li3 le5
+20170001P00344I0064 ke3 yi3 she4 zhi4 wei4 bu4 yun2 xu3 dui4 ri4 ji4 jin4 xing2 ping2 lun4
+20170001P00099A0029 bie2 yuan1 wang3 wo3 ya1 wo3 shi4 kao3 lv4 shen1 ti3 ya1
+20170001P00072A0109 ni3 chao1 wan2 gei3 jie3 min3 jia1
+20170001P00097A0101 feng2 bi4 xia2 zai4 ru4 yuan4 shi2 bei4 cha2 chu1 ai2 zheng4 le5
+20170001P00155A0067 wo3 men5 qing3 ni3 men5 guan3 xia2 de5 wei4 sheng1 yuan4 lai2 kai1 hui4
+20170001P00279I0060 li4 ma3 cheng2 wei4 bai3 wan4 fu4 weng1 le5
+20170001P00326I0043 tian1 tong1 wan3 huai2 yun4 bao3 xian3
+20170001P00406I0036 a1 qin4 hui4 bu4 hui4 he1 wan2 le5 zai4 dian4 ying3 yuan4 shua3 jiu3 feng1
+20170001P00036I0036 shuo1 hua4 ye3 bu4 yuan4 yi4 guai3 wan1 mo3 jiao3
+20170001P00258I0079 ti2 qian2 ge4 ji3 tian1 jiu4 gen1 wo3 tong2 sheng1 ri4 le5 wai1
+20170001P00133A0013 wo3 he2 huang2 ze2 jun1 qu4 wan2 er2 de5
+20170001P00178A0081 na4 sha4 li3 jun1 xiang2 shi4 ni3 men5 gong1 si1 shui2 de5 lao3 shi1
+20170001P00101I0021 ri4 ben3 bei3 hai3 dao4 de5 xun1 yi1 cao3 wa1
+20170001P00302I0005 wo3 she4 bu4 yun2 xu3 jia1 qun2 le5
+20170001P00180I0091 wo3 yuan4 yi4 ba3 ni3 bao4 dao4 huai2 zhong1 qin1 ge4 gou4
+20170001P00097I0091 na4 ni3 ci2 zhi2 le5 jiu4 zhun3 bei4 zi4 ji3 chuang4 ye4 le5
+20170001P00136I0069 wo3 yuan4 yi4 yong3 yuan3 dou1 zai4 ni3 bei4 hou4 mo4 mo4 de5 fu4 chu1
+20170001P00233A0038 wo3 shuo1 biao1 zhun3 nv3 ren2 neng2 sheng1 wa2
+20170001P00148A0103 nong4 yi1 qun2 li3 han4 jun1 zhe4 zhong3 bu4 dong3 dan4 you4 ni4 tian1 de5
+20170001P00223A0077 ni3 yao4 fu4 yu4 xia4 de5 bu4 gong1 hai2 shi4 yao4 pin2 qiong2 xia4 de5
+20170001P00224I0051 wei4 zhe4 shi4 wo3 zi1 xun2 guo4 zan2 xiong1 di4 de5
+20170001P00332I0009 man3 huai2 zhao2 yuan4 qi4 guo4 xia4 ban4 bei4 zi5
+20170001P00278A0113 ni3 de5 xiong1 ye3 zhi3 neng2 rang4 wo3 yi1 ge4 ren2 mo1
+20170001P00326A0105 che1 chuang2 che1 xue1 gong1 jian4 de5 ren2 ji1
+20170001P00046A0076 ni3 er3 duo1 gen1 zi5 yi3 hou4 an1 jing4 la5
+20170001P00219A0016 ni3 jiu4 shi4 bai2 xue3 gong1 zhu3 de5 hou4 ma1 wo3 cong2 bu4 shuo1 huang3
+20170001P00164A0005 gang1 kai1 shi3 mo1 xiong1 de5 shi2 hou4
+20170001P00078A0034 er2 qie3 hai2 shi4 zai4 jiao3 huai2 shang4 mian4 quan1 quan1
+20170001P00090A0041 mei2 xiang3 zhao3 zhi3 xiang3 ren4 zhen1 xue2 ji4 zhu2
+20170001P00398I0009 xie4 xie4 ni3 de5 kua1 jiang3 yo5 zhou1 ri4 ni3 yao4 qu4 bi3 sai4
+20170001P00217A0081 ni3 gen1 jia1 lin2 de5 zhan4 zheng1 da4 jia1 dou1 you3 mu4 gong4 du3 de5
+20170001P00417A0042 huang2 yong3 dan1 you3 mei2 you3 jie2 tu2 wen4 ni3 shen2 me5
+20170001P00303I0032 ni3 ye3 zhun3 bei4 ci2 zhi2 la5
+20170001P00136A0101 wo3 gei3 liao4 cheng2 fan1 che3 wan2 le5
+20170001P00140A0103 shuo1 shi2 zai4 de5 yong3 heng2 yi1 zhi2 dou1 shi4 zui4 wen3 ding4 de5
+20170001P00397A0070 wei4 shen2 me5 gan3 jue2 kan4 dao4 le5 yang2 zi3 jun1
+20170001P00113A0072 shen3 jun1 ran2 ba3 ta1 juan4 lai2 pi1 yang4 zi5 ta1
+20170001P00203A0079 lin2 ju1 dou1 xiong2 ta1 lia3 shuo1 ta1 lia3 bu4 hui4 he2 wo3 gou1 tong1
+20170001P00318I0021 wang2 guan1 jun1 ni3 zhun3 bei4 shen2 me5 shi2 hou4 pei2 wo3 chu1 qu4
+20170001P00263A0061 yong3 yuan3 pei2 ban4 ni3 gao4 su4 ni3 mei3 hao3 de5 shi4 jie4
+20170001P00111I0085 wo3 mei3 tian1 qu4 shi1 yuan4 pao3 liang3 quan1
+20170001P00432A0083 ta1 zai4 deng3 jiu3 tian1 jie3 chi1 fan4 mei2 you3 mei2 xue3 hen3 hao3
+20170001P00421A0088 ni3 er2 jia1 jiu4 xi4 guo4 qiao2 chou1 ban3 le5 dian3 er2
+20170001P00308A0005 mei2 you3 zuo4 ye4 hao3 shuang3 gang1 zuo4 wan2 jun1 xun4
+20170001P00151A0108 yan3 quan1 fa1 hei1 you4 gan4 you4 huang2
+20170001P00236A0024 wo3 dao4 wo3 er4 yi2 jia1 kan4 kan4 neng2 bu4 neng2 wan2
+20170001P00122I0041 bu4 zhun3 pei2 er4 shi1 xiong1 he1 jiu3
+20170001P00358I0113 wo3 zhen1 bu4 zhi1 dao4 re3 ni3 sheng1 qi4 le5
+20170001P00203I0071 ni3 zhun3 bei4 hui2 jia1 wan2 er2 ji3 tian1
+20170001P00258A0049 huan2 jing4 bu4 yun2 xu3 ni3 bu4 yong4 zai4 hu1 na4 xie1 yuan2 yin1
+20170001P00297A0008 dao4 jia1 wo3 jiu4 fang4 xin1 la5
+20170001P00388A0086 kuai4 lai2 pei2 wo3 fan1 gun3 wo3 shi4 quan1 quan1
+20170001P00338A0004 ou3 er3 cong2 lian3 shang4 hua2 xia4 ji3 ke1
+20170001P00030I0061 wen4 xia4 qun2 li3 de5 xiong1 di4 men5 zhi1 bu4 zhi1 dao4 a5
+20170001P00071I0076 zi4 ji3 ren4 wei4 shen2 me5 ta1 shuo1 yao4 juan1 yan3 jiao3 mo4
+20170001P00075A0111 wo3 zhe4 ge4 yue4 hai2 xiang3 qu4 shan1 xi1 huo4 zhe3 shi4 zhou1 zhuang1
+20170001P00065I0069 bu2 gou4 huo4 zhe3 que1 de5 shi2 hou4
+20170001P00190I0048 hao3 la5 bu4 gen1 ni3 che3 la5 zhuan3 jie1 dao4 liu2 xue3 ying2 na4 er2
+20170001P00417A0077 wo3 jian4 xi2 de5 yi1 yuan4 shi4 bu2 yun2 xu3
+20170001P00249A0009 er4 wei2 ge2 zi5 de5 di4 yi1 di4 er4 bu4 li3 de5 ju2 zhou1
+20170001P00362A0008 ni3 dai4 ni3 bao3 bao3 qu4 you2 yong3
+20170001P00131A0009 ni3 zhen1 de5 yao4 mo1 ta1 xiong1 bu4
+20170001P00227A0090 ran2 hou4 ba3 huo2 xing4 tan4 song4 jia1 shan1 xiang1 qu4
+20170001P00443A0023 jing3 de2 zhen4 tao2 ci2 xue2 yuan4 xiang1 hu2 xiao4 qu1
+20170001P00141A0120 qin1 yang2 gua1 niu2 de5 qun2 jiu4 shi4 que1 shao3
+20170001P00317I0117 qun2 zhong4 de5 yan3 jing1 cai2 shi4 xue3 liang4 de5
+20170001P00344I0073 zhun3 bei4 hong1 wa2 er2 shui4 jiao4 le5
+20170001P00349I0090 wo3 jin1 tian1 kan4 dao4 huang2 yong3 zhou1 pai1 de5 yi4 zhu2 zhao4 le5
+20170001P00339A0073 ta1 men5 dou1 shuo1 wo3 zhang3 de2 xiang4 yang2 wa2 wa5
+20170001P00020I0094 tu2 pian4 li3 mian4 hai2 yao4 yi1 quan1 yang2 guang1
+20170001P00176I0083 wo3 yuan4 de5 ruan3 ying4 jian4 pei4 bei4 jun1 wu2 fa3 de5 xu1 yao4
+20170001P00375A0072 feng2 xi3 mei2 feng2 meng4 hui1 li3 yong3 li4 li3 yuan2
+20170001P00382I0116 pian1 pian1 rang4 yang2 xiao3 jun1 de5 ma1 ma1 qu4 si4 hou4
+20170001P00011I0042 quan4 ni3 hai2 shi4 yi1 qi3 lai2 a5 lai2 yong3 an1 da3 si3 wo3
+20170001P00281A0064 quan2 shen1 luo3 zhao4 shi4 mei2 you3 de5 ju2 bu4 ke3 yi3
+20170001P00401A0025 dan4 shi4 zhi1 yao4 shi4 shi4 xun1 jiu4 ke3 yi3 qu4 wan2
+20170001P00302A0106 lao3 jun1 tang2 hai3 tang2 gong1 yuan2 zhe4 xun2 luo2 na3
+20170001P00116A0040 wo3 huai2 nian4 pei2 ni3 da3 qiang1 shen2 de5 ri4 zi5 ai1
+20170001P00085I0040 ri4 xing2 you4 huai2 guan1 jie2 gu3 zhe2 zhu2
+20170001P00125A0080 er2 qie3 da4 duo1 shi4 ta1 yue1 wo3
+20170001P00277I0110 ni3 jiu4 shi4 zhun3 bei4 ci2 a5
+20170001P00168I0045 ting1 xue3 zhen1 zhun3 bei4 chang2 da4
+20170001P00247A0095 er2 qie3 ta1 dui4 wa2 er2 he2 ta1 lao3 gong1 hai2 you3 gan3 qing2
+20170001P00377A0049 wo3 ji4 de2 xuan1 chuan2 ka3 meng2 hao4 ma3 mi4 ma3
+20170001P00068A0066 xiang1 xun1 an4 mo2 de5 hao3 chu4
+20170001P00147A0054 wo3 zhi4 shao3 neng2 shuai3 ge4 feng4 huang2
+20170001P00292I0043 feng2 zhong1 shou4 jun1 yun2 nei4 ya1 li4 zuo4 yong4
+20170001P00370I0059 qi1 dai4 xia4 sai4 ji4 qun2 xiong2 zheng1 ba4 le5
+20170001P00095I0025 xiao3 mai4 pei1 ya2 you2 neng2 an4 mo2 xiong1 bu4
+20170001P00178A0023 wei4 le5 gei3 zhe4 ge4 xiong2 hai2 zi5 gai3 shang4 chuang2 de5 chou4 mao2 bing4
+20170001P00355I0112 shi4 a5 wo3 ye3 hao3 huai2 nian4 yi3 qian2 de5 ri4 zi5
+20170001P00043I0102 ri4 zhi4 li3 dai4 ji3 ge4 min3 gan3 ci2 jiu4 fa1 bu4
+20170001P00142I0015 guang3 da4 xuan1 chuan2 gong1 zuo4 zhe3 de5 shui3 ping2
+20170001P00132A0008 san1 wei4 lao3 shi1 qing3 jia1 wang3 luo4 zhi2 bo1 qun2
+20170001P00361A0088 wen1 zhou1 le4 yuan2 mei2 ren2 qu4 wan2 shua3 de5
+20170001P00230I0089 na4 ge4 jun1 tuan2 zhu3 yao4 zai4 gai4 lun2 te4 huo2 dong4 de5 ya1
+20170001P00356I0053 ding3 zhao2 lie4 ri4 wai4 fang3 de5 jian4 jun1 xiong1 di4 xin1 ku3 la5
+20170001P00151A0029 bian4 xiang4 wang3 luo4 gui1 mo2 bi3 li4 ping2 jun1 shu4 biao1 zhun3 cha4
+20170001P00116A0093 jian4 yi4 xiong1 di4 wan2 xun2 hang2 hai2 shi4 wan2 ri4 xi4 ya3 ma3 ha1
+20170001P00339I0068 shao3 nian2 jiang1 jun1 zhao4 yun2 nan2 yi3 li4 zu2 yu2
+20170001P00297I0116 qin2 shi3 huang2 bing1 ma3 yong3 da4 quan2
+20170001P00224A0016 ni3 yong3 yuan3 bu4 shi4 duo1 yu2 de5 na4 ge4 ren2 wo3 ye3 bu4 hui4
+20170001P00265A0008 ba3 ni3 de5 zheng4 ju4 gei3 wo3 er4 shi1 xiong1 kan4 kan4
+20170001P00354A0046 ni3 hai2 zhen1 shi4 ju1 xin1 po3 ce4 a5
+20170001P00391A0046 ru2 guo3 wo3 men5 de5 ren2 sheng1 dou1 shi4 da4 fu4 weng1
+20170001P00355I0072 wo3 bu4 yong4 qu4 wen3 zuo4 zong1 jun1 zhang4
+20170001P00388A0079 ning2 bo1 wo4 ci2 de5 wei4 jiao1 tong3 ji4
+20170001P00276A0113 lin2 jun1 yao2 a5 qi3 lai2 mei2 a5 yao4 chu1 fa1 la5
+20170001P00147I0022 guo4 yi1 duan4 shi2 jian1 ci2 zhi2 jiu4 zhun3 bei4 guo4 qu4
+20170001P00255I0033 wo3 da4 gai4 qi1 hao4 huo4 zhe3 ba1 hao4 zou3
+20170001P00087I0035 ka3 hao4 jiu4 shi4 gang1 gang1 na4 ge4 wa2
+20170001P00288I0041 xia4 wu3 shui4 wu3 jue2 you4 shuai1 chuang2 xia4 qu4 le5
+20170001P00001A0076 jin1 ri4 di4 yi1 ci4 qu4 wang3 ba5 wan2 ying1 xiong2 lian2 meng2
+20170001P00138I0020 bu2 dui4 cheng1 xie2 bang1 you3 xie1 ka3 jiao3 huai2
+20170001P00372I0037 jia1 ru4 zan2 men5 qu1 de5 wang3 luo4 xuan1 chuan2 dui4 wu3 qun2 le5 ma5
+20170001P00103I0091 mai3 yi1 xiang1 xue3 bi4 huo4 zhe3 ke3 le4
+20170001P00313I0054 wo3 yi1 hui4 er2 na2 qu4 gai4 zhang1
+20170001P00181A0064 bing4 fang2 hao3 gui1 mi4 tian1 tian1 wan2 er2 fu4 weng1 le5
+20170001P00108A0066 zhu4 yuan4 guai1 nv3 er2 de5 niang2 qin1 sheng1 ri4 kuai4 le4
+20170001P00005I0058 jin1 ri4 ci2 hui4 zai4 xian4 chang2 jie1 mi4
+20170001P00397A0045 di4 er4 tian1 wo3 fang4 peng2 you3 quan1 cai4 ge1 da3 de5 zai4 sheng1 qi4
+20170001P00196A0034 jiu4 deng3 yu2 ba3 wo3 men5 xiong1 di4 ji3 ge4 dou1 tui1 shang4 qu4 le5
+20170001P00198A0008 kai1 che1 bu4 yao4 wan2 shou3 ji1 ni3 zhe4 ge4 yue4 bu4 shi4 ying1 gai1
+20170001P00036A0090 wo3 zhi1 dao4 ni3 zhu3 yao4 shi4 bu2 xiang3 re3 ma1 ma1 sheng1 qi4
+20170001P00064I0025 na4 ni3 gei3 liu2 ai4 jun1 er2 huo4 zhe3 ceng2 zhi4 wen2 ba5
+20170001P00347I0088 qing3 liu2 juan1 na4 bian1 ba3 biao1 zhun3 ding4 xia4 lai2
+20170001P00054I0110 wo3 dou1 huai2 yi2 ni3 yi3 qian2 zen3 me5 jie1 wen3 de5
+20170001P00394A0070 wo3 men5 zhi1 qian2 yue1 hao3 zai4 ming2 le5 lou2 ding3
+20170001P00104A0056 wo3 mei4 mei5 hou4 tian1 guo4 lai2 gen1 wo3 guo4 sheng1 ri4
+20170001P00288A0036 er4 wa2 zhang1 wen2 jing4 er2 mei2 sha4 zen3 me5 le5
+20170001P00004A0061 ni3 de5 kong1 jian1 zhi3 yun2 xu3 wo3 yi1 ren2 wan3 an1
+20170001P00199A0093 ke3 yi3 kai1 tong2 xue2 hui4 ma5 huo4 zhe3 ji3 ge4 shua3 de2 hao3 de5
+20170001P00328A0045 huang3 le5 yi1 hui4 hu1 la5 quan1 wan2 er2 le5 yi1 hui4 tiao4 sheng2
+20170001P00058I0080 wo3 zhe4 shi4 zhao1 shui2 re3 shui2 le5 wo3
+20170001P00046I0050 ni3 yao4 yi1 mi3 er4 de5 chuang2 bu4 dei3 a5
+20170001P00102A0114 ke3 yi3 shi4 ke3 yi3 jiu4 shi4 guang1 ze2 du4 bu4 jun1 yun2
+20170001P00434A0056 li3 bao3 jun1 shuo1 ta1 zhou1 ri4 xia4 wu3 wu3 dian3 zhao3 chen2 xiao3 yu3
+20170001P00366A0021 shui4 zhao2 le5 liao4 shi1 lin2 wo3 hai2 gan4 ma5 tian2 ci2
+20170001P00076A0010 ka3 hao4 jiu4 shi4 gang1 gang1 na4 ge4 wa2
+20170001P00390I0114 neng2 shi3 yi4 zhi4 zhe3 de2 dao4 yong3 qi4 er2 sheng1 hua2
+20170001P00195I0075 xue1 mang2 guo3 gei3 wo3 men5 chi1 ha1 ha1
+20170001P00369I0011 qi2 shi2 zhe4 shi4 huai2 yang2 liang3 ri4 you2
+20170001P00435A0092 huang2 meng4 jia1 ni3 ren4 shi4 ma5
+20170001P00204A0013 liu2 xue3 yun2 wo3 yao4 shi4 mei2 gen1 ni3 hao3 ke3 neng2 bang1 wo3 ma5
+20170001P00004I0104 chu3 xiong2 shi1 yuan4 bi4 ye4 zheng4 cha2 xun2
+20170001P00245I0055 wo3 yi3 hou4 zhun3 bei4 xian1 mai3 ge4 che1 che1 wan2
+20170001P00213I0026 kai1 wan2 hui4 tong2 shi4 rang4 shang4 jie1 kuang2 yi1 quan1 er2
+20170001P00096I0118 bu4 yun2 xu3 tong2 xing4 lian4 zhe3
+20170001P00149A0048 bei1 ju4 chuan1 jun1 kang4 ri4 jiu4 shi4 ge4 bei1 ju4
+20170001P00372A0117 you3 lia3 fan3 jun1 le5 er2 qie3 zhe4 li3 tai4 an4
+20170001P00358A0089 hao3 le5 gang1 nong4 hao3 zheng1 de5 yang2 huai2 hua1
+20170001P00343I0024 wo3 hao3 huai2 nian4 qu4 nian2 de5 sheng1 ri4 wa1
+20170001P00053A0082 mei2 you3 zhou1 ji3 de5 gai4 nian4 liu2 yong3 jun1 zhen1 hao3
+20170001P00010A0078 han4 lin2 lin2 de5 yong1 bao4 ni3 jue2 de2 zen3 me5 yang4
+20170001P00131I0001 hua1 hua1 jia3 chun1 qiu1 hang2 kong1 chun1 qiu1 qiong2 you2 wang3
+20170001P00246A0095 duo1 duo1 dai4 zhao2 wo3 jia1 xiao3 nuan3 nan2 qu4 zhao3 wo3 nv3 shen2
+20170001P00137A0046 kan4 ri4 ji4 de5 wa2 shang1 bu4 qi3 a5
+20170001P00152I0087 nong4 ge4 xue3 fo2 lan2 da4 huang2 feng1 ye3 bu4 cuo4
+20170001P00343I0107 dan4 wo3 na4 shi2 zui4 da4 de5 xin1 yuan4 jiu4 shi4 shuai3 le5 ta1
+20170001P00354A0078 ding4 le5 ma5 o1 ji3 dian3 tan2 xue3 shou3 ji1 hao4 gei3 wo3
+20170001P00102I0027 ni3 yi3 wei4 dong4 man4 zhong1 shuo1 de5 quan2 shi4 ri4 chang2 a5
+20170001P00037I0109 peng4 jian4 liu2 hui4 juan1 le5 na4 yi1 qun2 ren2 le5
+20170001P00182A0115 hai2 yi3 wei4 ni3 yi1 hui4 qu4 ci2 yun2 si4 ne5
+20170001P00216A0114 ni3 de5 wang3 chuan1 li3 yi3 jing1 juan1 ke4 xia4 le5 ta1 de5 ming2 zi4
+20170001P00245I0105 rao4 le5 yi1 ge4 da4 quan1 ne5 mei2 zhun3 hao3
+20170001P00102A0082 zuo4 jing3 shi2 dou1 mei2 jian4 ni3 lao3 po2 huai2 ge4
+20170001P00029A0119 ma3 xue3 ping2 lin2 shi1 jie3 guan1 yu2 nian2 hui4 xing2 cheng2
+20170001P00255A0050 ha1 ha1 ha1 ha1 wa2 wa5 zhong1 yu2 cheng2 shou4 bu4 zhu4 wo3 le5
+20170001P00303I0080 wo3 dei3 gan3 kuai4 xun2 mo1 zhao2 mai3 ge4 er3 ji1 le5
+20170001P00024A0020 wo3 zhi1 dao4 mei3 ci4 dou1 shi4 wo3 zi4 ji3 gai4 zhang1 de5
+20170001P00175I0068 xiang1 cheng2 qu1 wo4 long2 wei4 sheng1 yuan4 jiang4 jiao4 yu4 xuan1 chuan2 zhuan1 lan2
+20170001P00192A0047 jiang1 xiong1 wo3 wan3 shang4 jia1 li3 you3 dian3 shi4 jiu4 bu4 guo4 lai2 la5
+20170001P00310A0012 mou2 xue3 xian4 zai4 zai4 zhe4 jiang1 ta1 ba4 na4 li3
+20170001P00103A0093 xiao3 jun1 gei3 wo3 men5 cha2 yi1 xia4 chen2 hong2 shi4 shen2 me5 ka3
+20170001P00368A0034 er2 shi4 ni3 que1 shao3 fa1 xian4 de5 yan3 guang1
+20170001P00109I0066 wo3 xiang3 ba3 yi1 yuan4 de5 gong1 zuo4 ci2 le5
+20170001P00374A0033 deng3 ma1 guo4 sheng1 ri4 jia1 yu3 fang4 jia3
+20170001P00299A0091 sheng4 xia4 pei2 sen1 gu1 jun1 zuo4 zhan4 lo5
+20170001P00121A0045 yue4 lai2 yue4 huai2 nian4 zuo2 tian1 de5 ri4 zi5 le5
+20170001P00032A0069 shi2 zhong1 de5 yao4 pao3 qu4 ti3 yu4 guan3 jun1 xun4 de5 mei3 ri4
+20170001P00300I0027 zi4 gu3 po2 xi2 shi4 yuan1 jia1 ya1
+20170001P00246A0086 duo1 dai4 chu1 qu4 jiu4 shi4 le5 wo3 xian4 zai4 yun3 xu3 ta1 zai4
+20170001P00170A0076 shen2 me5 qing2 kuang4 e2 you2 yong3 mei2 you3 ya1
+20170001P00388I0005 wo3 ye3 bu4 que1 ge1 bo2 shao3 tui3
+20170001P00055A0050 ni3 men5 de5 quan1 zi5 hai2 shi4 tai4 xiao3 le5
+20170001P00302I0115 shan1 dong1 sheng3 wei1 hai3 shi4 huai2 yun2 cun1
+20170001P00395I0046 ni3 men5 wei4 sheng1 yuan4 shi4 bu2 shi4 you3 ge4 jiao4 zhang1 yong3 de5
+20170001P00237I0104 ta1 shuo1 ta1 ming2 tian1 yao4 qu4 weng4 an1
+20170001P00010A0096 dan4 shi4 wo3 bu4 yun2 xu3 ni3 zhao3
+20170001P00155A0090 jiao3 hua2 chan3 ye4 xun2 huan2 jing1 ji4 ping2 jia4 shi2 shi1 zhi3 nan2
+20170001P00200I0069 zi3 zhu2 yuan4 bei3 jing1 jun1 qu1
+20170001P00250I0109 xia4 zhou1 ri4 wo3 zhun3 bei4 you2 yong3
+20170001P00085A0106 lao3 tian1 ye2 bu4 yun2 xu3 ba3 ni3 wang4 le5 ha1 ha1 ha1 ha1
+20170001P00137I0100 wo3 you3 ge4 xiong1 di4 qu4 ri4 ben3 ba3 cai2 liao4 jiao1 gei3 ni3 ba5
+20170001P00444A0109 shang4 ci4 zai4 yi1 yuan4 dou1 bei4 kan4 xiong1 le5
+20170001P00272A0108 qian2 yi1 tian1 ye3 shi4 yu3 hua2 ken3 ding4 hua2 wen4 bai2 yang2
+20170001P00263A0022 yuan2 lai2 shuo1 hao3 de5 yong3 jiu3 bu4 kan4 yong4 hu4 yin3 si1
+20170001P00145A0073 ji4 kai3 xuan2 ai4 lian4 jia1 xiu4 dao4 yong3 yuan3
+20170001P00371I0055 chu2 le5 yun3 er2 wo3 jiu4 zui4 xi3 huan1 xi1 ka3 la5 hei1 hei1
+20170001P00286A0091 zhen1 dui4 ni3 le5 wo3 yi3 jing1 gou4 bei4 bie2 ren2 yuan1 wang3 de5 le5
+20170001P00154A0027 ni3 dong3 wo3 ni3 fang4 xin1 jiu4 liao2 liao2 hao1 zi3 ci2 ba1 er2 yi3
+20170001P00185I0111 wen4 wang2 jin1 qiao2 dian4 bao4 biao3
+20170001P00050A0045 lou2 shang4 zhuang1 xiu1 weng1 weng1 de5 xiang3
+20170001P00019A0042 wan3 shang4 ni3 ba4 yun3 xu3 ni3 chu1 qu4 la5
+20170001P00183A0020 zhe4 shi4 mai3 gei3 ba4 ma1 xiong1 di4 jie3 mei4 de5
+20170001P00009A0015 gan4 ma5 peng2 you3 quan1 bie2 ren2 fa1 de5 shan4 liang2
+20170001P00050I0063 huang2 gang1 de5 nv3 ren2 dou1 chang2 de2 hen3 yong3 zhong3
+20170001P00146I0026 che4 di3 mo1 qing1 yao2 juan1 de5 ping2 ri4 zuo4 feng1
+20170001P00098I0031 wo3 ning2 yuan4 yong3 yuan3 huo2 zai4 zi4 ji3 de5 tao2 yuan2
+20170001P00401A0052 shi2 ge4 you3 yi1 ge4 gen1 yu2 le4 quan1 you3 guan1 xi4 de5
+20170001P00392I0082 qun2 zhong4 de5 zhi3 hui4 shi4 wu2 qiong2 de5
+20170001P00032I0083 huang2 gua1 yi1 xue1 pi2 ke3 shi4 chun2 tian1 ran2 le4
+20170001P00378I0002 ting1 xue3 zhen1 zhun3 bei4 chang2 da4
+20170001P00020I0098 dan4 xian4 shi2 bu4 yun2 xu3 wo3 men5 zai4 yi1 qi3 le5
+20170001P00266I0043 zhun3 bei4 gai3 cheng2 peng2 xuan1 xuan1
+20170001P00191A0031 ji4 ran2 zhe4 me5 sheng3 shi4 ni3 jiu4 qu4 mai3 a5 tui1 ci2 ni3 mei4
+20170001P00227A0093 lei4 le5 yi1 tian1 ni3 mo1 zhao2 xiong1 kou3 xiang3 xiang3 ba5
+20170001P00391A0001 ni3 jue2 dui4 shi4 guan1 jun1
+20170001P00392I0110 ni3 hai3 jia1 er3 ri4 chang2 zuo4 le5 mei2
+20170001P00326A0004 wo3 he2 sun1 yong3 gei3 ni3 bu3 guo4 sheng1 ri4
+20170001P00049A0043 xia4 ci4 nin2 jian3 zhi2 shi4 xue3 zhong1 song4 tan4 a5
+20170001P00338I0066 na4 ru2 guo3 shi4 wang3 shang4 mai3 dong1 xi1 zen3 me5 yang4 qian1 yue1 ya3
+20170001P00044I0063 wo3 men5 dou1 xi3 huan1 wan2 yong3 zhe3 dou3 e4 long2
+20170001P00066I0012 dong4 wu4 bei4 she4 shang1 huo4 zhe3 ji2 bi4 jun1 bei4 shi4 wei4
+20170001P00404I0097 ji4 zhe3 yan2 zhao2 ye3 he2 bang1 shun4 you2 er2 xia4
+20170001P00237I0118 wen2 xuan1 tui1 jian4 de5 ji1 ben3 dou1 shi4 ri4 xi4 che1
+20170001P00358I0030 ye3 hao3 zuo4 wei4 wo3 men5 xue2 xiao4 ri4 hou4 de5 xuan1 chuan2
+20170001P00210I0038 ma1 ma1 yue1 le5 ren2 min2 yi1 yuan4 de5 gan1 ying4 hua4 zhuan1 jia1
+20170001P00240I0011 wo3 ba3 zhe4 qun2 li3 wan2 lun2 hua2 de5 qing3 chu1 ba5 jia1 cuo4 le5
+20170001P00382I0060 peng2 you3 dou1 mei2 shua3 zen3 me5 jie2 hun1 na3 li3 qu4
+20170001P00177I0048 zhuan1 bo2 shi4 ci2 zhuan1 de5 sao3 miao2 jian4
+20170001P00145A0092 er2 bu4 shi4 huai2 yi2 ni3 shen2 me5 ni3 zen3 me5 bu4 ming2 bai2
+20170001P00172I0054 wo3 yi2 shi4 xu2 zhou1 jiu3 qi1 yi1 yuan4 de5 jun1 yi1
+20170001P00222A0050 ni3 shuo1 xu2 san1 jun1 zen3 me5 yang4 wo3 jue2 de2 ren2 ting3 hao3 de5
+20170001P00113A0091 a1 jie3 qiong2 de2 hen3 a5 na4 ni3 ke3 yi3 zou3 le5
+20170001P00374I0013 huang2 zhi4 xiong2 shang4 gong1 ji1 jin1 le5 ma5
+20170001P00373A0007 han2 xue3 wo3 zhen1 de5 wo3 tiao4 jin4 huang2 he2 ye3 xi3 bu4 qing1 le5
+20170001P00074I0033 wo3 men5 zai4 deng3 gai4 shi4 ying1 xiong2 de5 chu1 xian4
+20170001P00321A0081 ren4 zhen1 lv3 xing2 yun2 nan2 zhong1 yan1 xuan1 chuan2 tong1 xun4
+20170001P00074I0086 ni3 gei3 wo3 zhao3 ge4 yuan4 yi4 gei3 wo3 sheng1 wa2 de5 ren2
+20170001P00239A0037 gei3 ta1 mai3 le5 ji3 jian4 yi1 fu5 he2 yi1 ping2 shuang3 wai1 wai1
+20170001P00390I0063 dou1 shi4 na2 yi1 yuan4 de5 ping2 jun1 jiang3
+20170001P00384A0011 wei4 shen2 me5 shuo1 rang4 ni3 xiang3 shou4 huai2 yun4 de5 ri4 zi5 le5
+20170001P00142I0108 wo3 kan4 shi4 huai2 yun4 qian2 jiu4 zhun3 bei4 chi1 le5
+20170001P00016A0020 guo4 ji3 tian1 deng3 wo3 xiu1 jia3 hui2 lai2 pei2 ni3 shua3 bai4
+20170001P00440A0106 rang4 ta1 xiang4 zan2 men5 yi1 yang4 guo4 qiong2 ri4 zi5
+20170001P00228A0114 na4 jiu4 bo1 ge4 hao3 chi1 de5 cheng2 zi5
+20170001P00089A0019 na4 jia1 jin3 le5 mo2 ca1 e2
+20170001P00021A0012 shi2 ji3 wan4 huang2 jun1 bu4 dui4
+20170001P00419A0055 shi4 ma5 wo3 hao3 xiang4 yin3 yue1 kan4 dao4 ni3 zou3 guo4 qu4
+20170001P00358I0021 ni3 zhun3 bei4 si3 zai4 gou3 de5 huai2 bao4 li3
+20170001P00091A0033 qun2 zhong4 de5 yan3 jing1 shi4 xue3 liang4 zhen1 li3 xiang3
+20170001P00186A0039 kan4 qun2 li3 gong1 gao4 en4 tai4 qi3 zuo4 yong4 le5
+20170001P00077I0042 hun4 zai4 kang1 yong1 gan4 de5 ri4 zi5
+20170001P00388I0114 huan4 zhe3 bu4 shu3 fo2 tang2 xia2 qu1 ding1 zhou1 wu3
+20170001P00372I0089 mei3 zhong3 hu4 xing2 jun1 you3 hua1 yuan4
+20170001P00337I0024 qu4 xue3 yuan2 da3 guai4 wu4 ri4 ji4 ben3
+20170001P00290I0116 wo3 lia3 de5 chu1 wen3 gei3 le5 xue3 gao1
+20170001P00200I0029 huan4 zhe3 zi4 shu4 tou2 yun1 e4 xin1 xiong1 men4 fa1 li4
+20170001P00206I0077 ji1 ke3 jun1 ni3 you3 lian3 me5 bing4 dui4
+20170001P00027I0057 duan4 lian4 shen1 ti3 jian3 fei2 juan1 juan1
+20170001P00212I0003 ke3 lian2 de5 wa2 mian4 huang2 ji1 shou4 a5
+20170001P00191A0103 jia1 li3 wang3 huai4 le5 a5 wo3 gang1 gang1 gen1 ta1 yi1 kuai4 you2 yong3
+20170001P00054A0071 zui3 xiong1 jiu4 zhi3 neng2 shuo1 shuo1 er2 yi3
+20170001P00230I0101 ji2 shi3 zhi1 dao4 wo3 que1 dian3 hai2 yuan4 yi4
+20170001P00092I0012 tian2 ci2 de5 shi4 huang2 wei3 wen2
+20170001P00417A0048 bu4 yun2 xu3 shang4 fa3 lun2 ban1
+20170001P00184I0082 ni3 pa2 huang2 shan1 de5 na4 ge4 guai3 zhang4 shi4 duo1 shao3 yuan2 de5
+20170001P00142I0027 huang2 long2 xia2 su4 xi1 tuo4 zhan3
+20170001P00092A0002 yang2 shi4 xun1 wo3 xi3 huan1 wu2 yan4 zu3 wo3 ye3 xi3 huan1 lin2 bo1
+20170001P00134I0090 que1 jia3 liang3 jian4 lian2 yi1 qun2
+20170001P00263A0078 yun1 zuo4 chun1 meng4 lai2 de5 ran2 hou4 wo3 jiu4 huai2 yun4 le5
+20170001P00247I0082 bu2 guo4 ri4 wen2 ye3 shi4 han4 zi4 za2 jia1 de5
+20170001P00245I0069 ri4 zhi1 qian2 jiang1 juan1 kuan3 jiao1 dao4 zu3 zhi1 ke1
+20170001P00390A0081 wei4 shen2 me5 bei3 ji2 xiong2 bu4 chi1 qi3 e2
+20170001P00373A0088 ran2 hou4 tian1 tian1 qu4 ni3 jia1 men2 kou3 shua1 ya2
+20170001P00292A0064 shi4 bu2 shi4 le4 yang2 xin1 nian2 kuai4 le4 jiu3 wei2 de5 xue3 jing3
+20170001P00121A0059 nin2 zhou1 ri4 xia4 wu3 you4 you3 yue1 hui4
+20170001P00096A0108 ni3 wo4 er3 bu4 shi4 huang2 zuan4
+20170001P00402I0060 bi1 jin4 xiong2 ben3 zhen4 tai2 zhi1 shi2
+20170001P00413A0013 bai3 lin2 dian4 ying3 jie2 na2 jin1 xiong2 jiang3 na4 ge4
+20170001P00114A0101 mei3 tian1 fa1 fa1 peng2 you3 quan1 huo4 zhe3 kong1 jian1 le5
+20170001P00241A0057 qian1 zi4 ling4 wai4 na4 ge4 hao3 xiang4 zai4 you2 yu4
+20170001P00290A0082 di4 san1 ge4 zhong1 guo2 yin2 xing2 cui1 xiao3 jun1 kai1 hu4 xing2
+20170001P00182A0078 ni3 yun2 xu3 wo3 zui4 duo1 bang1 wo3 fu4 mu3 hai2 duo1 shao3
+20170001P00381A0084 hua4 shuo1 ni3 zai4 na3 li3 kan4 jian4 da4 xiong2 le5 ma5
+20170001P00110I0022 xin1 lang4 wei1 bo2 sheng1 ri4 da2 ren2 xun1 zhang1
+20170001P00411A0066 shi4 bu2 cuo4 de5 an1 wei4 ji4 huo4 zhe3 shi4 run4 hua2 you2
+20170001P00125A0106 shi4 zheng4 pai2 jun1 guo2 min2 zheng4 fu3 cai2 bei4 wai4 guo2 ren4 ke3
+20170001P00374A0094 huang2 yao2 jun1 da4 jia1 dou1 kai1 xin1 da4 jia1 dou1 lai2 wan2
+20170001P00149I0060 ci3 shi2 ri4 jun1 ye3 mei2 you3 li4 liang4 jin4 gong1
+20170001P00405I0060 wo3 shuo1 yi3 hou4 de5 ge4 qian1 bu4 yao4 che3 wo3 he2 mei2 jun1
+20170001P00339I0118 di1 yin1 pao4 weng1 weng1 de5 xiang3
+20170001P00418A0015 ni3 fa1 de5 zui4 hou4 yi1 ge4 feng1 xiong1 chan3 pin3
+20170001P00053I0039 guang3 dong1 rang4 ni3 fu2 pin2 ji4 kun4 ri4 ji4 guang3 zhou1 ci2 shan4 ri4
+20170001P00297I0037 wo3 gang1 cai2 yi3 jing1 ru4 le5 cang1 qiong2 yu4 huang2 le5
+20170001P00300I0066 gong1 si1 su1 zhou1 da4 yong3 dian4 zi3 song4 zhun3
+20170001P00202I0044 wo3 men5 hai2 zhun3 bei4 qu4 la1 sa4
+20170001P00373A0090 ta1 he2 shuang3 wai1 wai1 wo3 zhi3 xi3 huan1 yan4 zi5 he2 wai1 wai1
+20170001P00354A0096 ren2 yun2 yi4 yun2 yong3 yuan3
+20170001P00412A0097 fa3 lv4 bu4 yun2 xu3 hui4 xing4 fu2 si3 le5
+20170001P00316A0116 ni3 kan4 kan4 ni3 hai2 shuo1 wo3 yuan1 wang3 ni3 ne5
+20170001P00028I0064 ni3 shen1 cai2 bi3 jiao4 jun1 yun2
+20170001P00166A0107 na4 wo3 xue2 sheng1 jiu4 shang4 huang2 shi4 jun1 de5
+20170001P00101A0108 shen2 me5 gan3 jue2 zhun3 bei4 you2 yong3 le5
+20170001P00065A0019 shi4 wo3 mo1 ni3 xiong1 bu4 shi4 ni3 mo1 wo3 xiong1
+20170001P00410A0082 wo3 ba4 ma1 dou1 yun2 xu3 wo3 he2 peng2 you3 wan2 le5
+20170001P00386I0096 xiao3 huang2 hui4 ba3 ta1 xiong1 di4 bao3 hu4 hao3 de5
+20170001P00215A0005 ni3 bu4 shi4 da4 er4 jun1 xun4 me5 zen3 me5 zhi1 dao4 jun1 xun4 de5
+20170001P00126A0119 lun2 tai1 ben3 shen1 zhi2 liang4 fen1 bu4 bu4 jun1 yun2
+20170001P00427A0015 ni3 se4 xin1 you4 qi3 le5 gai4 ci2 bi3
+20170001P00189A0057 huan4 ge4 san1 yang2 shou1 fu4 dai4 wo3 de5 du4 zi5 hai2 hen3 da4
+20170001P00410I0110 ping2 zi5 you3 ge4 que1 kou3 mo2 sun3 le5
+20170001P00385I0062 qing1 qing1 zhe4 yang4 er2 hai2 ke3 yi3 yu2 kuai4 de5 wan2 shua3
+20170001P00174A0026 ni3 rang4 wu2 qiong2 xian1 da3 ge4 zhan3 hui4 zi1 xun2 de5 dian4 hua4
+20170001P00278A0109 ni3 de5 ping2 ban3 wo3 lan2 ya2 shang4 bu4 le5 wang3 le5
+20170001P00352I0029 huang2 yi1 nan2 dai4 biao3 zhao2 jian4 yi4 yong3 wei4 ya1
+20170001P00039A0106 dao4 na4 bian1 hou4 you3 xu1 yao4 bang1 mang2 de5 zhao3 weng1 zhi4 wen2
+20170001P00163A0058 ke3 shi4 hu2 jia1 qian4 yuan4 yi4 a5
+20170001P00111A0027 ya3 si1 de5 ci2 hui4 liang4 yao4
+20170001P00262I0011 wo3 bu4 xi3 huan1 xi1 ban1 ya2 zhe4 ge4 guo2 ming2 gun3 le5
+20170001P00322A0061 zhun3 bei4 qing1 cang1 shuai3 huo4 le5
+20170001P00146I0071 nin2 kan4 yang2 jiao4 shou4 he2 weng1 fan1
+20170001P00111A0060 qu4 nian2 ba3 wo3 diao4 guo4 qu4 xie2 zhu4 huang2 bi4 jun1 zuo4 chan3 pin3
+20170001P00034I0006 wu2 tian1 jun1 jiu4 shi4 huang2 guan1 a5
+20170001P00321I0004 gai4 ci2 mei2 you3 kan4 cuo4 ta1
+20170001P00083A0090 jin1 ri4 gao1 kai1 hui2 bu3 que1 kou3
+20170001P00266I0012 shi2 jun1 shi4 zai4 zi4 yuan4 de5 qing2 xing2 xia4 qian1 ding4 de5
+20170001P00423A0003 ke3 neng2 xi4 lao3 shi1 ge1 kai1 xi4 fei2 xiong2
+20170001P00356A0081 yun2 xu3 ni3 wan3 shang4 hui2 jia1
+20170001P00250I0117 yao4 dan4 gao1 hai2 shi4 mian4 bao1 quan1
+20170001P00054A0076 sheng1 qi4 hai2 bu4 yun2 xu3 a5 yao4 zen3 yang4
+20170001P00146A0036 wo3 hui4 guai3 ge4 wan1 cong2 yi1 ge4
+20170001P00305I0034 jin1 yong1 qun2 xia2 zhuan4 xia4 zai4
+20170001P00005I0051 ta1 bu4 yun2 xu3 ren4 he2 ren2 jia1 ru4 gai1 qun2 le5
+20170001P00151A0111 mai4 tan4 weng1 de5 suo3 you3 wen2 zhang1 li3
+20170001P00255A0025 hai2 dei3 chong1 liang2 wo3 shi4 da4 xiong2 de5 hua4 yang2 yang2 dai4 ni3
+20170001P00362I0012 ya3 ya3 gei3 ta1 men5 liang3 ge4 fu4 jun1
+20170001P00041A0030 xian4 zai4 wo3 he2 qiu1 xue3 huang2 ting2 zai4 yi1 qi3
+20170001P00381I0109 pang2 ren2 cai2 bu4 guan3 yin3 chan3 hou4 yi1 zhi2 mei2 huai2
+20170001P00402I0095 wo3 hao3 xiang4 re3 dao4 ta1 le5
+20170001P00186A0104 gan3 jue2 huang2 yong3 jia1 kan4 dao4 wo3 tong2 xue2 hui4 bu4 zi4 zai4
+20170001P00101A0004 ni3 bang1 wo3 mai3 me5 o1 ni3 xuan3 hao3 xian1 wo3 qiong2
+20170001P00317I0035 dian4 nao3 yuan4 yi4 zuo4 wo3 yong3 yuan3 de5 peng2 you3
+20170001P00229I0040 ni3 zen3 me5 shi4 huai2 hua4 de5 ka3
+20170001P00392I0054 ba3 chang2 zi5 che3 chu1 lai2 shuai3 xia4
+20170001P00253I0064 ban4 ye4 you4 meng4 dao4 bao3 bao3 yao4 shuai1 le5 gei3 xia4 xing3
+20170001P00079A0103 kai1 che1 shuai1 wo3 hai2 xin1 gan1 qing2 yuan4 de5
+20170001P00069A0082 ta1 zhen1 de5 bu4 ci2 er2 bie2
+20170001P00231A0062 shi4 shi2 sheng4 yu2 xiong2 bian4 ma5 bu4 shi4
+20170001P00168I0062 fen1 dao4 fei1 shi2 wei4 ri4 jun1
+20170001P00106I0098 ka3 dou1 neng2 wang3 shou3 shang4 tao4 de5 xian4 quan1 er2 you3 dian3 xiao3
+20170001P00033A0114 ni3 dei3 xue2 zhao2 qin2 kuai4 dian3 zhao4 gu4 dian3 zi4 ji3
+20170001P00156A0016 huang2 juan1 shi4 bu2 qing3 jia3 le5 ma5
+20170001P00276I0060 xiang4 guang3 da4 qun2 zhong4 xuan1 chuan2 xi1 yan1 you3 he2 wei1 hai4
+20170001P00217A0024 ni3 hai2 qu4 ba5 sun1 jia1 yi4 bu4 shi4 hai2 xi3 huan1 yang2 li4 guo2
+20170001P00431A0103 gei3 wo3 hai2 mei2 gang1 qi3 chuang2 hao3 leng3 na4 me5 xiong1 gan4 ma5 ne5
+20170001P00264I0045 chu1 tie3 jun1 yun2 lv4 bu4 hao3
+20170001P00398A0036 ni3 xiong1 kou3 huang2 se4 na4 dian3 shi4 shen2 me5
+20170001P00049A0091 yi2 ge4 wan3 shang4 yun3 xu3 ni3 wo3 bi3 jiao4
+20170001P00080I0077 neng2 guo4 ri4 zi5 di1 shi2 zai4 wa2 er2
+20170001P00397I0081 rang4 ta1 men5 zi4 ji3 qu4 na2 zhang1 you2 yong3 ka3
+20170001P00050I0106 wo3 jing1 chang2 qu4 weng4 an1 ne5
+20170001P00230A0040 mei3 xia2 na4 li3 duo1 shao3 ren2 gong1 yong4 yi1 tiao2 wang3 xian4 a5
+20170001P00208A0112 ming2 tian1 jun1 xun4 wan2 pei2 ni3 gang1 cai2 wo3 cai2 zhi1 dao4 ke3 yi3
+20170001P00159I0064 cong2 ni2 si1 qu4 a1 wei2 ni2 weng1 de5 huo3 che1
+20170001P00290I0022 shang4 ci4 fei1 lv4 bin1 jun1 jian4 da3 zhao2 bai2 qi2 dao4 huang2 yan2 dao3
+20170001P00339A0058 ri4 ben3 ren2 wu2 yong3 chu1 gui3
+20170001P00095A0015 gan3 shou4 dao4 cong2 ru4 yuan4 dao4 chu1 yuan4 hou4 de5 ge4 zhong3 guan1 huai2
+20170001P00438A0035 wo3 dou1 huai2 yi2 ni3 shi4 bu2 shi4 yao4 jie2 hun1 le5 shui4 jiao4 a5
+20170001P00150I0011 wo3 he2 ka3 jia1 zuo4 shi4 fan4
+20170001P00152I0077 tui4 chang2 shen1 qing3 weng1 fa1 xiang2
+20170001P00012I0031 ni3 ting1 shuo1 ri4 wu2 xi4 de5 ren2 zhi3 jia3 wen4 ti2 le5 ma5
+20170001P00268A0022 bu4 zhi1 dao4 shi4 bu2 shi4 yi1 ge4 yu2 le4 quan1 de5
+20170001P00433A0090 ke3 she4 ming4 pei2 jun1 zi3 ni3 shi4 zhong1 wu3 qi3 lai2 de5
+20170001P00192I0100 fu2 ci2 wen3 ding4 xing4 shi2 yan4 ji4 hua2
+20170001P00209A0053 na2 hui2 jia1 xia4 jiu3 le5 xiong2 hai2 zi5 yi1 er3 guang1 shan4 shang4 qu4
+20170001P00199A0072 ke3 yi3 zai4 wang3 shang4 mai3 ge4 you2 yong3 chi2 zi4 ji3 zai4 jia1 you2
+20170001P00139A0115 xia4 qu4 de5 shi2 hou4 gei3 hong2 yu3 xuan1 dai4 bu4 dao3 weng1
+20170001P00015A0114 ci2 tiao2 ka3 huan4 ka3 yao4 shu1 shen1 fen4 zheng4 hao4 ma3 ma5
+20170001P00325I0023 jiu4 shuo1 mei3 nv3 wo3 yue1 le5 chen2 yuan4 yuan4
+20170001P00400A0120 kun1 lun2 er4 shi1 xiong1 xiang2 ping2 na2 le5 yue4 guan1
+20170001P00006A0053 ni3 de5 xiong1 di4 zuo4 nan2 ren2 zuo4 de2 ke3 mei2 pin3
+20170001P00385I0089 qing3 yang2 jie2 bu4 yao4 deng3 dao4 guo1 xue3 ying2 ai4 qing2
+20170001P00409I0002 ni3 dou1 zhun3 bei4 ci2 zhi2
+20170001P00096A0100 sheng1 ri4 kuai4 le4 a5 lao3 xiong1
+20170001P00375I0081 suo3 yi3 bu4 yong4 qu4 guang3 zhou1 gai4 shou3 zhi3 mo4
+20170001P00192I0066 wo3 hao3 zhao3 ji4 zhe3 qu4 cai3
+20170001P00023A0005 mao4 zhun3 bei4 ya2 shua1 mao2 jin1
+20170001P00188I0037 chi2 xu4 zhong1 huang2 he4 tian1 chu2 shang1 jia1 yue1 tan2
+20170001P00254I0064 lv4 se4 xiao3 xiong2 he2 huang2 se4 xiao3 xiong2
+20170001P00211I0035 xin1 si4 jun1 shi4 kang4 ri4 de5 tie3 jun1
+20170001P00306A0027 ma3 min3 mao4 si4 bu4 zhi1 dao4 wo3 ci2 zhi2 le5
+20170001P00295I0100 na4 xiong1 di4 pa4 shi4 jing1 chang2 qun2 jia4 yo5
+20170001P00406I0073 tuan2 wei3 xing2 shi4 ren4 wu4 xuan1 chuan2 huo2 dong4
+20170001P00142I0022 jia1 li3 you3 shi4 qing3 jia3 bu4 zhun3 jiu4 ci2 zhi2 la5
+20170001P00383I0085 qi2 zhong1 shi4 qun2 hao4 wei4 yun3 xu3 shang1 jia1 cun2 zai4
+20170001P00286I0085 guan1 yu2 yi1 xue2 wen2 xian4 cha2 xun2 cui1 xiong1
+20170001P00278A0088 ni3 dian4 li3 bu4 yun2 xu3 gei3 nan2 de5 fu2 wu4 de5
+20170001P00116A0030 kao4 zi4 ji3 le5 wo3 zheng4 zai4 jian3 fei2 zhong1 wo3 hen3 qiong2 de5
+20170001P00053I0114 jiu4 shi4 shang4 ci4 wa2 wa5 de5 quan4
+20170001P00394I0058 suo3 yi3 xi1 wang4 wang2 jing1 li3 juan4 gei3 wo3 men5 bao4 jia4 o1
+20170001P00169A0055 wei2 yi1 que1 shao3 yin2 er3 bu4 xing2
+20170001P00138A0050 ting2 dian4 er4 yang3 hua4 liu2 ri4 jun1 zhi2 chao1 biao1 yan1 chen2
+20170001P00283I0119 wei4 sha4 yong4 huang2 lv4 zhe4 ge4 ci2
+20170001P00169I0070 wo3 zhe4 bian1 xian1 gei3 ni3 qian1 zi4 gai4 zhang1 hao3 le5
+20170001P00233I0058 ying1 er2 you2 yong3 guan3 de5 you2 yong3 ka3
+20170001P00281A0051 qun2 li3 bu4 yun2 xu3 zuo4 guang3 gao4 xiao3 xin1 bei4 ti1
+20170001P00075A0083 na4 tian1 wan3 shang4 zheng3 ge4 xi1 ban1 ya2 kuang2 huan1
+20170001P00218A0005 ni3 hui2 jia1 yao4 hao3 hao3 gen1 ta1 pei2 yang3 xiong1 di4 gan3 qing2 a5
+20170001P00353I0044 dan4 wo3 hao3 xiang4 jing1 chang2 re3 bao3 bei4 er2 sheng1 qi4 ya1
+20170001P00394I0086 han2 guo2 dong1 da4 men2 dai4 gou4 mo3 xiong1 lian2 yi1 qun2
+20170001P00205I0030 ge1 jiu4 zuo4 yi1 tian1 de5 fu4 weng1
+20170001P00127A0064 ni3 shuo1 zhe4 hua4 cai3 dao4 shi2 tou2 le5 chao1 dao3 mei2 de5
+20170001P00260A0111 ji3 fen1 zhong1 zhi1 nei4 chu1 lai2 zai4 cheng2 tian1 hai2 shi4 xiang1 jun1
+20170001P00266A0023 ben4 dan4 wo3 shuo1 ru4 zhi2 qian2 dou1 suan4 que1 qin2 me5
+20170001P00269I0028 zi1 liao4 jun1 yao4 gai4 gong1 zhang1
+20170001P00247I0050 zhe4 me5 jiao4 wo3 de5 jiu4 xiong2 mao1 he2 mo2 gu1
+20170001P00313I0096 ben3 lai2 shuo1 kan4 xiao3 xue1 na4 zhong3 de5 dan4 gao1 qun2 de5
+20170001P00341I0068 xi1 wang4 jin4 qun2 de5 tong2 xue2 yong3 yue4 fa1 yan2
+20170001P00106A0102 di4 yi1 ge4 tu2 pian4 shuo1 zhang1 yu2 yong1 you3 lan2 se4 de5 xie3
+20170001P00074I0096 qiao2 hong2 jun1 zai4 ji4 ning2 shi4 fu4 you4 bao3 jian4 yuan4
+20170001P00266I0029 xiang1 ying4 chan3 sheng1 de5 sun3 shi1 jun1 you2 yi3 fang1 zi4 xing2 fu4 ze2
+20170001P00163A0098 li4 li4 ke3 shi4 you3 jia1 shi4 de5 ren2 le5
+20170001P00278I0018 qing3 bang1 wo3 wen4 yi1 xia4 xiao3 weng1
+20170001P00398A0040 bo1 duo2 jun1 xun4 wu3 tian1 hou4 de5 xiu1 xi1 shi2 jian1 pi2 lao2
+20170001P00344A0025 ni3 jiu4 ke3 yi3 che4 di3 gun3 dan4 le5
+20170001P00396A0085 jin1 tian1 qu4 zhu4 yuan4 zuo2 tian1 ci2 zhi2 le5
+20170001P00390A0119 li3 mian4 mei2 you3 wo3 jia1 wa2 bang1 wo3 jia1 jia1 ge4 ba5
+20170001P00136I0018 ting1 shuo1 huang2 yong3 fang1 neng2 liang3 ge4 yue4 shang4 yi1 xiu1 san1 ne5
+20170001P00114A0063 mo4 ba3 qun2 li3 hao3 wa2 wa5 dai4 huai4 le5
+20170001P00361A0107 lao3 gong1 de5 huai2 bao4 kua1 kua1 ta1 za3 le5 ma5
+20170001P00290I0015 xie4 xie4 ni3 zhe4 xie1 ri4 zi5 dui4 wo3 de5 guan1 huai2
+20170001P00104A0067 ni3 men5 wa2 zhun3 bei4 chi1 sa4 zi3 nai3 fen3 ye2
+20170001P00138I0085 guang3 chang2 hua4 zui4 xuan4 min2 zu2 feng1
+20170001P00016A0115 tian1 xiong2 jiu4 bang1 wo3 da4 jie3 bang1 wen2 xin1 yi2 ye3 bang1 yang2 jia1 qi2
+20170001P00160I0046 bu4 chao2 xiao4 di1 neng2 zhe3 hui4 huai2 yun4 ma5
+20170001P00133A0075 ha1 er3 bin1 dou1 xia4 xue3 le5 zhe4 ci4 leng3 kong1 qi4
+20170001P00360I0108 hui4 zhang3 zai4 yong4 xue3 bai2 de5 gai4 shi4 tu4
+20170001P00007A0077 wo3 guo4 ji3 tian1 yao4 shang4 yong3 chun1 qu4 le5
+20170001P00269I0016 ya3 xuan1 fei1 ge2 lian2 yi1 qun2
+20170001P00171I0056 wo3 yong4 wu2 gai4 de5 jiu4 dei3 le5
+20170001P00142I0092 ye3 jiu4 gai4 jiao1 fan4 zhe4 zhong3 dong1 xi1 le5
+20170001P00027A0079 wo3 you2 yong3 ka3 you3 zhao2 lang4
+20170001P00112I0101 gang1 cai2 weng1 shuo1 ni3 shuo1 hua4 shao3
+20170001P00133I0029 wo3 yi1 ban1 bu4 yuan4 yi4 xiang4 wu2 juan1 juan1 na4 yang4 shua3 pi2 qi4
+20170001P00303A0009 lei3 si1 le5 ming2 tian1 weng1 yuan2 qu4 na3 li3 le5
+20170001P00220I0015 huang2 li4 juan1 ni3 shu2 xi1 ma5
+20170001P00284A0080 ru2 guo3 shi2 jian1 yun3 xu3 wo3 bang1 ni3 xie3 yi1 fen4
+20170001P00099A0039 han2 jia3 wo3 zhun3 bei4 rang4 ni3 huai2 yun4
+20170001P00219I0022 jian4 li4 yue1 gao3 qun2 tong1 guo4 duo1 zhong3 tu2 jing4
+20170001P00319I0095 jia1 zhuang1 xian1 qi4 hou4 gai4 bian4 xing2 you4 qian2 gang1 quan1 er2 ji2 lun2 tai1
+20170001P00080A0049 wo3 yong4 e4 mo2 mao1 hua2 ti1 he2 ni3 huan4 wu3 dao3 ji1
+20170001P00303A0102 li3 guan1 a5 na4 li2 bo1 yu2 quan1 ting3 yuan3 ne5
+20170001P00331I0063 na4 ge4 qun2 de5 you3 ge4 jiao4 xue3 er2 de5 yu3 qi4 hen3 hao3
+20170001P00311I0002 ning2 yuan4 yong3 yuan3 ye3 bu4 zhi1 dao4
+20170001P00079I0059 dou1 shi4 bu2 neng2 zai4 yun3 xu3 jia1 ru4 gong1 si1 qun2
+20170001P00159A0010 xiao1 shou4 fu4 gai4 mian4 xia2 zhai3
+20170001P00026A0053 ni3 ge4 hun1 jun1 gan4 sha4 ne5 kou4 kou4 wo3 bu4 xiang3 deng1 le5
+20170001P00232I0052 wo3 jue2 de2 xiong1 ka3 jiu4 ke3 yi3 le5
+20170001P00197A0018 jiu4 shi4 wo3 de5 hua2 ban3 xie2 a5 na4 xie1 tong1 jiang1 xian4 zai4 de5
+20170001P00261I0040 jin1 ri4 mao4 si4 xu4 mou2 wan2 lai4
+20170001P00277A0027 na4 wa2 ta1 ma1 dou1 biao3 shi4 kan4 bu4 shang4 you3 jin3
+20170001P00220A0113 ni3 men5 ba3 er4 wa2 shuo1 sheng1 qi4 la5 jia1 li3 yi1 dui1 lao3 po2
+20170001P00098A0024 ni3 wen4 wen4 zhao4 ya3 lu4 huo4 zhe3 tian2 xin1 quan1 bu4 jiu4 dei3 le5
+20170001P00066I0120 shang4 ci4 gei3 ni3 qu4 xiang1 gang3 shua3 de5 ka3
+20170001P00051I0119 huang2 juan1 sheng1 ri4 ni3 bu4 shi4 ye3 qu4 a5
+20170001P00232A0098 hao3 xiang4 kan4 ying1 xiong2 lian2 meng2 de5 shi4 pin2 le5
+20170001P00229A0066 nv3 wa2 he1 jiu3 shi4 ba5 zhi4 yu2 na4 me5 duo1 bu4
+20170001P00172A0091 dan4 shi4 xian4 shi2 bu4 yun2 xu3 lai2 le5
+20170001P00039A0114 tong2 yang4 ye3 mei2 you3 yong3 yuan3 de5 shi1 bai4 zhe3
+20170001P00040I0051 jing1 xie2 shang1 sui4 fan3 hui2 xiu1 li3 zai4 chu1 yun2 dao4 mo4 er3 ben3
+20170001P00008A0099 ni3 ke3 bie2 zhong1 tu2 que1 xi2
+20170001P00133I0066 ni3 he2 jun1 zhu3 de5 xiao3 hao4 wo3 bu4 zhun3 ta1 men5 da3
+20170001P00141I0067 ni3 men5 zhun3 bei4 zai4 huai2 bei3 mai3 fang2 zi5 ma5
+20170001P00380I0107 nong2 min2 gong1 shen2 me5 de5 yao4 gong1 zi1 zui4 xiong1 le5
+20170001P00066A0010 chu1 mai4 gei3 mai3 shou4 ren2 weng1 ai4 guo2
+20170001P00384A0057 qiang2 ci2 duo2 li3 mei2 mai2 yuan4 ni3
+20170001P00358A0022 wo3 jiu4 kan4 kai3 jia3 yong3 shi4 qu4 le5
+20170001P00056A0061 yi4 wan4 fu4 weng1 fen1 jia1 chan3
+20170001P00201I0039 chuan1 qun2 zi5 de5 piao1 liang4 wa2
+20170001P00310A0082 na2 wo3 de5 shu1 fu1 jia1 fei2 zao4 xi3 wan2 tou2
+20170001P00230I0111 sha4 men2 yong3 can4 huang2 shang1 mao4 you3 xian4 gong1 si1 shen1 qing3 biao3
+20170001P00038I0081 jin1 tian1 wo3 ba3 xiong1 di4 guo4 sheng1 ri4
+20170001P00374I0046 zhu4 ni3 zao3 ri4 zhao3 ge4 ru2 yi4 lang2 jun1 xin1 xiang3 shi4 cheng2
+20170001P00376I0095 kan4 bu4 qing1 chu3 huai2 bao4 hui2 yi4 guang1 mang2
+20170001P00063A0068 ni3 zhen1 de5 shi4 you2 zui3 hua2 she2 er2 yi3
+20170001P00272A0105 dui4 yu2 ni3 men5 lai2 shuo1 nan2 sheng1 yong3 yuan3 shi4 huai4 ren2
+20170001P00241I0013 gong1 zuo4 biao1 zhun3 xuan1 guan4 hui4 yi4 ri4 cheng2 biao3
+20170001P00045I0117 bu4 pei2 wo3 wan2 bu4 shi4 ren2 gun3 dan4
+20170001P00030I0107 xin1 shi4 jie4 zhen1 shi4 feng1 qi3 yun2 yong3 a5
+20170001P00188I0063 mian3 yi4 que1 xian4 huo4 jie1 shou4 mian3 yi4 yi4 zhi4 ji4 zhe3
+20170001P00334I0014 gong1 zi1 biao1 zhun3 jun1 you2 wai4 bao1 dui4 wu3 zi4 xing2 an1 pai2
+20170001P00085I0105 qi2 shi2 wo3 he2 yao2 jia1 xuan2 hao3 le5
+20170001P00066A0040 wo3 qu4 weng1 yuan2 wan2 de5 shi2 hou4 zhao4 de5
+20170001P00240I0097 wo3 hao3 huai2 nian4 wo3 men5 chu1 qu4 xia1 hun4 de5 ri4 zi5
+20170001P00024I0067 ha1 er3 bin1 nan2 gang3 yang2 guang1 lv4 se4 jia1 yuan2 xi1 qu1
+20170001P00246A0073 duo1 yu2 de5 ke4 tao4 hua4 ni3 wo3 xiong1 mei4 jiu4 bu4 duo1 yan2
+20170001P00123A0076 bu4 qiong2 jiu4 bu4 na2 jin1 ka3 le5
+20170001P00114A0067 ban4 yue4 ka3 ke3 yi3 you2 yong3
+20170001P00079A0006 dao4 shi2 ni3 ke3 yi3 zhi4 dian4 wo3 huo4 zhe3 shi1 xiong1 la5
+20170001P00142I0020 deng3 liang4 jia3 quan2 he2 gao1 meng3 suan1 jia3 xun1 zheng1 xiao1 du2 fa3
+20170001P00025A0050 ni3 zhe4 ge4 mei2 liang2 xin1 de5 he1 he1 huai4 ying1 xiong2
+20170001P00444A0006 wo3 zai4 cha2 ne5 guai1 lao3 po2 shui4 jiao4
+20170001P00409I0027 na4 tian1 sheng1 ri4 zhen1 shi4 hui2 wei4 wu2 qiong2
+20170001P00229I0055 ni3 de5 yong1 bao4 he2 qin1 wen3
+20170001P00340A0077 tiao2 jian4 yun3 xu3 wo3 yi1 ding4 hui4 qu3 ni3
+20170001P00267A0029 bu2 yao4 xiao3 qiao2 yun3 hao4 la5 ai4 ma3 hao3 xiu1 se4
+20170001P00173I0106 li3 cheng2 xian4 he2 an1 yi3 xuan1 jie2 hun1 le5 ma5
+20170001P00095A0044 she4 diao1 ying1 xiong2 zhuan4 shi2 wo3 yi3 you3 le5 huang2 rong2
+20170001P00164I0035 qi2 ta1 san4 ke4 ban4 ka3 mei2 de5 shuo1 ci2 de5 a5
+20170001P00269I0072 yue4 jing1 bu4 diao4 zhu4 she4 huang2 ti3 tong2 hou4 hai2 huai2 yun4 ma5
+20170001P00134I0104 lao3 feng4 xiang2 huang2 jin1 er3 ding1
+20170001P00384I0103 qing1 chun1 dou4 kuai4 mei2 you3 le5 shi4 que1 ni3 de5 shi4 er2
+20170001P00076I0068 mo4 qi1 shao3 nian2 qiong2 lai2 ri4 wei4 ren2 xiong2
+20170001P00016I0045 jin1 rong2 ni3 quan2 neng2 a5 xia4 yi1 bu4 zhun3 bei4 jin4 jun1 na3 xing2
+20170001P00024I0021 huang2 zong3 chui2 xiong1 da3 dian4 hua4
+20170001P00152I0112 xun2 yang2 da3 bai4 sai1 na4 bo1
+20170001P00288A0013 jin1 tian1 peng2 you3 quan1 bei4 guang3 gao4 mai3 qi3
+20170001P00195I0043 wo3 hao3 zhun3 bei4 wan2 shu3 jia3
+20170001P00198A0021 ka3 de5 jie1 bu4 le5 a5 mao4 shi4 bu2 shi4 yao4 xue3 hua1 qiao1 men2
+20170001P00196A0077 jiu4 he1 le5 na4 me5 yi1 dian3 dian3 ming2 tian1 yao4 sha1 wa2 wa5 yu2
+20170001P00041A0073 wo3 mei2 you3 huang2 hua2 de5 qun2
+20170001P00025I0055 qing3 yun2 xu3 wo3 qi3 le5 yi1 ge4 zhong1 guo2
+20170001P00062I0024 biao1 zhun3 da2 an4 bu4 yun2 xu3 xue2 sheng1 chang2 shi4 cuo4 wu4
+20170001P00179I0046 jia3 liang3 jian4 xue3 fang3 qun2 zi5
+20170001P00105A0058 fu4 yong1 feng1 ya3 lu4 shi4 xian4 dai4 wen2
+20170001P00075I0111 wan4 zhou1 san1 xia2 yi1 yuan4 ti3 jian3 zhong1 xin1
+20170001P00239I0049 yong3 ji4 jin1 ri4 xia4 da4 yu3
+20170001P00155I0058 xiao3 bo2 shuo1 fang4 zi3 xuan1 qu4 er4 zhong1 duan4 lian4
+20170001P00079I0041 ke3 shi4 xiao3 xiong1 nan2 de5 hai2 bu4 yuan4 yi4 an4 mo2
+20170001P00304I0117 yue1 le5 weng1 gong1 ming2 tian1 shang4 wu3
+20170001P00014A0036 qian2 mian4 shang4 de5 qun2 li3 de5 ci2 he2 ge1 dou1
+20170001P00404A0095 che4 ge1 he2 xue3 fu2 mei4 zhi3 zhun3 bei4 hao3 le5 ma5
+20170001P00303I0111 lun2 dun1 ba1 li2 ji2 niu3 yue1 zheng4 quan4 jiao1 yi4 suo3
+20170001P00140I0079 zhun3 bei4 gan4 man3 yi1 ge4 yue4 ci2 le5 suan4 le5
+20170001P00158I0105 wo3 fu1 se4 hai2 bu4 zen3 me5 jun1 yun2
+20170001P00261I0001 ye4 mo2 he2 xue3 ren2 dou1 shi4 rou4
+20170001P00041I0007 wo3 zhen1 de5 xiang3 cong2 wo3 pang2 bian1 zhe3 chuang1 hu4 tiao4 xia4 qu4 le5
+20170001P00149A0064 qu4 mi4 shi4 tao2 wang2 ni3 jiu4 shuo1 he2 zhang1 xue3 yi1 qi3
+20170001P00234A0106 shuo1 de5 shi4 bu4 dui4 li3 de5 jun1 ren2 huo4 zhe3 wu3 jing3 guan1 bing1
+20170001P00082I0018 ji3 tian1 shi2 jian1 jiu4 neng2 cheng2 wei4 bai3 wan4 fu4 weng1 le5
+20170001P00301I0076 shao1 wei1 ka3 yi1 xia4 ma5 ruan3 ruan3 guai1 ma5
+20170001P00176I0099 qing3 ting1 qi2 shi4 ai4 li4 ka3 bu4 lang3 te4 li3 de5 shi4 yue1
+20170001P00001A0011 bo1 tao1 xiong1 yong3 de5 hao3 duo1 sha3 shuo1 ban4 tian1
+20170001P00437A0113 shui2 wei4 lai2 ji3 nian2 fa1 cai2 hai2 bu4 yun2 xu3 ni3 ya1
+20170001P00130I0087 hai2 bu4 ru2 kai1 fang2 mai3 yong3 zhe3 shu1
+20170001P00394A0076 fu3 mo1 xiong1 bu4 jiu4 neng2 lai2 gan3 jue2 ma5
+20170001P00372A0078 nan2 jing1 ren2 mei2 you3 zhu3 ren2 weng1 ze2 ren4 gan3
+20170001P00400I0117 wo3 gang1 zhun3 bei4 shuo1 wo3 men5 ting1 de5 ge1 ci2 dou1 you3 bu4 zi4
+20170001P00094I0067 wo3 jiu4 shi4 shuo1 juan1 kuan3 shi4 zi4 yuan4 de5
+20170001P00396I0068 fu4 ke1 ji2 bing4 huo4 zhe3 shi4 huai2 yun4
+20170001P00402I0093 xia4 mian4 de5 ma3 tong3 tao2 ci2 he2 shang4 mian4 de5 gai4 ban3
+20170001P00376I0018 ge1 ge1 zhun3 bei4 kai1 che1 qu4 ke4 qi2 liu1 da2 yi1 quan1 ne5
+20170001P00155I0010 ni3 men5 mai4 wo4 er3 ma3 de5 ka3
+20170001P00218I0091 qun2 you3 shi4 yong1 hu4 zan2 de5
+20170001P00251A0021 gao1 du4 huai2 yi2 zuo2 wan3 chi1 de5 rou4 chuan4 er2 bu4 shi4 yang2 rou4
+20170001P00112I0059 xia4 wu3 bo2 quan1 fa1 gei3 ni3
+20170001P00213I0067 wo3 zuo4 yi3 qian2 wen1 shi1 fu4 de5 wen2 zhi2
+20170001P00360A0107 er2 qie3 wo3 ba4 ma1 ye3 bu4 yun2 xu3 wo3 chou1 yan1
+20170001P00069A0014 huang2 huai2 xue2 yuan4 bu4 qing1 xi1 kan4 bu4 qing1
+20170001P00160A0033 lao3 zi5 gen1 xu2 yong3 shun4 shuo1 sha3 bi1 hao3 ba5
+20170001P00333I0051 zhe4 jian4 xue3 fang3 qun2 jian3 zhi2 tai4 piao1 liang4 le5
+20170001P00245I0026 lao3 ban3 de5 xi1 you2 ji4 huo4 zhe3 she4 diao1 ying1 xiong2 zhuan4
+20170001P00007A0060 dan4 shi4 yang2 lao3 shi1 hui4 huai2 yi2 wo3 de5 e2
+20170001P00333I0004 na4 ni3 ba3 weng1 shi1 qi2 de5 di4 zhi3 fa1 gei3 wo3 ba5
+20170001P00319A0097 ni3 shuo1 de5 shi4 xuan1 hua4 dian4 li3 de5 shi4 pin3
+20170001P00285A0068 shang4 ci4 wan4 da2 guang3 chang2 zhuan1 mai4 dian4 juan1 yi1 fu5
+20170001P00063A0119 wo3 zai4 yong3 tai4 you3 fan4 ju2 bai2 yun2 qu1
+20170001P00393I0039 ru2 guo3 wo3 men5 jin1 nian2 xuan1 bu4 hao3 ri4 zi5
+20170001P00130I0020 kai3 jia3 yong3 shi4 neng2 chuan1 suo1 guang1 yin1
+20170001P00109I0085 xia4 ci4 wo3 yi1 ding4 yao4 qu4 qun2 li3 xuan1 chuan2 ni3 hui4 mai4 meng2
+20170001P00091I0119 an4 jin4 huai2 li3 qin1 wen3 ke3 lian2 da4 yan3 jing1
+20170001P00174I0015 wo3 zai4 xuan1 chuan2 qun2 li3 shuo1 guo4
+20170001P00010A0100 bi3 ci3 de5 xin1 he2 ren2 yong3 yuan3 shu3 yu2 bi3 ci3
+20170001P00371I0060 na4 ge4 lang2 ya2 he2 ling2 hu2 zhe3 he2
+20170001P00346I0029 wang2 yong3 tian1 sheng1 jiu4 shi4 shi3 zhe3 ming4
+20170001P00127I0090 ri4 ju3 xing2 guan1 fang1 xuan1 chuan2 huo2 dong4
+20170001P00123I0079 xian4 zai4 zhi3 yao4 shi4 ge4 fu4 weng1 jiu4 bu4 cuo4 le5
+20170001P00066A0031 jiao4 ka3 mei2 long2 di2 ya4 ci2
+20170001P00215I0106 gua3 ren2 yi3 jing1 shou4 bu4 le5 ba1 yun2 zi3 le5
+20170001P00265I0077 wo3 cong2 chuang2 shang4 hua2 xia4 qu4 le5
+20170001P00018A0061 he1 yi1 dian3 niu2 nai3 huo4 zhe3 chi1 dian3
+20170001P00251A0008 gao1 jiang1 jun1 hao3 yang4 de5 wo3 shuo1 de5 hua4 bu4 neng2 xin4 a5
+20170001P00110A0044 ni3 ba3 wa2 wa5 dang1 ba1 bi3 yang2 wa2 wa5 le5
+20170001P00141A0045 hai2 ke3 yi3 zuo4 yu2 sheng1 you2 yong3 tao2 hua1 yun4 you4 lai2 le5
+20170001P00109I0059 qing1 yun2 xiong1 bu4 jian3 dan1 de5 qi2 ta1 ye3 you3 hao3 ba5
+20170001P00214I0109 ta1 yao4 ba3 zhe4 ge4 dian4 nao3 wan2 er2 de5 gun3 gua1 luan4 shu2
+20170001P00275I0036 guan3 yi1 xia4 wo3 de5 qun2 bang1 bang1 mang2 xiong1 di4
+20170001P00306I0118 she4 ji4 ji1 chuang2 suo3 xu1 de5 gong1 zhuang1 jia1 zhi4 ju4
+20170001P00372A0101 ming2 tian1 gen1 huang2 ji4 jun1 qu4
+20170001P00364A0053 wei4 le5 xing2 su4 wo3 zhi3 shi4 kai1 shi3 bei4 dan1 ci2 er2 yi3
+20170001P00309I0016 wo3 ning2 yuan4 bu4 yao4 dian4 ci2 lu2 ye3 yao4 yi1 ge4 tun2 tang1 bao1
+20170001P00294I0120 wo3 men5 zhun3 bei4 xian1 sheng1 wa2 zai4 ling3 zheng4
+20170001P00083A0089 mei2 you3 jin4 guo4 huai2 hua1 qun2
+20170001P00332I0109 bu2 guo4 huang2 huai2 xue2 yuan4 dian3 de5
+20170001P00098I0102 wo3 qu4 ba4 zhe3 shua1 yi1 quan1 jiu4 xia4
+20170001P00286A0013 bu4 zhun3 bei4 ba3 ya2 song4 chu1 qu4 liu2 xue2
+20170001P00034I0051 san1 zhe3 dou1 bu4 ke3 huo4 que1
+20170001P00365A0089 deng4 jing3 xuan1 qu4 jiu4 zhao3 ge4 nan2 de5 pei2 le5 a5
+20170001P00269A0041 xue3 mei2 ta1 men5 mei2 wen4 zen3 me5 yang4 na3 er2 di4 fang1 de5
+20170001P00389A0016 lao3 po2 shui4 ge4 an1 wen3 jue2 yong3 yuan3 ai4 ni3
+20170001P00193A0091 jie1 yang2 jie3 chu1 qu4 chi1 fan4 lai2 zhao2 ran2 hou4 yong3 ge1 wen4 ta1
+20170001P00417A0036 na3 li3 hai2 you3 xing1 qi1 tian1 yun3 xu3 chi2 dao4 de5
+20170001P00417A0015 shao3 gei3 wa2 wa5 chi1 na4 xie1 la1 ji2 shi2 pin3
+20170001P00161A0095 wang3 nian2 ping2 jun1 ri4 fa1 huo4
+20170001P00128A0020 na4 shi4 ni3 bu4 yuan4 yi4 kong1 chu1 shi2 jian1 lai2 yue1 ren2 jia1
+20170001P00343I0019 dong1 fang1 ze2 si4 hu1 bu4 yuan4 yi4 yu3 ta1 dou1 quan1 zi5
+20170001P00200A0075 lai2 wan2 da4 fu4 weng1 xiao3 di4 ha1 ha1 ha1 liang3 zhang1 dou1 hao3 chou3

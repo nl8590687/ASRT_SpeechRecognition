@@ -73,10 +73,12 @@ class ModelSpeech(): # 语音模型类
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH, 1))
 		
 		layer_h1 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(input_data) # 卷积层
+		layer_h1 = Dropout(0.3)(layer_h1)
 		layer_h2 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h1) # 卷积层
 		layer_h3 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h2) # 池化层
 		#layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
 		layer_h4 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h3) # 卷积层
+		layer_h4 = Dropout(0.3)(layer_h4)
 		layer_h5 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h4) # 卷积层
 		layer_h6 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h5) # 池化层
 		
@@ -85,8 +87,9 @@ class ModelSpeech(): # 语音模型类
 		
 		layer_h7 = Reshape((400, 3200))(layer_h6) #Reshape层
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
-		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
+		layer_h7 = Dropout(0.3)(layer_h7) # 随机中断部分神经网络连接，防止过拟合
 		layer_h8 = Dense(256, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h7) # 全连接层
+		layer_h8 = Dropout(0.3)(layer_h8) # 随机中断部分神经网络连接，防止过拟合
 		layer_h9 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h8) # 全连接层
 		
 		y_pred = Activation('softmax', name='Activation0')(layer_h9)
@@ -115,7 +118,7 @@ class ModelSpeech(): # 语音模型类
 		#sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
 		ada_d = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
 		
-		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd, metrics=["accuracy"])
+		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd)
 		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d)
 		
 		
@@ -378,10 +381,11 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	#ms.LoadModel(modelpath + 'm22\\speech_model22_e_0_step_6500.model')
-	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	ms.LoadModel(modelpath + 'm22_2\\speech_model22_e_0_step_209000.model')
+	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
 	#ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
-	#r = ms.RecognizeSpeech_FromFile('E:\语音数据集\ST-CMDS\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')
+	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
+	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
-	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
-	#print('*[提示] 语音识别结果：\n',r)
+	r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
+	print('*[提示] 语音识别结果：\n',r)
