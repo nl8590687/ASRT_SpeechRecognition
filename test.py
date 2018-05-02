@@ -28,10 +28,10 @@ else:
 
 ms = ModelSpeech(datapath)
 
-ms.LoadModel(modelpath + 'm22\\speech_model22_e_0_step_6500.model')
+ms.LoadModel(modelpath + 'm22_2\\speech_model22_e_0_step_257000.model')
 
 #ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
-r = ms.RecognizeSpeech_FromFile('E:\语音数据集\ST-CMDS\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')
+r = ms.RecognizeSpeech_FromFile('E:\语音数据集\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')
 #r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
 #r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\test\\D4\\D4_750.wav')
 print('*[提示] 语音识别结果：\n',r)

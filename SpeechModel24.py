@@ -22,7 +22,7 @@ from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Acti
 from keras import backend as K
 from keras.optimizers import SGD, Adadelta
 
-from readdata22_2 import DataSpeech
+from readdata24 import DataSpeech
 
 class ModelSpeech(): # 语音模型类
 	def __init__(self, datapath):
@@ -130,7 +130,7 @@ class ModelSpeech(): # 语音模型类
 	
 	
 	
-	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/speech_model2'):
+	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/speech_model24'):
 		'''
 		训练模型
 		参数：
@@ -204,7 +204,7 @@ class ModelSpeech(): # 语音模型类
 			txt = ''
 			for i in range(data_count):
 				data_input, data_labels = data.GetData((ran_num + i) % num_data)  # 从随机数开始连续向后取一定数量数据
-				pre = self.Predict(data_input, data_input.shape[0] // 4)
+				pre = self.Predict(data_input, data_input.shape[0] // 8)
 				
 				words_n = data_labels.shape[0] # 获取每个句子的字数
 				words_num += words_n # 把句子的总字数加上
@@ -299,7 +299,7 @@ class ModelSpeech(): # 语音模型类
 		#print('time cost:',t1-t0)
 		
 		input_length = len(data_input)
-		input_length = input_length // 4
+		input_length = input_length // 8
 		
 		data_input = np.array(data_input, dtype = np.float)
 		#print(data_input,data_input.shape)
@@ -345,7 +345,7 @@ if(__name__=='__main__'):
 	
 	import tensorflow as tf
 	from keras.backend.tensorflow_backend import set_session
-	os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+	os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 	#进行配置，使用70%的GPU
 	config = tf.ConfigProto()
 	config.gpu_options.per_process_gpu_memory_fraction = 0.7
@@ -375,7 +375,7 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	#ms.LoadModel(modelpath + 'm24\\speech_model24_e_0_step_1.model')
-	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	ms.TrainModel(datapath, epoch = 50, batch_size = 2, save_step = 500)
 	#ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')

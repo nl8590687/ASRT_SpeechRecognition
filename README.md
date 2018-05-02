@@ -9,6 +9,10 @@ This project uses keras, TensorFlow based on LSTM, CNN and CTC to implement.
 
 本项目目前已经可以正常进行训练了。
 
+通过git克隆仓库以后，需要将datalist目录下的文件全部拷贝到dataset目录下，也就是将其跟数据集放在一起。
+
+目前可用的模型有22
+
 本项目运行请执行：
 ```shell
 $ python3 SpeechModel22.py
@@ -18,7 +22,7 @@ $ python3 SpeechModel22.py
 
 ### Speech Model 语音模型
 
-CNN + LSTM + CTC
+CNN + LSTM/GRU + CTC
 
 ### Language Model 语言模型
 
