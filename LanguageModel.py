@@ -34,6 +34,7 @@ class ModelLanguage(): # 语音模型类
 		self.dict_pinyin = self.GetSymbolDict('dict.txt')
 		self.model1 = self.GetLanguageModel(self.modelpath + 'language_model1.txt')
 		self.model2 = self.GetLanguageModel(self.modelpath + 'language_model2.txt')
+		self.pinyin = self.GetPinyin(self.modelpath + 'dic_pinyin.txt')
 		model = (self.dict_pinyin, self.model1, self.model2 )
 		return model
 		pass
@@ -44,12 +45,32 @@ class ModelLanguage(): # 语音模型类
 		实现从语音拼音符号到最终文本的转换
 		尚未完成
 		'''
-		r = self.decode(list_syllable, 0.001)
-		if(r == []):
-			return ['', 0.0]
-		return r[0]
+		r=''
+		length = len(list_syllable)
+		if(length == 0): # 传入的参数没有包含任何拼音时
+			return ''
+		
+		str_tmp = [list_syllable[0]]
+		for i in range(0, length - 1):
+			str_split = list_syllable[i] + ' ' + list_syllable[i+1]
+			#print(str_split,str_tmp,r)
+			if(str_split in self.pinyin):
+				str_tmp.append(list_syllable[i+1])
+			else:
+				str_decode = self.decode(str_tmp, 0.0000)
+				#print('decode ',str_tmp,str_decode)
+				if(str_decode != []):
+					r += str_decode[0][0]
+				str_tmp = [list_syllable[i+1]]
+		
+		#print(str_tmp)
+		str_decode = self.decode(str_tmp, 0.0000)
+		if(str_decode != []):
+			r += str_decode[0][0]
+		
+		return r
 	
-	def decode(self,list_syllable, yuzhi = 0.001):
+	def decode(self,list_syllable, yuzhi = 0.0001):
 		'''
 		实现拼音向文本的转换
 		基于马尔可夫链
@@ -58,12 +79,14 @@ class ModelLanguage(): # 语音模型类
 		list_words = []
 		
 		num_pinyin = len(list_syllable)
+		#print('======')
+		#print('decode function: list_syllable\n',list_syllable)
 		#print(num_pinyin)
 		# 开始语音解码
 		for i in range(num_pinyin):
 			#print(i)
 			ls = ''
-			if(list_syllable[i] in self.dict_pinyin):
+			if(list_syllable[i] in self.dict_pinyin): # 如果这个拼音在汉语拼音字典里的话
 				# 获取拼音下属的字的列表，ls包含了该拼音对应的所有的字
 				ls = self.dict_pinyin[list_syllable[i]]
 			else:
@@ -71,6 +94,7 @@ class ModelLanguage(): # 语音模型类
 			
 			
 			if(i == 0):
+				# 第一个字做初始处理
 				num_ls = len(ls)
 				for j in range(num_ls):
 					tuple_word = ['',0.0]
@@ -84,27 +108,31 @@ class ModelLanguage(): # 语音模型类
 				#print(list_words)
 				continue
 			else:
+				# 开始处理紧跟在第一个字后面的字
 				list_words_2 = []
 				num_ls_word = len(list_words)
+				#print('ls_wd: ',list_words)
 				for j in range(0, num_ls_word):
-					#print('ls_wd: ',list_words)
+					
 					num_ls = len(ls)
 					for k in range(0, num_ls):
 						tuple_word = ['',0.0]
-						tuple_word = list(list_words[j])
+						tuple_word = list(list_words[j]) # 把现有的每一条短语取出来
 						#print('tw1: ',tuple_word)
-						tuple_word[0] = tuple_word[0] + ls[k]
+						tuple_word[0] = tuple_word[0] + ls[k] # 尝试按照下一个音可能对应的全部的字进行组合
 						#print('ls[k]  ',ls[k])
 						
-						tmp_words = tuple_word[0][-2:]
-						#print('tmp_words: ',tmp_words)
-						if(tmp_words in self.model2):
+						tmp_words = tuple_word[0][-2:] # 取出用于计算的最后两个字
+						#print('tmp_words: ',tmp_words,tmp_words in self.model2)
+						if(tmp_words in self.model2): # 判断它们是不是再状态转移表里
+							#print(tmp_words,tmp_words in self.model2)
 							tuple_word[1] = tuple_word[1] * float(self.model2[tmp_words]) / float(self.model1[tmp_words[-1]])
 							# 核心！在当前概率上乘转移概率，公式化简后为第n-1和n个字出现的次数除以第n-1个字出现的次数
 						else:
 							tuple_word[1] = 0.0
 							continue
 						#print('tw2: ',tuple_word)
+						#print(tuple_word[1] >= pow(yuzhi, i))
 						if(tuple_word[1] >= pow(yuzhi, i)):
 							# 大于阈值之后保留，否则丢弃
 							list_words_2.append(tuple_word)
@@ -165,7 +193,24 @@ class ModelLanguage(): # 语音模型类
 				
 		return dic_model
 	
-
+	def GetPinyin(self, filename):
+		file_obj = open(filename,'r',encoding='UTF-8')
+		txt_all = file_obj.read()
+		file_obj.close()
+	
+		txt_lines = txt_all.split('\n')
+		dic={}
+	
+		for line in txt_lines:
+			if(line == ''):
+				continue
+			pinyin_split = line.split('\t')
+			
+			list_pinyin=pinyin_split[0]
+			
+			if(list_pinyin not in dic):
+				dic[list_pinyin] = pinyin_split[1]
+		return dic
 
 
 if(__name__=='__main__'):
@@ -174,8 +219,15 @@ if(__name__=='__main__'):
 	ml.LoadModel()
 	
 	#str_pinyin = ['zhe4','zhen1','shi4','ji2', 'hao3','de5']
-	str_pinyin = ['jin1', 'tian1', 'shi4', 'xing1', 'qi1', 'san1']
+	#str_pinyin = ['jin1', 'tian1', 'shi4', 'xing1', 'qi1', 'san1']
 	#str_pinyin = ['ni3', 'hao3','a1']
-	r = ml.decode(str_pinyin)
+	#str_pinyin = ['wo3','dui4','shi4','mei2','cuo4','ni3','hao3']
+	#str_pinyin = ['wo3','dui4','shi4','tian1','mei2','na5','li3','hai4']
+	#str_pinyin = ['ba3','zhe4','xie1','zuo4','wan2','wo3','jiu4','qu4','shui4','jiao4']
+	#str_pinyin = ['wo3','qu4','a4','mei2','shi4','er2','la1']
+	#str_pinyin = ['wo3', 'men5', 'qun2', 'li3', 'xiong1', 'di4', 'jian4', 'mei4', 'dou1', 'zai4', 'shuo1']
+	#str_pinyin = ['su1', 'an1', 'ni3', 'sui4', 'li4', 'yun4', 'sui2', 'cong2', 'jiao4', 'ming2', 'tao2', 'qi3', 'yu2', 'peng2', 'ya4', 'yang4', 'chao1', 'dao3', 'jiang1', 'li3', 'yuan2', 'kang1', 'zhua1', 'zou3']
+	#r = ml.decode(str_pinyin)
+	r=ml.SpeechToText(str_pinyin)
 	print('语音转文字结果：\n',r)
 

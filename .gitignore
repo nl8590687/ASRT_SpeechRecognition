@@ -2,7 +2,7 @@
 
 *.model
 [Mm]odel_speech/
-[Mm]odel_language/
+
 __pycache__
 *.wav
 Test_Report_*
