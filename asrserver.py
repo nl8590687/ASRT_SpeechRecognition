@@ -4,7 +4,6 @@
 @author: nl8590687
 语音识别API的HTTP服务器程序
 
-尚未完成
 """
 import http.server
 import urllib
@@ -45,6 +44,7 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		token = ''
 		fs = 0
 		wavs = []
+		#type = 'wavfilebytes' # wavfilebytes or python-list
 		
 		for line in datas_split:
 			[key, value]=line.split('=')
@@ -54,10 +54,15 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 				fs = int(value)
 			elif('token' == key ):
 				token = value
+			#elif('type' == key):
+			#	type = value
 			else:
 				print(key, value)
 			
+		#if('python-list' == type):
 		r = self.recognize([wavs], fs)
+		#else:
+		#	r = self.recognize_from_file('')
 		
 		if(token == 'qwertasd'):
 			#buf = '成功\n'+'wavs:\n'+str(wavs)+'\nfs:\n'+str(fs)
@@ -74,7 +79,7 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		
 		
 		#buf = '<!DOCTYPE HTML> \n<html> \n<head>\n<title>Post page</title>\n</head> \n<body>Post Data:%s  <br />Path:%s\n</body>  \n</html>'%(datas,self.path)  
-		buf = bytes(buf],encoding="utf-8")
+		buf = bytes(buf,encoding="utf-8")
 		self.wfile.write(buf)  
 		
 	def recognize(self, wavs, fs):
@@ -90,6 +95,9 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		str_pinyin = r_speech
 		r = ml.SpeechToText(str_pinyin)
 		return r
+		pass
+	
+	def recognize_from_file(self, filename):
 		pass
 	
 def start_server(ip, port):  

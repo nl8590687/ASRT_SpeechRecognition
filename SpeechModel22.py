@@ -208,7 +208,7 @@ class ModelSpeech(): # 语音模型类
 			if(out_report == True):
 				txt_obj = open('Test_Report_' + str_dataset + '_' + nowtime + '.txt', 'w', encoding='UTF-8') # 打开文件并读入
 			
-			txt = ''
+			
 			for i in range(data_count):
 				data_input, data_labels = data.GetData((ran_num + i) % num_data)  # 从随机数开始连续向后取一定数量数据
 				pre = self.Predict(data_input, data_input.shape[0] // 4)
@@ -221,16 +221,20 @@ class ModelSpeech(): # 语音模型类
 				else: # 否则肯定是增加了一堆乱七八糟的奇奇怪怪的字
 					word_error_num += words_n # 就直接加句子本来的总字数就好了
 				
+				if(i % 10 == 0):
+					print('测试进度：',i,'/',data_count)
+				
+				txt = ''
 				if(out_report == True):
 					txt += str(i) + '\n'
 					txt += 'True:\t' + str(data_labels) + '\n'
 					txt += 'Pred:\t' + str(pre) + '\n'
 					txt += '\n'
-				
+				txt_obj.write(txt)
 			
 			print('*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率：', word_error_num / words_num * 100, '%')
 			if(out_report == True):
-				txt += '*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率： ' + str(word_error_num / words_num * 100) + ' %'
+				txt = '*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率： ' + str(word_error_num / words_num * 100) + ' %'
 				txt_obj.write(txt)
 				txt_obj.close()
 			
@@ -381,9 +385,9 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	#ms.LoadModel(modelpath + 'm22_2\\speech_model22_e_0_step_257000.model')
+	#ms.LoadModel(modelpath + 'm22_2\\1\\speech_model22_e_0_step_159000.model')
 	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
-	#ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
+	#ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
