@@ -66,16 +66,17 @@ class ModelSpeech(): # 语音模型类
 		
 	def CreateModel(self):
 		'''
-		定义CNN/LSTM/CTC模型，使用函数式模型
-		输入层：39维的特征值序列，一条语音数据的最大长度设为1500（大约15s）
-		隐藏层一：1024个神经元的卷积层
-		隐藏层二：池化层，池化窗口大小为2
-		隐藏层三：Dropout层，需要断开的神经元的比例为0.2，防止过拟合
-		隐藏层四：循环层、LSTM层
-		隐藏层五：Dropout层，需要断开的神经元的比例为0.2，防止过拟合
+		定义CNN/LSTM/CTC模型，使用函数式模型，暂时不完全与这里的注释内容相同
+		输入层：200维的特征值序列，一条语音数据的最大长度设为1600（大约16s）
+		隐藏层一：32卷积核,尺寸3*3的卷积层
+		隐藏层二：32卷积核,尺寸3*3的卷积层
+		隐藏层三：最大池化层，池化窗口大小为2
+		隐藏层四：64卷积核,尺寸3*3的卷积层
+		隐藏层五：64卷积核,尺寸3*3的卷积层
+		隐藏层六：最大池化层，池化窗口大小为2
+		隐藏层七：全连接层，神经元数量为256，使用reLu作为激活函数，
 		隐藏层六：全连接层，神经元数量为self.MS_OUTPUT_SIZE，使用softmax作为激活函数，
-		输出层：自定义层，即CTC层，使用CTC的loss作为损失函数，实现连接性时序多输出
-		
+		输出层：自定义层，即CTC层，使用CTC的loss作为损失函数，CTC_loss越小，神经网络拟合的越好
 		'''
 		# 每一帧使用13维mfcc特征及其13维一阶差分和13维二阶差分表示，最大信号序列长度为1500
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH, 1))
@@ -178,8 +179,9 @@ class ModelSpeech(): # 语音模型类
 		训练模型
 		参数：
 			datapath: 数据保存的路径
-			epoch: 迭代轮数
+			epoch: 迭代轮数，暂时没有用处
 			save_step: 每多少步保存一次模型
+			batch_size：每一个训练批次的数据量的大小
 			filename: 默认保存文件名，不含文件后缀名
 		'''
 		data=DataSpeech(datapath, 'train')
@@ -204,8 +206,8 @@ class ModelSpeech(): # 语音模型类
 					break
 				
 				self.SaveModel(comment='_e_'+str(epoch)+'_step_'+str(n_step * save_step))
-				self.TestModel(self.datapath, str_dataset='train', data_count = 4)
-				self.TestModel(self.datapath, str_dataset='dev', data_count = 4)
+				self.TestModel(self.datapath, str_dataset='train', data_count = 4, show_ratio = False)
+				self.TestModel(self.datapath, str_dataset='dev', data_count = 4, show_ratio = False)
 				
 	def LoadModel(self,filename='model_speech/speech_model22.model'):
 		'''
@@ -224,9 +226,14 @@ class ModelSpeech(): # 语音模型类
 		f.write(filename+comment)
 		f.close()
 
-	def TestModel(self, datapath='', str_dataset='dev', data_count = 32, out_report = False):
+	def TestModel(self, datapath='', str_dataset='dev', data_count = 32, out_report = False, show_ratio = True):
 		'''
 		测试检验模型效果
+		datapath：数据集的路径，暂时不用
+		str_dataset：使用何种数据集进行测试，可选的有train、dev和test，分别代表训练集、开发集和测试集
+		data_count：用于测试的数据数量，数字越大随机波动越小，如果是个人电脑一般可以设为128
+		out_report：是否生成测试报告，可在项目根目录下看到
+		show_ratio：测试时是否显示当前测试进度比例，避免因为时间太长以为发生了死循环
 		'''
 		data=DataSpeech(self.datapath, str_dataset)
 		#data.LoadDataList(str_dataset) 
@@ -257,7 +264,7 @@ class ModelSpeech(): # 语音模型类
 				else: # 否则肯定是增加了一堆乱七八糟的奇奇怪怪的字
 					word_error_num += words_n # 就直接加句子本来的总字数就好了
 				
-				if(i % 10 == 0):
+				if(i % 10 == 0 and show_ratio == True):
 					print('测试进度：',i,'/',data_count)
 				
 				txt = ''
@@ -281,6 +288,8 @@ class ModelSpeech(): # 语音模型类
 		'''
 		预测结果
 		返回语音识别后的拼音符号列表
+		data_input：(1, timestep, 200)的numpy array，与GetData中的data_input是相同的
+		input_len：输入的语音标签序列的长度，这个与模型的卷积层和池化层的配置有关
 		'''
 		
 		batch_size = 1 
@@ -332,7 +341,8 @@ class ModelSpeech(): # 语音模型类
 	def RecognizeSpeech(self, wavsignal, fs):
 		'''
 		最终做语音识别用的函数，识别一个wav序列的语音
-		不过这里现在还有bug
+		wavsignal：wav声音的原始语音序列
+		fs：wav的采样频率，需要使用16kHz的wav采样频率才行
 		'''
 		
 		#data = self.data
@@ -342,6 +352,7 @@ class ModelSpeech(): # 语音模型类
 		#data_input = GetMfccFeature(wavsignal, fs)
 		#t0=time.time()
 		data_input = GetFrequencyFeature2(wavsignal, fs)
+		#data_input = GetFrequencyFeature3(wavsignal, fs)
 		#t1=time.time()
 		#print('time cost:',t1-t0)
 		
@@ -368,6 +379,7 @@ class ModelSpeech(): # 语音模型类
 	def RecognizeSpeech_FromFile(self, filename):
 		'''
 		最终做语音识别用的函数，识别指定文件名的语音
+		filename：wav文件名
 		'''
 		
 		wavsignal,fs = read_wav_data(filename)
@@ -385,7 +397,7 @@ class ModelSpeech(): # 语音模型类
 		'''
 		返回keras model
 		'''
-		return self._model
+		return self._model, self.base_model
 
 
 if(__name__=='__main__'):
@@ -422,8 +434,8 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	#ms.LoadModel(modelpath + 'm22_2\\1\\speech_model22_e_0_step_327500.model')
-	ms.LoadModel(modelpath + 'm22_2/1/speech_model22_e_0_step_327500.model')
-	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	#ms.LoadModel(modelpath + 'm22_2/1/speech_model22_e_0_step_327500.model')
+	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
 	#ms.TestModel(datapath, str_dataset='train', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
