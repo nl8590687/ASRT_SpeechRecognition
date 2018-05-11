@@ -16,6 +16,7 @@ import keras as kr
 import numpy as np
 import random
 
+from keras.models import model_from_yaml
 from keras.models import Sequential, Model
 from keras.layers import Dense, Dropout, Input, Reshape # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
 from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge,Conv1D
@@ -40,7 +41,14 @@ class ModelSpeech(): # 语音模型类
 		self.label_max_string_length = 64
 		self.AUDIO_LENGTH = 1600
 		self.AUDIO_FEATURE_LENGTH = 200
+		
+		self.model_name = 'm22'
+		
+		#if(not os.path.exists(self.model_name + '.model_yaml')): # 判断保存模型的目录是否存在
 		self._model, self.base_model = self.CreateModel() 
+		#else:
+		#	self._model, self.base_model = self.load_model_yaml(self.model_name)
+		
 		
 		self.datapath = datapath
 		self.slash = ''
@@ -112,7 +120,7 @@ class ModelSpeech(): # 语音模型类
 		
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
 		
-		model.summary()
+		#model.summary()
 		
 		# clipnorm seems to speeds up convergence
 		#sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
@@ -125,6 +133,9 @@ class ModelSpeech(): # 语音模型类
 		# captures output of softmax so we can decode the output during visualization
 		test_func = K.function([input_data], [y_pred])
 		
+		#kr.utils.plot_model(model, to_file='model.png', show_shapes=False, show_layer_names=True) # 可视化展示模型
+		self.save_model_yaml(model, model_data)
+		
 		print('[*提示] 创建模型成功，模型编译成功')
 		return model, model_data
 		
@@ -135,7 +146,32 @@ class ModelSpeech(): # 语音模型类
 		#y_pred = y_pred[:, 2:, :]
 		return K.ctc_batch_cost(labels, y_pred, input_length, label_length)
 	
+	def save_model_yaml(self,model,model_data):
+		'''
+		保存模型的配置结构
+		'''
+		str_yaml_model = model.to_yaml()
+		str_yaml_model_data = model_data.to_yaml()
+		f = open(self.model_name + '.model_yaml','w')
+		f.write(str_yaml_model)
+		f.close()
+		f = open(self.model_name + '_base.model_yaml','w')
+		f.write(str_yaml_model_data)
+		f.close()
 	
+	def load_model_yaml(self, model_name):
+		'''
+		加载模型的配置结构
+		'''
+		f = open(self.model_name + '.model_yaml','r')
+		str_yaml_model = f.read()
+		f.close()
+		f = open(self.model_name + '_base.model_yaml','r')
+		str_yaml_model_data = f.read()
+		f.close()
+		model = model_from_yaml(str_yaml_model)
+		model_data = model_from_yaml(str_yaml_model_data)
+		return model, model_data
 	
 	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/speech_model2'):
 		'''
@@ -230,7 +266,7 @@ class ModelSpeech(): # 语音模型类
 					txt += 'True:\t' + str(data_labels) + '\n'
 					txt += 'Pred:\t' + str(pre) + '\n'
 					txt += '\n'
-				txt_obj.write(txt)
+					txt_obj.write(txt)
 			
 			print('*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率：', word_error_num / words_num * 100, '%')
 			if(out_report == True):
@@ -356,7 +392,7 @@ if(__name__=='__main__'):
 	
 	import tensorflow as tf
 	from keras.backend.tensorflow_backend import set_session
-	os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+	os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 	#进行配置，使用70%的GPU
 	config = tf.ConfigProto()
 	config.gpu_options.per_process_gpu_memory_fraction = 0.7
@@ -385,9 +421,10 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	#ms.LoadModel(modelpath + 'm22_2\\1\\speech_model22_e_0_step_159000.model')
-	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
-	#ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
+	#ms.LoadModel(modelpath + 'm22_2\\1\\speech_model22_e_0_step_327500.model')
+	ms.LoadModel(modelpath + 'm22_2/1/speech_model22_e_0_step_327500.model')
+	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	#ms.TestModel(datapath, str_dataset='train', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')

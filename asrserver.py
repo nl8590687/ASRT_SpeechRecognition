@@ -11,6 +11,13 @@ import keras
 from SpeechModel22 import ModelSpeech
 from LanguageModel import ModelLanguage
 
+datapath = 'data/'
+modelpath = 'model_speech/'
+ms = ModelSpeech(datapath)
+ms.LoadModel(modelpath + 'speech_model22_e_0_step_216500.model')
+
+ml = ModelLanguage('model_language')
+ml.LoadModel()
 
 class TestHTTPHandle(http.server.BaseHTTPRequestHandler):  
 	
@@ -66,7 +73,7 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		
 		if(token == 'qwertasd'):
 			#buf = '成功\n'+'wavs:\n'+str(wavs)+'\nfs:\n'+str(fs)
-			buf = r[0]
+			buf = r
 		else:
 			buf = '403'
 		
@@ -74,24 +81,13 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		
 		self._set_response()
 		
-		
-		
-		
-		
 		#buf = '<!DOCTYPE HTML> \n<html> \n<head>\n<title>Post page</title>\n</head> \n<body>Post Data:%s  <br />Path:%s\n</body>  \n</html>'%(datas,self.path)  
 		buf = bytes(buf,encoding="utf-8")
 		self.wfile.write(buf)  
 		
 	def recognize(self, wavs, fs):
-		datapath = 'data/'
-		modelpath = 'model_speech/'
-		ms = ModelSpeech(datapath)
-		ms.LoadModel(modelpath + 'speech_model22_e_0_step_6500.model')
-		
 		r_speech = ms.RecognizeSpeech(wavs, fs)
 		
-		ml = ModelLanguage('model_language')
-		ml.LoadModel()
 		str_pinyin = r_speech
 		r = ml.SpeechToText(str_pinyin)
 		return r

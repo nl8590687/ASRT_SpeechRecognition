@@ -5,6 +5,7 @@
 
 __pycache__
 *.wav
+*.model_yaml
 Test_Report_*
 
 dataset
