@@ -28,7 +28,14 @@ $ python3 test_mspeech.py
 ```
 测试之前，请确保代码中填写的模型文件路径存在。
 
-如果程序运行期间有什么问题，可以及时在issue中提出来，我将尽快做出答复。
+ASRT API服务器启动请执行：
+```shell
+$ python3 asrserver.py
+```
+
+如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。
+
+提问前可以先 [查看常见问题](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) 
 
 ## Model 模型
 

@@ -153,8 +153,8 @@ class DataSpeech():
 		#print('feat_out:',feat_out)
 		
 		# 获取输入特征
-		data_input = GetFrequencyFeature2(wavsignal,fs)
-		#data_input = GetFrequencyFeature3(wavsignal,fs)
+		#data_input = GetFrequencyFeature2(wavsignal,fs)
+		data_input = GetFrequencyFeature3(wavsignal,fs)
 		
 		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
 		#arr_zero = np.zeros((1, 39), dtype=np.int16) #一个全是0的行向量

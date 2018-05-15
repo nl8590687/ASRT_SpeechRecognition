@@ -137,7 +137,8 @@ class ModelSpeech(): # 语音模型类
 		#kr.utils.plot_model(model, to_file='model.png', show_shapes=False, show_layer_names=True) # 可视化展示模型
 		self.save_model_yaml(model, model_data)
 		
-		print('[*提示] 创建模型成功，模型编译成功')
+		#print('[*提示] 创建模型成功，模型编译成功')
+		print('[*message] Create Model Successfully and Compile Model Successfully.')
 		return model, model_data
 		
 	def ctc_lambda_func(self, args):
@@ -351,8 +352,8 @@ class ModelSpeech(): # 语音模型类
 		# 获取输入特征
 		#data_input = GetMfccFeature(wavsignal, fs)
 		#t0=time.time()
-		data_input = GetFrequencyFeature2(wavsignal, fs)
-		#data_input = GetFrequencyFeature3(wavsignal, fs)
+		#data_input = GetFrequencyFeature2(wavsignal, fs)
+		data_input = GetFrequencyFeature3(wavsignal, fs)
 		#t1=time.time()
 		#print('time cost:',t1-t0)
 		
@@ -433,7 +434,7 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	#ms.LoadModel(modelpath + 'm22_2\\1\\speech_model22_e_0_step_327500.model')
+	#ms.LoadModel(modelpath + 'speech_model22_e_0_step_317000.model')
 	#ms.LoadModel(modelpath + 'm22_2/1/speech_model22_e_0_step_327500.model')
 	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
 	#ms.TestModel(datapath, str_dataset='train', data_count = 128, out_report = True)
