@@ -44,7 +44,7 @@ else:
 
 ms = ModelSpeech(datapath)
 
-ms.LoadModel(modelpath + 'm22_2\\2\\speech_model22_e_0_step_123500.model')
+ms.LoadModel(modelpath + 'm22_2\\2\\speech_model22_e_0_step_500.model')
 
 ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 

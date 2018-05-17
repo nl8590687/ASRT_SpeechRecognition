@@ -255,6 +255,16 @@ class ModelSpeech(): # 语音模型类
 			
 			for i in range(data_count):
 				data_input, data_labels = data.GetData((ran_num + i) % num_data)  # 从随机数开始连续向后取一定数量数据
+				
+				# 数据格式出错处理 开始
+				# 当输入的wav文件长度过长时自动跳过该文件，转而使用下一个wav文件来运行
+				num_bias = 0
+				while(data_input.shape[0] > self.AUDIO_LENGTH):
+					print('*[Error]','wave data lenghth of num',(ran_num + i) % num_data, 'is too long.','\n A Exception raise when test Speech Model.')
+					num_bias += 1
+					data_input, data_labels = data.GetData((ran_num + i + num_bias) % num_data)  # 从随机数开始连续向后取一定数量数据
+				# 数据格式出错处理 结束
+				
 				pre = self.Predict(data_input, data_input.shape[0] // 4)
 				
 				words_n = data_labels.shape[0] # 获取每个句子的字数

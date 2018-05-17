@@ -35,7 +35,7 @@ $ python3 asrserver.py
 
 如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。
 
-提问前可以先 [查看常见问题](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) 
+提问前可以先 [查看常见问题](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/issues) 
 
 ## Model 模型
 
