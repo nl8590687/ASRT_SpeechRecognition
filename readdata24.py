@@ -153,7 +153,7 @@ class DataSpeech():
 		#print('feat_out:',feat_out)
 		
 		# 获取输入特征
-		data_input = GetFrequencyFeature2(wavsignal,fs)
+		data_input = GetFrequencyFeature3(wavsignal,fs)
 		#data_input = np.array(data_input)
 		data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
 		#arr_zero = np.zeros((1, 39), dtype=np.int16) #一个全是0的行向量
@@ -197,7 +197,7 @@ class DataSpeech():
 			for i in range(batch_size):
 				data_input, data_labels = self.GetData((ran_num + i) % self.DataNum)  # 从随机数开始连续向后取一定数量数据
 				
-				input_length.append(data_input.shape[0] // 8)
+				input_length.append(data_input.shape[0] // 8 + data_input.shape[0] % 8)
 				#print(data_input, data_labels)
 				#print('data_input长度:',len(data_input))
 				

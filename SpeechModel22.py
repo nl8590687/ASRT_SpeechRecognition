@@ -21,7 +21,7 @@ from keras.models import Sequential, Model
 from keras.layers import Dense, Dropout, Input, Reshape # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
 from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge,Conv1D
 from keras import backend as K
-from keras.optimizers import SGD, Adadelta
+from keras.optimizers import SGD, Adadelta, Adam
 
 from readdata22_2 import DataSpeech
 #from neural_network.ctc_layer import ctc_layer
@@ -33,7 +33,7 @@ class ModelSpeech(): # 语音模型类
 	def __init__(self, datapath):
 		'''
 		初始化
-		默认输出的拼音的表示大小是1283，即1282个拼音+1个空白块
+		默认输出的拼音的表示大小是1422，即1421个拼音+1个空白块
 		'''
 		MS_OUTPUT_SIZE = 1422
 		self.MS_OUTPUT_SIZE = MS_OUTPUT_SIZE # 神经网络最终输出的每一个字符向量维度的大小
@@ -82,12 +82,12 @@ class ModelSpeech(): # 语音模型类
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH, 1))
 		
 		layer_h1 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(input_data) # 卷积层
-		layer_h1 = Dropout(0.5)(layer_h1)
+		layer_h1 = Dropout(0.3)(layer_h1)
 		layer_h2 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h1) # 卷积层
 		layer_h3 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h2) # 池化层
 		#layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
 		layer_h4 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h3) # 卷积层
-		layer_h4 = Dropout(0.5)(layer_h4)
+		layer_h4 = Dropout(0.3)(layer_h4)
 		layer_h5 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h4) # 卷积层
 		layer_h6 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h5) # 池化层
 		
@@ -96,9 +96,9 @@ class ModelSpeech(): # 语音模型类
 		
 		layer_h7 = Reshape((400, 3200))(layer_h6) #Reshape层
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
-		layer_h7 = Dropout(0.5)(layer_h7) # 随机中断部分神经网络连接，防止过拟合
+		layer_h7 = Dropout(0.3)(layer_h7) # 随机中断部分神经网络连接，防止过拟合
 		layer_h8 = Dense(256, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h7) # 全连接层
-		layer_h8 = Dropout(0.5)(layer_h8) # 随机中断部分神经网络连接，防止过拟合
+		layer_h8 = Dropout(0.3)(layer_h8) # 随机中断部分神经网络连接，防止过拟合
 		layer_h9 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h8) # 全连接层
 		
 		y_pred = Activation('softmax', name='Activation0')(layer_h9)
@@ -126,10 +126,10 @@ class ModelSpeech(): # 语音模型类
 		# clipnorm seems to speeds up convergence
 		#sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
 		ada_d = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
-		
-		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd)
+		#adam = Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
+		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = sgd)
 		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = ada_d)
-		
+		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = adam)
 		
 		# captures output of softmax so we can decode the output during visualization
 		test_func = K.function([input_data], [y_pred])
@@ -287,6 +287,7 @@ class ModelSpeech(): # 语音模型类
 					txt_obj.write(txt)
 			
 			print('*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率：', word_error_num / words_num * 100, '%')
+			#print('*[TestResilt] Speech Recognition ' + str_dataset + ' set word error ratio: ', word_error_num / words_num * 100, '%')
 			if(out_report == True):
 				txt = '*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率： ' + str(word_error_num / words_num * 100) + ' %'
 				txt_obj.write(txt)

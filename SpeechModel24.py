@@ -28,7 +28,7 @@ class ModelSpeech(): # 语音模型类
 	def __init__(self, datapath):
 		'''
 		初始化
-		默认输出的拼音的表示大小是1283，即1282个拼音+1个空白块
+		默认输出的拼音的表示大小是1422，即1421个拼音+1个空白块
 		'''
 		MS_OUTPUT_SIZE = 1422
 		self.MS_OUTPUT_SIZE = MS_OUTPUT_SIZE # 神经网络最终输出的每一个字符向量维度的大小
@@ -69,14 +69,19 @@ class ModelSpeech(): # 语音模型类
 		input_data = Input(name='the_input', shape=(self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH, 1))
 		
 		layer_h1 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(input_data) # 卷积层
+		layer_h1 = Dropout(0.1)(layer_h1)
 		layer_h2 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h1) # 卷积层
 		layer_h3 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h2) # 池化层
 		#layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
+		layer_h3 = Dropout(0.2)(layer_h3)
 		layer_h4 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h3) # 卷积层
+		layer_h4 = Dropout(0.2)(layer_h4)
 		layer_h5 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h4) # 卷积层
 		layer_h6 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h5) # 池化层
 		
+		layer_h6 = Dropout(0.3)(layer_h6)
 		layer_h7 = Conv2D(128, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h6) # 卷积层
+		layer_h7 = Dropout(0.3)(layer_h7)
 		layer_h8 = Conv2D(128, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h7) # 卷积层
 		layer_h9 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h8) # 池化层
 		#test=Model(inputs = input_data, outputs = layer_h6)
@@ -85,7 +90,9 @@ class ModelSpeech(): # 语音模型类
 		layer_h10 = Reshape((200, 3200))(layer_h9) #Reshape层
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
 		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
+		layer_h10 = Dropout(0.4)(layer_h10)
 		layer_h11 = Dense(128, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h10) # 全连接层
+		layer_h11 = Dropout(0.4)(layer_h11)
 		layer_h12 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h11) # 全连接层
 		
 		y_pred = Activation('softmax', name='Activation0')(layer_h12)
@@ -105,7 +112,7 @@ class ModelSpeech(): # 语音模型类
 		
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
 		
-		model.summary()
+		#model.summary()
 		
 		# clipnorm seems to speeds up convergence
 		#sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
@@ -181,7 +188,7 @@ class ModelSpeech(): # 语音模型类
 		f.write(filename+comment)
 		f.close()
 
-	def TestModel(self, datapath='', str_dataset='dev', data_count = 32, out_report = False):
+	def TestModel(self, datapath='', str_dataset='dev', data_count = 32, out_report = False, show_ratio = True):
 		'''
 		测试检验模型效果
 		'''
@@ -204,6 +211,16 @@ class ModelSpeech(): # 语音模型类
 			txt = ''
 			for i in range(data_count):
 				data_input, data_labels = data.GetData((ran_num + i) % num_data)  # 从随机数开始连续向后取一定数量数据
+				
+				# 数据格式出错处理 开始
+				# 当输入的wav文件长度过长时自动跳过该文件，转而使用下一个wav文件来运行
+				num_bias = 0
+				while(data_input.shape[0] > self.AUDIO_LENGTH):
+					print('*[Error]','wave data lenghth of num',(ran_num + i) % num_data, 'is too long.','\n A Exception raise when test Speech Model.')
+					num_bias += 1
+					data_input, data_labels = data.GetData((ran_num + i + num_bias) % num_data)  # 从随机数开始连续向后取一定数量数据
+				# 数据格式出错处理 结束
+				
 				pre = self.Predict(data_input, data_input.shape[0] // 8)
 				
 				words_n = data_labels.shape[0] # 获取每个句子的字数
@@ -214,16 +231,21 @@ class ModelSpeech(): # 语音模型类
 				else: # 否则肯定是增加了一堆乱七八糟的奇奇怪怪的字
 					word_error_num += words_n # 就直接加句子本来的总字数就好了
 				
+				if(i % 10 == 0 and show_ratio == True):
+					print('测试进度：',i,'/',data_count)
+				
+				txt = ''
 				if(out_report == True):
 					txt += str(i) + '\n'
 					txt += 'True:\t' + str(data_labels) + '\n'
 					txt += 'Pred:\t' + str(pre) + '\n'
 					txt += '\n'
+					txt_obj.write(txt)
 				
 			
 			print('*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率：', word_error_num / words_num * 100, '%')
 			if(out_report == True):
-				txt += '*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率： ' + str(word_error_num / words_num * 100) + ' %'
+				txt = '*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率： ' + str(word_error_num / words_num * 100) + ' %'
 				txt_obj.write(txt)
 				txt_obj.close()
 			
@@ -348,7 +370,7 @@ if(__name__=='__main__'):
 	os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 	#进行配置，使用70%的GPU
 	config = tf.ConfigProto()
-	config.gpu_options.per_process_gpu_memory_fraction = 0.7
+	config.gpu_options.per_process_gpu_memory_fraction = 0.93
 	#config.gpu_options.allow_growth=True   #不全部占满显存, 按需分配
 	set_session(tf.Session(config=config))
 	
@@ -374,9 +396,9 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	#ms.LoadModel(modelpath + 'm24\\speech_model24_e_0_step_1.model')
-	ms.TrainModel(datapath, epoch = 50, batch_size = 2, save_step = 500)
-	#ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
+	ms.LoadModel(modelpath + 'm24\\speech_model24_e_0_step_45000.model')
+	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
