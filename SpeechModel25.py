@@ -73,26 +73,33 @@ class ModelSpeech(): # 语音模型类
 		layer_h2 = Conv2D(32, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h1) # 卷积层
 		layer_h3 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h2) # 池化层
 		#layer_h3 = Dropout(0.2)(layer_h2) # 随机中断部分神经网络连接，防止过拟合
-		layer_h3 = Dropout(0.2)(layer_h3)
+		layer_h3 = Dropout(0.1)(layer_h3)
 		layer_h4 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h3) # 卷积层
 		layer_h4 = Dropout(0.2)(layer_h4)
 		layer_h5 = Conv2D(64, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h4) # 卷积层
 		layer_h6 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h5) # 池化层
 		
-		layer_h6 = Dropout(0.3)(layer_h6)
+		layer_h6 = Dropout(0.2)(layer_h6)
 		layer_h7 = Conv2D(128, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h6) # 卷积层
 		layer_h7 = Dropout(0.3)(layer_h7)
 		layer_h8 = Conv2D(128, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h7) # 卷积层
 		layer_h9 = MaxPooling2D(pool_size=2, strides=None, padding="valid")(layer_h8) # 池化层
-		#test=Model(inputs = input_data, outputs = layer_h6)
+		
+		layer_h9 = Dropout(0.3)(layer_h9)
+		layer_h10 = Conv2D(128, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h9) # 卷积层
+		layer_h10 = Dropout(0.4)(layer_h10)
+		layer_h11 = Conv2D(128, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h10) # 卷积层
+		layer_h12 = MaxPooling2D(pool_size=1, strides=None, padding="valid")(layer_h11) # 池化层
+		
+		#test=Model(inputs = input_data, outputs = layer_h12)
 		#test.summary()
 		
-		layer_h10 = Reshape((200, 3200))(layer_h9) #Reshape层
+		layer_h10 = Reshape((200, 3200))(layer_h12) #Reshape层
 		#layer_h5 = LSTM(256, activation='relu', use_bias=True, return_sequences=True)(layer_h4) # LSTM层
 		#layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
 		layer_h10 = Dropout(0.4)(layer_h10)
 		layer_h11 = Dense(128, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h10) # 全连接层
-		layer_h11 = Dropout(0.4)(layer_h11)
+		layer_h11 = Dropout(0.5)(layer_h11)
 		layer_h12 = Dense(self.MS_OUTPUT_SIZE, use_bias=True, kernel_initializer='he_normal')(layer_h11) # 全连接层
 		
 		y_pred = Activation('softmax', name='Activation0')(layer_h12)
@@ -112,7 +119,7 @@ class ModelSpeech(): # 语音模型类
 		
 		model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out)
 		
-		#model.summary()
+		model.summary()
 		
 		# clipnorm seems to speeds up convergence
 		#sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
@@ -137,7 +144,7 @@ class ModelSpeech(): # 语音模型类
 	
 	
 	
-	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/speech_model24'):
+	def TrainModel(self, datapath, epoch = 2, save_step = 1000, batch_size = 32, filename = 'model_speech/speech_model25'):
 		'''
 		训练模型
 		参数：
@@ -171,20 +178,20 @@ class ModelSpeech(): # 语音模型类
 				self.TestModel(self.datapath, str_dataset='train', data_count = 4)
 				self.TestModel(self.datapath, str_dataset='dev', data_count = 4)
 				
-	def LoadModel(self,filename='model_speech/speech_model24.model'):
+	def LoadModel(self,filename='model_speech/speech_model25.model'):
 		'''
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
 		self.base_model.load_weights(filename + '.base')
 
-	def SaveModel(self,filename='model_speech/speech_model24',comment=''):
+	def SaveModel(self,filename='model_speech/speech_model25',comment=''):
 		'''
 		保存模型参数
 		'''
 		self._model.save_weights(filename+comment+'.model')
 		self.base_model.save_weights(filename + comment + '.model.base')
-		f = open('step24.txt','w')
+		f = open('step25.txt','w')
 		f.write(filename+comment)
 		f.close()
 
@@ -367,7 +374,7 @@ if(__name__=='__main__'):
 	
 	import tensorflow as tf
 	from keras.backend.tensorflow_backend import set_session
-	os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+	os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 	#进行配置，使用70%的GPU
 	config = tf.ConfigProto()
 	config.gpu_options.per_process_gpu_memory_fraction = 0.93
@@ -396,9 +403,9 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + 'm24\\speech_model24_e_0_step_112500.model')
-	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
-	ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
+	#ms.LoadModel(modelpath + 'm25\\speech_model25_e_0_step_1.model')
+	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	#ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
