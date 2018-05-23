@@ -55,6 +55,16 @@ CNN + LSTM/GRU + CTC
 
 不过由于目前国际和国内的部分团队能做到97%，所以正确率仍有待于进一步提高
 
+* 目前可知的可以继续提高准确率的一个方案就是纠正数据集标注错误，尤其是ST-CMDS里面关于syllable文件中拼音的错误，这里面有一定比例的错误标注，如果走过路过的各位有意愿帮助纠正数据标注错误的，可以提交Pull Request，并且将登上本仓库的贡献者名单。
+
+样例：`不是： bu4 shi4 -> bu2 shi4` `一个：yi1 ge4 -> yi2 ge4` `了解：le5 jie3 -> liao3 jie3`
+
+* 已订正部分：
+
+ST-CMDS
+
+train:  20170001P00001A    20170001P00001I    20170001P00002A
+
 ## Python Import
 Python的依赖库
 
@@ -91,3 +101,8 @@ ST-CMDS-20170001_1-OS.tar.gz
 日志
 
 链接：[进展日志](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/log.md)
+
+## Contributors 贡献者们
+@ZJUGuoShuai @williamchenwl
+
+@nl8590687 (repo owner)
