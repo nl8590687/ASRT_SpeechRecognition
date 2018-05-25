@@ -363,8 +363,8 @@ class ModelSpeech(): # 语音模型类
 		# 获取输入特征
 		#data_input = GetMfccFeature(wavsignal, fs)
 		#t0=time.time()
-		#data_input = GetFrequencyFeature2(wavsignal, fs)
-		data_input = GetFrequencyFeature3(wavsignal, fs)
+		data_input = GetFrequencyFeature2(wavsignal, fs)
+		#data_input = GetFrequencyFeature3(wavsignal, fs)
 		#t1=time.time()
 		#print('time cost:',t1-t0)
 		
