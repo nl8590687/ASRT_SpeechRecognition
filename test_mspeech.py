@@ -12,7 +12,7 @@ import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
 
 
-from SpeechModel22 import ModelSpeech
+from SpeechModel24 import ModelSpeech
 
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -44,9 +44,9 @@ else:
 
 ms = ModelSpeech(datapath)
 
-ms.LoadModel(modelpath + 'm22_2\\2\\speech_model22_e_0_step_42500.model')
+ms.LoadModel(modelpath + 'm24\\speech_model24_e_0_step_42500.model')
 
-ms.TestModel(datapath, str_dataset='train', data_count = 128, out_report = True)
+ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 
 #r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 #r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')

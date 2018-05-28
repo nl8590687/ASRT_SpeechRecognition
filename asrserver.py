@@ -8,13 +8,13 @@
 import http.server
 import urllib
 import keras
-from SpeechModel22 import ModelSpeech
+from SpeechModel24 import ModelSpeech
 from LanguageModel import ModelLanguage
 
 datapath = 'data/'
 modelpath = 'model_speech/'
 ms = ModelSpeech(datapath)
-ms.LoadModel(modelpath + 'speech_model22_e_0_step_216500.model')
+ms.LoadModel(modelpath + 'speech_model24_e_0_step_216500.model')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()

@@ -50,21 +50,32 @@ class ModelLanguage(): # 语音模型类
 		if(length == 0): # 传入的参数没有包含任何拼音时
 			return ''
 		
+		# 先取出一个字，即拼音列表中第一个字
 		str_tmp = [list_syllable[0]]
+		
 		for i in range(0, length - 1):
+			# 依次从第一个字开始每次连续取两个字拼音
 			str_split = list_syllable[i] + ' ' + list_syllable[i+1]
 			#print(str_split,str_tmp,r)
+			# 如果这个拼音在汉语拼音状态转移字典里的话
 			if(str_split in self.pinyin):
+				# 将第二个字的拼音加入
 				str_tmp.append(list_syllable[i+1])
 			else:
+				# 否则不加入，然后直接将现有的拼音序列进行解码
 				str_decode = self.decode(str_tmp, 0.0000)
 				#print('decode ',str_tmp,str_decode)
 				if(str_decode != []):
 					r += str_decode[0][0]
+				# 再重新从i+1开始作为第一个拼音
 				str_tmp = [list_syllable[i+1]]
+				
 		
-		#print(str_tmp)
+		#print('最后：', str_tmp)
 		str_decode = self.decode(str_tmp, 0.0000)
+		
+		#print('剩余解码：',str_decode)
+		
 		if(str_decode != []):
 			r += str_decode[0][0]
 		
@@ -208,7 +219,7 @@ class ModelLanguage(): # 语音模型类
 			
 			list_pinyin=pinyin_split[0]
 			
-			if(list_pinyin not in dic):
+			if(list_pinyin not in dic and int(pinyin_split[1]) > 1):
 				dic[list_pinyin] = pinyin_split[1]
 		return dic
 
