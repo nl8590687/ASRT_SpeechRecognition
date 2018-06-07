@@ -14,7 +14,7 @@ from LanguageModel import ModelLanguage
 datapath = 'data/'
 modelpath = 'model_speech/'
 ms = ModelSpeech(datapath)
-ms.LoadModel(modelpath + 'speech_model24_e_0_step_216500.model')
+ms.LoadModel(modelpath + 'm24/speech_model24_e_0_step_411000.model')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()
@@ -55,7 +55,7 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		
 		for line in datas_split:
 			[key, value]=line.split('=')
-			if('wavs' == key):
+			if('wavs' == key and '' != value):
 				wavs.append(int(value))
 			elif('fs' == key):
 				fs = int(value)
@@ -66,8 +66,18 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 			else:
 				print(key, value)
 			
+		if(token != 'qwertasd'):
+			buf = '403'
+			print(buf)
+			buf = bytes(buf,encoding="utf-8")
+			self.wfile.write(buf)  
+			return
+		
 		#if('python-list' == type):
-		r = self.recognize([wavs], fs)
+		if(len(wavs)>0):
+			r = self.recognize([wavs], fs)
+		else:
+			r = ''
 		#else:
 		#	r = self.recognize_from_file('')
 		
@@ -82,14 +92,20 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 		self._set_response()
 		
 		#buf = '<!DOCTYPE HTML> \n<html> \n<head>\n<title>Post page</title>\n</head> \n<body>Post Data:%s  <br />Path:%s\n</body>  \n</html>'%(datas,self.path)  
+		print(buf)
 		buf = bytes(buf,encoding="utf-8")
 		self.wfile.write(buf)  
 		
 	def recognize(self, wavs, fs):
-		r_speech = ms.RecognizeSpeech(wavs, fs)
-		
-		str_pinyin = r_speech
-		r = ml.SpeechToText(str_pinyin)
+		r=''
+		try:
+			r_speech = ms.RecognizeSpeech(wavs, fs)
+			print(r_speech)
+			str_pinyin = r_speech
+			r = ml.SpeechToText(str_pinyin)
+		except:
+			r=''
+			print('[*Message] Server raise a bug. ')
 		return r
 		pass
 	
