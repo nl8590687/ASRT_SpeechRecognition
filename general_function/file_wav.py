@@ -102,6 +102,10 @@ def GetFrequencyFeature2(wavsignal, fs):
 	#print(data_input.shape)
 	return data_input
 
+
+x=np.linspace(0, 400 - 1, 400, dtype = np.int64)
+w = 0.54 - 0.46 * np.cos(2 * np.pi * (x) / (400 - 1) ) # 汉明窗
+
 def GetFrequencyFeature3(wavsignal, fs):
 	# wav波形 加时间窗以及时移10ms
 	time_window = 25 # 单位ms
@@ -114,14 +118,13 @@ def GetFrequencyFeature3(wavsignal, fs):
 	range0_end = int(len(wavsignal[0])/fs*1000 - time_window) // 10 # 计算循环终止的位置，也就是最终生成的窗数
 	data_input = np.zeros((range0_end, 200), dtype = np.float) # 用于存放最终的频率特征数据
 	data_line = np.zeros((1, 400), dtype = np.float)
+	
 	for i in range(0, range0_end):
 		p_start = i * 160
 		p_end = p_start + 400
 		
 		data_line = wav_arr[0, p_start:p_end]
 		
-		x=np.linspace(0, 400 - 1, 400, dtype = np.int64)
-		w = 0.54 - 0.46 * np.cos(2 * np.pi * (x) / (400 - 1) ) # 汉明窗
 		data_line = data_line * w # 加窗
 		
 		data_line = np.abs(fft(data_line)) / wav_length
@@ -213,10 +216,10 @@ if(__name__=='__main__'):
 	wave_data, fs = read_wav_data("A2_0.wav")  
 	
 	wav_show(wave_data[0],fs)
-	#t0=time.time()
+	t0=time.time()
 	freimg = GetFrequencyFeature3(wave_data,fs)
-	#t1=time.time()
-	#print('time cost:',t1-t0)
+	t1=time.time()
+	print('time cost:',t1-t0)
 	
 	freimg = freimg.T
 	plt.subplot(111)
