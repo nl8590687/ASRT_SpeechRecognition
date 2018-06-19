@@ -1,5 +1,7 @@
-# ASRT_SpeechRecognition
-基于深度学习的语音识别系统
+# A Deep-Learning-Based Chinese Speech Recognition System
+基于深度学习的中文语音识别系统
+
+ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) 
 
 ## Introduction 简介
 
@@ -100,6 +102,8 @@ ST-CMDS-20170001_1-OS.tar.gz
 <http://cn-mirror.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>
 
 特别鸣谢！感谢前辈们的公开语音数据集
+
+如果提供的数据集链接无法打开和下载，请点击该链接 [OpenSLR](http://www.openslr.org)
 
 ## Log
 日志
