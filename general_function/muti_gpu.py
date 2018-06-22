@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+'''
+感谢原作者的无私奉献
+来自：
+https://www.jianshu.com/p/db0ba022936f
+'''
+
 import tensorflow as tf
 import keras
 import keras.backend as K
