@@ -18,7 +18,7 @@ This project uses keras, TensorFlow based on LSTM, CNN and CTC to implement.
 $ cp -rf datalist/* dataset/
 ```
 
-目前可用的模型有22和24
+目前可用的模型有22、24和25
 
 本项目开始训练请执行：
 ```shell
@@ -35,7 +35,7 @@ ASRT API服务器启动请执行：
 $ python3 asrserver.py
 ```
 
-如果要训练和使用模型24，请在代码中 `import SpeechModel` 的相应位置做修改。
+如果要训练和使用模型25，请在代码中 `import SpeechModel` 的相应位置做修改。
 
 如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。
 
@@ -49,11 +49,11 @@ CNN + LSTM/GRU + CTC
 
 * 关于下载已经训练好的模型的问题
 
-可以在Github本仓库下release里面的预发布的v0.1版软件的压缩包`ASRT_v0.1.zip`里获得完整源程序，这个版本使用的是speech_model_22模型。
+可以在Github本仓库下release里面的查看发布的各个版本软件的压缩包里获得完整源程序。
 
 ### Language Model 语言模型
 
-基于概率图的马尔可夫模型
+基于概率图的最大熵隐马尔可夫模型
 
 ## About Accuracy 关于准确率
 
@@ -89,17 +89,21 @@ Python的依赖库
 
 data_thchs30.tgz 
 <http://cn-mirror.openslr.org/resources/18/data_thchs30.tgz>
+<http://www.openslr.org/resources/18/data_thchs30.tgz>
 
 test-noise.tgz 
 <http://cn-mirror.openslr.org/resources/18/test-noise.tgz>
+<http://www.openslr.org/resources/18/test-noise.tgz>
 
 resource.tgz 
 <http://cn-mirror.openslr.org/resources/18/resource.tgz>
+<http://www.openslr.org/resources/18/resource.tgz>
 
 * Free ST Chinese Mandarin Corpus
 
 ST-CMDS-20170001_1-OS.tar.gz 
 <http://cn-mirror.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>
+<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>
 
 特别鸣谢！感谢前辈们的公开语音数据集
 
