@@ -4,7 +4,7 @@ ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/
 
 ## Introduction
 
-This project implements by keras, TensorFlow based on LSTM, CNN and CTC. 
+This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
 
 [View this project's wiki page](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) (In progress..)
 

@@ -5,9 +5,9 @@ ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/
 
 ## Introduction 简介
 
-本项目使用Keras、TensorFlow基于长短时记忆神经网络和卷积神经网络以及CTC进行制作。
+本项目使用Keras、TensorFlow基于深度卷积神经网络和长短时记忆神经网络、注意力机制以及CTC实现。
 
-This project uses keras, TensorFlow based on LSTM, CNN and CTC to implement. 
+This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
 
 [查看本项目的Wiki页面](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) (正在完善中)
 
@@ -57,7 +57,7 @@ CNN + LSTM/GRU + CTC
 
 ## About Accuracy 关于准确率
 
-当前，speech_model22的准确率在GPU上训练了120+小时（大约50个epoch），在测试集上基本能达到70+%的汉语拼音正确率
+当前，最好的模型在测试集上基本能达到80%的汉语拼音正确率
 
 不过由于目前国际和国内的部分团队能做到97%，所以正确率仍有待于进一步提高
 

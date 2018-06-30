@@ -323,7 +323,7 @@ class ModelSpeech(): # 语音模型类
 		# 获取输入特征
 		#data_input = GetMfccFeature(wavsignal, fs)
 		#t0=time.time()
-		data_input = GetFrequencyFeature2(wavsignal, fs)
+		data_input = GetFrequencyFeature3(wavsignal, fs)
 		#t1=time.time()
 		#print('time cost:',t1-t0)
 		
@@ -404,9 +404,9 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	# 全场最佳 speech_model25_e_0_step_340000
-	ms.LoadModel(modelpath + 'm25\\speech_model25_e_0_step_382000.model')
+	ms.LoadModel(modelpath + 'm25\\speech_model25_e_0_step_545500.model')
 	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
-	#ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
+	ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
