@@ -8,18 +8,21 @@
 import http.server
 import urllib
 import keras
-from SpeechModel24 import ModelSpeech
+from SpeechModel25 import ModelSpeech
 from LanguageModel import ModelLanguage
 
 datapath = 'data/'
 modelpath = 'model_speech/'
 ms = ModelSpeech(datapath)
-ms.LoadModel(modelpath + 'm24/speech_model24_e_0_step_411000.model')
+ms.LoadModel(modelpath + 'm25/speech_model25_e_0_step_545500.model')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()
 
 class TestHTTPHandle(http.server.BaseHTTPRequestHandler):  
+	def setup(self):
+		self.request.settimeout(10)
+		http.server.BaseHTTPRequestHandler.setup(self)
 	
 	def _set_response(self):
 		self.send_response(200)
