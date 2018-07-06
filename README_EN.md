@@ -33,7 +33,7 @@ ASRT API Server startup please execute:
 $ python3 asrserver.py
 ```
 
-If you want to train and use Model 25, make changes in the corresponding position of the `import SpeechModel` in the code files.
+If you want to train and use Model 251, make changes in the corresponding position of the `import SpeechModel` in the code files.
 
 If there is any problem during the execution of the program or during use, it can be promptly put forward in the issue, and I will reply as soon as possible.
 
