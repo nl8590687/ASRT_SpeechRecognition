@@ -374,7 +374,7 @@ if(__name__=='__main__'):
 	
 	import tensorflow as tf
 	from keras.backend.tensorflow_backend import set_session
-	os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+	os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 	#进行配置，使用70%的GPU
 	config = tf.ConfigProto()
 	config.gpu_options.per_process_gpu_memory_fraction = 0.93
@@ -403,10 +403,9 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	# 全场最佳 speech_model25_e_0_step_340000
-	ms.LoadModel(modelpath + 'm25\\speech_model25_e_0_step_545500.model')
-	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
-	ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
+	#ms.LoadModel(modelpath + 'm25/speech_model25_e_0_step_545500.model')
+	ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
+	#ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')

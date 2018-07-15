@@ -396,8 +396,8 @@ if(__name__=='__main__'):
 	
 	ms = ModelSpeech(datapath)
 	
-	ms.LoadModel(modelpath + 'm24\\speech_model24_e_0_step_411000.model')
-	#ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
+	#ms.LoadModel(modelpath + 'm24/speech_model24_e_0_step_411000.model')
+	ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
 	#ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
