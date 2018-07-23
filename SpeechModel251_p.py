@@ -10,8 +10,8 @@ import time
 from general_function.file_wav import *
 from general_function.file_dict import *
 from general_function.gen_func import *
+from general_function.muti_gpu import *
 
-# LSTM_CNN
 import keras as kr
 import numpy as np
 import random
@@ -26,7 +26,7 @@ from readdata24 import DataSpeech
 
 abspath = ''
 ModelName='251'
-#NUM_GPU = 2
+NUM_GPU = 2
 
 class ModelSpeech(): # 语音模型类
 	def __init__(self, datapath):
@@ -94,7 +94,7 @@ class ModelSpeech(): # 语音模型类
 		
 		layer_h12 = Dropout(0.2)(layer_h12)
 		layer_h13 = Conv2D(128, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h12) # 卷积层
-		layer_h13 = Dropout(0.2)(layer_h13)
+		layer_h13 = Dropout(0.3)(layer_h13)
 		layer_h14 = Conv2D(128, (3,3), use_bias=True, activation='relu', padding='same', kernel_initializer='he_normal')(layer_h13) # 卷积层
 		layer_h15 = MaxPooling2D(pool_size=1, strides=None, padding="valid")(layer_h14) # 池化层
 		
@@ -130,9 +130,13 @@ class ModelSpeech(): # 语音模型类
 		
 		# clipnorm seems to speeds up convergence
 		#sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True, clipnorm=5)
-		#opt = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
+		#ada_d = Adadelta(lr = 0.01, rho = 0.95, epsilon = 1e-06)
 		opt = Adam(lr = 0.001, beta_1 = 0.9, beta_2 = 0.999, decay = 0.0, epsilon = 10e-8)
 		#model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer=sgd)
+		
+		model.build((self.AUDIO_LENGTH, self.AUDIO_FEATURE_LENGTH, 1))
+		model = ParallelModel(model, NUM_GPU)
+		
 		model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer = opt)
 		
 		
@@ -203,16 +207,9 @@ class ModelSpeech(): # 语音模型类
 		f.write(filename+comment)
 		f.close()
 
-	def TestModel(self, datapath='', str_dataset='dev', data_count = 32, out_report = False, show_ratio = True, io_step_print = 10, io_step_file = 10):
+	def TestModel(self, datapath='', str_dataset='dev', data_count = 32, out_report = False, show_ratio = True):
 		'''
 		测试检验模型效果
-		
-		io_step_print
-			为了减少测试时标准输出的io开销，可以通过调整这个参数来实现
-		
-		io_step_file
-			为了减少测试时文件读写的io开销，可以通过调整这个参数来实现
-		
 		'''
 		data=DataSpeech(self.datapath, str_dataset)
 		#data.LoadDataList(str_dataset) 
@@ -230,7 +227,7 @@ class ModelSpeech(): # 语音模型类
 			if(out_report == True):
 				txt_obj = open('Test_Report_' + str_dataset + '_' + nowtime + '.txt', 'w', encoding='UTF-8') # 打开文件并读入
 			
-			txt = '测试报告\n模型编号 ' + ModelName + '\n\n'
+			txt = ''
 			for i in range(data_count):
 				data_input, data_labels = data.GetData((ran_num + i) % num_data)  # 从随机数开始连续向后取一定数量数据
 				
@@ -253,29 +250,23 @@ class ModelSpeech(): # 语音模型类
 				else: # 否则肯定是增加了一堆乱七八糟的奇奇怪怪的字
 					word_error_num += words_n # 就直接加句子本来的总字数就好了
 				
-				if((i % io_step_print == 0 or i == data_count - 1) and show_ratio == True):
-					#print('测试进度：',i,'/',data_count)
+				if(i % 10 == 0 and show_ratio == True):
 					print('Test Count: ',i,'/',data_count)
 				
-				
+				txt = ''
 				if(out_report == True):
-					if(i % io_step_file == 0 or i == data_count - 1):
-						txt_obj.write(txt)
-						txt = ''
-					
 					txt += str(i) + '\n'
 					txt += 'True:\t' + str(data_labels) + '\n'
 					txt += 'Pred:\t' + str(pre) + '\n'
 					txt += '\n'
-					
+					txt_obj.write(txt)
 				
 			
 			#print('*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率：', word_error_num / words_num * 100, '%')
 			print('*[Test Result] Speech Recognition ' + str_dataset + ' set word error ratio: ', word_error_num / words_num * 100, '%')
 			if(out_report == True):
-				txt += '*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率： ' + str(word_error_num / words_num * 100) + ' %'
+				txt = '*[测试结果] 语音识别 ' + str_dataset + ' 集语音单字错误率： ' + str(word_error_num / words_num * 100) + ' %'
 				txt_obj.write(txt)
-				txt = ''
 				txt_obj.close()
 			
 		except StopIteration:
@@ -426,15 +417,9 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	
-	#ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_100000.model')
+	#ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_98000.model')
 	ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
-	
-	#t1=time.time()
-	#ms.TestModel(datapath, str_dataset='train', data_count = 128, out_report = True)
-	#ms.TestModel(datapath, str_dataset='dev', data_count = 128, out_report = True)
 	#ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
-	#t2=time.time()
-	#print('Test Model Time Cost:',t2-t1,'s')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00020I0087.wav')
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\wav\\train\\A11\\A11_167.WAV')
