@@ -1,12 +1,14 @@
 # A Deep-Learning-Based Chinese Speech Recognition System
 
-ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) 
+[![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0)
+
+ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) English
+
+[View this project's wiki page](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) (In progress..)
 
 ## Introduction
 
 This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
-
-[View this project's wiki page](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) (In progress..)
 
 The project can now be properly trained.
 
@@ -16,7 +18,7 @@ After cloning a repository through git, you need to copy all the files in the da
 $ cp -rf datalist/* dataset/
 ```
 
-Currently available models are 22, 24 and 25
+Currently available models are 24, 25 and 251
 
 To start training this project, please execute:
 ```shell
@@ -47,7 +49,7 @@ CNN + LSTM/GRU + CTC
 
 * Questions about downloading trained models
 
-The complete source program can be obtained from the archives of the various versions of the software released in the release page of Github.
+The complete source program can be obtained from the archives of the various versions of the software released in the [releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases) page of Github.
 
 ### Language Model 
 
@@ -110,3 +112,5 @@ Links: [Progress Logs](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/
 @ZJUGuoShuai @williamchenwl
 
 @nl8590687 (repo owner)
+
+[Donate](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)

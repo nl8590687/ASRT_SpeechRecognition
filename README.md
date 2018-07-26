@@ -1,15 +1,17 @@
 # A Deep-Learning-Based Chinese Speech Recognition System
 基于深度学习的中文语音识别系统
 
-ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) 
+[![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0)
+
+ReadMe Language 中文版 [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) 
+
+[查看本项目的Wiki页面](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) (正在完善中)
 
 ## Introduction 简介
 
 本项目使用Keras、TensorFlow基于深度卷积神经网络和长短时记忆神经网络、注意力机制以及CTC实现。
 
 This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
-
-[查看本项目的Wiki页面](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) (正在完善中)
 
 本项目目前已经可以正常进行训练了。
 
@@ -18,7 +20,7 @@ This project uses Keras, TensorFlow based on deep convolutional neural network a
 $ cp -rf datalist/* dataset/
 ```
 
-目前可用的模型有22、24和25
+目前可用的模型有24、25和251
 
 本项目开始训练请执行：
 ```shell
@@ -49,7 +51,7 @@ CNN + LSTM/GRU + CTC
 
 * 关于下载已经训练好的模型的问题
 
-可以在Github本仓库下release里面的查看发布的各个版本软件的压缩包里获得完整源程序。
+可以在Github本仓库下[releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases)里面的查看发布的各个版本软件的压缩包里获得完整源程序。
 
 ### Language Model 语言模型
 
@@ -118,3 +120,5 @@ ST-CMDS-20170001_1-OS.tar.gz
 @ZJUGuoShuai @williamchenwl
 
 @nl8590687 (repo owner)
+
+[打赏作者](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)
