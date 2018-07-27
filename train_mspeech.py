@@ -12,7 +12,7 @@ import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
 
 
-from SpeechModel25 import ModelSpeech
+from SpeechModel251 import ModelSpeech
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 #进行配置，使用95%的GPU
@@ -43,7 +43,7 @@ else:
 
 ms = ModelSpeech(datapath)
 
-#ms.LoadModel(modelpath + 'speech_model24_e_0_step_327500.model')
+#ms.LoadModel(modelpath + 'speech_model251_e_0_step_327500.model')
 ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
 
 

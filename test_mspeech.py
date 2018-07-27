@@ -12,7 +12,7 @@ import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
 
 
-from SpeechModel25 import ModelSpeech
+from SpeechModel251 import ModelSpeech
 
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -44,7 +44,7 @@ else:
 
 ms = ModelSpeech(datapath)
 
-ms.LoadModel(modelpath + 'm25/speech_model25_e_0_step_42500.model')
+ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_42500.model')
 
 ms.TestModel(datapath, str_dataset='test', data_count = 128, out_report = True)
 
