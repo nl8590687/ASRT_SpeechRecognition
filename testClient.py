@@ -14,9 +14,7 @@ url = 'http://127.0.0.1:20000/'
 
 token = 'qwertasd'
 
-#wavsignal,fs=read_wav_data('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')
-wavsignal,fs=read_wav_data('C:\\Users\\nl\\Desktop\\20180506_114631.wav')
-#wavsignal,fs=read_wav_data('E:\\国创项目工程\\代码\\语音识别笔记本UWP\\语音识别笔记本UWP\\bin\\x86\\Debug\\AppX\\12345.wav')
+wavsignal,fs=read_wav_data('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')
 
 #print(wavsignal,fs)
 
