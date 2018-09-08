@@ -6,6 +6,8 @@ ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/
 
 [View this project's wiki page](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) (In progress..)
 
+A post about ASRT's introduction [ASRT: Chinese Speech Recognition System](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
+
 ## Introduction
 
 This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
