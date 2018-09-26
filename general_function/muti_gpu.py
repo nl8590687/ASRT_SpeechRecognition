@@ -24,6 +24,7 @@ class ParallelModel(keras.models.Model):
         keras_model: The Keras model to parallelize
         gpu_count: Number of GPUs. Must be > 1
         """
+		super(ParallelModel, self).__init__() # Thanks to @greatken999 for fixing bugs
         self.inner_model = keras_model
         self.gpu_count = gpu_count
         merged_outputs = self.make_parallel()
