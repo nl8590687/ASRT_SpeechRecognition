@@ -9,6 +9,8 @@ ReadMe Language 中文版 [English](https://github.com/nl8590687/ASRT_SpeechReco
 
 ASRT的原理请查看本文：[ASRT：一个中文语音识别系统](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
 
+关于经常被问到的统计语言模型原理的问题，请看：[无需中文分词算法的简单词频统计](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+
 ## Introduction 简介
 
 本项目使用Keras、TensorFlow基于深度卷积神经网络和长短时记忆神经网络、注意力机制以及CTC实现。

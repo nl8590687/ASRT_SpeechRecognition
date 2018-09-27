@@ -8,6 +8,8 @@ ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/
 
 A post about ASRT's introduction [ASRT: Chinese Speech Recognition System](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
 
+For questions about the principles of the statistical language model that are often asked, see: [Simple word frequency statistics without Chinese word segmentation algorithm] (https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+
 ## Introduction
 
 This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
