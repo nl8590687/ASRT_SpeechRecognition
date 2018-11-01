@@ -570,7 +570,7 @@ lie5	咧
 lin2	林临秘邻琳淋霖麟鳞磷嶙辚粼遴啉瞵
 lin3	凛懔檩廪
 lin4	淋吝躏赁蔺膦
-ling1	拎
+lin1	拎
 ling2	令灵零龄凌玲铃陵伶聆囹棱菱苓翎棂瓴绫酃泠羚蛉柃鲮领岭
 ling3	领令岭
 ling4	令另呤
@@ -705,7 +705,7 @@ ning3	拧
 ning4	拧泞宁
 niu2	牛
 niu3	扭钮纽
-nin4	拗
+niu4	拗
 nong1	浓脓
 nong2	浓农侬
 nong4	弄
