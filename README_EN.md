@@ -2,27 +2,53 @@
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.4+-blue.svg)](https://www.tensorflow.org/) [![Keras Version](https://img.shields.io/badge/Keras-2.0+-blue.svg)](https://keras.io/) [![Python Version](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/) 
 
-ReadMe Language [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) English
+**ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
-[View this project's wiki page](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) (In progress..)
+[View this project's wiki pages (Chinese)](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki)
 
-A post about ASRT's introduction [ASRT: Chinese Speech Recognition System](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
+If you have any questions in your works with this project, welcome to put up issues in this repo and I will response as soon as possible. 
 
-For questions about the principles of the statistical language model that are often asked, see: [Simple word frequency statistics without Chinese word segmentation algorithm] (https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+You can check the [FAQ Page (Chinese)](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/issues) first before asking questions to avoid repeating questions.
+
+A post about ASRT's introduction 
+* [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
+
+For questions about the principles of the statistical language model that are often asked, see: 
+* [Simple word frequency statistics without Chinese word segmentation algorithm (Chinese)](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+* [Statistical Language Model: Chinese Pinyin to Words (Chinese)](https://blog.ailemon.me/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
 
 ## Introduction
 
-This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
+This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement. 
 
-The project can now be properly trained.
+* **Steps**
 
-After cloning a repository through git, you need to copy all the files in the datalist directory to the dataset directory, that is, put them together with the data set.
+First, clone the project to your computer through Git, and then download the data sets needed for the training of this project. For the download links, please refer to [End of Document](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md#data-sets)
+```shell
+$ git clone https://github.com/nl8590687/ASRT_SpeechRecognition.git
+```
+
+Or you can use the "Fork" button to copy a copy of the project and then clone it locally with your own SSH key.
+
+After cloning the repository via git, go to the project root directory; create a subdirectory `dataset/` (you can use a soft link instead), and then extract the downloaded datasets directly into it.
+
+```shell
+$ cd ASRT_SpeechRecognition
+
+$ mkdir dataset
+
+$ tar zxf <dataset zip files name> -C dataset/ 
+```
+
+Then, you need to copy all the files in the 'datalist' directory to the dataset directory, that is, put them together with the data set.
 
 ```shell
 $ cp -rf datalist/* dataset/
 ```
 
 Currently available models are 24, 25 and 251
+
+Before running this project, please install the necessary [Python3 version dependent library](https://github.com/nl8590687/ASRT_SpeechRecognition#python-import)
 
 To start training this project, please execute:
 ```shell
@@ -43,13 +69,15 @@ If you want to train and use Model 251, make changes in the corresponding positi
 
 If there is any problem during the execution of the program or during use, it can be promptly put forward in the issue, and I will reply as soon as possible.
 
-You can check the [FAQ](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/issues) first before asking questions.
+
 
 ## Model
 
 ### Speech Model
 
 CNN + LSTM/GRU + CTC
+
+The maximum length of the input audio is 16 seconds, and the output is the corresponding Chinese pinyin sequence. 
 
 * Questions about downloading trained models
 
@@ -59,11 +87,13 @@ The complete source program can be obtained from the archives of the various ver
 
 Maximum Entropy Hidden Markov Model Based on Probability Graph. 
 
+The input is a Chinese pinyin sequence, and the output is the corresponding Chinese character text. 
+
 ## About Accuracy
 
 At present, the best model can basically reach 80% of Pinyin correct rate on the test set. 
 
-However, as the current international and domestic teams can achieve 97%, the accuracy rate still needs to be further improved. 
+However, as the current international and domestic teams can achieve 98%, the accuracy rate still needs to be further improved. 
 
 * At present, one solution that can continue to improve the accuracy rate is correcting data set labeling errors, especially the ST-CMDS error in the syllable file. There is a certain percentage of errors in the label. If you have see this and you have the will to help correct some of the data tagging mistakes by own ability, I will be very welcome. It can be corrected by submitting a Pull Request, and you will be on the list of contributors of this repo.
 
@@ -86,27 +116,39 @@ train:  20170001P00001A    20170001P00001I    20170001P00002A
 * math
 * Scipy
 * h5py
+* http
+* urllib
 
 ## Data Sets 
-* Tsinghua University THCHS30 Chinese voice data set
+* **Tsinghua University THCHS30 Chinese voice data set**
 
-data_thchs30.tgz 
-<http://www.openslr.org/resources/18/data_thchs30.tgz>
+  data_thchs30.tgz 
+[Download](<http://www.openslr.org/resources/18/data_thchs30.tgz>)
 
-test-noise.tgz 
-<http://www.openslr.org/resources/18/test-noise.tgz>
+  test-noise.tgz 
+[Download](<http://www.openslr.org/resources/18/test-noise.tgz>)
 
-resource.tgz 
-<http://www.openslr.org/resources/18/resource.tgz>
+  resource.tgz 
+[Download](<http://www.openslr.org/resources/18/resource.tgz>)
 
-* Free ST Chinese Mandarin Corpus
+* **Free ST Chinese Mandarin Corpus**
 
-ST-CMDS-20170001_1-OS.tar.gz 
-<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>
+  ST-CMDS-20170001_1-OS.tar.gz 
+[Download](<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)
+
+* **AIShell-1 Open Source Dataset** (This project has not been used yet and it will be added later)
+
+  data_aishell.tgz
+[Download](<http://www.openslr.org/resources/33/data_aishell.tgz>)
+
+* **Primewords Chinese Corpus Set 1** (This project has not been used yet and it will be added later)
+
+  primewords_md_2018_set1.tar.gz
+[Download](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
 
 Special thanks! Thanks to the predecessors' public voice data set. 
 
-If the provided dataset link cannot be opened and downloaded, click this link [OpenSLR] (http://www.openslr.org)
+If the provided dataset link cannot be opened and downloaded, click this link [OpenSLR](http://www.openslr.org)
 
 ## Logs
 
@@ -117,4 +159,4 @@ Links: [Progress Logs](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/
 
 @nl8590687 (repo owner)
 
-[Donate](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)
+[**Donate**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)

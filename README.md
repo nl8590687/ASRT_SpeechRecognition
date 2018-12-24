@@ -75,6 +75,8 @@ $ python3 asrserver.py
 
 CNN + LSTM/GRU + CTC
 
+其中，输入的音频的最大时间长度为16秒，输出为对应的汉语拼音序列
+
 * 关于下载已经训练好的模型的问题
 
 可以在Github本仓库下[releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases)里面的查看发布的各个版本软件的压缩包里获得完整源程序。
@@ -83,11 +85,13 @@ CNN + LSTM/GRU + CTC
 
 基于概率图的最大熵隐马尔可夫模型
 
+输入为汉语拼音序列，输出为对应的汉字文本
+
 ## About Accuracy 关于准确率
 
 当前，最好的模型在测试集上基本能达到80%的汉语拼音正确率
 
-不过由于目前国际和国内的部分团队能做到97%，所以正确率仍有待于进一步提高
+不过由于目前国际和国内的部分团队能做到98%，所以正确率仍有待于进一步提高
 
 * 目前可知的可以继续提高准确率的一个方案就是纠正数据集标注错误，尤其是ST-CMDS里面关于syllable文件中拼音的错误，这里面有一定比例的错误标注，如果走过路过的各位有意愿尽自己的能力帮助纠正一些数据标注错误的，我将非常欢迎，可以通过提交Pull Request来纠正，并且将登上本仓库的贡献者名单。
 
@@ -111,41 +115,39 @@ Python的依赖库
 * math
 * Scipy
 * h5py
+* http
+* urllib
 
 ## Data Sets 数据集
 * **清华大学THCHS30中文语音数据集**
 
-data_thchs30.tgz 
-
+  data_thchs30.tgz 
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/18/data_thchs30.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/18/data_thchs30.tgz>)
 
-test-noise.tgz 
-
+  test-noise.tgz 
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/18/test-noise.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/18/test-noise.tgz>)
 
-resource.tgz 
-
+  resource.tgz 
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/18/resource.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/18/resource.tgz>)
 
 * **Free ST Chinese Mandarin Corpus** 
 
-ST-CMDS-20170001_1-OS.tar.gz 
-
+  ST-CMDS-20170001_1-OS.tar.gz 
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)
 
-* **AIShell 开源版数据集** (本项目暂未使用，之后会加入)
+* **AIShell-1 开源版数据集** (本项目暂未使用，之后会加入)
 
-data_aishell.tgz
-
+  data_aishell.tgz
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/33/data_aishell.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/33/data_aishell.tgz>)
 
 * **Primewords Chinese Corpus Set 1** (本项目暂未使用，之后会加入)
 
+  primewords_md_2018_set1.tar.gz
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
 
