@@ -55,14 +55,11 @@ class ModelSpeech(): # 语音模型类
 	def CreateModel(self):
 		'''
 		定义CNN/LSTM/CTC模型，使用函数式模型
-		输入层：39维的特征值序列，一条语音数据的最大长度设为1500（大约15s）
-		隐藏层一：1024个神经元的卷积层
-		隐藏层二：池化层，池化窗口大小为2
-		隐藏层三：Dropout层，需要断开的神经元的比例为0.2，防止过拟合
-		隐藏层四：循环层、LSTM层
-		隐藏层五：Dropout层，需要断开的神经元的比例为0.2，防止过拟合
-		隐藏层六：全连接层，神经元数量为self.MS_OUTPUT_SIZE，使用softmax作为激活函数，
-		输出层：自定义层，即CTC层，使用CTC的loss作为损失函数，实现连接性时序多输出
+		输入层：200维的特征值序列，一条语音数据的最大长度设为1600（大约16s）
+		隐藏层：卷积池化层，卷积核大小为3x3，池化窗口大小为2
+		隐藏层：全连接层
+		输出层：全连接层，神经元数量为self.MS_OUTPUT_SIZE，使用softmax作为激活函数，
+		CTC层：使用CTC的loss作为损失函数，实现连接性时序多输出
 		
 		'''
 		# 每一帧使用13维mfcc特征及其13维一阶差分和13维二阶差分表示，最大信号序列长度为1500
@@ -384,7 +381,7 @@ if(__name__=='__main__'):
 	
 	system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 	if(system_type == 'Windows'):
-		datapath = 'E:\\语音数据集'
+		datapath = 'D:\\语音数据集'
 		modelpath = modelpath + '\\'
 	elif(system_type == 'Linux'):
 		datapath = 'dataset'
