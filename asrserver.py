@@ -11,10 +11,10 @@ import keras
 from SpeechModel251 import ModelSpeech
 from LanguageModel import ModelLanguage
 
-datapath = 'data/'
+datapath = './'
 modelpath = 'model_speech/'
 ms = ModelSpeech(datapath)
-ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_12000.model')
+ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_117000.model')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()
@@ -114,9 +114,19 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
 	
 	def recognize_from_file(self, filename):
 		pass
-	
+
+import socket
+
+class HTTPServerV6(http.server.HTTPServer):
+	address_family = socket.AF_INET6
+
 def start_server(ip, port):  
-	http_server = http.server.HTTPServer((ip, int(port)), TestHTTPHandle)  
+	
+	if(':' in ip):
+		http_server = HTTPServerV6((ip, port), TestHTTPHandle)
+	else:
+		http_server = http.server.HTTPServer((ip, int(port)), TestHTTPHandle)
+	
 	print('服务器已开启')
 	
 	try:
@@ -127,8 +137,9 @@ def start_server(ip, port):
 	print('HTTP server closed')
 	
 if __name__ == '__main__':
+	start_server('', 20000) # For IPv4 Network Only
+	#start_server('::', 20000) # For IPv6 Network
 	
-	start_server('', 20000)
 	
 	
 	
