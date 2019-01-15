@@ -95,16 +95,6 @@ At present, the best model can basically reach 80% of Pinyin correct rate on the
 
 However, as the current international and domestic teams can achieve 98%, the accuracy rate still needs to be further improved. 
 
-* At present, one solution that can continue to improve the accuracy rate is correcting data set labeling errors, especially the ST-CMDS error in the syllable file. There is a certain percentage of errors in the label. If you have see this and you have the will to help correct some of the data tagging mistakes by own ability, I will be very welcome. It can be corrected by submitting a Pull Request, and you will be on the list of contributors of this repo.
-
-Samples: `不是： bu4 shi4 -> bu2 shi4` `一个：yi1 ge4 -> yi2 ge4` `了解：le5 jie3 -> liao3 jie3`
-
-* Corrected part:
-
-ST-CMDS
-
-train:  20170001P00001A    20170001P00001I    20170001P00002A
-
 ## Python libraries that need importing
 
 * python_speech_features
@@ -136,12 +126,12 @@ train:  20170001P00001A    20170001P00001I    20170001P00002A
   ST-CMDS-20170001_1-OS.tar.gz 
 [Download](<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)
 
-* **AIShell-1 Open Source Dataset** (This project has not been used yet and it will be added later)
+* **AIShell-1 Open Source Dataset** 
 
   data_aishell.tgz
 [Download](<http://www.openslr.org/resources/33/data_aishell.tgz>)
 
-* **Primewords Chinese Corpus Set 1** (This project has not been used yet and it will be added later)
+* **Primewords Chinese Corpus Set 1** 
 
   primewords_md_2018_set1.tar.gz
 [Download](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)

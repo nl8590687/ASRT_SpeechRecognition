@@ -6,7 +6,6 @@
 
 基于马尔可夫模型的语言模型
 
-尚未完成
 """
 import platform as plat
 
@@ -43,7 +42,6 @@ class ModelLanguage(): # 语音模型类
 		'''
 		为语音识别专用的处理函数
 		实现从语音拼音符号到最终文本的转换
-		尚未完成
 		'''
 		r=''
 		length = len(list_syllable)
