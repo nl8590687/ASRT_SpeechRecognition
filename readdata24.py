@@ -172,15 +172,15 @@ class DataSpeech():
 		需要再修改。。。
 		'''
 		
-		labels = []
-		for i in range(0,batch_size):
-			#input_length.append([1500])
-			labels.append([0.0])
+		#labels = []
+		#for i in range(0,batch_size):
+		#	#input_length.append([1500])
+		#	labels.append([0.0])
 		
 		
 		
-		labels = np.array(labels, dtype = np.float)
-		
+		#labels = np.array(labels, dtype = np.float)
+		labels = np.zeros((batch_size,1), dtype = np.float)
 		#print(input_length,len(input_length))
 		
 		while True:
@@ -213,7 +213,7 @@ class DataSpeech():
 				label_length.append([len(data_labels)])
 			
 			label_length = np.matrix(label_length)
-			input_length = np.array(input_length).T
+			input_length = np.array([input_length]).T
 			#input_length = np.array(input_length)
 			#print('input_length:\n',input_length)
 			#X=X.reshape(batch_size, audio_length, 200, 1)
