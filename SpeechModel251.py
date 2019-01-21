@@ -197,8 +197,11 @@ class ModelSpeech(): # 语音模型类
 		'''
 		保存模型参数
 		'''
-		self._model.save_weights(filename+comment+'.model')
+		self._model.save_weights(filename + comment + '.model')
 		self.base_model.save_weights(filename + comment + '.model.base')
+		# 需要安装 hdf5 模块
+		self._model.save(filename + comment + '.h5')
+		self.base_model.save(filename + comment + '.base.h5')
 		f = open('step'+ModelName+'.txt','w')
 		f.write(filename+comment)
 		f.close()
