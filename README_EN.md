@@ -4,7 +4,7 @@
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
-[View this project's wiki pages (Chinese)](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki)
+[**View this project's wiki document (Chinese)**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki)
 
 If you have any questions in your works with this project, welcome to put up issues in this repo and I will response as soon as possible. 
 
@@ -64,6 +64,8 @@ ASRT API Server startup please execute:
 ```shell
 $ python3 asrserver.py
 ```
+
+Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation [ASRT Client Demo](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/ClientDemo).
 
 If you want to train and use Model 251, make changes in the corresponding position of the `import SpeechModel` in the code files.
 
@@ -130,6 +132,14 @@ However, as the current international and domestic teams can achieve 98%, the ac
 
   data_aishell.tgz
 [Download](<http://www.openslr.org/resources/33/data_aishell.tgz>)
+
+Note：unzip this dataset
+
+```
+$ tar xzf data_aishell.tgz
+$ cd data_aishell/wav
+$ for tar in *.tar.gz;  do tar xvf $tar; done
+```
 
 * **Primewords Chinese Corpus Set 1** 
 

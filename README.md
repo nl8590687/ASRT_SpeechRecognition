@@ -5,7 +5,7 @@
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
-[查看本项目的Wiki页面](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) 
+[**查看本项目的Wiki文档**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) 
 
 如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。本项目作者交流QQ群：**867888133**
 
@@ -66,6 +66,8 @@ ASRT API服务器启动请执行：
 ```shell
 $ python3 asrserver.py
 ```
+
+请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[ASRT客户端Demo](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/ClientDemo)。
 
 如果要训练和使用模型251，请在代码中 `import SpeechModel` 的相应位置做修改。
 
@@ -134,6 +136,14 @@ Python的依赖库
   data_aishell.tgz
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/33/data_aishell.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/33/data_aishell.tgz>)
+
+注：数据集解压方法
+
+```
+$ tar xzf data_aishell.tgz
+$ cd data_aishell/wav
+$ for tar in *.tar.gz;  do tar xvf $tar; done
+```
 
 * **Primewords Chinese Corpus Set 1** 
 
