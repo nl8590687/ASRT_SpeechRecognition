@@ -10,7 +10,11 @@ def GetSymbolList(datapath):
 	加载拼音符号列表，用于标记符号
 	返回一个列表list类型变量
 	'''
-	txt_obj=open('dict.txt','r',encoding='UTF-8') # 打开文件并读入
+	if(datapath != ''):
+		if(datapath[-1]!='/' or datapath[-1]!='\\'):
+			datapath = datapath + '/'
+	
+	txt_obj=open(datapath + 'dict.txt','r',encoding='UTF-8') # 打开文件并读入
 	txt_text=txt_obj.read()
 	txt_lines=txt_text.split('\n') # 文本分割
 	list_symbol=[] # 初始化符号列表
