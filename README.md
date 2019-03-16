@@ -137,13 +137,13 @@ Python的依赖库
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/33/data_aishell.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/33/data_aishell.tgz>)
 
-注：数据集解压方法
+  注：数据集解压方法
 
-```
-$ tar xzf data_aishell.tgz
-$ cd data_aishell/wav
-$ for tar in *.tar.gz;  do tar xvf $tar; done
-```
+  ```
+  $ tar xzf data_aishell.tgz
+  $ cd data_aishell/wav
+  $ for tar in *.tar.gz;  do tar xvf $tar; done
+  ```
 
 * **Primewords Chinese Corpus Set 1** 
 
@@ -159,7 +159,9 @@ $ for tar in *.tar.gz;  do tar xvf $tar; done
 日志链接：[进展日志](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/log.md)
 
 ## Contributors 贡献者们
-@ZJUGuoShuai @williamchenwl
+
+[@zw76859420](https://github.com/zw76859420) 
+@madeirak @ZJUGuoShuai @williamchenwl
 
 @nl8590687 (repo owner)
 

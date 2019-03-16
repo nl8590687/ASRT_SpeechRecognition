@@ -133,13 +133,13 @@ However, as the current international and domestic teams can achieve 98%, the ac
   data_aishell.tgz
 [Download](<http://www.openslr.org/resources/33/data_aishell.tgz>)
 
-Note：unzip this dataset
+  Note：unzip this dataset
 
-```
-$ tar xzf data_aishell.tgz
-$ cd data_aishell/wav
-$ for tar in *.tar.gz;  do tar xvf $tar; done
-```
+  ```
+  $ tar xzf data_aishell.tgz
+  $ cd data_aishell/wav
+  $ for tar in *.tar.gz;  do tar xvf $tar; done
+  ```
 
 * **Primewords Chinese Corpus Set 1** 
 
@@ -155,7 +155,8 @@ If the provided dataset link cannot be opened and downloaded, click this link [O
 Links: [Progress Logs](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/log.md)
 
 ## Contributors
-@ZJUGuoShuai @williamchenwl
+[@zw76859420](https://github.com/zw76859420) 
+@madeirak @ZJUGuoShuai @williamchenwl
 
 @nl8590687 (repo owner)
 
