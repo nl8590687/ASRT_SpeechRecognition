@@ -135,6 +135,39 @@ def GetFrequencyFeature3(wavsignal, fs):
 	#print(data_input.shape)
 	data_input = np.log(data_input + 1)
 	return data_input
+	
+def GetFrequencyFeature4(wavsignal, fs):
+	'''
+	主要是用来修正3版的bug
+	'''
+	# wav波形 加时间窗以及时移10ms
+	time_window = 25 # 单位ms
+	window_length = fs / 1000 * time_window # 计算窗长度的公式，目前全部为400固定值
+	
+	wav_arr = np.array(wavsignal)
+	#wav_length = len(wavsignal[0])
+	wav_length = wav_arr.shape[1]
+	
+	range0_end = int(len(wavsignal[0])/fs*1000 - time_window) // 10 + 1 # 计算循环终止的位置，也就是最终生成的窗数
+	data_input = np.zeros((range0_end, 200), dtype = np.float) # 用于存放最终的频率特征数据
+	data_line = np.zeros((1, 400), dtype = np.float)
+	
+	for i in range(0, range0_end):
+		p_start = i * 160
+		p_end = p_start + 400
+		
+		data_line = wav_arr[0, p_start:p_end]
+		
+		data_line = data_line * w # 加窗
+		
+		data_line = np.abs(fft(data_line)) / wav_length
+		
+		
+		data_input[i]=data_line[0:200] # 设置为400除以2的值（即200）是取一半数据，因为是对称的
+		
+	#print(data_input.shape)
+	data_input = np.log(data_input + 1)
+	return data_input
 
 def wav_scale(energy):
 	'''

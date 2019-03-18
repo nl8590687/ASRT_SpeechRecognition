@@ -83,7 +83,7 @@ The maximum length of the input audio is 16 seconds, and the output is the corre
 
 * Questions about downloading trained models
 
-The complete source program can be obtained from the archives of the various versions of the software released in the [releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases) page of Github.
+The complete source program that includes trained model weights can be obtained from the archives of the various versions of the software released in the [releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases) page of Github.
 
 ### Language Model 
 
