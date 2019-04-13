@@ -151,6 +151,12 @@ Python的依赖库
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
 
+* **aidatatang_200zh**
+
+  200.zip
+[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/62/200.zip>)
+[OpenSLR国外镜像](<http://www.openslr.org/resources/62/200.zip>)
+
 特别鸣谢！感谢前辈们的公开语音数据集
 
 如果提供的数据集链接无法打开和下载，请点击该链接 [OpenSLR](http://www.openslr.org)

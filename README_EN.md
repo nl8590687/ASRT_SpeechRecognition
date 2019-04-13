@@ -146,6 +146,11 @@ However, as the current international and domestic teams can achieve 98%, the ac
   primewords_md_2018_set1.tar.gz
 [Download](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
 
+* **aidatatang_200zh**
+
+  200.zip
+[Download](<http://www.openslr.org/resources/62/200.zip>)
+
 Special thanks! Thanks to the predecessors' public voice data set. 
 
 If the provided dataset link cannot be opened and downloaded, click this link [OpenSLR](http://www.openslr.org)
