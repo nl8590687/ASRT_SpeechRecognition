@@ -153,9 +153,9 @@ Python的依赖库
 
 * **aidatatang_200zh**
 
-  200.zip
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/62/200.zip>)
-[OpenSLR国外镜像](<http://www.openslr.org/resources/62/200.zip>)
+   aidatatang_200zh.tgz
+[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/62/aidatatang_200zh.tgz>)
+[OpenSLR国外镜像](<http://www.openslr.org/resources/62/aidatatang_200zh.tgz>)
 
 特别鸣谢！感谢前辈们的公开语音数据集
 

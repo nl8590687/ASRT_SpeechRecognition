@@ -148,8 +148,8 @@ However, as the current international and domestic teams can achieve 98%, the ac
 
 * **aidatatang_200zh**
 
-  200.zip
-[Download](<http://www.openslr.org/resources/62/200.zip>)
+  aidatatang_200zh.tgz
+[Download](<http://www.openslr.org/resources/62/aidatatang_200zh.tgz>)
 
 Special thanks! Thanks to the predecessors' public voice data set. 
 
