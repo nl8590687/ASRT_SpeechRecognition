@@ -5,7 +5,7 @@
 '''
 import platform as plat
 
-def GetSymbolList_trash(datapath):
+def GetSymbolList(datapath):
 	'''
 	加载拼音符号列表，用于标记符号
 	返回一个列表list类型变量
@@ -27,7 +27,7 @@ def GetSymbolList_trash(datapath):
 	#SymbolNum = len(list_symbol)
 	return list_symbol
 	
-def GetSymbolList(datapath):
+def GetSymbolList_trash2(datapath):
 	'''
 	加载拼音符号列表，用于标记符号
 	返回一个列表list类型变量
@@ -56,6 +56,7 @@ def GetSymbolList(datapath):
 	list_symbol.append('_')
 	#SymbolNum = len(list_symbol)
 	return list_symbol
+
 
 if(__name__ == '__main__'):
 	GetSymbolList('E:\\abc\\')
