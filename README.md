@@ -157,6 +157,24 @@ Python的依赖库
 [OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/62/aidatatang_200zh.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/62/aidatatang_200zh.tgz>)
 
+* **MagicData**
+
+  train_set.tar.gz
+[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/68/train_set.tar.gz>)
+[OpenSLR国外镜像](<http://www.openslr.org/resources/68/train_set.tar.gz>)
+
+  dev_set.tar.gz
+[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/68/dev_set.tar.gz>)
+[OpenSLR国外镜像](<http://www.openslr.org/resources/68/dev_set.tar.gz>)
+
+  test_set.tar.gz
+[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/68/test_set.tar.gz>)
+[OpenSLR国外镜像](<http://www.openslr.org/resources/68/test_set.tar.gz>)
+
+  metadata.tar.gz
+[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/68/metadata.tar.gz>)
+[OpenSLR国外镜像](<http://www.openslr.org/resources/68/metadata.tar.gz>)
+
 特别鸣谢！感谢前辈们的公开语音数据集
 
 如果提供的数据集链接无法打开和下载，请点击该链接 [OpenSLR](http://www.openslr.org)

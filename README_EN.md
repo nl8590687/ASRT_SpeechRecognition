@@ -151,6 +151,20 @@ However, as the current international and domestic teams can achieve 98%, the ac
   aidatatang_200zh.tgz
 [Download](<http://www.openslr.org/resources/62/aidatatang_200zh.tgz>)
 
+* **MagicData**
+
+  train_set.tar.gz
+[Download](<http://www.openslr.org/resources/68/train_set.tar.gz>)
+
+  dev_set.tar.gz
+[Download](<http://www.openslr.org/resources/68/dev_set.tar.gz>)
+
+  test_set.tar.gz
+[Download](<http://www.openslr.org/resources/68/test_set.tar.gz>)
+
+  metadata.tar.gz
+[Download](<http://www.openslr.org/resources/68/metadata.tar.gz>)
+
 Special thanks! Thanks to the predecessors' public voice data set. 
 
 If the provided dataset link cannot be opened and downloaded, click this link [OpenSLR](http://www.openslr.org)
