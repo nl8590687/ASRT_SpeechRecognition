@@ -169,9 +169,9 @@ Special thanks! Thanks to the predecessors' public voice data set.
 
 If the provided dataset link cannot be opened and downloaded, click this link [OpenSLR](http://www.openslr.org)
 
-## Logs
+## License
 
-Links: [Progress Logs](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/log.md)
+[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687)
 
 ## Contributors
 [@zw76859420](https://github.com/zw76859420) 

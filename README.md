@@ -179,8 +179,9 @@ Python的依赖库
 
 如果提供的数据集链接无法打开和下载，请点击该链接 [OpenSLR](http://www.openslr.org)
 
-## Log
-日志链接：[进展日志](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/log.md)
+## License 开源许可协议
+
+[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687)
 
 ## Contributors 贡献者们
 
