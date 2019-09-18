@@ -304,7 +304,6 @@ class ModelSpeech(): # 语音模型类
 	def RecognizeSpeech(self, wavsignal, fs):
 		'''
 		最终做语音识别用的函数，识别一个wav序列的语音
-		不过这里现在还有bug
 		'''
 		
 		#data = self.data

@@ -35,7 +35,7 @@ class ModelSpeech(): # 语音模型类
 		初始化
 		默认输出的拼音的表示大小是1422，即1421个拼音+1个空白块
 		'''
-		MS_OUTPUT_SIZE = 1422
+		MS_OUTPUT_SIZE = 1424
 		self.MS_OUTPUT_SIZE = MS_OUTPUT_SIZE # 神经网络最终输出的每一个字符向量维度的大小
 		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
@@ -353,7 +353,6 @@ class ModelSpeech(): # 语音模型类
 	def RecognizeSpeech(self, wavsignal, fs):
 		'''
 		最终做语音识别用的函数，识别一个wav序列的语音
-		不过这里现在还有bug
 		'''
 		
 		#data = self.data
