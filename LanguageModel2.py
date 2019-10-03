@@ -7,33 +7,20 @@
 基于马尔可夫模型的语言模型
 
 """
+import os
 import platform as plat
 
 
 class ModelLanguage(): # 语音模型类
 	def __init__(self, modelpath):
 		self.modelpath = modelpath
-		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
-		
-		self.slash = ''
-		if(system_type == 'Windows'):
-			self.slash = '\\'
-		elif(system_type == 'Linux'):
-			self.slash = '/'
-		else:
-			print('*[Message] Unknown System\n')
-			self.slash = '/'
-		
-		if(self.slash != self.modelpath[-1]): # 在目录路径末尾增加斜杠
-			self.modelpath = self.modelpath + self.slash
-		
 		pass
 		
 	def LoadModel(self):
 		self.dict_pinyin = self.GetSymbolDict('dict.txt')
-		self.model1 = self.GetLanguageModel(self.modelpath + 'language_model1.txt')
-		self.model2 = self.GetLanguageModel(self.modelpath + 'language_model2.txt')
-		self.pinyin = self.GetPinyin(self.modelpath + 'dic_pinyin.txt')
+		self.model1 = self.GetLanguageModel(os.path.join(self.modelpath, 'language_model1.txt'))
+		self.model2 = self.GetLanguageModel(os.path.join(self.modelpath, 'language_model2.txt'))
+		self.pinyin = self.GetPinyin(os.path.join(self.modelpath, 'dic_pinyin.txt'))
 		model = (self.dict_pinyin, self.model1, self.model2 )
 		return model
 		pass

@@ -22,23 +22,8 @@ class DataSpeech():
 			path：数据存放位置根目录
 		'''
 		
-		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
-		
 		self.datapath = path; # 数据存放位置根目录
-		self.type = type # 数据类型，分为三种：训练集(train)、验证集(dev)、测试集(test)
-		
-		self.slash = ''
-		if(system_type == 'Windows'):
-			self.slash='\\' # 反斜杠
-		elif(system_type == 'Linux'):
-			self.slash='/' # 正斜杠
-		else:
-			print('*[Message] Unknown System\n')
-			self.slash='/' # 正斜杠
-		
-		if(self.slash != self.datapath[-1]): # 在目录路径末尾增加斜杠
-			self.datapath = self.datapath + self.slash
-		
+		self.type = type # 数据类型，分为三种：训练集(train)、验证集(dev)、测试集(test)	
 		
 		self.dic_wavlist_thchs30 = {}
 		self.dic_symbollist_thchs30 = {}
@@ -69,29 +54,29 @@ class DataSpeech():
 		'''
 		# 设定选取哪一项作为要使用的数据集
 		if(self.type=='train'):
-			filename_wavlist_thchs30 = 'thchs30' + self.slash + 'train.wav.lst'
-			filename_wavlist_stcmds = 'st-cmds' + self.slash + 'train.wav.txt'
-			filename_symbollist_thchs30 = 'thchs30' + self.slash + 'train.syllable.txt'
-			filename_symbollist_stcmds = 'st-cmds' + self.slash + 'train.syllable.txt'
+			filename_wavlist_thchs30 = os.path.join('thchs30', 'train.wav.lst')
+			filename_wavlist_stcmds = os.path.join('st-cmds', 'train.wav.txt')
+			filename_symbollist_thchs30 = os.path.join('thchs30', 'train.syllable.txt')
+			filename_symbollist_stcmds = os.path.join('st-cmds', 'train.syllable.txt')
 		elif(self.type=='dev'):
-			filename_wavlist_thchs30 = 'thchs30' + self.slash + 'cv.wav.lst'
-			filename_wavlist_stcmds = 'st-cmds' + self.slash + 'dev.wav.txt'
-			filename_symbollist_thchs30 = 'thchs30' + self.slash + 'cv.syllable.txt'
-			filename_symbollist_stcmds = 'st-cmds' + self.slash + 'dev.syllable.txt'
+			filename_wavlist_thchs30 = os.path.join('thchs30', 'cv.wav.lst')
+			filename_wavlist_stcmds = os.path.join('st-cmds', 'dev.wav.txt')
+			filename_symbollist_thchs30 = os.path.join('thchs30', 'cv.syllable.txt')
+			filename_symbollist_stcmds = os.path.join('st-cmds', 'dev.syllable.txt')
 		elif(self.type=='test'):
-			filename_wavlist_thchs30 = 'thchs30' + self.slash + 'test.wav.lst'
-			filename_wavlist_stcmds = 'st-cmds' + self.slash + 'test.wav.txt'
-			filename_symbollist_thchs30 = 'thchs30' + self.slash + 'test.syllable.txt'
-			filename_symbollist_stcmds = 'st-cmds' + self.slash + 'test.syllable.txt'
+			filename_wavlist_thchs30 = os.path.join('thchs30', 'test.wav.lst')
+			filename_wavlist_stcmds = os.path.join('st-cmds', 'test.wav.txt')
+			filename_symbollist_thchs30 = os.path.join('thchs30', 'test.syllable.txt')
+			filename_symbollist_stcmds = os.path.join('st-cmds', 'test.syllable.txt')
 		else:
 			filename_wavlist = '' # 默认留空
 			filename_symbollist = ''
 		# 读取数据列表，wav文件列表和其对应的符号列表
-		self.dic_wavlist_thchs30,self.list_wavnum_thchs30 = get_wav_list(self.datapath + filename_wavlist_thchs30)
-		self.dic_wavlist_stcmds,self.list_wavnum_stcmds = get_wav_list(self.datapath + filename_wavlist_stcmds)
+		self.dic_wavlist_thchs30,self.list_wavnum_thchs30 = get_wav_list(os.path.join(self.datapath, filename_wavlist_thchs30))
+		self.dic_wavlist_stcmds,self.list_wavnum_stcmds = get_wav_list(os.path.join(self.datapath, filename_wavlist_stcmds))
 		
-		self.dic_symbollist_thchs30,self.list_symbolnum_thchs30 = get_wav_symbol(self.datapath + filename_symbollist_thchs30)
-		self.dic_symbollist_stcmds,self.list_symbolnum_stcmds = get_wav_symbol(self.datapath + filename_symbollist_stcmds)
+		self.dic_symbollist_thchs30,self.list_symbolnum_thchs30 = get_wav_symbol(os.path.join(self.datapath, filename_symbollist_thchs30))
+		self.dic_symbollist_stcmds,self.list_symbolnum_stcmds = get_wav_symbol(os.path.join(self.datapath, filename_symbollist_stcmds))
 		self.DataNum = self.GetDataNum()
 	
 	def GetDataNum(self):
@@ -135,10 +120,7 @@ class DataSpeech():
 			filename = self.dic_wavlist_stcmds[self.list_wavnum_stcmds[(n + yushu - 1)%length]]
 			list_symbol=self.dic_symbollist_stcmds[self.list_symbolnum_stcmds[(n + yushu - 1)%length]]
 		
-		if('Windows' == plat.system()):
-			filename = filename.replace('/','\\') # windows系统下需要执行这一行，对文件路径做特别处理
-		
-		wavsignal,fs=read_wav_data(self.datapath + filename)
+		wavsignal,fs=read_wav_data(os.path.join(self.datapath, filename))
 		
 		# 获取输出特征
 		

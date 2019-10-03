@@ -32,18 +32,15 @@ if(not os.path.exists(modelpath)): # 判断保存模型的目录是否存在
 system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 if(system_type == 'Windows'):
 	datapath = 'E:\\语音数据集'
-	modelpath = modelpath + '\\'
 elif(system_type == 'Linux'):
 	datapath = 'dataset'
-	modelpath = modelpath + '/'
 else:
 	print('*[Message] Unknown System\n')
 	datapath = 'dataset'
-	modelpath = modelpath + '/'
 
 ms = ModelSpeech(datapath)
 
-#ms.LoadModel(modelpath + 'speech_model251_e_0_step_327500.model')
+#ms.LoadModel(os.path.join(modelpath, 'speech_model251_e_0_step_327500.model'))
 ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
 
 
