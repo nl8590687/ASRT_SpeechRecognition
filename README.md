@@ -35,6 +35,9 @@ $ git clone https://github.com/nl8590687/ASRT_SpeechRecognition.git
 或者您也可以通过 "Fork" 按钮，将本项目Copy一份副本，然后通过您自己的SSH密钥克隆到本地。
 
 通过git克隆仓库以后，进入项目根目录；并创建子目录 `dataset/` (可使用软链接代替)，然后将下载好的数据集直接解压进去
+
+注意，当前版本中，Thchs30和ST-CMDS两个数据集都必须下载使用，缺一不可，并且使用其他数据集需要修改代码。
+
 ```shell
 $ cd ASRT_SpeechRecognition
 

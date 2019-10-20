@@ -32,6 +32,8 @@ Or you can use the "Fork" button to copy a copy of the project and then clone it
 
 After cloning the repository via git, go to the project root directory; create a subdirectory `dataset/` (you can use a soft link instead), and then extract the downloaded datasets directly into it.
 
+Note that in the current version, both the Thchs30 and ST-CMDS data sets must be downloaded and used, and using other data sets need to modify the sourece codes. 
+
 ```shell
 $ cd ASRT_SpeechRecognition
 
