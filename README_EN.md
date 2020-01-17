@@ -113,6 +113,8 @@ However, as the current international and domestic teams can achieve 98%, the ac
 * http
 * urllib
 
+[Dependent Environment Details](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/Dependent-Environment)
+
 ## Data Sets 
 * **Tsinghua University THCHS30 Chinese voice data set**
 

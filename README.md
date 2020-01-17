@@ -113,6 +113,8 @@ Python的依赖库
 * http
 * urllib
 
+[程序运行依赖环境详细说明](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/Dependent-Environment)
+
 ## Data Sets 数据集
 * **清华大学THCHS30中文语音数据集**
 
