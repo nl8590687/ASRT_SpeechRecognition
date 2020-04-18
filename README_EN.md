@@ -1,6 +1,9 @@
 # A Deep-Learning-Based Chinese Speech Recognition System
 
-[![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.4+-blue.svg)](https://www.tensorflow.org/) [![Keras Version](https://img.shields.io/badge/Keras-2.0+-blue.svg)](https://keras.io/) [![Python Version](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/) 
+[![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
+[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.13+-blue.svg)](https://www.tensorflow.org/) 
+[![Keras Version](https://img.shields.io/badge/Keras-2.2+-blue.svg)](https://keras.io/) 
+[![Python Version](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/) 
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
@@ -16,6 +19,12 @@ A post about ASRT's introduction
 For questions about the principles of the statistical language model that are often asked, see: 
 * [Simple word frequency statistics without Chinese word segmentation algorithm (Chinese)](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
 * [Statistical Language Model: Chinese Pinyin to Words (Chinese)](https://blog.ailemon.me/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
+
+For questions about CTC, see: 
+
+* [[Translation] Sequence Modeling with CTC (Chinese)](<https://blog.ailemon.me/2019/07/18/sequence-modeling-with-ctc/>)
+
+For more infomation please refer to author's blog website: [AILemon Blog](https://blog.ailemon.me/) (Chinese)
 
 ## Introduction
 
@@ -102,8 +111,8 @@ However, as the current international and domestic teams can achieve 98%, the ac
 ## Python libraries that need importing
 
 * python_speech_features
-* TensorFlow
-* Keras
+* TensorFlow (1.13+)
+* Keras (2.2+)
 * Numpy
 * wave
 * matplotlib
@@ -116,6 +125,9 @@ However, as the current international and domestic teams can achieve 98%, the ac
 [Dependent Environment Details](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/Dependent-Environment)
 
 ## Data Sets 
+
+[Some free Chinese speech datasets (Chinese)](https://blog.ailemon.me/2018/11/21/free-open-source-chinese-speech-datasets/)
+
 * **Tsinghua University THCHS30 Chinese voice data set**
 
   data_thchs30.tgz 

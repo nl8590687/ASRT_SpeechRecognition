@@ -1,7 +1,10 @@
 # A Deep-Learning-Based Chinese Speech Recognition System
 基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
 
-[![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.4+-blue.svg)](https://www.tensorflow.org/) [![Keras Version](https://img.shields.io/badge/Keras-2.0+-blue.svg)](https://keras.io/) [![Python Version](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/) 
+[![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
+[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.13+-blue.svg)](https://www.tensorflow.org/) 
+[![Keras Version](https://img.shields.io/badge/Keras-2.2+-blue.svg)](https://keras.io/) 
+[![Python Version](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/) 
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
@@ -18,6 +21,12 @@ ASRT的原理请查看本文：
 
 * [统计语言模型：从中文拼音到文本](https://blog.ailemon.me/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
 * [无需中文分词算法的简单词频统计](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+
+关于CTC的问题请看：
+
+* [[翻译]使用CTC进行序列建模](<https://blog.ailemon.me/2019/07/18/sequence-modeling-with-ctc/>)
+
+更多内容请访问作者的博客：[AI柠檬博客](https://blog.ailemon.me/)
 
 ## Introduction 简介
 
@@ -102,8 +111,8 @@ CNN + LSTM/GRU + CTC
 Python的依赖库
 
 * python_speech_features
-* TensorFlow
-* Keras
+* TensorFlow (1.13+)
+* Keras (2.2+)
 * Numpy
 * wave
 * matplotlib
@@ -116,6 +125,9 @@ Python的依赖库
 [程序运行依赖环境详细说明](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/Dependent-Environment)
 
 ## Data Sets 数据集
+
+[几个最新免费开源的中文语音数据集](https://blog.ailemon.me/2018/11/21/free-open-source-chinese-speech-datasets/)
+
 * **清华大学THCHS30中文语音数据集**
 
   data_thchs30.tgz 
