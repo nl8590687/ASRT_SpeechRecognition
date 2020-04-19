@@ -14,3 +14,6 @@ data_pinyin.txt
 testClient.py
 
 webapi/
+.idea/
+*.iml/
+model_speech/
