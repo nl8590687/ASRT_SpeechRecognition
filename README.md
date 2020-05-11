@@ -8,11 +8,11 @@
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
-[**查看本项目的Wiki文档**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki) 
+[**查看本项目的Wiki文档**](https://asrt.ailemon.me/docs/) 
 
 如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。本项目作者交流QQ群：**867888133**
 
-提问前可以先 [查看常见问题](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/issues) 避免重复提问
+提问前可以先 [查看常见问题](https://asrt.ailemon.me/docs/issues) 避免重复提问
 
 ASRT的原理请查看本文：
 * [ASRT：一个中文语音识别系统](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
@@ -94,6 +94,8 @@ CNN + LSTM/GRU + CTC
 * 关于下载已经训练好的模型的问题
 
 可以在Github本仓库下[releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases)里面的查看发布的各个版本软件的压缩包里获得包含已经训练好模型参数的完整源程序。
+
+发布的成品软件可以在此下载：[ASRT下载页面](https://asrt.ailemon.me/download)
 
 ### Language Model 语言模型
 
@@ -198,7 +200,7 @@ Python的依赖库
 
 ## License 开源许可协议
 
-[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687)
+[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687) 作者：[AI柠檬](https://ailemon.me/)
 
 ## Contributors 贡献者们
 

@@ -7,11 +7,11 @@
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
-[**View this project's wiki document (Chinese)**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki)
+[**View this project's wiki document (Chinese)**](https://asrt.ailemon.me/docs/)
 
 If you have any questions in your works with this project, welcome to put up issues in this repo and I will response as soon as possible. 
 
-You can check the [FAQ Page (Chinese)](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/issues) first before asking questions to avoid repeating questions.
+You can check the [FAQ Page (Chinese)](https://asrt.ailemon.me/docs/issues) first before asking questions to avoid repeating questions.
 
 A post about ASRT's introduction 
 * [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
@@ -95,6 +95,8 @@ The maximum length of the input audio is 16 seconds, and the output is the corre
 * Questions about downloading trained models
 
 The complete source program that includes trained model weights can be obtained from the archives of the various versions of the software released in the [releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases) page of Github.
+
+The released finished software can be downloaded here: [ASRT download page](https://asrt.ailemon.me/download)
 
 ### Language Model 
 
@@ -187,7 +189,7 @@ If the provided dataset link cannot be opened and downloaded, click this link [O
 
 ## License
 
-[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687)
+[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687) Author: [ailemon](https://ailemon.me/)
 
 ## Contributors
 [@zw76859420](https://github.com/zw76859420) 
