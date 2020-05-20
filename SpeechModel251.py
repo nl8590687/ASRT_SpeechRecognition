@@ -12,6 +12,7 @@ from general_function.file_dict import *
 from general_function.gen_func import *
 
 # LSTM_CNN
+import tensorflow as tf
 import keras as kr
 import numpy as np
 import random
@@ -322,19 +323,9 @@ class ModelSpeech(): # 语音模型类
 		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
 		
 		#print('r', r)
-		
-		
-		r1 = K.get_value(r[0][0])
-		#print('r1', r1)
-		
-		
-		#r2 = K.get_value(r[1])
-		#print(r2)
-		
-		r1=r1[0]
-		
-		return r1
-		pass
+		r1 = r[0][0].eval(session=tf.Session())
+		tf.reset_default_graph()
+		return r1[0]
 	
 	def RecognizeSpeech(self, wavsignal, fs):
 		'''
