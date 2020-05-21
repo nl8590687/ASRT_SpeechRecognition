@@ -79,7 +79,7 @@ ASRT API服务器启动请执行：
 $ python3 asrserver.py
 ```
 
-请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[ASRT客户端Demo](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/ClientDemo)。
+请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[ASRT客户端Demo](https://asrt.ailemon.me/docs/client-demo)。
 
 如果要训练和使用模型251，请在代码中 `import SpeechModel` 的相应位置做修改。
 
@@ -124,7 +124,7 @@ Python的依赖库
 * http
 * urllib
 
-[程序运行依赖环境详细说明](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/Dependent-Environment)
+[程序运行依赖环境详细说明](https://asrt.ailemon.me/docs/dependent-environment)
 
 ## Data Sets 数据集
 

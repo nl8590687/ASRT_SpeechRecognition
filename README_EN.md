@@ -76,7 +76,7 @@ ASRT API Server startup please execute:
 $ python3 asrserver.py
 ```
 
-Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation [ASRT Client Demo](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/ClientDemo).
+Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation [ASRT Client Demo](https://asrt.ailemon.me/docs/client-demo).
 
 If you want to train and use Model 251, make changes in the corresponding position of the `import SpeechModel` in the code files.
 
@@ -124,7 +124,7 @@ However, as the current international and domestic teams can achieve 98%, the ac
 * http
 * urllib
 
-[Dependent Environment Details](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/Dependent-Environment)
+[Dependent Environment Details](https://asrt.ailemon.me/docs/dependent-environment)
 
 ## Data Sets 
 
