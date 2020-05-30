@@ -323,8 +323,8 @@ class ModelSpeech(): # 语音模型类
 		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
 		
 		#print('r', r)
-		r1 = r[0][0].eval(session=tf.Session())
-		tf.reset_default_graph()
+		r1 = r[0][0].eval(session=tf.compat.v1.Session())
+		tf.compat.v1.reset_default_graph()
 		return r1[0]
 	
 	def RecognizeSpeech(self, wavsignal, fs):
