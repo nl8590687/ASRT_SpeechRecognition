@@ -133,27 +133,27 @@ Python的依赖库
 * **清华大学THCHS30中文语音数据集**
 
   data_thchs30.tgz 
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/18/data_thchs30.tgz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/18/data_thchs30.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/18/data_thchs30.tgz>)
 
   test-noise.tgz 
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/18/test-noise.tgz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/18/test-noise.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/18/test-noise.tgz>)
 
   resource.tgz 
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/18/resource.tgz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/18/resource.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/18/resource.tgz>)
 
 * **Free ST Chinese Mandarin Corpus** 
 
   ST-CMDS-20170001_1-OS.tar.gz 
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)
 
 * **AIShell-1 开源版数据集** 
 
   data_aishell.tgz
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/33/data_aishell.tgz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/33/data_aishell.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/33/data_aishell.tgz>)
 
   注：数据集解压方法
@@ -167,31 +167,31 @@ Python的依赖库
 * **Primewords Chinese Corpus Set 1** 
 
   primewords_md_2018_set1.tar.gz
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/47/primewords_md_2018_set1.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
 
 * **aidatatang_200zh**
 
    aidatatang_200zh.tgz
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/62/aidatatang_200zh.tgz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/62/aidatatang_200zh.tgz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/62/aidatatang_200zh.tgz>)
 
 * **MagicData**
 
   train_set.tar.gz
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/68/train_set.tar.gz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/68/train_set.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/68/train_set.tar.gz>)
 
   dev_set.tar.gz
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/68/dev_set.tar.gz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/68/dev_set.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/68/dev_set.tar.gz>)
 
   test_set.tar.gz
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/68/test_set.tar.gz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/68/test_set.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/68/test_set.tar.gz>)
 
   metadata.tar.gz
-[OpenSLR国内镜像](<http://cn-mirror.openslr.org/resources/68/metadata.tar.gz>)
+[OpenSLR国内镜像](<http://openslr.magicdatatech.com/resources/68/metadata.tar.gz>)
 [OpenSLR国外镜像](<http://www.openslr.org/resources/68/metadata.tar.gz>)
 
 特别鸣谢！感谢前辈们的公开语音数据集
