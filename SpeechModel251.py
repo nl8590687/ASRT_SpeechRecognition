@@ -324,7 +324,7 @@ class ModelSpeech(): # 语音模型类
 		
 		#print('r', r)
 		r1 = r[0][0].eval(session=tf.compat.v1.Session())
-		tf.compat.v1.reset_default_graph()
+		#tf.compat.v1.reset_default_graph()
 		return r1[0]
 	
 	def RecognizeSpeech(self, wavsignal, fs):
