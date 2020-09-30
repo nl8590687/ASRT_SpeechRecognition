@@ -7,7 +7,7 @@
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
-[**View this project's wiki document (Chinese)**](https://asrt.ailemon.me/docs/)
+[**ASRT Project Home Page**](https://asrt.ailemon.me/) | [**Released Download**](https://asrt.ailemon.me/download) | [**View this project's wiki document (Chinese)**](https://asrt.ailemon.me/docs/) | [**Experience Demo**](https://asrt.ailemon.me/demo)
 
 If you have any questions in your works with this project, welcome to put up issues in this repo and I will response as soon as possible. 
 
@@ -15,6 +15,10 @@ You can check the [FAQ Page (Chinese)](https://asrt.ailemon.me/docs/issues) firs
 
 A post about ASRT's introduction 
 * [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
+
+About how to use ASRT to train and deploy：
+* [Teach you how to use ASRT to train Chinese ASR model (Chinese)](<https://blog.ailemon.me/2020/08/20/teach-you-how-use-asrt-train-chinese-asr-model/>)
+* [Teach you how to use ASRT to deploy Chinese ASR API Server (Chinese)](<https://blog.ailemon.me/2020/08/27/teach-you-how-use-asrt-deploy-chinese-asr-api-server/>)
 
 For questions about the principles of the statistical language model that are often asked, see: 
 * [Simple word frequency statistics without Chinese word segmentation algorithm (Chinese)](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
