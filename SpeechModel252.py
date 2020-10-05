@@ -42,17 +42,6 @@ class ModelSpeech(): # 语音模型类
 		self._model, self.base_model = self.CreateModel() 
 		
 		self.datapath = datapath
-		self.slash = ''
-		system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
-		if(system_type == 'Windows'):
-			self.slash='\\' # 反斜杠
-		elif(system_type == 'Linux'):
-			self.slash='/' # 正斜杠
-		else:
-			print('*[Message] Unknown System\n')
-			self.slash='/' # 正斜杠
-		if(self.slash != self.datapath[-1]): # 在目录路径末尾增加斜杠
-			self.datapath = self.datapath + self.slash
 		
 		
 	def CreateModel(self):
@@ -399,7 +388,7 @@ if(__name__=='__main__'):
 	
 	
 	datapath =  abspath + ''
-	modelpath =  abspath + 'model_speech'
+	modelpath =  os.path.join(abspath, 'model_speech')
 	
 	
 	if(not os.path.exists(modelpath)): # 判断保存模型的目录是否存在
@@ -408,19 +397,16 @@ if(__name__=='__main__'):
 	system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 	if(system_type == 'Windows'):
 		datapath = 'E:\\语音数据集'
-		modelpath = modelpath + '\\'
 	elif(system_type == 'Linux'):
-		datapath =  abspath + 'dataset'
-		modelpath = modelpath + '/'
+		datapath =  os.path.join(abspath, 'dataset')
 	else:
 		print('*[Message] Unknown System\n')
 		datapath = 'dataset'
-		modelpath = modelpath + '/'
 	
 	ms = ModelSpeech(datapath)
 	
 	
-	#ms.LoadModel(modelpath + 'm252\\speech_model252_e_0_step_115500.model')
+	#ms.LoadModel(os.path.join(modelpath, 'm252', 'speech_model252_e_0_step_115500.model'))
 	ms.TrainModel(datapath, epoch = 50, batch_size = 4, save_step = 500)
 	#ms.TestModel(datapath, str_dataset='dev', data_count = 128, out_report = True)
 	#r = ms.RecognizeSpeech_FromFile('E:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0053.wav')
