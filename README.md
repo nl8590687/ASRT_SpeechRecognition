@@ -24,7 +24,7 @@ ASRT训练和部署教程请看：
 关于经常被问到的统计语言模型原理的问题，请看：
 
 * [统计语言模型：从中文拼音到文本](https://blog.ailemon.me/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
-* [无需中文分词算法的简单词频统计](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+* [统计N元语言模型生成算法：简单中文词频统计](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
 
 关于CTC的问题请看：
 

@@ -21,7 +21,7 @@ About how to use ASRT to train and deploy：
 * [Teach you how to use ASRT to deploy Chinese ASR API Server (Chinese)](<https://blog.ailemon.me/2020/08/27/teach-you-how-use-asrt-deploy-chinese-asr-api-server/>)
 
 For questions about the principles of the statistical language model that are often asked, see: 
-* [Simple word frequency statistics without Chinese word segmentation algorithm (Chinese)](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+* [Simple Chinese word frequency statistics to generate N-gram language model (Chinese)](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
 * [Statistical Language Model: Chinese Pinyin to Words (Chinese)](https://blog.ailemon.me/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
 
 For questions about CTC, see: 
