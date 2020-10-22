@@ -32,9 +32,9 @@ class ModelSpeech(): # 语音模型类
 	def __init__(self, datapath):
 		'''
 		初始化
-		默认输出的拼音的表示大小是1424，即1423个拼音+1个空白块
+		默认输出的拼音的表示大小是1428，即1427个拼音+1个空白块
 		'''
-		MS_OUTPUT_SIZE = 1424
+		MS_OUTPUT_SIZE = 1428
 		self.MS_OUTPUT_SIZE = MS_OUTPUT_SIZE # 神经网络最终输出的每一个字符向量维度的大小
 		#self.BATCH_SIZE = BATCH_SIZE # 一次训练的batch
 		self.label_max_string_length = 64
@@ -429,7 +429,7 @@ if(__name__=='__main__'):
 	
 	
 	#ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_100000.model')
-	#ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
+	ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
 	
 	#t1=time.time()
 	#ms.TestModel(datapath, str_dataset='train', data_count = 128, out_report = True)
