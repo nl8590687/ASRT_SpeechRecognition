@@ -1,5 +1,5 @@
-# A Deep-Learning-Based Chinese Speech Recognition System
-基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
+# ASRT: A Deep-Learning-Based Chinese Speech Recognition System
+ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.13+-blue.svg)](https://www.tensorflow.org/) 
@@ -8,11 +8,31 @@
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
-[**ASRT项目主页**](https://asrt.ailemon.me/) | [**发布版下载**](https://asrt.ailemon.me/download) | [**查看本项目的Wiki文档**](https://asrt.ailemon.me/docs/) | [**实用效果体验Demo**](https://asrt.ailemon.me/demo)
+[**ASRT项目主页**](https://asrt.ailemon.me/) | 
+[**发布版下载**](https://asrt.ailemon.me/download) | 
+[**查看本项目的Wiki文档**](https://asrt.ailemon.me/docs/) | 
+[**实用效果体验Demo**](https://asrt.ailemon.me/demo) | 
+[**打赏作者**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)
 
-如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。本项目作者交流QQ群：**867888133**
+如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。本项目作者交流QQ群：**894112051**
 
-提问前可以先 [查看常见问题](https://asrt.ailemon.me/docs/issues) 避免重复提问
+提问前请仔细查看[项目文档](https://asrt.ailemon.me/docs/)、 
+[常见问题](https://asrt.ailemon.me/docs/issues)
+以及[Issues](https://github.com/nl8590687/ASRT_SpeechRecognition/issues) 避免重复提问
+
+以下问题AI柠檬博主和群友可能会拒绝回答，包括但不限于：
+* 询问已经写在 **ASRT语音识别项目文档** 和 **Issues** 上解决过的已知重复问题。
+* 找不到重点、不知所云的提问内容，但是不给出任何其他信息。
+* 跟ASRT项目没有直接相关的问题
+* “伸手党”类的问题
+
+```
+请注意，开发者并没有义务回复您的问题，也没用义务免费给你打工，您应该具备基本的提问技巧，并善用搜索引擎，
+每个人的时间都是宝贵的。
+```
+有关AI柠檬ASRT语音项目的相关信息亦可使用[AI柠檬站内搜索引擎](https://s.ailemon.me/)进行相关信息的搜索。
+
+## ASRT相关资料 
 
 ASRT的原理请查看本文：
 * [ASRT：一个中文语音识别系统](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
@@ -31,6 +51,8 @@ ASRT训练和部署教程请看：
 * [[翻译]使用CTC进行序列建模](<https://blog.ailemon.me/2019/07/18/sequence-modeling-with-ctc/>)
 
 更多内容请访问作者的博客：[AI柠檬博客](https://blog.ailemon.me/)
+
+或使用[AI柠檬站内搜索引擎](https://s.ailemon.me/)进行相关信息的搜索
 
 ## Introduction 简介
 
@@ -212,5 +234,3 @@ Python的依赖库
 @madeirak @ZJUGuoShuai @williamchenwl
 
 @nl8590687 (repo owner)
-
-[**打赏作者**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)
