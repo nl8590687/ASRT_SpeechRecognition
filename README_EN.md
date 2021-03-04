@@ -102,9 +102,9 @@ The maximum length of the input audio is 16 seconds, and the output is the corre
 
 * Questions about downloading trained models
 
-The complete source program that includes trained model weights can be obtained from the archives of the various versions of the software released in the [releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases) page of Github.
+The released finished software that includes trained model weights can be downloaded from [ASRT download page](https://asrt.ailemon.me/download). 
 
-The released finished software can be downloaded here: [ASRT download page](https://asrt.ailemon.me/download)
+Github [Releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases) page includes the archives of the various versions of the software released and it's introduction. Under each version module, there is a zip file that includes trained model weights files. 
 
 ### Language Model 
 

@@ -119,9 +119,9 @@ CNN + LSTM/GRU + CTC
 
 * 关于下载已经训练好的模型的问题
 
-可以在Github本仓库下[releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases)里面的查看发布的各个版本软件的压缩包里获得包含已经训练好模型参数的完整源程序。
+已经训练好的模型包含在发布版服务端程序压缩包里面，发布版成品服务端程序可以在此下载：[ASRT下载页面](https://asrt.ailemon.me/download)。
 
-发布的成品软件可以在此下载：[ASRT下载页面](https://asrt.ailemon.me/download)
+Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases)页面里面还包括各个不同版本的介绍信息，每个版本下方的zip压缩包也是包含已经训练好的模型的发布版服务端程序压缩包。
 
 ### Language Model 语言模型
 
