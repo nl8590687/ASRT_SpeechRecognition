@@ -7,15 +7,15 @@
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
-[**ASRT Project Home Page**](https://asrt.ailemon.me/) | 
-[**Released Download**](https://asrt.ailemon.me/download) | 
-[**View this project's wiki document (Chinese)**](https://asrt.ailemon.me/docs/) | 
-[**Experience Demo**](https://asrt.ailemon.me/demo) | 
+[**ASRT Project Home Page**](https://asrt.ailemon.net/) | 
+[**Released Download**](https://asrt.ailemon.net/download) | 
+[**View this project's wiki document (Chinese)**](https://asrt.ailemon.net/docs/) | 
+[**Experience Demo**](https://asrt.ailemon.net/demo) | 
 [**Donate**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)
 
 If you have any questions in your works with this project, welcome to put up issues in this repo and I will response as soon as possible. 
 
-You can check the [FAQ Page (Chinese)](https://asrt.ailemon.me/docs/issues) first before asking questions to avoid repeating questions.
+You can check the [FAQ Page (Chinese)](https://asrt.ailemon.net/docs/issues) first before asking questions to avoid repeating questions.
 
 A post about ASRT's introduction 
 * [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
@@ -84,7 +84,7 @@ ASRT API Server startup please execute:
 $ python3 asrserver.py
 ```
 
-Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation [ASRT Client Demo](https://asrt.ailemon.me/docs/client-demo).
+Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation [ASRT Client Demo](https://asrt.ailemon.net/docs/client-demo).
 
 If you want to train and use Model 251, make changes in the corresponding position of the `import SpeechModel` in the code files.
 
@@ -102,7 +102,7 @@ The maximum length of the input audio is 16 seconds, and the output is the corre
 
 * Questions about downloading trained models
 
-The released finished software that includes trained model weights can be downloaded from [ASRT download page](https://asrt.ailemon.me/download). 
+The released finished software that includes trained model weights can be downloaded from [ASRT download page](https://asrt.ailemon.net/download). 
 
 Github [Releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases) page includes the archives of the various versions of the software released and it's introduction. Under each version module, there is a zip file that includes trained model weights files. 
 
@@ -132,7 +132,7 @@ However, as the current international and domestic teams can achieve 98%, the ac
 * http
 * urllib
 
-[Dependent Environment Details](https://asrt.ailemon.me/docs/dependent-environment)
+[Dependent Environment Details](https://asrt.ailemon.net/docs/dependent-environment)
 
 ## Data Sets 
 

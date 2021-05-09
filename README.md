@@ -8,16 +8,16 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
-[**ASRT项目主页**](https://asrt.ailemon.me/) | 
-[**发布版下载**](https://asrt.ailemon.me/download) | 
-[**查看本项目的Wiki文档**](https://asrt.ailemon.me/docs/) | 
-[**实用效果体验Demo**](https://asrt.ailemon.me/demo) | 
+[**ASRT项目主页**](https://asrt.ailemon.net/) | 
+[**发布版下载**](https://asrt.ailemon.net/download) | 
+[**查看本项目的Wiki文档**](https://asrt.ailemon.net/docs/) | 
+[**实用效果体验Demo**](https://asrt.ailemon.net/demo) | 
 [**打赏作者**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)
 
 如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。本项目作者交流QQ群：**894112051**
 
-提问前请仔细查看[项目文档](https://asrt.ailemon.me/docs/)、 
-[常见问题](https://asrt.ailemon.me/docs/issues)
+提问前请仔细查看[项目文档](https://asrt.ailemon.net/docs/)、 
+[常见问题](https://asrt.ailemon.net/docs/issues)
 以及[Issues](https://github.com/nl8590687/ASRT_SpeechRecognition/issues) 避免重复提问
 
 以下问题AI柠檬博主和群友可能会拒绝回答，包括但不限于：
@@ -105,7 +105,7 @@ ASRT API服务器启动请执行：
 $ python3 asrserver.py
 ```
 
-请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[ASRT客户端Demo](https://asrt.ailemon.me/docs/client-demo)。
+请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[ASRT客户端Demo](https://asrt.ailemon.net/docs/client-demo)。
 
 如果要训练和使用模型251，请在代码中 `import SpeechModel` 的相应位置做修改。
 
@@ -119,7 +119,7 @@ CNN + LSTM/GRU + CTC
 
 * 关于下载已经训练好的模型的问题
 
-已经训练好的模型包含在发布版服务端程序压缩包里面，发布版成品服务端程序可以在此下载：[ASRT下载页面](https://asrt.ailemon.me/download)。
+已经训练好的模型包含在发布版服务端程序压缩包里面，发布版成品服务端程序可以在此下载：[ASRT下载页面](https://asrt.ailemon.net/download)。
 
 Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases)页面里面还包括各个不同版本的介绍信息，每个版本下方的zip压缩包也是包含已经训练好的模型的发布版服务端程序压缩包。
 
@@ -150,7 +150,7 @@ Python的依赖库
 * http
 * urllib
 
-[程序运行依赖环境详细说明](https://asrt.ailemon.me/docs/dependent-environment)
+[程序运行依赖环境详细说明](https://asrt.ailemon.net/docs/dependent-environment)
 
 ## Data Sets 数据集
 
