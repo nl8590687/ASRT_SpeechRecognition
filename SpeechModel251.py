@@ -32,15 +32,15 @@ from general_function.gen_func import *
 
 # LSTM_CNN
 import tensorflow as tf
-import keras as kr
+import tensorflow.keras as kr
 import numpy as np
 import random
 
-from keras.models import Sequential, Model
-from keras.layers import Dense, Dropout, Input, Reshape, BatchNormalization # , Flatten
-from keras.layers import Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge
-from keras import backend as K
-from keras.optimizers import SGD, Adadelta, Adam
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import Dense, Dropout, Input, Reshape, BatchNormalization # , Flatten
+from tensorflow.keras.layers import Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge
+from tensorflow.keras import backend as K
+from tensorflow.keras.optimizers import SGD, Adadelta, Adam
 
 from readdata24 import DataSpeech
 

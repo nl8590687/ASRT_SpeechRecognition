@@ -27,7 +27,7 @@ import platform as plat
 import os
 
 import tensorflow as tf
-from keras.backend.tensorflow_backend import set_session
+#from keras.backend.tensorflow_backend import set_session
 
 
 from SpeechModel251 import ModelSpeech, ModelName
