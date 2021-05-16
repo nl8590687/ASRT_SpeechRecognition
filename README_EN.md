@@ -2,7 +2,6 @@
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.14+-blue.svg)](https://www.tensorflow.org/) 
-[![Keras Version](https://img.shields.io/badge/Keras-2.3+-blue.svg)](https://keras.io/) 
 [![Python Version](https://img.shields.io/badge/Python-3.5+-blue.svg)](https://www.python.org/) 
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
@@ -121,7 +120,7 @@ However, as the current international and domestic teams can achieve 98%, the ac
 ## Python libraries that need importing
 
 * python_speech_features
-* TensorFlow (1.14+)
+* TensorFlow (1.14 - 2.x)
 * Numpy
 * wave
 * matplotlib

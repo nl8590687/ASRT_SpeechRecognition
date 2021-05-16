@@ -3,7 +3,6 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.14+-blue.svg)](https://www.tensorflow.org/) 
-[![Keras Version](https://img.shields.io/badge/Keras-2.3+-blue.svg)](https://keras.io/) 
 [![Python Version](https://img.shields.io/badge/Python-3.5+-blue.svg)](https://www.python.org/) 
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
@@ -139,7 +138,7 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 Python的依赖库
 
 * python_speech_features
-* TensorFlow (1.14+)
+* TensorFlow (1.14 - 2.x)
 * Numpy
 * wave
 * matplotlib
