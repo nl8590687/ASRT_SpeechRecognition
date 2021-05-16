@@ -342,8 +342,10 @@ class ModelSpeech(): # 语音模型类
 		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
 		
 		#print('r', r)
-		#r1 = r[0][0].eval(session=tf.compat.v1.Session())
-		r1 = r[0][0].numpy()
+		if(tf.__version__[0:2] == '1.'):
+			r1 = r[0][0].eval(session=tf.compat.v1.Session())
+		else:
+			r1 = r[0][0].numpy()
 		#tf.compat.v1.reset_default_graph()
 		return r1[0]
 	
