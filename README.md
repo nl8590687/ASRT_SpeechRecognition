@@ -2,7 +2,7 @@
 ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
-[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.13+-blue.svg)](https://www.tensorflow.org/) 
+[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.14+-blue.svg)](https://www.tensorflow.org/) 
 [![Keras Version](https://img.shields.io/badge/Keras-2.3+-blue.svg)](https://keras.io/) 
 [![Python Version](https://img.shields.io/badge/Python-3.5+-blue.svg)](https://www.python.org/) 
 
@@ -107,7 +107,7 @@ $ python3 asrserver.py
 
 请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[ASRT客户端Demo](https://asrt.ailemon.net/docs/client-demo)。
 
-如果要训练和使用模型251，请在代码中 `import SpeechModel` 的相应位置做修改。
+如果要训练和使用非251版模型，请在代码中 `import SpeechModel` 的相应位置做修改。
 
 ## Model 模型
 
@@ -139,8 +139,7 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 Python的依赖库
 
 * python_speech_features
-* TensorFlow (1.13+)
-* Keras (2.3+)
+* TensorFlow (1.14+)
 * Numpy
 * wave
 * matplotlib
@@ -149,6 +148,13 @@ Python的依赖库
 * h5py
 * http
 * urllib
+* requests
+
+不会安装环境的同学请直接运行以下命令(前提是有GPU且已经安装好 CUDA 10.0 和 cudnn 7.4)：
+
+```shell
+$ pip install -r requirements.txt
+```
 
 [程序运行依赖环境详细说明](https://asrt.ailemon.net/docs/dependent-environment)
 
@@ -226,7 +232,7 @@ Python的依赖库
 
 ## License 开源许可协议
 
-[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687) 作者：[AI柠檬](https://ailemon.me/)
+[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687) 作者：[AI柠檬](https://www.ailemon.net/)
 
 ## Contributors 贡献者们
 
