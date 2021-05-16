@@ -25,9 +25,9 @@ https://www.jianshu.com/p/db0ba022936f
 '''
 
 import tensorflow as tf
-import keras
-import keras.backend as K
-import keras.layers as KL
+import tensorflow.keras as kr
+import tensorflow.keras.backend as K
+import tensorflow.keras.layers as KL
 
 class ParallelModel(keras.models.Model):
     """Subclasses the standard Keras Model and adds multi-GPU support.

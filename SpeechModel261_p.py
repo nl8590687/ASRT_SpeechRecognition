@@ -30,16 +30,16 @@ from general_function.file_dict import *
 from general_function.gen_func import *
 from general_function.muti_gpu import *
 
-import keras as kr
+import tensorflow.keras as kr
 import numpy as np
 import random
 
-from keras.models import Sequential, Model
-from keras.layers import Dense, Dropout, Input, Reshape, BatchNormalization # , Flatten
-from keras.layers import Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D,GRU #, Merge
-from keras.layers.merge import add, concatenate
-from keras import backend as K
-from keras.optimizers import SGD, Adadelta, Adam
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import Dense, Dropout, Input, Reshape, BatchNormalization # , Flatten
+from tensorflow.keras.layers import Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D,GRU #, Merge
+from tensorflow.keras.layers.merge import add, concatenate
+from tensorflow.keras import backend as K
+from tensorflow.keras.optimizers import SGD, Adadelta, Adam
 
 from readdata24 import DataSpeech
 

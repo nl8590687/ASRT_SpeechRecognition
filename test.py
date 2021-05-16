@@ -27,7 +27,7 @@ import platform as plat
 
 from SpeechModel251 import ModelSpeech
 from LanguageModel2 import ModelLanguage
-from keras import backend as K
+from tensorflow.keras import backend as K
 
 datapath = ''
 modelpath = 'model_speech'
