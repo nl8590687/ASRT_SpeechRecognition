@@ -34,7 +34,7 @@ from LanguageModel import ModelLanguage
 datapath = './'
 modelpath = 'model_speech/'
 ms = ModelSpeech(datapath)
-ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_12000.model')
+ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_12000.h5')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()

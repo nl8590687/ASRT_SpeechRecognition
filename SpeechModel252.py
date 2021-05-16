@@ -217,7 +217,7 @@ class ModelSpeech(): # 语音模型类
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
-		self.base_model.load_weights(filename + '.base')
+		#self.base_model.load_weights(filename + '.base')
 
 	def SaveModel(self,filename = abspath + 'model_speech/m'+ModelName+'/speech_model'+ModelName,comment=''):
 		'''

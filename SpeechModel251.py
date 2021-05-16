@@ -211,7 +211,7 @@ class ModelSpeech(): # 语音模型类
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
-		self.base_model.load_weights(filename + '.base')
+		#self.base_model.load_weights(filename + '.base')
 
 	def SaveModel(self,filename = abspath + 'model_speech/m'+ModelName+'/speech_model'+ModelName,comment=''):
 		'''
@@ -439,7 +439,7 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	
-	#ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_100000.model')
+	#ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_100000.h5')
 	ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
 	
 	#t1=time.time()
