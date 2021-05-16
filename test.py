@@ -27,7 +27,7 @@ import platform as plat
 
 from SpeechModel251 import ModelSpeech
 from LanguageModel2 import ModelLanguage
-from keras import backend as K
+from tensorflow.keras import backend as K
 
 datapath = ''
 modelpath = 'model_speech'
@@ -46,8 +46,8 @@ else:
 
 ms = ModelSpeech(datapath)
 
-#ms.LoadModel(modelpath + 'm22_2\\0\\speech_model22_e_0_step_257000.model')
-ms.LoadModel(modelpath + 'm251\\speech_model251_e_0_step_625000.model')
+#ms.LoadModel(modelpath + 'm22_2\\0\\speech_model22_e_0_step_257000.h5')
+ms.LoadModel(modelpath + 'm251\\speech_model251_e_0_step_625000.h5')
 
 #ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
 r = ms.RecognizeSpeech_FromFile('D:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')

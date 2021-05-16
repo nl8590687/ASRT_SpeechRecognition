@@ -30,16 +30,16 @@ from general_function.file_dict import *
 from general_function.gen_func import *
 
 # LSTM_CNN
-import keras as kr
+import tensorflow.keras as kr
 import numpy as np
 import random
 
-from keras.models import Sequential, Model
-from keras.layers import Dense, Dropout, Input, Reshape,GRU # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
-from keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge,Conv1D
-from keras.layers.merge import add, concatenate
-from keras import backend as K
-from keras.optimizers import SGD, Adadelta
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import Dense, Dropout, Input, Reshape,GRU # , Flatten,LSTM,Convolution1D,MaxPooling1D,Merge
+from tensorflow.keras.layers import Conv1D,LSTM,MaxPooling1D, Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge,Conv1D
+from tensorflow.keras.layers.merge import add, concatenate
+from tensorflow.keras import backend as K
+from tensorflow.keras.optimizers import SGD, Adadelta
 
 from readdata24 import DataSpeech
 
@@ -218,7 +218,7 @@ class ModelSpeech(): # 语音模型类
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
-		self.base_model.load_weights(filename + '.base')
+		#self.base_model.load_weights(filename + '.base')
 
 	def SaveModel(self,filename='model_speech/m26/speech_model26',comment=''):
 		'''

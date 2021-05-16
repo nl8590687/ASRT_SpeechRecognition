@@ -32,15 +32,15 @@ from general_function.gen_func import *
 
 # LSTM_CNN
 import tensorflow as tf
-import keras as kr
+import tensorflow.keras as kr
 import numpy as np
 import random
 
-from keras.models import Sequential, Model
-from keras.layers import Dense, Dropout, Input, Reshape, BatchNormalization # , Flatten
-from keras.layers import Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge
-from keras import backend as K
-from keras.optimizers import SGD, Adadelta, Adam
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import Dense, Dropout, Input, Reshape, BatchNormalization # , Flatten
+from tensorflow.keras.layers import Lambda, TimeDistributed, Activation,Conv2D, MaxPooling2D #, Merge
+from tensorflow.keras import backend as K
+from tensorflow.keras.optimizers import SGD, Adadelta, Adam
 
 from readdata24 import DataSpeech
 
@@ -211,7 +211,7 @@ class ModelSpeech(): # 语音模型类
 		加载模型参数
 		'''
 		self._model.load_weights(filename)
-		self.base_model.load_weights(filename + '.base')
+		#self.base_model.load_weights(filename + '.base')
 
 	def SaveModel(self,filename = abspath + 'model_speech/m'+ModelName+'/speech_model'+ModelName,comment=''):
 		'''
@@ -342,7 +342,10 @@ class ModelSpeech(): # 语音模型类
 		r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
 		
 		#print('r', r)
-		r1 = r[0][0].eval(session=tf.compat.v1.Session())
+		if(tf.__version__[0:2] == '1.'):
+			r1 = r[0][0].eval(session=tf.compat.v1.Session())
+		else:
+			r1 = r[0][0].numpy()
 		#tf.compat.v1.reset_default_graph()
 		return r1[0]
 	
@@ -438,7 +441,7 @@ if(__name__=='__main__'):
 	ms = ModelSpeech(datapath)
 	
 	
-	#ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_100000.model')
+	#ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_100000.h5')
 	ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
 	
 	#t1=time.time()

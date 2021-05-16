@@ -27,7 +27,7 @@ import platform as plat
 import os
 
 import tensorflow as tf
-from keras.backend.tensorflow_backend import set_session
+#from keras.backend.tensorflow_backend import set_session
 
 
 from SpeechModel251 import ModelSpeech, ModelName
@@ -63,7 +63,7 @@ else:
 
 ms = ModelSpeech(datapath)
 
-#ms.LoadModel(modelpath + 'speech_model251_e_0_step_327500.model')
+#ms.LoadModel(modelpath + 'speech_model251_e_0_step_327500.h5')
 ms.TrainModel(datapath, epoch = 50, batch_size = 16, save_step = 500)
 
 

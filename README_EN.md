@@ -1,8 +1,7 @@
 # ASRT: A Deep-Learning-Based Chinese Speech Recognition System
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
-[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.13+-blue.svg)](https://www.tensorflow.org/) 
-[![Keras Version](https://img.shields.io/badge/Keras-2.3+-blue.svg)](https://keras.io/) 
+[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.14+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.5+-blue.svg)](https://www.python.org/) 
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
@@ -86,7 +85,7 @@ $ python3 asrserver.py
 
 Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation [ASRT Client Demo](https://asrt.ailemon.net/docs/client-demo).
 
-If you want to train and use Model 251, make changes in the corresponding position of the `import SpeechModel` in the code files.
+If you want to train and use other model(not Model 251), make changes in the corresponding position of the `import SpeechModel` in the code files.
 
 If there is any problem during the execution of the program or during use, it can be promptly put forward in the issue, and I will reply as soon as possible.
 
@@ -121,8 +120,7 @@ However, as the current international and domestic teams can achieve 98%, the ac
 ## Python libraries that need importing
 
 * python_speech_features
-* TensorFlow (1.13+)
-* Keras (2.3+)
+* TensorFlow (1.14 - 2.x)
 * Numpy
 * wave
 * matplotlib
@@ -131,6 +129,13 @@ However, as the current international and domestic teams can achieve 98%, the ac
 * h5py
 * http
 * urllib
+* requests
+
+If you have trouble when install those packages, please run the following script to do it as long as you have a GPU and CUDA 10.0 and cudnn 7.4 have been installed：
+
+```shell
+$ pip install -r requirements.txt
+```
 
 [Dependent Environment Details](https://asrt.ailemon.net/docs/dependent-environment)
 
@@ -197,7 +202,7 @@ If the provided dataset link cannot be opened and downloaded, click this link [O
 
 ## License
 
-[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687) Author: [ailemon](https://ailemon.me/)
+[GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687) Author: [ailemon](https://www.ailemon.net/)
 
 ## Contributors
 [@zw76859420](https://github.com/zw76859420) 
