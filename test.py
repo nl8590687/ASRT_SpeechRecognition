@@ -1,5 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+#
+# Copyright 2016-2099 Ailemon.net
+#
+# This file is part of ASRT Speech Recognition Tool.
+#
+# ASRT is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# ASRT is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with ASRT.  If not, see <https://www.gnu.org/licenses/>.
+# ============================================================================
+
 """
 @author: nl8590687
 用于测试整个一套语音识别系统的程序
@@ -16,7 +34,7 @@ modelpath = 'model_speech'
 
 system_type = plat.system() # 由于不同的系统的文件路径表示不一样，需要进行判断
 if(system_type == 'Windows'):
-	datapath = 'D:\\语音数据集'
+	datapath = 'Z:\\SpeechData'
 	modelpath = modelpath + '\\'
 elif(system_type == 'Linux'):
 	datapath = 'dataset'
@@ -29,7 +47,7 @@ else:
 ms = ModelSpeech(datapath)
 
 #ms.LoadModel(modelpath + 'm22_2\\0\\speech_model22_e_0_step_257000.model')
-ms.LoadModel(modelpath + 'm251\\speech_model251_e_0_step_12000.model')
+ms.LoadModel(modelpath + 'm251\\speech_model251_e_0_step_625000.model')
 
 #ms.TestModel(datapath, str_dataset='test', data_count = 64, out_report = True)
 r = ms.RecognizeSpeech_FromFile('D:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')

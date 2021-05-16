@@ -1,5 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+#
+# Copyright 2016-2099 Ailemon.net
+#
+# This file is part of ASRT Speech Recognition Tool.
+#
+# ASRT is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# ASRT is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with ASRT.  If not, see <https://www.gnu.org/licenses/>.
+# ============================================================================
 
 '''
 @author: nl8590687
@@ -11,10 +28,9 @@ import requests
 from general_function.file_wav import *
 
 url = 'http://127.0.0.1:20000/'
-
 token = 'qwertasd'
 
-wavsignal,fs=read_wav_data('D:\\语音数据集\\ST-CMDS-20170001_1-OS\\20170001P00241I0052.wav')
+wavsignal,fs=read_wav_data('X:\\语音数据集\\data_thchs30\\train\\A11_0.wav')
 
 #print(wavsignal,fs)
 

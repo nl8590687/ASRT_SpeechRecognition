@@ -1,5 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+#
+# Copyright 2016-2099 Ailemon.net
+#
+# This file is part of ASRT Speech Recognition Tool.
+#
+# ASRT is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# ASRT is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with ASRT.  If not, see <https://www.gnu.org/licenses/>.
+# ============================================================================
+
 """
 @author: nl8590687
 语音识别的语言模型
@@ -241,7 +259,8 @@ if(__name__=='__main__'):
 	#str_pinyin = ['wo3', 'men5', 'qun2', 'li3', 'xiong1', 'di4', 'jian4', 'mei4', 'dou1', 'zai4', 'shuo1']
 	#str_pinyin = ['su1', 'an1', 'ni3', 'sui4', 'li4', 'yun4', 'sui2', 'cong2', 'jiao4', 'ming2', 'tao2', 'qi3', 'yu2', 'peng2', 'ya4', 'yang4', 'chao1', 'dao3', 'jiang1', 'li3', 'yuan2', 'kang1', 'zhua1', 'zou3']
 	#str_pinyin = ['da4', 'jia1', 'hao3']
-	str_pinyin = ['kao3', 'yan2', 'yan1', 'yu3', 'ci2', 'hui4']
+	#str_pinyin = ['kao3', 'yan2', 'yan1', 'yu3', 'ci2', 'hui4']
+	str_pinyin = ['mei2', 'xiang3', 'jing4', 'ran2', 'can3', 'bai4']
 	#r = ml.decode(str_pinyin)
 	r=ml.SpeechToText(str_pinyin)
 	print('语音转文字结果：\n',r)
