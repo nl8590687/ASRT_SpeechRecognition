@@ -34,11 +34,11 @@ from SpeechModel251 import ModelSpeech, ModelName
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 #进行配置，使用95%的GPU
-config = tf.compat.v1.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.95
+#config = tf.compat.v1.ConfigProto()
+#config.gpu_options.per_process_gpu_memory_fraction = 0.95
 #config.gpu_options.allow_growth=True   #不全部占满显存, 按需分配
-sess = tf.compat.v1.Session(config=config)
-tf.compat.v1.keras.backend.set_session(sess)
+#sess = tf.compat.v1.Session(config=config)
+#tf.compat.v1.keras.backend.set_session(sess)
 
 
 datapath = ''
