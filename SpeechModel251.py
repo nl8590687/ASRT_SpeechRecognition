@@ -347,7 +347,10 @@ class ModelSpeech(): # 语音模型类
 		else:
 			r1 = r[0][0].numpy()
 		#tf.compat.v1.reset_default_graph()
-		return r1[0]
+		p = 0
+		while p < len(r1[0])-1 and r1[0][p] != -1:
+			p += 1
+		return r1[0][0:p]
 	
 	def RecognizeSpeech(self, wavsignal, fs):
 		'''
