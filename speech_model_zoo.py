@@ -34,7 +34,7 @@ class BaseModel:
     '''
     def __init__(self):
         self.input_shape = None
-        self.output_size = None
+        self.output_shape = None
 
     def get_model(self) -> tuple:
         raise Exception("method not implemented")
