@@ -74,14 +74,14 @@ class SpeechModel251(BaseModel):
 
     参数： \\
         input_shape: tuple，默认值(1600, 200, 1) \\
-        output_size: int，默认值1428
+        output_shape: tuple，默认值(200, 1428)
     '''
-    def __init__(self, input_shape :tuple=(1600, 200, 1), output_size :int=1428) -> None:
+    def __init__(self, input_shape :tuple=(1600, 200, 1), output_shape :tuple=(200, 1428)) -> None:
         super().__init__()
         self.input_shape = input_shape
-        self.output_size = output_size
+        self.output_shape = output_shape
         self._model_name = 'SpeechModel251'
-        self.model, self.model_base = self._define_model(self.input_shape, self.output_size)
+        self.model, self.model_base = self._define_model(self.input_shape, self.output_shape[1])
 
     def _define_model(self, input_shape, output_size) -> tuple:
         label_max_string_length = 64
