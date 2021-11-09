@@ -1,8 +1,8 @@
 # ASRT: A Deep-Learning-Based Chinese Speech Recognition System
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
-[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.14+-blue.svg)](https://www.tensorflow.org/) 
-[![Python Version](https://img.shields.io/badge/Python-3.5+-blue.svg)](https://www.python.org/) 
+[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
+[![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
@@ -120,7 +120,7 @@ However, as the current international and domestic teams can achieve 98%, the ac
 ## Python libraries that need importing
 
 * python_speech_features
-* TensorFlow (1.14 - 2.x)
+* TensorFlow (1.15 - 2.x)
 * Numpy
 * wave
 * matplotlib
@@ -131,7 +131,7 @@ However, as the current international and domestic teams can achieve 98%, the ac
 * urllib
 * requests
 
-If you have trouble when install those packages, please run the following script to do it as long as you have a GPU and CUDA 10.0 and cudnn 7.4 have been installed：
+If you have trouble when install those packages, please run the following script to do it as long as you have a GPU and CUDA 11.2 and cudnn 8.1 have been installed：
 
 ```shell
 $ pip install -r requirements.txt

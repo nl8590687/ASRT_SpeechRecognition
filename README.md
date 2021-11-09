@@ -2,8 +2,8 @@
 ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
-[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.14+-blue.svg)](https://www.tensorflow.org/) 
-[![Python Version](https://img.shields.io/badge/Python-3.5+-blue.svg)](https://www.python.org/) 
+[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
+[![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
@@ -138,7 +138,7 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 Python的依赖库
 
 * python_speech_features
-* TensorFlow (1.14 - 2.x)
+* TensorFlow (1.15 - 2.x)
 * Numpy
 * wave
 * matplotlib
@@ -149,7 +149,7 @@ Python的依赖库
 * urllib
 * requests
 
-不会安装环境的同学请直接运行以下命令(前提是有GPU且已经安装好 CUDA 10.0 和 cudnn 7.4)：
+不会安装环境的同学请直接运行以下命令(前提是有GPU且已经安装好 CUDA 11.2 和 cudnn 8.1)：
 
 ```shell
 $ pip install -r requirements.txt
