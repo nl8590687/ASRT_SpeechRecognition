@@ -29,29 +29,29 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 请注意，开发者并没有义务回复您的问题，也没用义务免费给你打工，您应该具备基本的提问技巧，并善用搜索引擎，
 每个人的时间都是宝贵的。
 ```
-有关AI柠檬ASRT语音项目的相关信息亦可使用[AI柠檬站内搜索引擎](https://s.ailemon.me/)进行相关信息的搜索。
+有关AI柠檬ASRT语音项目的相关信息亦可使用[AI柠檬站内搜索引擎](https://s.ailemon.net/)进行相关信息的搜索。
 
 ## ASRT相关资料 
 
 ASRT的原理请查看本文：
-* [ASRT：一个中文语音识别系统](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
+* [ASRT：一个中文语音识别系统](https://blog.ailemon.net/2018/08/29/asrt-a-chinese-speech-recognition-system/)
 
 ASRT训练和部署教程请看：
-* [教你如何使用ASRT训练中文语音识别模型](<https://blog.ailemon.me/2020/08/20/teach-you-how-use-asrt-train-chinese-asr-model/>)
-* [教你如何使用ASRT部署中文语音识别API服务器](<https://blog.ailemon.me/2020/08/27/teach-you-how-use-asrt-deploy-chinese-asr-api-server/>)
+* [教你如何使用ASRT训练中文语音识别模型](<https://blog.ailemon.net/2020/08/20/teach-you-how-use-asrt-train-chinese-asr-model/>)
+* [教你如何使用ASRT部署中文语音识别API服务器](<https://blog.ailemon.net/2020/08/27/teach-you-how-use-asrt-deploy-chinese-asr-api-server/>)
 
 关于经常被问到的统计语言模型原理的问题，请看：
 
-* [统计语言模型：从中文拼音到文本](https://blog.ailemon.me/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
-* [统计N元语言模型生成算法：简单中文词频统计](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+* [统计语言模型：从中文拼音到文本](https://blog.ailemon.net/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
+* [统计N元语言模型生成算法：简单中文词频统计](https://blog.ailemon.net/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
 
 关于CTC的问题请看：
 
-* [[翻译]使用CTC进行序列建模](<https://blog.ailemon.me/2019/07/18/sequence-modeling-with-ctc/>)
+* [[翻译]使用CTC进行序列建模](<https://blog.ailemon.net/2019/07/18/sequence-modeling-with-ctc/>)
 
-更多内容请访问作者的博客：[AI柠檬博客](https://blog.ailemon.me/)
+更多内容请访问作者的博客：[AI柠檬博客](https://blog.ailemon.net/)
 
-或使用[AI柠檬站内搜索引擎](https://s.ailemon.me/)进行相关信息的搜索
+或使用[AI柠檬站内搜索引擎](https://s.ailemon.net/)进行相关信息的搜索
 
 ## Introduction 简介
 
@@ -159,7 +159,7 @@ $ pip install -r requirements.txt
 
 ## Data Sets 数据集
 
-[几个最新免费开源的中文语音数据集](https://blog.ailemon.me/2018/11/21/free-open-source-chinese-speech-datasets/)
+[几个最新免费开源的中文语音数据集](https://blog.ailemon.net/2018/11/21/free-open-source-chinese-speech-datasets/)
 
 * **清华大学THCHS30中文语音数据集**
 

@@ -17,21 +17,21 @@ If you have any questions in your works with this project, welcome to put up iss
 You can check the [FAQ Page (Chinese)](https://asrt.ailemon.net/docs/issues) first before asking questions to avoid repeating questions.
 
 A post about ASRT's introduction 
-* [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.me/2018/08/29/asrt-a-chinese-speech-recognition-system/)
+* [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.net/2018/08/29/asrt-a-chinese-speech-recognition-system/)
 
 About how to use ASRT to train and deploy：
-* [Teach you how to use ASRT to train Chinese ASR model (Chinese)](<https://blog.ailemon.me/2020/08/20/teach-you-how-use-asrt-train-chinese-asr-model/>)
-* [Teach you how to use ASRT to deploy Chinese ASR API Server (Chinese)](<https://blog.ailemon.me/2020/08/27/teach-you-how-use-asrt-deploy-chinese-asr-api-server/>)
+* [Teach you how to use ASRT to train Chinese ASR model (Chinese)](<https://blog.ailemon.net/2020/08/20/teach-you-how-use-asrt-train-chinese-asr-model/>)
+* [Teach you how to use ASRT to deploy Chinese ASR API Server (Chinese)](<https://blog.ailemon.net/2020/08/27/teach-you-how-use-asrt-deploy-chinese-asr-api-server/>)
 
 For questions about the principles of the statistical language model that are often asked, see: 
-* [Simple Chinese word frequency statistics to generate N-gram language model (Chinese)](https://blog.ailemon.me/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
-* [Statistical Language Model: Chinese Pinyin to Words (Chinese)](https://blog.ailemon.me/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
+* [Simple Chinese word frequency statistics to generate N-gram language model (Chinese)](https://blog.ailemon.net/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+* [Statistical Language Model: Chinese Pinyin to Words (Chinese)](https://blog.ailemon.net/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
 
 For questions about CTC, see: 
 
-* [[Translation] Sequence Modeling with CTC (Chinese)](<https://blog.ailemon.me/2019/07/18/sequence-modeling-with-ctc/>)
+* [[Translation] Sequence Modeling with CTC (Chinese)](<https://blog.ailemon.net/2019/07/18/sequence-modeling-with-ctc/>)
 
-For more infomation please refer to author's blog website: [AILemon Blog](https://blog.ailemon.me/) (Chinese)
+For more infomation please refer to author's blog website: [AILemon Blog](https://blog.ailemon.net/) (Chinese)
 
 ## Introduction
 
@@ -141,7 +141,7 @@ $ pip install -r requirements.txt
 
 ## Data Sets 
 
-[Some free Chinese speech datasets (Chinese)](https://blog.ailemon.me/2018/11/21/free-open-source-chinese-speech-datasets/)
+[Some free Chinese speech datasets (Chinese)](https://blog.ailemon.net/2018/11/21/free-open-source-chinese-speech-datasets/)
 
 * **Tsinghua University THCHS30 Chinese voice data set**
 
