@@ -1,0 +1,51 @@
+{
+    "dict_filename": "dict.txt",
+
+    "dataset":{
+        "train":[
+            {
+                "name": "thchs30_train",
+                "data_list": "/data/speech_data/thchs30/train.wav.lst",
+                "data_path": "/data/speech_data",
+                "label_list": "/data/speech_data/thchs30/train.syllable.txt"
+            },
+            {
+                "name": "stcmds_train",
+                "data_list": "/data/speech_data/stcmds/train.wav.lst",
+                "data_path": "/data/speech_data",
+                "label_list": "/data/speech_data/stcmds/train.syllable.txt"
+            }
+        ],
+
+        "dev":[
+            {
+                "name": "thchs30_dev",
+                "data_list": "/data/speech_data/thchs30/cv.wav.lst",
+                "data_path": "/data/speech_data",
+                "label_list": "/data/speech_data/thchs30/cv.syllable.txt"
+            },
+            {
+                "name": "stcmds_dev",
+                "data_list": "/data/speech_data/stcmds/dev.wav.lst",
+                "data_path": "/data/speech_data",
+                "label_list": "/data/speech_data/stcmds/dev.syllable.txt"
+            }
+        ],
+
+        "test":[
+            {
+                "name": "thchs30_test",
+                "data_list": "/data/speech_data/thchs30/test.wav.lst",
+                "data_path": "/data/speech_data",
+                "label_list": "/data/speech_data/thchs30/test.syllable.txt"
+            },
+            {
+                "name": "stcmds_test",
+                "data_list": "/data/speech_data/stcmds/test.wav.lst",
+                "data_path": "/data/speech_data",
+                "label_list": "/data/speech_data/stcmds/test.syllable.txt"
+            }
+        ]
+
+    }
+}

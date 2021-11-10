@@ -30,7 +30,7 @@ _config_dict = None
 _pinyin_dict = None
 _pinyin_list = None
 
-def load_config_file(filename) -> dict:
+def load_config_file(filename: str) -> dict:
     '''
     加载json配置文件
 
@@ -48,7 +48,7 @@ def load_config_file(filename) -> dict:
         _config_dict = json.load(fp)
     return _config_dict
 
-def load_pinyin_dict(filename) -> tuple:
+def load_pinyin_dict(filename: str) -> tuple:
     '''
     加载拼音列表和拼音字典
 
