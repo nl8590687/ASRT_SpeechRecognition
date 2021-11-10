@@ -11,9 +11,9 @@
             },
             {
                 "name": "stcmds_train",
-                "data_list": "/data/speech_data/stcmds/train.wav.lst",
+                "data_list": "/data/speech_data/st-cmds/train.wav.txt",
                 "data_path": "/data/speech_data",
-                "label_list": "/data/speech_data/stcmds/train.syllable.txt"
+                "label_list": "/data/speech_data/st-cmds/train.syllable.txt"
             }
         ],
 
@@ -26,9 +26,9 @@
             },
             {
                 "name": "stcmds_dev",
-                "data_list": "/data/speech_data/stcmds/dev.wav.lst",
+                "data_list": "/data/speech_data/st-cmds/dev.wav.txt",
                 "data_path": "/data/speech_data",
-                "label_list": "/data/speech_data/stcmds/dev.syllable.txt"
+                "label_list": "/data/speech_data/st-cmds/dev.syllable.txt"
             }
         ],
 
@@ -41,9 +41,9 @@
             },
             {
                 "name": "stcmds_test",
-                "data_list": "/data/speech_data/stcmds/test.wav.lst",
+                "data_list": "/data/speech_data/st-cmds/test.wav.txt",
                 "data_path": "/data/speech_data",
-                "label_list": "/data/speech_data/stcmds/test.syllable.txt"
+                "label_list": "/data/speech_data/st-cmds/test.syllable.txt"
             }
         ]
 
