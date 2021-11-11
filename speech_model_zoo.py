@@ -23,10 +23,12 @@
 若干声学模型模型的定义
 """
 
+import tensorflow as tf
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, Dropout, Input, Reshape, BatchNormalization
 from tensorflow.keras.layers import Lambda, Activation,Conv2D, MaxPooling2D
 from tensorflow.keras import backend as K
+import numpy as np
 
 class BaseModel:
     '''
@@ -56,6 +58,9 @@ class BaseModel:
     
     def get_loss_function(self):
         raise Exception("method not implemented")
+    
+    def forward(self, x):
+        raise Exception("method not implemented")
 
 def ctc_lambda_func(args):
     y_pred, labels, input_length, label_length = args
@@ -76,10 +81,11 @@ class SpeechModel251(BaseModel):
         input_shape: tuple，默认值(1600, 200, 1) \\
         output_shape: tuple，默认值(200, 1428)
     '''
-    def __init__(self, input_shape :tuple=(1600, 200, 1), output_shape :tuple=(200, 1428)) -> None:
+    def __init__(self, input_shape :tuple=(1600, 200, 1), output_size :int=1428) -> None:
         super().__init__()
         self.input_shape = input_shape
-        self.output_shape = output_shape
+        self._pool_size = 8
+        self.output_shape = (input_shape[0] // self._pool_size, output_size)
         self._model_name = 'SpeechModel251'
         self.model, self.model_base = self._define_model(self.input_shape, self.output_shape[1])
 
@@ -120,7 +126,7 @@ class SpeechModel251(BaseModel):
         #test=Model(inputs = input_data, outputs = layer_h12)
         #test.summary()
 
-        layer_h16 = Reshape((200, 3200))(layer_h15) #Reshape层
+        layer_h16 = Reshape((self.output_shape[0], 3200))(layer_h15) #Reshape层
         #layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
         layer_h16 = Dropout(0.3)(layer_h16)
         layer_h17 = Dense(128, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h16) # 全连接层
@@ -172,3 +178,27 @@ class SpeechModel251(BaseModel):
 
     def get_loss_function(self) -> dict:
         return {'ctc': lambda y_true, y_pred: y_pred}
+
+    def forward(self, data_input):
+        batch_size = 1 
+        in_len = np.zeros((batch_size),dtype = np.int32)
+
+        in_len[0] = self.output_shape[0]
+
+        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float)
+
+        for i in range(batch_size):
+            x_in[i,0:len(data_input)] = data_input
+
+        base_pred = self.model_base.predict(x = x_in)
+        r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
+
+        if(tf.__version__[0:2] == '1.'):
+            r1 = r[0][0].eval(session=tf.compat.v1.Session())
+        else:
+            r1 = r[0][0].numpy()
+        
+        p = 0
+        while p < len(r1[0])-1 and r1[0][p] != -1:
+            p += 1
+        return r1[0][0:p]
