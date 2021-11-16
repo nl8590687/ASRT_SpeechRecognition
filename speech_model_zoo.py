@@ -167,11 +167,11 @@ class SpeechModel251(BaseModel):
         self.model.load_weights(filename)
 
     def save_weights(self, filename :str) -> None:
-        self.model.save_weights(filename + '.model')
-        self.model_base.save_weights(filename + '.model.base')
+        self.model.save_weights(filename + '.model.h5')
+        self.model_base.save_weights(filename + '.model.base.h5')
         # 需要安装 hdf5 模块
-        self.model.save(filename + '.h5')
-        self.model_base.save(filename + '.base.h5')
+        #self.model.save(filename + '.h5')
+        #self.model_base.save(filename + '.base.h5')
         f = open('epoch_'+self._model_name+'.txt','w')
         f.write(filename)
         f.close()
