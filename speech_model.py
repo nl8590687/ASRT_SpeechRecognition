@@ -109,6 +109,7 @@ class ModelSpeech:
             try:
                 epoch += 1
                 print('[ASRT Training] train epoch %d/%d .' % (epoch, iter_end))
+                data_loader.shuffle()
                 self.trained_model.fit_generator(yielddatas, num_iterate, callbacks = call_back)
             except StopIteration:
                 print('[error] generator error. please check data format.')
