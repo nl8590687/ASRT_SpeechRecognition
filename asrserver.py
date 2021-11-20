@@ -42,7 +42,7 @@ sm251 = SpeechModel251(
     )
 feat = Spectrogram()
 ms = ModelSpeech(sm251, feat, max_label_length=64)
-ms.load_model('save_models/' + sm251.get_model_name() + '.h5')
+ms.load_model('save_models/' + sm251.get_model_name() + '.model.h5')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()
