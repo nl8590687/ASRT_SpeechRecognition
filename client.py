@@ -20,19 +20,16 @@
 
 '''
 @author: nl8590687
-asrserver测试专用客户端
-
+ASRT语音识别asrserver测试专用客户端
 '''
 
 import requests
-from general_function.file_wav import *
+from utils.ops import read_wav_data
 
 url = 'http://127.0.0.1:20000/'
 token = 'qwertasd'
 
-wavsignal,fs=read_wav_data('X:\\语音数据集\\data_thchs30\\train\\A11_0.wav')
-
-#print(wavsignal,fs)
+wavsignal, fs, _, _ = read_wav_data('X:\\语音数据集\\data_thchs30\\train\\A11_0.wav')
 
 datas={'token':token, 'fs':fs, 'wavs':wavsignal}
 import time
