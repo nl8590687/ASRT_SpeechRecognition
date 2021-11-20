@@ -22,19 +22,17 @@
 @author: nl8590687
 ASRT语音识别asrserver测试专用客户端
 '''
-
+import time
 import requests
 from utils.ops import read_wav_data
 
-url = 'http://127.0.0.1:20000/'
-token = 'qwertasd'
-
+URL = 'http://127.0.0.1:20000/'
+TOKEN = 'qwertasd'
 wavsignal, fs, _, _ = read_wav_data('X:\\语音数据集\\data_thchs30\\train\\A11_0.wav')
+datas={'token':TOKEN, 'fs':fs, 'wavs':wavsignal}
 
-datas={'token':token, 'fs':fs, 'wavs':wavsignal}
-import time
 t0=time.time()
-r = requests.post(url, datas)
+r = requests.post(URL, datas)
 t1=time.time()
 r.encoding='utf-8'
 
