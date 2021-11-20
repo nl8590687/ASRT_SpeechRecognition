@@ -20,21 +20,29 @@
 
 """
 @author: nl8590687
-语音识别API的HTTP服务器程序
+ASRT语音识别API的HTTP服务器程序
 """
 
 import http.server
 import urllib
 import socket
-import keras
-from SpeechModel251 import ModelSpeech
-from LanguageModel import ModelLanguage
+from speech_model import ModelSpeech
+from speech_model_zoo import SpeechModel251
+from speech_features import Spectrogram
+from LanguageModel2 import ModelLanguage
 
-
-datapath = './'
-modelpath = 'model_speech/'
-ms = ModelSpeech(datapath)
-ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_12000.h5')
+audio_length = 1600
+audio_feature_length = 200
+channels = 1
+# 默认输出的拼音的表示大小是1428，即1427个拼音+1个空白块
+output_size = 1428
+sm251 = SpeechModel251(
+    input_shape=(audio_length, audio_feature_length, channels),
+    output_size=output_size
+    )
+feat = Spectrogram()
+ms = ModelSpeech(sm251, feat, max_label_length=64)
+ms.load_model('save_models/' + sm251.get_model_name() + '.h5')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()
@@ -114,7 +122,7 @@ class ASRTHTTPHandle(http.server.BaseHTTPRequestHandler):
     def recognize(self, wavs, fs):
         r=''
         try:
-            r_speech = ms.RecognizeSpeech(wavs, fs)
+            r_speech = ms.recognize_speech(wavs, fs)
             print(r_speech)
             str_pinyin = r_speech
             r = ml.SpeechToText(str_pinyin)
