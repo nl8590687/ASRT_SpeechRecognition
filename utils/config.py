@@ -25,7 +25,7 @@
 
 import json
 
-default_config_filename = 'asrtConfig.json'
+default_config_filename = 'asrt_config.json'
 _config_dict = None
 _pinyin_dict = None
 _pinyin_list = None
