@@ -332,7 +332,7 @@ class SpeechModel24(BaseModel):
         #test=Model(inputs = input_data, outputs = layer_h12)
         #test.summary()
 
-        layer_h10 = Reshape((self.output_shape[0], 3200))(layer_h19) #Reshape层
+        layer_h10 = Reshape((self.output_shape[0], 3200))(layer_h9) #Reshape层
         #layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
         layer_h10 = Dropout(0.3)(layer_h10)
         layer_h11 = Dense(128, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h10) # 全连接层
