@@ -35,7 +35,7 @@ For more infomation please refer to author's blog website: [AILemon Blog](https:
 
 ## Introduction
 
-This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement. 
+This project uses tensorFlow.keras based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement. 
 
 * **Steps**
 
@@ -46,9 +46,7 @@ $ git clone https://github.com/nl8590687/ASRT_SpeechRecognition.git
 
 Or you can use the "Fork" button to copy a copy of the project and then clone it locally with your own SSH key.
 
-After cloning the repository via git, go to the project root directory; create a subdirectory `dataset/` (you can use a soft link instead), and then extract the downloaded datasets directly into it.
-
-Note that in the current version, both the Thchs30 and ST-CMDS data sets must be downloaded and used, and using other data sets need to modify the sourece codes. 
+After cloning the repository via git, go to the project root directory; create a subdirectory `dataset/` (you can use a soft link instead) for datasets, and then extract the downloaded datasets directly into it.
 
 ```shell
 $ cd ASRT_SpeechRecognition
@@ -60,6 +58,8 @@ $ tar zxf <dataset zip files name> -C dataset/
 
 Then, you need to copy all the files in the 'datalist' directory to the dataset directory, that is, put them together with the data set.
 
+Note that in the current version, in the configuration file, two data sets, Thchs30 and ST-CMDS, are added by default, please delete them if you don’t need them. If you want to use other data sets, you need to add data configuration yourself, and use the standard format supported by ASRT to organize the data in advance.
+
 ```shell
 $ cp -rf datalist/* dataset/
 ```
@@ -70,11 +70,11 @@ Before running this project, please install the necessary [Python3 version depen
 
 To start training this project, please execute:
 ```shell
-$ python3 train_mspeech.py
+$ python3 train_speech_model.py
 ```
 To start the test of this project, please execute:
 ```shell
-$ python3 test_mspeech.py
+$ python3 evaluate_speech_model.py
 ```
 Before testing, make sure the model file path filled in the code files exists.
 
@@ -85,7 +85,7 @@ $ python3 asrserver.py
 
 Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation [ASRT Client Demo](https://asrt.ailemon.net/docs/client-demo).
 
-If you want to train and use other model(not Model 251), make changes in the corresponding position of the `import SpeechModel` in the code files.
+If you want to train and use other model(not Model 251), make changes in the corresponding position of the `import speech_model_zoo` in the code files.
 
 If there is any problem during the execution of the program or during use, it can be promptly put forward in the issue, and I will reply as soon as possible.
 
@@ -95,7 +95,7 @@ If there is any problem during the execution of the program or during use, it ca
 
 ### Speech Model
 
-CNN + LSTM/GRU + CTC
+CNN/LSTM/GRU + CTC
 
 The maximum length of the input audio is 16 seconds, and the output is the corresponding Chinese pinyin sequence. 
 
@@ -117,18 +117,14 @@ At present, the best model can basically reach 80% of Pinyin correct rate on the
 
 However, as the current international and domestic teams can achieve 98%, the accuracy rate still needs to be further improved. 
 
-## Python libraries that need importing
+## Python Dependency Library
 
-* python_speech_features
-* TensorFlow (1.15 - 2.x)
-* Numpy
+* tensorFlow (1.15 - 2.x)
+* numpy
 * wave
 * matplotlib
 * math
-* Scipy
-* h5py
-* http
-* urllib
+* scipy
 * requests
 
 If you have trouble when install those packages, please run the following script to do it as long as you have a GPU and CUDA 11.2 and cudnn 8.1 have been installed：

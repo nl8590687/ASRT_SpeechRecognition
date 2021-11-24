@@ -55,9 +55,9 @@ ASRT训练和部署教程请看：
 
 ## Introduction 简介
 
-本项目使用Keras、TensorFlow基于深度卷积神经网络和长短时记忆神经网络、注意力机制以及CTC实现。
+本项目使用tensorFlow.keras基于深度卷积神经网络和长短时记忆神经网络、注意力机制以及CTC实现。
 
-This project uses Keras, TensorFlow based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
+This project uses tensorFlow.keras based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
 
 * **操作步骤**
 
@@ -68,9 +68,9 @@ $ git clone https://github.com/nl8590687/ASRT_SpeechRecognition.git
 
 或者您也可以通过 "Fork" 按钮，将本项目Copy一份副本，然后通过您自己的SSH密钥克隆到本地。
 
-通过git克隆仓库以后，进入项目根目录；并创建子目录 `dataset/` (可使用软链接代替)，然后将下载好的数据集直接解压进去
+通过git克隆仓库以后，进入项目根目录；并创建一个存储数据的子目录， 例如 `dataset/` (可使用软链接代替)，然后将下载好的数据集直接解压进去
 
-注意，当前版本中，Thchs30和ST-CMDS两个数据集都必须下载使用，缺一不可，并且使用其他数据集需要修改代码。
+注意，当前版本中，在配置文件里，默认添加了Thchs30和ST-CMDS两个数据集，如果不需要请自行删除。如果要使用其他数据集需要自行添加数据配置，并提前使用ASRT支持的标准格式整理数据。
 
 ```shell
 $ cd ASRT_SpeechRecognition
@@ -91,11 +91,11 @@ $ cp -rf datalist/* dataset/
 
 本项目开始训练请执行：
 ```shell
-$ python3 train_mspeech.py
+$ python3 train_speech_model.py
 ```
 本项目开始测试请执行：
 ```shell
-$ python3 test_mspeech.py
+$ python3 evaluate_speech_model.py
 ```
 测试之前，请确保代码中填写的模型文件路径存在。
 
@@ -106,13 +106,13 @@ $ python3 asrserver.py
 
 请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[ASRT客户端Demo](https://asrt.ailemon.net/docs/client-demo)。
 
-如果要训练和使用非251版模型，请在代码中 `import SpeechModel` 的相应位置做修改。
+如果要训练和使用非251版模型，请在代码中 `import speech_model_zoo` 的相应位置做修改。
 
 ## Model 模型
 
 ### Speech Model 语音模型
 
-CNN + LSTM/GRU + CTC
+CNN/LSTM/GRU + CTC
 
 其中，输入的音频的最大时间长度为16秒，输出为对应的汉语拼音序列
 
@@ -134,19 +134,15 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 
 不过由于目前国际和国内的部分团队能做到98%，所以正确率仍有待于进一步提高
 
-## Python Import
+## Python Dependency Library
 Python的依赖库
 
-* python_speech_features
-* TensorFlow (1.15 - 2.x)
-* Numpy
+* tensorFlow (1.15 - 2.x)
+* numpy
 * wave
 * matplotlib
 * math
-* Scipy
-* h5py
-* http
-* urllib
+* scipy
 * requests
 
 不会安装环境的同学请直接运行以下命令(前提是有GPU且已经安装好 CUDA 11.2 和 cudnn 8.1)：
