@@ -1,6 +1,7 @@
 ## Ignore some files and folders for copyright and other reasons. 
 
 *.model
+*.model.base
 [Mm]odel_speech/
 
 __pycache__
@@ -14,3 +15,4 @@ data_pinyin.txt
 testClient.py
 
 webapi/
+save_models/
