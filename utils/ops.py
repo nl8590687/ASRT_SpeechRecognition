@@ -24,8 +24,8 @@
 """
 
 import wave
-import numpy as np
 import difflib
+import numpy as np
 
 def read_wav_data(filename: str) -> tuple:
     '''
@@ -45,14 +45,16 @@ def read_wav_data(filename: str) -> tuple:
 
 
 def get_edit_distance(str1, str2) -> int:
-	leven_cost = 0
-	s = difflib.SequenceMatcher(None, str1, str2)
-	for tag, i1, i2, j1, j2 in s.get_opcodes():
-		#print('{:7} a[{}: {}] --> b[{}: {}] {} --> {}'.format(tag, i1, i2, j1, j2, str1[i1: i2], str2[j1: j2]))
-		if tag == 'replace':
-			leven_cost += max(i2-i1, j2-j1)
-		elif tag == 'insert':
-			leven_cost += (j2-j1)
-		elif tag == 'delete':
-			leven_cost += (i2-i1)
-	return leven_cost
+    '''
+    计算两个串的编辑距离，支持str和list类型
+    '''
+    leven_cost = 0
+    sequence_match = difflib.SequenceMatcher(None, str1, str2)
+    for tag, index_1, index_2, index_j1, index_j2 in sequence_match.get_opcodes():
+        if tag == 'replace':
+            leven_cost += max(index_2-index_1, index_j2-index_j1)
+        elif tag == 'insert':
+            leven_cost += (index_j2-index_j1)
+        elif tag == 'delete':
+            leven_cost += (index_2-index_1)
+    return leven_cost

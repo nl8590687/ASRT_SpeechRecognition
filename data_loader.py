@@ -25,7 +25,7 @@
 import os
 import random
 import numpy as np
-from utils.config import load_config_file, default_config_filename, load_pinyin_dict
+from utils.config import load_config_file, DEFAULT_CONFIG_FILENAME, load_pinyin_dict
 from utils.ops import read_wav_data
 
 class DataLoader:
@@ -45,18 +45,17 @@ class DataLoader:
         self.pinyin_list = list()
         self.pinyin_dict = dict()
         self._load_data()
-        pass
 
     def _load_data(self):
-        config = load_config_file(default_config_filename)
-        
+        config = load_config_file(DEFAULT_CONFIG_FILENAME)
+
         self.pinyin_list, self.pinyin_dict = load_pinyin_dict(config['dict_filename'])
 
-        for id in range(len(config['dataset'][self.dataset_type])):
-            filename_datalist = config['dataset'][self.dataset_type][id]['data_list']
-            filename_datapath = config['dataset'][self.dataset_type][id]['data_path']
-            with open(filename_datalist, 'r', encoding='utf-8') as fp:
-                lines = fp.read().split('\n')
+        for index in range(len(config['dataset'][self.dataset_type])):
+            filename_datalist = config['dataset'][self.dataset_type][index]['data_list']
+            filename_datapath = config['dataset'][self.dataset_type][index]['data_path']
+            with open(filename_datalist, 'r', encoding='utf-8') as file_pointer:
+                lines = file_pointer.read().split('\n')
                 for line in lines:
                     if len(line) == 0:
                         continue
@@ -64,9 +63,9 @@ class DataLoader:
                     self.data_list.append(tokens[0])
                     self.wav_dict[tokens[0]] = os.path.join(filename_datapath, tokens[1])
 
-            filename_labellist = config['dataset'][self.dataset_type][id]['label_list']
-            with open(filename_labellist, 'r', encoding='utf-8') as fp:
-                lines = fp.read().split('\n')
+            filename_labellist = config['dataset'][self.dataset_type][index]['label_list']
+            with open(filename_labellist, 'r', encoding='utf-8') as file_pointer:
+                lines = file_pointer.read().split('\n')
                 for line in lines:
                     if len(line) == 0:
                         continue
@@ -85,7 +84,7 @@ class DataLoader:
         '''
         mark = self.data_list[index]
 
-        wav_signal, fs, _, _ = read_wav_data(self.wav_dict[mark])
+        wav_signal, sample_rate, _, _ = read_wav_data(self.wav_dict[mark])
         labels = list()
         for item in self.label_dict[mark]:
             if len(item) == 0:
@@ -93,7 +92,7 @@ class DataLoader:
             labels.append(self.pinyin_dict[item])
 
         data_label = np.array(labels)
-        return (wav_signal, fs, data_label)
+        return (wav_signal, sample_rate, data_label)
 
     def shuffle(self) -> None:
         '''
