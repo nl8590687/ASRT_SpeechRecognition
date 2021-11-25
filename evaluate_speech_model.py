@@ -45,6 +45,6 @@ feat = Spectrogram()
 evalue_data = DataLoader('dev')
 ms = ModelSpeech(sm251, feat, max_label_length=64)
 
-ms.load_model('save_models/' + sm251.get_model_name() + '.h5')
+ms.load_model('save_models/' + sm251.get_model_name() + '.model.h5')
 ms.evaluate_model(data_loader=evalue_data, data_count=-1,
     out_report=True, show_ratio=True, show_per_step=100)

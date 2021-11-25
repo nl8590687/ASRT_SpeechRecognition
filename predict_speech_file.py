@@ -44,7 +44,7 @@ sm251 = SpeechModel251(
 feat = Spectrogram()
 ms = ModelSpeech(sm251, feat, max_label_length=64)
 
-ms.load_model('save_models/' + sm251.get_model_name() + '.h5')
+ms.load_model('save_models/' + sm251.get_model_name() + '.model.h5')
 res = ms.recognize_speech_from_file('filename.wav')
 print('*[提示] 声学模型语音识别结果：\n',res)
 
