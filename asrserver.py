@@ -24,21 +24,20 @@ ASRT语音识别API的HTTP服务器程序
 """
 
 import http.server
-import urllib
 import socket
 from speech_model import ModelSpeech
 from speech_model_zoo import SpeechModel251
 from speech_features import Spectrogram
 from LanguageModel2 import ModelLanguage
 
-audio_length = 1600
-audio_feature_length = 200
-channels = 1
+AUDIO_LENGTH = 1600
+AUDIO_FEATURE_LENGTH = 200
+CHANNELS = 1
 # 默认输出的拼音的表示大小是1428，即1427个拼音+1个空白块
-output_size = 1428
+OUTPUT_SIZE = 1428
 sm251 = SpeechModel251(
-    input_shape=(audio_length, audio_feature_length, channels),
-    output_size=output_size
+    input_shape=(AUDIO_LENGTH, AUDIO_FEATURE_LENGTH, CHANNELS),
+    output_size=OUTPUT_SIZE
     )
 feat = Spectrogram()
 ms = ModelSpeech(sm251, feat, max_label_length=64)
@@ -48,7 +47,7 @@ ml = ModelLanguage('model_language')
 ml.LoadModel()
 
 
-class ASRTHTTPHandle(http.server.BaseHTTPRequestHandler):  
+class ASRTHTTPHandle(http.server.BaseHTTPRequestHandler):
     def setup(self):
         self.request.settimeout(10)
         http.server.BaseHTTPRequestHandler.setup(self)
@@ -58,67 +57,65 @@ class ASRTHTTPHandle(http.server.BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
 
-    def do_GET(self):  
-        buf = 'ASRT_SpeechRecognition API'  
-        self.protocal_version = 'HTTP/1.1'   
-        
-        self._set_response()
-        
-        buf = bytes(buf,encoding="utf-8")
-        self.wfile.write(buf) 
+    def do_GET(self):
+        buf = 'ASRT_SpeechRecognition API'
+        self.protocal_version = 'HTTP/1.1'
 
-    def do_POST(self):  
+        self._set_response()
+
+        buf = bytes(buf,encoding="utf-8")
+        self.wfile.write(buf)
+
+    def do_POST(self):
         '''
         处理通过POST方式传递过来并接收的语音数据
         通过语音模型和语言模型计算得到语音识别结果并返回
         '''
-        path = self.path  
-        print(path)  
-        #获取post提交的数据  
-        datas = self.rfile.read(int(self.headers['content-length']))  
-        #datas = urllib.unquote(datas).decode("utf-8", 'ignore') 
+        path = self.path
+        print(path)
+        #获取post提交的数据
+        datas = self.rfile.read(int(self.headers['content-length']))
+        #datas = urllib.unquote(datas).decode("utf-8", 'ignore')
         datas = datas.decode('utf-8')
         datas_split = datas.split('&')
         token = ''
         fs = 0
         wavs = []
-        
+
         for line in datas_split:
             [key, value]=line.split('=')
-            if('wavs' == key and '' != value):
+            if key == 'wavs' and value != '':
                 wavs.append(int(value))
-            elif('fs' == key):
+            elif key == 'fs':
                 fs = int(value)
-            elif('token' == key ):
+            elif key == 'token':
                 token = value
-            #elif('type' == key):
-            #    type = value
             else:
                 print(key, value)
-            
-        if(token != 'qwertasd'):
+
+        if token != 'qwertasd':
             buf = '403'
             print(buf)
             buf = bytes(buf,encoding="utf-8")
-            self.wfile.write(buf)  
+            self.wfile.write(buf)
             return
-        
-        if(len(wavs)>0):
+
+        if len(wavs)>0:
             r = self.recognize([wavs], fs)
         else:
             r = ''
-        
-        if(token == 'qwertasd'):
+
+        if token == 'qwertasd':
             buf = r
         else:
             buf = '403'
-        
+
         self._set_response()
-        
+
         print(buf)
         buf = bytes(buf,encoding="utf-8")
-        self.wfile.write(buf)  
-        
+        self.wfile.write(buf)
+
     def recognize(self, wavs, fs):
         r=''
         try:
@@ -130,8 +127,7 @@ class ASRTHTTPHandle(http.server.BaseHTTPRequestHandler):
             r=''
             print('[*Message] Server raise a bug. ', ex)
         return r
-        pass
-    
+
     def recognize_from_file(self, filename):
         pass
 
@@ -140,16 +136,16 @@ class HTTPServerV6(http.server.HTTPServer):
     address_family = socket.AF_INET6
 
 
-def start_server(ip, port):  
-    if(':' in ip):
+def start_server(ip, port):
+    if ':' in ip:
         http_server = HTTPServerV6((ip, port), ASRTHTTPHandle)
     else:
         http_server = http.server.HTTPServer((ip, int(port)), ASRTHTTPHandle)
-    
+
     print('服务器已开启')
-    
+
     try:
-        http_server.serve_forever() #设置一直监听并接收请求  
+        http_server.serve_forever() #设置一直监听并接收请求
     except KeyboardInterrupt:
         pass
     http_server.server_close()

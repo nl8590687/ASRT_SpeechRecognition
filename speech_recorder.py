@@ -18,8 +18,13 @@
 # along with ASRT.  If not, see <https://www.gnu.org/licenses/>.
 # ============================================================================
 
-import pyaudio
+"""
+@author: nl8590687
+一个配置为可用于ASRT语音识别系统的录音程序
+"""
+
 import wave
+import pyaudio
 
 
 def record_wave(wavfile,
@@ -43,8 +48,8 @@ def record_wave(wavfile,
     else:
         raise ValueError('Unsupported sampling bits')
 
-    p = pyaudio.PyAudio()
-    stream = p.open(format=format_,
+    audio = pyaudio.PyAudio()
+    stream = audio.open(format=format_,
                     channels=channels,
                     rate=sampling_rate,
                     input=True,
@@ -70,15 +75,15 @@ def record_wave(wavfile,
 
     stream.stop_stream()
     stream.close()
-    p.terminate()
+    audio.terminate()
 
     print('Convert PCM frames to WAV... ', end='')
-    wf = wave.open(wavfile, 'wb')
-    wf.setnchannels(channels)
-    wf.setsampwidth(p.get_sample_size(format_))
-    wf.setframerate(sampling_rate)
-    wf.writeframes(b''.join(frames))
-    wf.close()
+    wavfp = wave.open(wavfile, 'wb')
+    wavfp.setnchannels(channels)
+    wavfp.setsampwidth(audio.get_sample_size(format_))
+    wavfp.setframerate(sampling_rate)
+    wavfp.writeframes(b''.join(frames))
+    wavfp.close()
     print('OK')
 
 
@@ -95,7 +100,8 @@ if __name__ == "__main__":
                         default=16, choices=(8, 16, 24, 32), help='sampling bits')
     parser.add_argument('-c', '--channels', type=int,
                         default=1, help='audio channels')
-    parser.add_argument('output', nargs='?', default='output.wav', help='audio file to store audio stream')
+    parser.add_argument('output', nargs='?', default='output.wav',
+                        help='audio file to store audio stream')
     args = parser.parse_args()
     record_wave(args.output, duration=args.duration,
                 channels=args.channels,
