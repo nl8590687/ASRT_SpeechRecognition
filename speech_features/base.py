@@ -20,6 +20,12 @@
 
 # calculate filterbank features. Provides e.g. fbank and mfcc features for use in ASR applications
 # Author: James Lyons 2012
+
+'''
+@author: nl8590687
+ASRT语音识别声学特征基础库模块，一些基础函数实现
+'''
+
 from __future__ import division
 import numpy
 from scipy.fftpack import dct
@@ -29,7 +35,7 @@ from .sigproc import preemphasis, framesig, powspec
 def calculate_nfft(samplerate, winlen):
     """Calculates the FFT size as a power of two greater than or equal to
     the number of samples in a single window length.
-    
+
     Having an FFT less than the window length loses precision by dropping
     many of the samples; a longer FFT than the window allows zero-padding
     of the FFT buffer which is neutral in terms of frequency domain conversion.

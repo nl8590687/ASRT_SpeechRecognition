@@ -18,4 +18,9 @@
 # along with ASRT.  If not, see <https://www.gnu.org/licenses/>.
 # ============================================================================
 
+'''
+@author: nl8590687
+ASRT语音识别声学特征模块
+'''
+
 from .speech_features import *
