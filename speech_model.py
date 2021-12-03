@@ -165,8 +165,11 @@ class ModelSpeech:
                 data_input = data_input.reshape(data_input.shape[0],data_input.shape[1],1)
                 # 数据格式出错处理 开始
                 # 当输入的wav文件长度过长时自动跳过该文件，转而使用下一个wav文件来运行
-                while data_input.shape[0] > self.speech_model.input_shape[0]:
-                    print('*[Error]','wave data lenghth of num',(ran_num + i) % data_nums, 'is too long.','\n A Exception raise when test Speech Model.')
+                if data_input.shape[0] > self.speech_model.input_shape[0]:
+                    print('*[Error]','wave data lenghth of num',(ran_num + i) % data_nums, 'is too long.',
+                        'this data\'s length is', data_input.shape[0],
+                        'expect <=', self.speech_model.input_shape[0],
+                        '\n A Exception raise when test Speech Model.')
                     i += 1
                     continue
                 # 数据格式出错处理 结束
