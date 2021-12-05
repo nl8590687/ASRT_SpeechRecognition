@@ -166,12 +166,7 @@ class ModelLanguage(): # 语音模型类
                 list_words = list_words_2
                 #print(list_words,'\n')
         #print(list_words)
-        for i in range(0, len(list_words)):
-            for j in range(i + 1, len(list_words)):
-                if list_words[i][1] < list_words[j][1]:
-                    tmp = list_words[i]
-                    list_words[i] = list_words[j]
-                    list_words[j] = tmp
+        list_words = sorted(list_words, key=lambda x:x[1], reverse=True)
 
         return list_words
 
