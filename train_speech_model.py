@@ -50,5 +50,5 @@ ms = ModelSpeech(sm251, feat, max_label_length=64)
 
 #ms.load_model('save_models/' + sm251.get_model_name() + '.model.h5')
 ms.train_model(optimizer=opt, data_loader=train_data,
-    epochs=1, save_step=1, batch_size=16, last_epoch=0)
+    epochs=50, save_step=1, batch_size=16, last_epoch=0)
 ms.save_model('save_models/' + sm251.get_model_name())
