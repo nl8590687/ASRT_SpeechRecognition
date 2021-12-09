@@ -9,14 +9,14 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 
 [**ASRT项目主页**](https://asrt.ailemon.net/) | 
 [**发布版下载**](https://asrt.ailemon.net/download) | 
-[**查看本项目的Wiki文档**](https://asrt.ailemon.net/docs/) | 
+[**查看本项目的Wiki文档**](https://wiki.ailemon.net/docs/asrt-doc) | 
 [**实用效果体验Demo**](https://asrt.ailemon.net/demo) | 
-[**打赏作者**](https://github.com/nl8590687/ASRT_SpeechRecognition/wiki/donate)
+[**打赏作者**](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deo9u61unti9)
 
 如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。本项目作者交流QQ群：**894112051**
 
 提问前请仔细查看[项目文档](https://asrt.ailemon.net/docs/)、 
-[常见问题](https://asrt.ailemon.net/docs/issues)
+[FAQ常见问题](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deoeud494h4f)
 以及[Issues](https://github.com/nl8590687/ASRT_SpeechRecognition/issues) 避免重复提问
 
 以下问题AI柠檬博主和群友可能会拒绝回答，包括但不限于：
@@ -104,7 +104,7 @@ ASRT API服务器启动请执行：
 $ python3 asrserver.py
 ```
 
-请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[ASRT客户端Demo](https://asrt.ailemon.net/docs/client-demo)。
+请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[下载ASRT语音识别客户端Demo](https://wiki.ailemon.net/docs/asrt-doc/download)。
 
 如果要训练和使用非251版模型，请在代码中 `import speech_model_zoo` 的相应位置做修改。
 
@@ -118,7 +118,7 @@ CNN/LSTM/GRU + CTC
 
 * 关于下载已经训练好的模型的问题
 
-已经训练好的模型包含在发布版服务端程序压缩包里面，发布版成品服务端程序可以在此下载：[ASRT下载页面](https://asrt.ailemon.net/download)。
+已经训练好的模型包含在发布版服务端程序压缩包里面，发布版成品服务端程序可以在此下载：[ASRT下载页面](https://wiki.ailemon.net/docs/asrt-doc/download)。
 
 Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition/releases)页面里面还包括各个不同版本的介绍信息，每个版本下方的zip压缩包也是包含已经训练好的模型的发布版服务端程序压缩包。
 
@@ -151,7 +151,7 @@ Python的依赖库
 $ pip install -r requirements.txt
 ```
 
-[程序运行依赖环境详细说明](https://asrt.ailemon.net/docs/dependent-environment)
+[依赖环境和性能配置要求](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deobk7bmlgd6)
 
 ## Data Sets 数据集
 
@@ -231,7 +231,6 @@ $ pip install -r requirements.txt
 
 ## Contributors 贡献者们
 
-[@zw76859420](https://github.com/zw76859420) 
-@madeirak @ZJUGuoShuai @williamchenwl
+[贡献者页面](https://github.com/nl8590687/ASRT_SpeechRecognition/graphs/contributors)
 
 @nl8590687 (repo owner)
