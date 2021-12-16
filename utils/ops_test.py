@@ -24,7 +24,7 @@ ops.py单元测试
 """
 
 import pytest
-from ops import get_edit_distance
+from ops import get_edit_distance, ctc_decode_delete_tail_blank
 
 class TestGetEditDistance:
     def test_1(self):
@@ -49,4 +49,47 @@ class TestGetEditDistance:
         examle_input = ["abc", "addce"]
         examle_output = 3
         result = get_edit_distance(examle_input[0], examle_input[1])
+        assert result == examle_output
+
+    def test_5(self):
+        examle_input = ["abc", ""]
+        examle_output = 3
+        result = get_edit_distance(examle_input[0], examle_input[1])
+        assert result == examle_output
+
+    def test_6(self):
+        examle_input = ["", ""]
+        examle_output = 0
+        result = get_edit_distance(examle_input[0], examle_input[1])
+        assert result == examle_output
+
+class TestCtcDecodeDeleteTailBlank:
+    def test_1(self):
+        examle_input = [1, 2, 3, 4, 5, -1, -1, -1, -1, -1, -1]
+        examle_output = [1, 2, 3, 4, 5]
+        result = ctc_decode_delete_tail_blank(examle_input)
+        assert result == examle_output
+
+    def test_2(self):
+        examle_input = [1, 2, 3, 4, 5, -1]
+        examle_output = [1, 2, 3, 4, 5]
+        result = ctc_decode_delete_tail_blank(examle_input)
+        assert result == examle_output
+
+    def test_3(self):
+        examle_input = [1, 2, 3, 4, 5]
+        examle_output = [1, 2, 3, 4, 5]
+        result = ctc_decode_delete_tail_blank(examle_input)
+        assert result == examle_output
+
+    def test_4(self):
+        examle_input = [-1, -1, -1, -1]
+        examle_output = []
+        result = ctc_decode_delete_tail_blank(examle_input)
+        assert result == examle_output
+
+    def test_5(self):
+        examle_input = [-1]
+        examle_output = []
+        result = ctc_decode_delete_tail_blank(examle_input)
         assert result == examle_output

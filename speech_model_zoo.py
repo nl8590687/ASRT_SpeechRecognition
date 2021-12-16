@@ -29,6 +29,7 @@ from tensorflow.keras.layers import Dense, Dropout, Input, Reshape, BatchNormali
 from tensorflow.keras.layers import Lambda, Activation,Conv2D, MaxPooling2D
 from tensorflow.keras import backend as K
 import numpy as np
+from utils.ops import ctc_decode_delete_tail_blank
 
 class BaseModel:
     '''
@@ -178,10 +179,8 @@ class SpeechModel251(BaseModel):
         else:
             r1 = r[0][0].numpy()
         
-        p = 0
-        while p < len(r1[0])-1 and r1[0][p] != -1:
-            p += 1
-        return r1[0][0:p]
+        speech_result = ctc_decode_delete_tail_blank(r1[0])
+        return speech_result
 
 class SpeechModel25(BaseModel):
     '''
@@ -280,10 +279,8 @@ class SpeechModel25(BaseModel):
         else:
             r1 = r[0][0].numpy()
         
-        p = 0
-        while p < len(r1[0])-1 and r1[0][p] != -1:
-            p += 1
-        return r1[0][0:p]
+        speech_result = ctc_decode_delete_tail_blank(r1[0])
+        return speech_result
 
 class SpeechModel24(BaseModel):
     '''
@@ -376,7 +373,5 @@ class SpeechModel24(BaseModel):
         else:
             r1 = r[0][0].numpy()
         
-        p = 0
-        while p < len(r1[0])-1 and r1[0][p] != -1:
-            p += 1
-        return r1[0][0:p]
+        speech_result = ctc_decode_delete_tail_blank(r1[0])
+        return speech_result

@@ -25,6 +25,7 @@
 
 import wave
 import difflib
+import matplotlib.pyplot as plt
 import numpy as np
 
 def read_wav_data(filename: str) -> tuple:
@@ -58,3 +59,34 @@ def get_edit_distance(str1, str2) -> int:
         elif tag == 'delete':
             leven_cost += (index_2-index_1)
     return leven_cost
+
+def ctc_decode_delete_tail_blank(ctc_decode_list):
+    '''
+    处理CTC解码后序列末尾余留的空白元素，删除掉
+    '''
+    p = 0
+    while p < len(ctc_decode_list) and ctc_decode_list[p] != -1:
+        p += 1
+    return ctc_decode_list[0:p]
+
+def visual_1D(points_list, frequency=1):
+    '''
+    可视化1D数据
+    '''
+    # 首先创建绘图网格
+    # ax will be an array of two Axes objects
+    fig, ax = plt.subplots(1)
+    x = np.linspace(0, len(points_list)-1, len(points_list)) / frequency
+
+    # 在对应对象上调用 plot() 方法
+    ax[0].plot(x, points_list)
+    fig.show()
+
+def visual_2D(img):
+    '''
+    可视化2D数据
+    '''
+    plt.subplot(111)
+    plt.imshow(img)
+    plt.colorbar(cax=None, ax=None, shrink=0.5)
+    plt.show() 
