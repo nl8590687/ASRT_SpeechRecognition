@@ -73,13 +73,12 @@ def visual_1D(points_list, frequency=1):
     '''
     可视化1D数据
     '''
-    # 首先创建绘图网格
-    # ax will be an array of two Axes objects
+    # 首先创建绘图网格，1个子图
     fig, ax = plt.subplots(1)
     x = np.linspace(0, len(points_list)-1, len(points_list)) / frequency
 
     # 在对应对象上调用 plot() 方法
-    ax[0].plot(x, points_list)
+    ax.plot(x, points_list)
     fig.show()
 
 def visual_2D(img):
