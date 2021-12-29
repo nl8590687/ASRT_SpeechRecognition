@@ -229,6 +229,10 @@ $ pip install -r requirements.txt
 
 [GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687) 作者：[AI柠檬](https://www.ailemon.net/)
 
+## 参考引用本项目
+
+[DOI: 10.5281/zenodo.5808435](https://doi.org/10.5281/zenodo.5808435)
+
 ## Contributors 贡献者们
 
 [贡献者页面](https://github.com/nl8590687/ASRT_SpeechRecognition/graphs/contributors)

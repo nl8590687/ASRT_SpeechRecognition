@@ -200,6 +200,10 @@ If the provided dataset link cannot be opened and downloaded, click this link [O
 
 [GPL v3.0](LICENSE) © [nl8590687](https://github.com/nl8590687) Author: [ailemon](https://www.ailemon.net/)
 
+## Cite this project
+
+[DOI: 10.5281/zenodo.5808435](https://doi.org/10.5281/zenodo.5808435)
+
 ## Contributors
 
 [Contributors Page](https://github.com/nl8590687/ASRT_SpeechRecognition/graphs/contributors)
