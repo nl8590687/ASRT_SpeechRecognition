@@ -89,7 +89,12 @@ If you want to train and use other model(not Model 251), make changes in the cor
 
 If there is any problem during the execution of the program or during use, it can be promptly put forward in the issue, and I will reply as soon as possible.
 
-
+Deploy ASRT by docker：
+```shell
+$ docker pull ailemondocker/asrt_service:1.1.0
+$ docker run --rm -it -p 20000:20000 --name asrt-server -d ailemondocker/asrt_service:1.1.0
+```
+It will start a api server for recognition rather than training.
 
 ## Model
 

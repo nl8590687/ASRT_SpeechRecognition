@@ -108,6 +108,13 @@ $ python3 asrserver.py
 
 如果要训练和使用非251版模型，请在代码中 `import speech_model_zoo` 的相应位置做修改。
 
+使用docker直接部署ASRT：
+```shell
+$ docker pull ailemondocker/asrt_service:1.1.0
+$ docker run --rm -it -p 20000:20000 --name asrt-server -d ailemondocker/asrt_service:1.1.0
+```
+仅CPU运行推理识别，不作训练
+
 ## Model 模型
 
 ### Speech Model 语音模型
