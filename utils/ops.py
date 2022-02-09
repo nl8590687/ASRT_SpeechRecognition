@@ -44,6 +44,18 @@ def read_wav_data(filename: str) -> tuple:
     wave_data = wave_data.T # 将矩阵转置
     return wave_data, framerate, num_channel, num_sample_width
 
+def read_wav_bytes(filename: str) -> tuple:
+    '''
+    读取一个wav文件，返回声音信号的时域谱矩阵和播放时间
+    '''
+    wav = wave.open(filename,"rb") # 打开一个wav格式的声音文件流
+    num_frame = wav.getnframes() # 获取帧数
+    num_channel=wav.getnchannels() # 获取声道数
+    framerate=wav.getframerate() # 获取帧速率
+    num_sample_width=wav.getsampwidth() # 获取实例的比特宽度，即每一帧的字节数
+    str_data = wav.readframes(num_frame) # 读取全部的帧
+    wav.close() # 关闭流
+    return str_data, framerate, num_channel, num_sample_width
 
 def get_edit_distance(str1, str2) -> int:
     '''
@@ -89,3 +101,59 @@ def visual_2D(img):
     plt.imshow(img)
     plt.colorbar(cax=None, ax=None, shrink=0.5)
     plt.show() 
+
+def decode_wav_bytes(samples_data: bytes, channels: int = 1, byte_width: int = 2) -> list:
+    '''
+    解码wav格式样本点字节流，得到numpy数组
+    '''
+    numpy_type = np.short
+    if byte_width == 4:
+        numpy_type = np.int
+    elif byte_width != 2:
+        raise Exception('error: unsurpport byte width `' + str(byte_width) + '`')
+    wave_data = np.fromstring(samples_data, dtype = numpy_type) # 将声音文件数据转换为数组矩阵形式
+    wave_data.shape = -1, channels # 按照声道数将数组整形，单声道时候是一列数组，双声道时候是两列的矩阵
+    wave_data = wave_data.T # 将矩阵转置
+    return wave_data
+
+def get_symbol_dict(dict_filename):
+    '''
+    读取拼音汉字的字典文件
+    返回读取后的字典
+    '''
+    txt_obj = open(dict_filename, 'r', encoding='UTF-8') # 打开文件并读入
+    txt_text = txt_obj.read()
+    txt_obj.close()
+    txt_lines = txt_text.split('\n') # 文本分割
+
+    dic_symbol = {} # 初始化符号字典
+    for i in txt_lines:
+        list_symbol=[] # 初始化符号列表
+        if i!='':
+            txt_l=i.split('\t')
+            pinyin = txt_l[0]
+            for word in txt_l[1]:
+                list_symbol.append(word)
+        dic_symbol[pinyin] = list_symbol
+
+    return dic_symbol
+
+def get_language_model(model_language_filename):
+    '''
+    读取语言模型的文件
+    返回读取后的模型
+    '''
+    txt_obj = open(model_language_filename, 'r', encoding='UTF-8') # 打开文件并读入
+    txt_text = txt_obj.read()
+    txt_obj.close()
+    txt_lines = txt_text.split('\n') # 文本分割
+
+    dic_model = {} # 初始化符号字典
+    for i in txt_lines:
+        if i!='':
+            txt_l=i.split('\t')
+            if len(txt_l) == 1:
+                continue
+            dic_model[txt_l[0]] = txt_l[1]
+
+    return dic_model
