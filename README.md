@@ -4,6 +4,7 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808435.svg)](https://doi.org/10.5281/zenodo.5808435)
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
@@ -32,6 +33,7 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 有关AI柠檬ASRT语音项目的相关信息亦可使用[AI柠檬站内搜索引擎](https://s.ailemon.net/)进行相关信息的搜索。
 
 ## ASRT相关资料 
+* [查看ASRT项目的Wiki文档](https://wiki.ailemon.net/docs/asrt-doc)
 
 ASRT的原理请查看本文：
 * [ASRT：一个中文语音识别系统](https://blog.ailemon.net/2018/08/29/asrt-a-chinese-speech-recognition-system/)
@@ -75,14 +77,14 @@ $ git clone https://github.com/nl8590687/ASRT_SpeechRecognition.git
 ```shell
 $ cd ASRT_SpeechRecognition
 
-$ mkdir dataset
+$ mkdir /data/speech_data
 
-$ tar zxf <数据集压缩文件名> -C dataset/ 
+$ tar zxf <数据集压缩文件名> -C /data/speech_data/ 
 ```
 
-然后需要将datalist目录下的文件全部拷贝到 `dataset/` 目录下，也就是将其跟数据集放在一起。
+下载默认数据集的拼音标签文件：
 ```shell
-$ cp -rf datalist/* dataset/
+$ python download_default_datalist.py
 ```
 
 目前可用的模型有24、25和251

@@ -3,6 +3,7 @@
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808435.svg)](https://doi.org/10.5281/zenodo.5808435)
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
@@ -15,6 +16,8 @@
 If you have any questions in your works with this project, welcome to put up issues in this repo and I will response as soon as possible. 
 
 You can check the [FAQ Page (Chinese)](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deoeud494h4f) first before asking questions to avoid repeating questions.
+
+* [ASRT project's Wiki document](https://wiki.ailemon.net/docs/asrt-doc)
 
 A post about ASRT's introduction 
 * [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.net/2018/08/29/asrt-a-chinese-speech-recognition-system/)
@@ -51,17 +54,18 @@ After cloning the repository via git, go to the project root directory; create a
 ```shell
 $ cd ASRT_SpeechRecognition
 
-$ mkdir dataset
+$ mkdir /data/speech_data
 
-$ tar zxf <dataset zip files name> -C dataset/ 
+$ tar zxf <dataset zip files name> -C /data/speech_data/ 
 ```
 
 Then, you need to copy all the files in the 'datalist' directory to the dataset directory, that is, put them together with the data set.
 
 Note that in the current version, in the configuration file, two data sets, Thchs30 and ST-CMDS, are added by default, please delete them if you don’t need them. If you want to use other data sets, you need to add data configuration yourself, and use the standard format supported by ASRT to organize the data in advance.
 
+To download pinyin syllable list files for default dataset:
 ```shell
-$ cp -rf datalist/* dataset/
+$ python download_default_datalist.py
 ```
 
 Currently available models are 24, 25 and 251
