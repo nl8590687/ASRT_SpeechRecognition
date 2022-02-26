@@ -5,7 +5,7 @@
         "train":[
             {
                 "name": "thchs30_train",
-                "data_list": "datalist/thchs30/train.wav.lst",
+                "data_list": "datalist/thchs30/train.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/thchs30/train.syllable.txt"
             },
@@ -17,25 +17,25 @@
             },
             {
                 "name": "primewords_train",
-                "data_list": "datalist/primewords/train.wav.lst",
+                "data_list": "datalist/primewords/train.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/primewords/train.syllable.txt"
             },
             {
                 "name": "aishell_train",
-                "data_list": "datalist/aishell/train.wav.lst",
+                "data_list": "datalist/aishell/train.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/aishell/train.syllable.txt"
             },
             {
                 "name": "aidatatang_train",
-                "data_list": "datalist/aidatatang_lst/train.wav.lst",
+                "data_list": "datalist/aidatatang_lst/train.wav.txt",
                 "data_path": "/data/speech_data/aidatatang",
                 "label_list": "datalist/aidatatang_lst/train.syllable.txt"
             },
             {
                 "name": "magicdata_train",
-                "data_list": "datalist/magicdata_lst/train.wav.lst",
+                "data_list": "datalist/magicdata_lst/train.wav.txt",
                 "data_path": "/data/speech_data/magicdata",
                 "label_list": "datalist/magicdata_lst/train.syllable.txt"
             }
@@ -44,7 +44,7 @@
         "dev":[
             {
                 "name": "thchs30_dev",
-                "data_list": "datalist/thchs30/cv.wav.lst",
+                "data_list": "datalist/thchs30/cv.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/thchs30/cv.syllable.txt"
             },
@@ -56,25 +56,25 @@
             },
             {
                 "name": "primewords_dev",
-                "data_list": "datalist/primewords/dev.wav.lst",
+                "data_list": "datalist/primewords/dev.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/primewords/dev.syllable.txt"
             },
             {
                 "name": "aishell_dev",
-                "data_list": "datalist/aishell/dev.wav.lst",
+                "data_list": "datalist/aishell/dev.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/aishell/dev.syllable.txt"
             },
             {
                 "name": "aidatatang_dev",
-                "data_list": "datalist/aidatatang_lst/dev.wav.lst",
+                "data_list": "datalist/aidatatang_lst/dev.wav.txt",
                 "data_path": "/data/speech_data/aidatatang",
                 "label_list": "datalist/aidatatang_lst/dev.syllable.txt"
             },
             {
                 "name": "magicdata_dev",
-                "data_list": "datalist/magicdata_lst/dev.wav.lst",
+                "data_list": "datalist/magicdata_lst/dev.wav.txt",
                 "data_path": "/data/speech_data/magicdata",
                 "label_list": "datalist/magicdata_lst/dev.syllable.txt"
             }
@@ -83,7 +83,7 @@
         "test":[
             {
                 "name": "thchs30_test",
-                "data_list": "datalist/thchs30/test.wav.lst",
+                "data_list": "datalist/thchs30/test.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/thchs30/test.syllable.txt"
             },
@@ -95,25 +95,25 @@
             },
             {
                 "name": "primewords_test",
-                "data_list": "datalist/primewords/test.wav.lst",
+                "data_list": "datalist/primewords/test.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/primewords/test.syllable.txt"
             },
             {
                 "name": "aishell_test",
-                "data_list": "datalist/aishell/test.wav.lst",
+                "data_list": "datalist/aishell/test.wav.txt",
                 "data_path": "/data/speech_data",
                 "label_list": "datalist/aishell/test.syllable.txt"
             },
             {
                 "name": "aidatatang_test",
-                "data_list": "datalist/aidatatang_lst/test.wav.lst",
+                "data_list": "datalist/aidatatang_lst/test.wav.txt",
                 "data_path": "/data/speech_data/aidatatang",
                 "label_list": "datalist/aidatatang_lst/test.syllable.txt"
             },
             {
                 "name": "magicdata_test",
-                "data_list": "datalist/magicdata_lst/test.wav.lst",
+                "data_list": "datalist/magicdata_lst/test.wav.txt",
                 "data_path": "/data/speech_data/magicdata",
                 "label_list": "datalist/magicdata_lst/test.syllable.txt"
             }
