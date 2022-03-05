@@ -135,7 +135,7 @@ class SpeechModel251(BaseModel):
         #test=Model(inputs = input_data, outputs = layer_h12)
         #test.summary()
 
-        layer_h16 = Reshape((self.output_shape[0], 3200))(layer_h15) #Reshape层
+        layer_h16 = Reshape((self.output_shape[0], input_shape[1] // self._pool_size * 128))(layer_h15) #Reshape层
         #layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
         layer_h16 = Dropout(0.3)(layer_h16)
         layer_h17 = Dense(128, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h16) # 全连接层
@@ -235,7 +235,7 @@ class SpeechModel25(BaseModel):
         #test=Model(inputs = input_data, outputs = layer_h12)
         #test.summary()
 
-        layer_h12 = Reshape((self.output_shape[0], 3200))(layer_h12) #Reshape层
+        layer_h12 = Reshape((self.output_shape[0], input_shape[1] // self._pool_size * 128))(layer_h12) #Reshape层
         #layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
         layer_h12 = Dropout(0.3)(layer_h12)
         layer_h13 = Dense(128, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h12) # 全连接层
@@ -329,7 +329,7 @@ class SpeechModel24(BaseModel):
         #test=Model(inputs = input_data, outputs = layer_h12)
         #test.summary()
 
-        layer_h10 = Reshape((self.output_shape[0], 3200))(layer_h9) #Reshape层
+        layer_h10 = Reshape((self.output_shape[0], input_shape[1] // self._pool_size * 128))(layer_h9) #Reshape层
         #layer_h6 = Dropout(0.2)(layer_h5) # 随机中断部分神经网络连接，防止过拟合
         layer_h10 = Dropout(0.3)(layer_h10)
         layer_h11 = Dense(128, activation="relu", use_bias=True, kernel_initializer='he_normal')(layer_h10) # 全连接层
