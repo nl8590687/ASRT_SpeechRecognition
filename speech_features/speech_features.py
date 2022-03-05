@@ -90,13 +90,14 @@ class Logfbank(SpeechFeatureMeta):
     '''
     ASRT语音识别内置的logfbank声学特征提取类
     '''
-    def __init__(self, framesamplerate = 16000):
+    def __init__(self, framesamplerate = 16000, nfilt=26):
+        self.nfilt = nfilt
         super().__init__(framesamplerate)
 
     def run(self, wavsignal, fs = 16000):
         wavsignal = np.array(wavsignal, dtype=np.float)
         # 获取输入特征
-        wav_feature = logfbank(wavsignal, fs)
+        wav_feature = logfbank(wavsignal, fs, nfilt=self.nfilt)
         return wav_feature
 
 class Spectrogram(SpeechFeatureMeta):
