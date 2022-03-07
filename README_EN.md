@@ -1,9 +1,11 @@
-# ASRT: A Deep-Learning-Based Chinese Speech Recognition System
+![](https://res.ailemon.net/common/asrt_title_header_en.png)
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808435.svg)](https://doi.org/10.5281/zenodo.5808435)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
+
+ASRT is A Deep-Learning-Based Chinese Speech Recognition System. If you like this project, please **star** it. 
 
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
@@ -41,6 +43,7 @@ For more infomation please refer to author's blog website: [AILemon Blog](https:
 This project uses tensorFlow.keras based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement. 
 
 * **Steps**
+Take the operation under the Linux system as an example:
 
 First, clone the project to your computer through Git, and then download the data sets needed for the training of this project. For the download links, please refer to [End of Document](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md#data-sets)
 ```shell
@@ -49,7 +52,7 @@ $ git clone https://github.com/nl8590687/ASRT_SpeechRecognition.git
 
 Or you can use the "Fork" button to copy a copy of the project and then clone it locally with your own SSH key.
 
-After cloning the repository via git, go to the project root directory; create a subdirectory `dataset/` (you can use a soft link instead) for datasets, and then extract the downloaded datasets directly into it.
+After cloning the repository via git, go to the project root directory; create a subdirectory `/data/speech_data` (you can use a soft link instead) for datasets, and then extract the downloaded datasets directly into it.
 
 ```shell
 $ cd ASRT_SpeechRecognition
@@ -59,9 +62,7 @@ $ mkdir /data/speech_data
 $ tar zxf <dataset zip files name> -C /data/speech_data/ 
 ```
 
-Then, you need to copy all the files in the 'datalist' directory to the dataset directory, that is, put them together with the data set.
-
-Note that in the current version, in the configuration file, two data sets, Thchs30 and ST-CMDS, are added by default, please delete them if you don’t need them. If you want to use other data sets, you need to add data configuration yourself, and use the standard format supported by ASRT to organize the data in advance.
+Note that in the current version, in the configuration file, six data sets, Thchs30, ST-CMDS, Primewords, aishell-1, aidatatang200, MagicData, are added by default, please delete them if you don’t need them. If you want to use other data sets, you need to add data configuration yourself, and use the standard format supported by ASRT to organize the data in advance.
 
 To download pinyin syllable list files for default dataset:
 ```shell
@@ -211,7 +212,7 @@ If the provided dataset link cannot be opened and downloaded, click this link [O
 
 ## Cite this project
 
-[DOI: 10.5281/zenodo.5808435](https://doi.org/10.5281/zenodo.5808435)
+[DOI: 10.5281/zenodo.5808434](https://doi.org/10.5281/zenodo.5808434)
 
 ## Contributors
 

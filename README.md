@@ -1,10 +1,11 @@
-# ASRT: A Deep-Learning-Based Chinese Speech Recognition System
-ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
+![](https://res.ailemon.net/common/asrt_title_header.png)
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808435.svg)](https://doi.org/10.5281/zenodo.5808435)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
+
+ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
 
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
@@ -62,6 +63,7 @@ ASRT训练和部署教程请看：
 This project uses tensorFlow.keras based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
 
 * **操作步骤**
+以在Linux系统下的操作为例：
 
 首先通过Git将本项目克隆到您的计算机上，然后下载本项目训练所需要的数据集，下载链接详见[文档末尾部分](https://github.com/nl8590687/ASRT_SpeechRecognition#data-sets-%E6%95%B0%E6%8D%AE%E9%9B%86)。
 ```shell
@@ -70,9 +72,9 @@ $ git clone https://github.com/nl8590687/ASRT_SpeechRecognition.git
 
 或者您也可以通过 "Fork" 按钮，将本项目Copy一份副本，然后通过您自己的SSH密钥克隆到本地。
 
-通过git克隆仓库以后，进入项目根目录；并创建一个存储数据的子目录， 例如 `dataset/` (可使用软链接代替)，然后将下载好的数据集直接解压进去
+通过git克隆仓库以后，进入项目根目录；并创建一个存储数据的子目录， 例如 `/data/speech_data` (可使用软链接代替)，然后将下载好的数据集直接解压进去
 
-注意，当前版本中，在配置文件里，默认添加了Thchs30和ST-CMDS两个数据集，如果不需要请自行删除。如果要使用其他数据集需要自行添加数据配置，并提前使用ASRT支持的标准格式整理数据。
+注意，当前版本中，在配置文件里，默认添加了Thchs30、ST-CMDS、Primewords、aishell-1、aidatatang200、MagicData 六个数据集，如果不需要请自行删除。如果要使用其他数据集需要自行添加数据配置，并提前使用ASRT支持的标准格式整理数据。
 
 ```shell
 $ cd ASRT_SpeechRecognition
@@ -240,7 +242,7 @@ $ pip install -r requirements.txt
 
 ## 参考引用本项目
 
-[DOI: 10.5281/zenodo.5808435](https://doi.org/10.5281/zenodo.5808435)
+[DOI: 10.5281/zenodo.5808434](https://doi.org/10.5281/zenodo.5808434)
 
 ## Contributors 贡献者们
 
