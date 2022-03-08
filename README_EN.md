@@ -19,30 +19,25 @@ If you have any questions in your works with this project, welcome to put up iss
 
 You can check the [FAQ Page (Chinese)](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deoeud494h4f) first before asking questions to avoid repeating questions.
 
-* [ASRT project's Wiki document](https://wiki.ailemon.net/docs/asrt-doc)
-
-A post about ASRT's introduction 
-* [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.net/2018/08/29/asrt-a-chinese-speech-recognition-system/)
-
-About how to use ASRT to train and deploy：
-* [Teach you how to use ASRT to train Chinese ASR model (Chinese)](<https://blog.ailemon.net/2020/08/20/teach-you-how-use-asrt-train-chinese-asr-model/>)
-* [Teach you how to use ASRT to deploy Chinese ASR API Server (Chinese)](<https://blog.ailemon.net/2020/08/27/teach-you-how-use-asrt-deploy-chinese-asr-api-server/>)
-
-For questions about the principles of the statistical language model that are often asked, see: 
-* [Simple Chinese word frequency statistics to generate N-gram language model (Chinese)](https://blog.ailemon.net/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
-* [Statistical Language Model: Chinese Pinyin to Words (Chinese)](https://blog.ailemon.net/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
-
-For questions about CTC, see: 
-
-* [[Translation] Sequence Modeling with CTC (Chinese)](<https://blog.ailemon.net/2019/07/18/sequence-modeling-with-ctc/>)
-
-For more infomation please refer to author's blog website: [AILemon Blog](https://blog.ailemon.net/) (Chinese)
+If there is any abnormality when the program is running, please send a complete screenshot when asking questions, and indicate the CPU architecture, GPU model, operating system, Python, TensorFlow and CUDA versions used, and whether any code has been modified or data sets have been added or deleted, etc. .
 
 ## Introduction
 
 This project uses tensorFlow.keras based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement. 
 
-* **Steps**
+## Minimum requirements for training
+### Hardware
+* CPU: 4核 (x86_64, amd64) +
+* RAM: 16 GB +
+* GPU: NVIDIA, Graph Memory 11GB+ (>1080ti)
+* 硬盘: 500 GB HDD(or SSD)
+
+### Software
+* Linux: Ubuntu 18.04 + / CentOS 7 +
+* Python: 3.6 +
+* TensorFlow: 1.15, 2.x + (The latest and x.x.0 are deprecated)
+
+## Quick Start
 Take the operation under the Linux system as an example:
 
 First, clone the project to your computer through Git, and then download the data sets needed for the training of this project. For the download links, please refer to [End of Document](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md#data-sets)
@@ -125,8 +120,6 @@ The input is a Chinese pinyin sequence, and the output is the corresponding Chin
 
 At present, the best model can basically reach 80% of Pinyin correct rate on the test set. 
 
-However, as the current international and domestic teams can achieve 98%, the accuracy rate still needs to be further improved. 
-
 ## Python Dependency Library
 
 * tensorFlow (1.15 - 2.x)
@@ -147,30 +140,19 @@ $ pip install -r requirements.txt
 
 ## Data Sets 
 
-[Some free Chinese speech datasets (Chinese)](https://blog.ailemon.net/2018/11/21/free-open-source-chinese-speech-datasets/)
+For full content please refer: [Some free Chinese speech datasets (Chinese)](https://blog.ailemon.net/2018/11/21/free-open-source-chinese-speech-datasets/)
 
-* **Tsinghua University THCHS30 Chinese voice data set**
+|Dataset|Time|Size|Download (CN Mirrors)|Download (Source)|
+|-|-|-|-|-|
+|THCHS30|40h|6.01G|[data_thchs30.tgz](<http://openslr.magicdatatech.com/resources/18/data_thchs30.tgz>)|[data_thchs30.tgz](<http://www.openslr.org/resources/18/data_thchs30.tgz>)|
+|ST-CMDS|100h|7.67G|[ST-CMDS-20170001_1-OS.tar.gz](<http://openslr.magicdatatech.com/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)|[ST-CMDS-20170001_1-OS.tar.gz](<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)|
+|AIShell-1|178h|14.51G|[data_aishell.tgz](<http://openslr.magicdatatech.com/resources/33/data_aishell.tgz>)|[data_aishell.tgz](<http://www.openslr.org/resources/33/data_aishell.tgz>)|
+|Primewords|100h|8.44G|[primewords_md_2018_set1.tar.gz](<http://openslr.magicdatatech.com/resources/47/primewords_md_2018_set1.tar.gz>)|[primewords_md_2018_set1.tar.gz](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)|
+|aidatatang_200zh|200h|17.47G|[aidatatang_200zh.tgz](<http://openslr.magicdatatech.com/resources/62/aidatatang_200zh.tgz>)|[aidatatang_200zh.tgz](<http://www.openslr.org/resources/62/aidatatang_200zh.tgz>)|
+|MagicData|755h|52G/1.0G/2.2G| [train_set.tar.gz](<http://openslr.magicdatatech.com/resources/68/train_set.tar.gz>) / [dev_set.tar.gz](<http://openslr.magicdatatech.com/resources/68/dev_set.tar.gz>) / [test_set.tar.gz](<http://openslr.magicdatatech.com/resources/68/test_set.tar.gz>)|[train_set.tar.gz](<http://www.openslr.org/resources/68/train_set.tar.gz>) / [dev_set.tar.gz](<http://www.openslr.org/resources/68/dev_set.tar.gz>) / [test_set.tar.gz](<http://www.openslr.org/resources/68/test_set.tar.gz>)|
 
-  data_thchs30.tgz 
-[Download](<http://www.openslr.org/resources/18/data_thchs30.tgz>)
 
-  test-noise.tgz 
-[Download](<http://www.openslr.org/resources/18/test-noise.tgz>)
-
-  resource.tgz 
-[Download](<http://www.openslr.org/resources/18/resource.tgz>)
-
-* **Free ST Chinese Mandarin Corpus**
-
-  ST-CMDS-20170001_1-OS.tar.gz 
-[Download](<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)
-
-* **AIShell-1 Open Source Dataset** 
-
-  data_aishell.tgz
-[Download](<http://www.openslr.org/resources/33/data_aishell.tgz>)
-
-  Note：unzip this dataset
+  Note：The way to unzip AISHELL-1 dataset
 
   ```
   $ tar xzf data_aishell.tgz
@@ -178,33 +160,30 @@ $ pip install -r requirements.txt
   $ for tar in *.tar.gz;  do tar xvf $tar; done
   ```
 
-* **Primewords Chinese Corpus Set 1** 
-
-  primewords_md_2018_set1.tar.gz
-[Download](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)
-
-* **aidatatang_200zh**
-
-  aidatatang_200zh.tgz
-[Download](<http://www.openslr.org/resources/62/aidatatang_200zh.tgz>)
-
-* **MagicData**
-
-  train_set.tar.gz
-[Download](<http://www.openslr.org/resources/68/train_set.tar.gz>)
-
-  dev_set.tar.gz
-[Download](<http://www.openslr.org/resources/68/dev_set.tar.gz>)
-
-  test_set.tar.gz
-[Download](<http://www.openslr.org/resources/68/test_set.tar.gz>)
-
-  metadata.tar.gz
-[Download](<http://www.openslr.org/resources/68/metadata.tar.gz>)
-
 Special thanks! Thanks to the predecessors' public voice data set. 
 
 If the provided dataset link cannot be opened and downloaded, click this link [OpenSLR](http://www.openslr.org)
+
+## ASRT Docuemnts
+
+* [ASRT project's Wiki document](https://wiki.ailemon.net/docs/asrt-doc)
+
+A post about ASRT's introduction 
+* [ASRT: Chinese Speech Recognition System (Chinese)](https://blog.ailemon.net/2018/08/29/asrt-a-chinese-speech-recognition-system/)
+
+About how to use ASRT to train and deploy：
+* [Teach you how to use ASRT to train Chinese ASR model (Chinese)](<https://blog.ailemon.net/2020/08/20/teach-you-how-use-asrt-train-chinese-asr-model/>)
+* [Teach you how to use ASRT to deploy Chinese ASR API Server (Chinese)](<https://blog.ailemon.net/2020/08/27/teach-you-how-use-asrt-deploy-chinese-asr-api-server/>)
+
+For questions about the principles of the statistical language model that are often asked, see: 
+* [Simple Chinese word frequency statistics to generate N-gram language model (Chinese)](https://blog.ailemon.net/2017/02/20/simple-words-frequency-statistic-without-segmentation-algorithm/)
+* [Statistical Language Model: Chinese Pinyin to Words (Chinese)](https://blog.ailemon.net/2017/04/27/statistical-language-model-chinese-pinyin-to-words/)
+
+For questions about CTC, see: 
+
+* [[Translation] Sequence Modeling with CTC (Chinese)](<https://blog.ailemon.net/2019/07/18/sequence-modeling-with-ctc/>)
+
+For more infomation please refer to author's blog website: [AILemon Blog](https://blog.ailemon.net/) (Chinese)
 
 ## License
 
