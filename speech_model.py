@@ -74,10 +74,11 @@ class ModelSpeech:
                 y[i,0:len(data_labels)] = data_labels
                 label_length.append([len(data_labels)])
 
+                index = (index+1) % data_count
+
             label_length = np.matrix(label_length)
             input_length = np.array([input_length]).T
 
-            index = (index+1) % data_count
             yield [X, y, input_length, label_length ], labels
 
     def train_model(self, optimizer, data_loader, epochs = 1, save_step = 1, batch_size = 16, last_epoch = 0, call_back=None):
