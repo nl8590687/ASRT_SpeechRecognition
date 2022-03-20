@@ -1,6 +1,7 @@
 ![](https://res.ailemon.net/common/asrt_title_header.png)
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
+[![Stars](https://img.shields.io/github/stars/nl8590687/ASRT_SpeechRecognition)](https://github.com/nl8590687/ASRT_SpeechRecognition) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
@@ -83,12 +84,22 @@ $ python3 evaluate_speech_model.py
 ```
 测试之前，请确保代码中填写的模型文件路径存在。
 
-ASRT API服务器启动请执行：
+预测单条音频文件的语音识别文本：
 ```shell
-$ python3 asrserver.py
+$ python3 predict_speech_file.py
 ```
 
-请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[下载ASRT语音识别客户端Demo](https://wiki.ailemon.net/docs/asrt-doc/download)。
+ASRT API服务器启动请执行：
+```shell
+$ python3 asrserver_http.py
+```
+
+本地测试调用API服务是否成功：
+```shell
+$ python3 client_http.py
+```
+
+请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[下载ASRT语音识别客户端SDK和Demo](https://wiki.ailemon.net/docs/asrt-doc/download)。
 
 如果要训练和使用非251版模型，请在代码中 `import speech_model_zoo` 的相应位置做修改。
 
@@ -103,7 +114,7 @@ $ docker run --rm -it -p 20000:20000 --name asrt-server -d ailemondocker/asrt_se
 
 ### Speech Model 语音模型
 
-CNN/LSTM/GRU + CTC
+DCNN + CTC
 
 其中，输入的音频的最大时间长度为16秒，输出为对应的汉语拼音序列
 
@@ -123,8 +134,7 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 
 当前，最好的模型在测试集上基本能达到80%的汉语拼音正确率
 
-## Python Dependency Library
-Python的依赖库
+## Python依赖库
 
 * tensorFlow (1.15 - 2.x)
 * numpy
@@ -133,6 +143,8 @@ Python的依赖库
 * math
 * scipy
 * requests
+* flask
+* waitress
 
 不会安装环境的同学请直接运行以下命令(前提是有GPU且已经安装好 CUDA 11.2 和 cudnn 8.1)：
 
@@ -166,6 +178,16 @@ $ pip install -r requirements.txt
 特别鸣谢！感谢前辈们的公开语音数据集
 
 如果提供的数据集链接无法打开和下载，请点击该链接 [OpenSLR](http://www.openslr.org)
+
+## ASRT语音识别API客户端调用SDK
+
+ASRT为客户端通过RPC方式调用开发语音识别功能提供了不同平台和编程语言的SDK接入能力，对于其他平台，可直接通过调用通用RESTful Open API方式进行语音识别功能接入。具体接入步骤请看ASRT项目文档。
+
+|客户端平台|项目仓库链接|
+|-|-|
+|Windows客户端SDK和Demo|[ASRT_SDK_WinClient](https://github.com/nl8590687/ASRT_SDK_WinClient)|
+|跨平台Python3客户端SDK和Demo|[ASRT_SDK_Python3](https://github.com/nl8590687/ASRT_SDK_Python3)|
+|JavaWeb网站端SDK和Demo|[ASRT_SpeechClient_JavaWeb](https://github.com/nl8590687/ASRT_SpeechClient_JavaWeb)|
 
 ## ASRT相关资料 
 * [查看ASRT项目的Wiki文档](https://wiki.ailemon.net/docs/asrt-doc)

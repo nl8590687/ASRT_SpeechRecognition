@@ -1,6 +1,7 @@
 ![](https://res.ailemon.net/common/asrt_title_header_en.png)
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
+[![Stars](https://img.shields.io/github/stars/nl8590687/ASRT_SpeechRecognition)](https://github.com/nl8590687/ASRT_SpeechRecognition) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
@@ -27,7 +28,7 @@ This project uses tensorFlow.keras based on deep convolutional neural network an
 
 ## Minimum requirements for training
 ### Hardware
-* CPU: 4核 (x86_64, amd64) +
+* CPU: 4 Core (x86_64, amd64) +
 * RAM: 16 GB +
 * GPU: NVIDIA, Graph Memory 11GB+ (>1080ti)
 * 硬盘: 500 GB HDD(or SSD)
@@ -78,12 +79,23 @@ $ python3 evaluate_speech_model.py
 ```
 Before testing, make sure the model file path filled in the code files exists.
 
-ASRT API Server startup please execute:
+To predict one wave audio file for speech recognition：
 ```shell
-$ python3 asrserver.py
+$ python3 predict_speech_file.py
 ```
 
-Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation to [download ASRT Client Demo](https://wiki.ailemon.net/docs/asrt-doc/download).
+ASRT API Server startup please execute:
+```shell
+$ python3 asrserver_http.py
+```
+
+Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation to [download ASRT Client SDK & Demo](https://wiki.ailemon.net/docs/asrt-doc/download).
+
+
+To test whether it is successful or not that calls api service interface:
+```shell
+$ python3 client_http.py
+```
 
 If you want to train and use other model(not Model 251), make changes in the corresponding position of the `import speech_model_zoo` in the code files.
 
@@ -100,7 +112,7 @@ It will start a api server for recognition rather than training.
 
 ### Speech Model
 
-CNN/LSTM/GRU + CTC
+DCNN + CTC
 
 The maximum length of the input audio is 16 seconds, and the output is the corresponding Chinese pinyin sequence. 
 
@@ -129,6 +141,8 @@ At present, the best model can basically reach 80% of Pinyin correct rate on the
 * math
 * scipy
 * requests
+* flask
+* waitress
 
 If you have trouble when install those packages, please run the following script to do it as long as you have a GPU and CUDA 11.2 and cudnn 8.1 have been installed：
 
@@ -137,6 +151,16 @@ $ pip install -r requirements.txt
 ```
 
 [Dependent Environment Details and Hardware Requirement](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deobk7bmlgd6)
+
+## ASRT Client SDK for Calling Speech Recognition API
+
+ASRT provides the abilities to import client SDKs for several platform and programing language for client develop speech recognition features , which work by RPC. Please refer ASRT project documents for detail.
+
+|Client Platform|Project Repos Link|
+|-|-|
+|Windows Client SDK & Demo|[ASRT_SDK_WinClient](https://github.com/nl8590687/ASRT_SDK_WinClient)|
+|Python3 Client SDK & Demo (Any Platform)|[ASRT_SDK_Python3](https://github.com/nl8590687/ASRT_SDK_Python3)|
+|JavaWeb Website SDK & Demo|[ASRT_SpeechClient_JavaWeb](https://github.com/nl8590687/ASRT_SpeechClient_JavaWeb)|
 
 ## Data Sets 
 
