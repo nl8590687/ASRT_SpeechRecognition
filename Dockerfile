@@ -40,6 +40,6 @@ EXPOSE 20001/tcp
 ENTRYPOINT ["/bin/bash", "/asrt_server/start.sh"]
 
 # https://docs.docker.com/engine/reference/commandline/build/#options
-# docker build --progress plain --rm --build-arg TAG=1.1.2 --tag asrt/api_server:1.1.2 .
+# docker build --progress plain --rm --build-arg TAG=1.2.0 --tag asrt/api_server:1.2.0 .
 # https://docs.docker.com/engine/reference/commandline/run/#options
-# docker run --rm -it  -p 20001:20001 --name asrt -d asrt/api_server:1.1.2
+# docker run --rm -it  -p 20001:20001 --name asrt -d asrt/api_server:1.2.0

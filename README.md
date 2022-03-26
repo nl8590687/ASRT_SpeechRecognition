@@ -105,8 +105,8 @@ $ python3 client_http.py
 
 使用docker直接部署ASRT：
 ```shell
-$ docker pull ailemondocker/asrt_service:1.1.1
-$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.1.1
+$ docker pull ailemondocker/asrt_service:1.1.2
+$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.1.2
 ```
 仅CPU运行推理识别，不作训练
 
@@ -188,7 +188,7 @@ ASRT为客户端通过RPC方式调用开发语音识别功能提供了不同平�
 |Windows客户端SDK和Demo|[ASRT_SDK_WinClient](https://github.com/nl8590687/ASRT_SDK_WinClient)|
 |跨平台Python3客户端SDK和Demo|[ASRT_SDK_Python3](https://github.com/nl8590687/ASRT_SDK_Python3)|
 |跨平台Golang客户端SDK和Demo|[asrt-sdk-go](https://github.com/nl8590687/asrt-sdk-go)|
-|JavaWeb网站端SDK和Demo|[ASRT_SpeechClient_JavaWeb](https://github.com/nl8590687/ASRT_SpeechClient_JavaWeb)|
+|Java客户端SDK和Demo|[ASRT_SDK_Java](https://github.com/nl8590687/ASRT_SDK_Java)|
 
 ## ASRT相关资料 
 * [查看ASRT项目的Wiki文档](https://wiki.ailemon.net/docs/asrt-doc)

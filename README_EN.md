@@ -103,8 +103,8 @@ If there is any problem during the execution of the program or during use, it ca
 
 Deploy ASRT by docker：
 ```shell
-$ docker pull ailemondocker/asrt_service:1.1.1
-$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.1.1
+$ docker pull ailemondocker/asrt_service:1.1.2
+$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.1.2
 ```
 It will start a api server for recognition rather than training.
 
@@ -161,7 +161,7 @@ ASRT provides the abilities to import client SDKs for several platform and progr
 |Windows Client SDK & Demo|[ASRT_SDK_WinClient](https://github.com/nl8590687/ASRT_SDK_WinClient)|
 |Python3 Client SDK & Demo (Any Platform)|[ASRT_SDK_Python3](https://github.com/nl8590687/ASRT_SDK_Python3)|
 |Golang Client SDK & Demo|[asrt-sdk-go](https://github.com/nl8590687/asrt-sdk-go)|
-|JavaWeb Website SDK & Demo|[ASRT_SpeechClient_JavaWeb](https://github.com/nl8590687/ASRT_SpeechClient_JavaWeb)|
+|Java Client SDK & Demo|[ASRT_SDK_Java](https://github.com/nl8590687/ASRT_SDK_Java)|
 
 ## Data Sets 
 
