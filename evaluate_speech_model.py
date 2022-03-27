@@ -26,7 +26,7 @@
 import os
 
 from speech_model import ModelSpeech
-from speech_model_zoo import SpeechModel251
+from speech_model_zoo import SpeechModel251BN
 from data_loader import DataLoader
 from speech_features import Spectrogram
 
@@ -37,14 +37,14 @@ AUDIO_FEATURE_LENGTH = 200
 CHANNELS = 1
 # 默认输出的拼音的表示大小是1428，即1427个拼音+1个空白块
 OUTPUT_SIZE = 1428
-sm251 = SpeechModel251(
+sm251bn = SpeechModel251BN(
     input_shape=(AUDIO_LENGTH, AUDIO_FEATURE_LENGTH, CHANNELS),
     output_size=OUTPUT_SIZE
     )
 feat = Spectrogram()
 evalue_data = DataLoader('dev')
-ms = ModelSpeech(sm251, feat, max_label_length=64)
+ms = ModelSpeech(sm251bn, feat, max_label_length=64)
 
-ms.load_model('save_models/' + sm251.get_model_name() + '.model.h5')
+ms.load_model('save_models/' + sm251bn.get_model_name() + '.model.h5')
 ms.evaluate_model(data_loader=evalue_data, data_count=-1,
     out_report=True, show_ratio=True, show_per_step=100)

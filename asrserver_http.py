@@ -23,12 +23,13 @@
 ASRT语音识别基于HTTP协议的API服务器程序
 """
 
+import argparse
 import base64
 import json
 from flask import Flask, Response, request
 
 from speech_model import ModelSpeech
-from speech_model_zoo import SpeechModel251
+from speech_model_zoo import SpeechModel251BN
 from speech_features import Spectrogram
 from LanguageModel2 import ModelLanguage
 from utils.ops import decode_wav_bytes
@@ -36,9 +37,14 @@ from utils.ops import decode_wav_bytes
 API_STATUS_CODE_OK = 200000 # OK
 API_STATUS_CODE_CLIENT_ERROR = 400000
 API_STATUS_CODE_CLIENT_ERROR_FORMAT = 400001 # 请求数据格式错误
-API_STATUS_CODE_CLIENT_ERROR_FORMAT = 400002 # 请求数据配置不支持
+API_STATUS_CODE_CLIENT_ERROR_CONFIG = 400002 # 请求数据配置不支持
 API_STATUS_CODE_SERVER_ERROR = 500000
 API_STATUS_CODE_SERVER_ERROR_RUNNING = 500001 # 服务器运行中出错
+
+parser = argparse.ArgumentParser(description='ASRT HTTP+Json RESTful API Service')
+parser.add_argument('--listen', default='0.0.0.0', type=str, help='the network to listen')
+parser.add_argument('--port', default='20001', type=str, help='the port to listen')
+args = parser.parse_args()
 
 app = Flask("ASRT API Service")
 
@@ -47,13 +53,13 @@ AUDIO_FEATURE_LENGTH = 200
 CHANNELS = 1
 # 默认输出的拼音的表示大小是1428，即1427个拼音+1个空白块
 OUTPUT_SIZE = 1428
-sm251 = SpeechModel251(
+sm251bn = SpeechModel251BN(
     input_shape=(AUDIO_LENGTH, AUDIO_FEATURE_LENGTH, CHANNELS),
     output_size=OUTPUT_SIZE
     )
 feat = Spectrogram()
-ms = ModelSpeech(sm251, feat, max_label_length=64)
-ms.load_model('save_models/' + sm251.get_model_name() + '.model.h5')
+ms = ModelSpeech(sm251bn, feat, max_label_length=64)
+ms.load_model('save_models/' + sm251bn.get_model_name() + '.model.h5')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()
@@ -149,7 +155,7 @@ def recognition_post(level):
             json_data = AsrtApiResponse(API_STATUS_CODE_OK, 'all level')
             json_data.result = result
             buffer = json_data.to_json()
-            print('output:', buffer)
+            print('ASRT Result:', result,'output:', buffer)
             return Response(buffer, mimetype='application/json')
         else:
             request_data = request.get_json()
@@ -165,6 +171,8 @@ def recognition_post(level):
         # request_data['samples'][-100:])
         json_data = AsrtApiResponse(API_STATUS_CODE_SERVER_ERROR, str(except_general))
         buffer = json_data.to_json()
+        #print("input:", request_data, "\n", "output:", buffer)
+        print("output:", buffer, "error:", except_general)
         return Response(buffer, mimetype='application/json')
 
 
@@ -173,4 +181,4 @@ if __name__ == '__main__':
     #app.run(host='0.0.0.0', port=20001)
     # for production env
     import waitress
-    waitress.serve(app, host='0.0.0.0', port=20001)
+    waitress.serve(app, host=args.listen, port=args.port)

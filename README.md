@@ -101,7 +101,7 @@ $ python3 client_http.py
 
 请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[下载ASRT语音识别客户端SDK和Demo](https://wiki.ailemon.net/docs/asrt-doc/download)。
 
-如果要训练和使用非251版模型，请在代码中 `import speech_model_zoo` 的相应位置做修改。
+如果要训练和使用非251bn版模型，请在代码中 `import speech_model_zoo` 的相应位置做修改。
 
 使用docker直接部署ASRT：
 ```shell

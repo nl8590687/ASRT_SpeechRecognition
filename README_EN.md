@@ -97,7 +97,7 @@ To test whether it is successful or not that calls api service interface:
 $ python3 client_http.py
 ```
 
-If you want to train and use other model(not Model 251), make changes in the corresponding position of the `import speech_model_zoo` in the code files.
+If you want to train and use other model(not Model 251bn), make changes in the corresponding position of the `import speech_model_zoo` in the code files.
 
 If there is any problem during the execution of the program or during use, it can be promptly put forward in the issue, and I will reply as soon as possible.
 
