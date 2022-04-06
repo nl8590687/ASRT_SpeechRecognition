@@ -11,7 +11,7 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 **ReadMe Language** | 中文版 | [English](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README_EN.md) |
 
 [**ASRT项目主页**](https://asrt.ailemon.net/) | 
-[**发布版下载**](https://asrt.ailemon.net/download) | 
+[**发布版下载**](https://wiki.ailemon.net/docs/asrt-doc/download) | 
 [**查看本项目的Wiki文档**](https://wiki.ailemon.net/docs/asrt-doc) | 
 [**实用效果体验Demo**](https://asrt.ailemon.net/demo) | 
 [**打赏作者**](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deo9u61unti9)
@@ -27,8 +27,6 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 ## Introduction 简介
 
 本项目使用tensorFlow.keras基于深度卷积神经网络和长短时记忆神经网络、注意力机制以及CTC实现。
-
-This project uses tensorFlow.keras based on deep convolutional neural network and long-short memory neural network, attention mechanism and CTC to implement.
 
 ## 训练模型的最低软硬件要求
 ### 硬件
@@ -105,8 +103,8 @@ $ python3 client_http.py
 
 使用docker直接部署ASRT：
 ```shell
-$ docker pull ailemondocker/asrt_service:1.1.2
-$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.1.2
+$ docker pull ailemondocker/asrt_service:1.2.0
+$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.2.0
 ```
 仅CPU运行推理识别，不作训练
 
@@ -132,7 +130,7 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 
 ## About Accuracy 关于准确率
 
-当前，最好的模型在测试集上基本能达到80%的汉语拼音正确率
+当前，最好的模型在测试集上基本能达到85%的汉语拼音正确率
 
 ## Python依赖库
 

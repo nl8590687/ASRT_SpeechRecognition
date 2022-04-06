@@ -11,7 +11,7 @@ ASRT is A Deep-Learning-Based Chinese Speech Recognition System. If you like thi
 **ReadMe Language** | [中文版](https://github.com/nl8590687/ASRT_SpeechRecognition/blob/master/README.md) | English |
 
 [**ASRT Project Home Page**](https://asrt.ailemon.net/) | 
-[**Released Download**](https://asrt.ailemon.net/download) | 
+[**Released Download**](https://wiki.ailemon.net/docs/asrt-doc/download) | 
 [**View this project's wiki document (Chinese)**](https://wiki.ailemon.net/docs/asrt-doc) | 
 [**Experience Demo**](https://asrt.ailemon.net/demo) | 
 [**Donate**](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deo9u61unti9)
@@ -103,8 +103,8 @@ If there is any problem during the execution of the program or during use, it ca
 
 Deploy ASRT by docker：
 ```shell
-$ docker pull ailemondocker/asrt_service:1.1.2
-$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.1.2
+$ docker pull ailemondocker/asrt_service:1.2.0
+$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.2.0
 ```
 It will start a api server for recognition rather than training.
 
@@ -130,7 +130,7 @@ The input is a Chinese pinyin sequence, and the output is the corresponding Chin
 
 ## About Accuracy
 
-At present, the best model can basically reach 80% of Pinyin correct rate on the test set. 
+At present, the best model can basically reach 85% of Pinyin correct rate on the test set. 
 
 ## Python Dependency Library
 
