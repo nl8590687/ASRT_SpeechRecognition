@@ -29,6 +29,7 @@ import numpy as np
 
 from utils.ops import get_edit_distance, read_wav_data
 from utils.config import load_config_file, DEFAULT_CONFIG_FILENAME, load_pinyin_dict
+from utils.thread import threadsafe_generator
 
 class ModelSpeech:
     '''
@@ -45,6 +46,7 @@ class ModelSpeech:
         self.speech_features = speech_features
         self.max_label_length = max_label_length
 
+    @threadsafe_generator
     def _data_generator(self, batch_size, data_loader):
         '''
         数据生成器函数，用于Keras的generator_fit训练
