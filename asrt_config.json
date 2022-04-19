@@ -30,7 +30,7 @@
             {
                 "name": "aidatatang_train",
                 "data_list": "datalist/aidatatang_lst/train.wav.lst",
-                "data_path": "/data/speech_data/aidatatang",
+                "data_path": "/data/speech_data",
                 "label_list": "datalist/aidatatang_lst/train.syllable.txt"
             },
             {
@@ -69,7 +69,7 @@
             {
                 "name": "aidatatang_dev",
                 "data_list": "datalist/aidatatang_lst/dev.wav.lst",
-                "data_path": "/data/speech_data/aidatatang",
+                "data_path": "/data/speech_data",
                 "label_list": "datalist/aidatatang_lst/dev.syllable.txt"
             },
             {
@@ -108,7 +108,7 @@
             {
                 "name": "aidatatang_test",
                 "data_list": "datalist/aidatatang_lst/test.wav.lst",
-                "data_path": "/data/speech_data/aidatatang",
+                "data_path": "/data/speech_data",
                 "label_list": "datalist/aidatatang_lst/test.syllable.txt"
             },
             {
