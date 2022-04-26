@@ -28,7 +28,7 @@ import os
 from speech_model import ModelSpeech
 from speech_model_zoo import SpeechModel251BN
 from speech_features import Spectrogram
-from LanguageModel2 import ModelLanguage
+from language_model3 import ModelLanguage
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
@@ -49,7 +49,7 @@ res = ms.recognize_speech_from_file('filename.wav')
 print('*[提示] 声学模型语音识别结果：\n', res)
 
 ml = ModelLanguage('model_language')
-ml.LoadModel()
+ml.load_model()
 str_pinyin = res
-res = ml.SpeechToText(str_pinyin)
+res = ml.pinyin_to_text(str_pinyin)
 print('语音识别最终结果：\n',res)

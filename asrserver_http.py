@@ -31,7 +31,7 @@ from flask import Flask, Response, request
 from speech_model import ModelSpeech
 from speech_model_zoo import SpeechModel251BN
 from speech_features import Spectrogram
-from LanguageModel2 import ModelLanguage
+from language_model3 import ModelLanguage
 from utils.ops import decode_wav_bytes
 
 API_STATUS_CODE_OK = 200000 # OK
@@ -62,7 +62,7 @@ ms = ModelSpeech(sm251bn, feat, max_label_length=64)
 ms.load_model('save_models/' + sm251bn.get_model_name() + '.model.h5')
 
 ml = ModelLanguage('model_language')
-ml.LoadModel()
+ml.load_model()
 
 
 class AsrtApiResponse:
@@ -131,7 +131,7 @@ def recognition_post(level):
 
             seq_pinyin = request_data['sequence_pinyin']
 
-            result = ml.SpeechToText(seq_pinyin)
+            result = ml.pinyin_to_text(seq_pinyin)
 
             json_data = AsrtApiResponse(API_STATUS_CODE_OK, 'language level')
             json_data.result = result
@@ -150,7 +150,7 @@ def recognition_post(level):
             wavdata = decode_wav_bytes(samples_data=wavdata_bytes,
                                         channels=channels, byte_width=byte_width)
             result_speech = ms.recognize_speech(wavdata, sample_rate)
-            result = ml.SpeechToText(result_speech)
+            result = ml.pinyin_to_text(result_speech)
 
             json_data = AsrtApiResponse(API_STATUS_CODE_OK, 'all level')
             json_data.result = result
