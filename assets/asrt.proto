@@ -1,0 +1,55 @@
+/* Copyright 2016-2099 Ailemon.net
+
+This file is part of ASRT Speech Recognition Tool.
+
+ASRT is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+ASRT is distributed in the hope that it will be useful,
+
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with ASRT.  If not, see <https://www.gnu.org/licenses/>.
+============================================================================ */
+
+syntax = "proto3";
+package asrt;
+
+//定义服务接口
+service AsrtGrpcService {
+    rpc Speech (SpeechRequest) returns (SpeechResponse) {}  //一个服务中可以定义多个接口，也就是多个函数功能
+    rpc Language (LanguageRequest) returns (TextResponse) {}
+    rpc All (SpeechRequest) returns (TextResponse) {}
+    rpc Stream (stream SpeechRequest) returns (stream TextResponse) {}
+}
+
+message SpeechRequest {
+    WavData wav_data = 1;
+}
+
+message SpeechResponse {
+    int32 status_code = 1; 
+    string status_message = 2; 
+    repeated string result_data = 3; // 拼音结果
+}
+
+message LanguageRequest {
+    repeated string pinyins = 1;
+}
+
+message TextResponse {
+    int32 status_code = 1; 
+    string status_message = 2; 
+    string text_result = 3;
+}
+
+message WavData{
+    bytes samples = 1; // wav样本点字节
+    int32 sample_rate = 2; // wav采样率
+    int32 channels = 3; // wav通道数
+    int32 byte_width = 4; // wav样本字节宽度
+}
