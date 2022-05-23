@@ -32,7 +32,7 @@ import grpc
 from assets.asrt_pb2_grpc import AsrtGrpcServiceServicer, add_AsrtGrpcServiceServicer_to_server
 from assets.asrt_pb2 import SpeechResponse, TextResponse
 from speech_model import ModelSpeech
-from speech_model_zoo import SpeechModel251BN
+from model_zoo.speech_model.keras_backend import SpeechModel251BN
 from speech_features import Spectrogram
 from language_model3 import ModelLanguage
 from utils.ops import decode_wav_bytes

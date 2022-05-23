@@ -26,7 +26,7 @@
 import os
 
 from speech_model import ModelSpeech
-from speech_model_zoo import SpeechModel251BN
+from model_zoo.speech_model.keras_backend import SpeechModel251BN
 from data_loader import DataLoader
 from speech_features import Spectrogram
 
