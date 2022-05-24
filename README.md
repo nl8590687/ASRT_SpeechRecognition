@@ -3,7 +3,7 @@
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![Stars](https://img.shields.io/github/stars/nl8590687/ASRT_SpeechRecognition)](https://github.com/nl8590687/ASRT_SpeechRecognition) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
-[![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
+[![Python Version](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
 
 ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
@@ -37,7 +37,7 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 
 ### 软件
 * Linux: Ubuntu 18.04 + / CentOS 7 +
-* Python: 3.6 +
+* Python: 3.7 +
 * TensorFlow: 1.15, 2.x + (不建议使用最新版和大版本的x.x.0版)
 
 ## 快速开始
@@ -87,24 +87,34 @@ $ python3 evaluate_speech_model.py
 $ python3 predict_speech_file.py
 ```
 
-ASRT API服务器启动请执行：
+启动ASRT HTTP协议的API服务器启动请执行：
 ```shell
 $ python3 asrserver_http.py
 ```
 
-本地测试调用API服务是否成功：
+本地测试调用HTTP协议API服务是否成功：
 ```shell
 $ python3 client_http.py
 ```
 
+启动ASRT GRPC协议的API服务器启动请执行：
+```shell
+$ python3 asrserver_grpc.py
+```
+
+本地测试调用GRPC协议API服务是否成功：
+```shell
+$ python3 client_grpc.py
+```
+
 请注意，开启API服务器之后，需要使用本ASRT项目对应的客户端软件来进行语音识别，详见Wiki文档[下载ASRT语音识别客户端SDK和Demo](https://wiki.ailemon.net/docs/asrt-doc/download)。
 
-如果要训练和使用非251bn版模型，请在代码中 `import speech_model_zoo` 的相应位置做修改。
+如果要训练和使用非251bn版模型，请在代码中 `from speech_model.xxx import xxx` 的相应位置做修改。
 
 使用docker直接部署ASRT：
 ```shell
-$ docker pull ailemondocker/asrt_service:1.2.0
-$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.2.0
+$ docker pull ailemondocker/asrt_service:1.3.0
+$ docker run --rm -it -p 20001:20001 -p 20002:20002 --name asrt-server -d ailemondocker/asrt_service:1.3.0
 ```
 仅CPU运行推理识别，不作训练
 
@@ -143,6 +153,7 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 * requests
 * flask
 * waitress
+* grpcio / grpcio-tools / protobuf
 
 不会安装环境的同学请直接运行以下命令(前提是有GPU且已经安装好 CUDA 11.2 和 cudnn 8.1)：
 

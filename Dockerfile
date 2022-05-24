@@ -30,16 +30,16 @@ RUN apt update && apt install -y python3 python3-pip
 
 RUN pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-RUN pip3 install wave scipy matplotlib tensorflow-cpu==2.5.3 numpy==1.19.2 requests flask waitress grpcio grpcio-tools protobuf
+RUN pip3 install wave scipy matplotlib tensorflow-cpu==2.5.3 numpy==1.19.2 requests flask waitress grpcio==1.34.0 grpcio-tools==1.34.0 protobuf
 
-RUN echo $'cd /asrt_server \n python3 asrserver_http.py' > /asrt_server/start.sh && chmod +x /asrt_server/start.sh
+RUN echo $'cd /asrt_server \n python3 asrserver_http.py & \n python3 asrserver_grpc.py' > /asrt_server/start.sh && chmod +x /asrt_server/start.sh
 
 # refer: https://docs.docker.com/engine/reference/builder/#expose
-EXPOSE 20001/tcp
+EXPOSE 20001/tcp 20002/tcp
 
 ENTRYPOINT ["/bin/bash", "/asrt_server/start.sh"]
 
 # https://docs.docker.com/engine/reference/commandline/build/#options
 # docker build --progress plain --rm --build-arg TAG=1.3.0 --tag asrt/api_server:1.3.0 .
 # https://docs.docker.com/engine/reference/commandline/run/#options
-# docker run --rm -it  -p 20001:20001 --name asrt -d asrt/api_server:1.3.0
+# docker run --rm -it -p 20001:20001 -p 20002:20002 --name asrt -d asrt/api_server:1.3.0

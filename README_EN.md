@@ -3,7 +3,7 @@
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![Stars](https://img.shields.io/github/stars/nl8590687/ASRT_SpeechRecognition)](https://github.com/nl8590687/ASRT_SpeechRecognition) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
-[![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
+[![Python Version](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
 
 ASRT is A Deep-Learning-Based Chinese Speech Recognition System. If you like this project, please **star** it. 
@@ -35,7 +35,7 @@ This project uses tensorFlow.keras based on deep convolutional neural network an
 
 ### Software
 * Linux: Ubuntu 18.04 + / CentOS 7 +
-* Python: 3.6 +
+* Python: 3.7 +
 * TensorFlow: 1.15, 2.x + (The latest and x.x.0 are deprecated)
 
 ## Quick Start
@@ -84,7 +84,7 @@ To predict one wave audio file for speech recognition：
 $ python3 predict_speech_file.py
 ```
 
-ASRT API Server startup please execute:
+To startup ASRT API Server with HTTP protocol please execute:
 ```shell
 $ python3 asrserver_http.py
 ```
@@ -92,19 +92,29 @@ $ python3 asrserver_http.py
 Please note that after opening the API server, you need to use the client software corresponding to this ASRT project for voice recognition. For details, see the Wiki documentation to [download ASRT Client SDK & Demo](https://wiki.ailemon.net/docs/asrt-doc/download).
 
 
-To test whether it is successful or not that calls api service interface:
+To test whether it is successful or not that calls api service interface with HTTP protocol:
 ```shell
 $ python3 client_http.py
 ```
 
-If you want to train and use other model(not Model 251bn), make changes in the corresponding position of the `import speech_model_zoo` in the code files.
+To startup ASRT API Server with GRPC protocol please execute:
+```shell
+$ python3 asrserver_grpc.py
+```
+
+To test whether it is successful or not that calls api service interface with GRPC protocol:
+```shell
+$ python3 client_grpc.py
+```
+
+If you want to train and use other model(not Model 251bn), make changes in the corresponding position of the `from speech_model.xxx import xxx` in the code files.
 
 If there is any problem during the execution of the program or during use, it can be promptly put forward in the issue, and I will reply as soon as possible.
 
 Deploy ASRT by docker：
 ```shell
-$ docker pull ailemondocker/asrt_service:1.2.0
-$ docker run --rm -it -p 20001:20001 --name asrt-server -d ailemondocker/asrt_service:1.2.0
+$ docker pull ailemondocker/asrt_service:1.3.0
+$ docker run --rm -it -p 20001:20001 -p 20002:20002 --name asrt-server -d ailemondocker/asrt_service:1.3.0
 ```
 It will start a api server for recognition rather than training.
 
@@ -143,6 +153,7 @@ At present, the best model can basically reach 85% of Pinyin correct rate on the
 * requests
 * flask
 * waitress
+* grpcio / grpcio-tools / protobuf
 
 If you have trouble when install those packages, please run the following script to do it as long as you have a GPU and CUDA 11.2 and cudnn 8.1 have been installed：
 
