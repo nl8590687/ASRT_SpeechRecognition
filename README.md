@@ -16,7 +16,9 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 [**实用效果体验Demo**](https://asrt.ailemon.net/demo) | 
 [**打赏作者**](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deo9u61unti9)
 
-如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。本项目作者交流QQ群：**894112051**
+如果程序运行期间或使用中有什么问题，可以及时在issue中提出来，我将尽快做出答复。本项目作者交流QQ群：**894112051** ，加微信群请先加AI柠檬微信号：**ailemon-me** ，并备注“ASRT语音识别”
+
+<center><img src="https://res.ailemon.net/common/ailemon-me-wechat-qrcode.jpg?x-oss-process=style/ailemon-blog-webp" height="100rem"/></center>
 
 提问前请仔细查看[项目文档](https://asrt.ailemon.net/docs/)、 
 [FAQ常见问题](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deoeud494h4f)
