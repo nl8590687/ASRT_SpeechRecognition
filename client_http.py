@@ -30,7 +30,7 @@ from utils.ops import read_wav_bytes
 
 URL = 'http://127.0.0.1:20001/all'
 
-wav_bytes, sample_rate, channels, sample_width = read_wav_bytes('Y:\\SpeechData\\语音数据集\\data_thchs30\\train\\A11_0.wav')
+wav_bytes, sample_rate, channels, sample_width = read_wav_bytes('assets/A11_0.wav')
 datas = {
     'channels': channels,
     'sample_rate': sample_rate,

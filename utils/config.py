@@ -30,8 +30,9 @@ _config_dict = None
 _pinyin_dict = None
 _pinyin_list = None
 
+
 def load_config_file(filename: str) -> dict:
-    '''
+    """
     加载json配置文件
 
     参数：\\
@@ -39,22 +40,23 @@ def load_config_file(filename: str) -> dict:
 
     返回：\\
         配置信息字典
-    '''
+    """
     global _config_dict
     if _config_dict is not None:
         return _config_dict
 
-    with open(filename,'r', encoding="utf-8") as file_pointer:
+    with open(filename, 'r', encoding="utf-8") as file_pointer:
         _config_dict = json.load(file_pointer)
     return _config_dict
 
+
 def load_pinyin_dict(filename: str) -> tuple:
-    '''
+    """
     加载拼音列表和拼音字典
 
     拼音列表：用于下标索引转拼音 \\
     拼音字典：用于拼音索引转下标
-    '''
+    """
     global _pinyin_list, _pinyin_dict
     if _pinyin_dict is not None and _pinyin_list is not None:
         return _pinyin_list, _pinyin_dict

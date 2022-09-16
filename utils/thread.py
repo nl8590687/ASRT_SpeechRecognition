@@ -18,10 +18,10 @@
 # along with ASRT.  If not, see <https://www.gnu.org/licenses/>.
 # ============================================================================
 
-'''
+"""
 @author: nl8590687
 解决python生成器多线程的线程安全问题
-'''
+"""
 
 import threading
 '''
@@ -29,6 +29,8 @@ import threading
     This method was introducted by Anand Chitipothu in http://anandology.com/blog/using-iterators-and-generators/
     but was not compatible with python 3. This modified version is now compatible and works both in python 2.8 and 3.0 
 '''
+
+
 class threadsafe_iter:
     """Takes an iterator/generator and makes it thread-safe by
     serializing call to the `next` method of given iterator/generator.
@@ -43,6 +45,7 @@ class threadsafe_iter:
     def __next__(self):
         with self.lock:
             return self.it.__next__()
+
 
 def threadsafe_generator(f):
     """A decorator that takes a generator function and makes it thread-safe.

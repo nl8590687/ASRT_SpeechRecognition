@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Copyright 2016-2099 Ailemon.net
@@ -18,9 +18,9 @@
 # along with ASRT.  If not, see <https://www.gnu.org/licenses/>.
 # ============================================================================
 
-'''
+"""
 @author: nl8590687
 ASRT语音识别声学特征模块
-'''
+"""
 
 from .speech_features import *

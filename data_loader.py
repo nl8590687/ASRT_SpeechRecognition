@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Copyright 2016-2099 Ailemon.net
@@ -28,14 +28,15 @@ import numpy as np
 from utils.config import load_config_file, DEFAULT_CONFIG_FILENAME, load_pinyin_dict
 from utils.ops import read_wav_data
 
+
 class DataLoader:
-    '''
+    """
     数据加载器
 
     参数：\\
         config: 配置信息字典
         dataset_type: 要加载的数据集类型，包含('train', 'dev', 'test')三种
-    '''
+    """
     def __init__(self, dataset_type:str):
         self.dataset_type = dataset_type
 
@@ -73,15 +74,15 @@ class DataLoader:
                     self.label_dict[tokens[0]] = tokens[1:]
 
     def get_data_count(self) -> int:
-        '''
+        """
         获取数据集总数量
-        '''
+        """
         return len(self.data_list)
 
     def get_data(self, index:int) -> tuple:
-        '''
+        """
         按下标获取一条数据
-        '''
+        """
         mark = self.data_list[index]
 
         wav_signal, sample_rate, _, _ = read_wav_data(self.wav_dict[mark])
@@ -92,10 +93,10 @@ class DataLoader:
             labels.append(self.pinyin_dict[item])
 
         data_label = np.array(labels)
-        return (wav_signal, sample_rate, data_label)
+        return wav_signal, sample_rate, data_label
 
     def shuffle(self) -> None:
-        '''
+        """
         随机打乱数据
-        '''
+        """
         random.shuffle(self.data_list)
