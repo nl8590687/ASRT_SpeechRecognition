@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Copyright 2016-2099 Ailemon.net
@@ -50,10 +50,10 @@ def record_wave(wavfile,
 
     audio = pyaudio.PyAudio()
     stream = audio.open(format=format_,
-                    channels=channels,
-                    rate=sampling_rate,
-                    input=True,
-                    frames_per_buffer=chunk_size)
+                        channels=channels,
+                        rate=sampling_rate,
+                        input=True,
+                        frames_per_buffer=chunk_size)
 
     frames = []
 

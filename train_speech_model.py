@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Copyright 2016-2099 Ailemon.net
@@ -21,10 +21,9 @@
 """
 @author: nl8590687
 用于训练语音识别系统语音模型的程序
-
 """
+
 import os
-#import tensorflow as tf
 from tensorflow.keras.optimizers import Adam
 
 from speech_model import ModelSpeech
@@ -42,13 +41,13 @@ OUTPUT_SIZE = 1428
 sm251bn = SpeechModel251BN(
     input_shape=(AUDIO_LENGTH, AUDIO_FEATURE_LENGTH, CHANNELS),
     output_size=OUTPUT_SIZE
-    )
+)
 feat = SpecAugment()
 train_data = DataLoader('train')
-opt = Adam(lr = 0.0001, beta_1 = 0.9, beta_2 = 0.999, decay = 0.0, epsilon = 10e-8)
+opt = Adam(learning_rate=0.0001, beta_1=0.9, beta_2=0.999, decay=0.0, epsilon=10e-8)
 ms = ModelSpeech(sm251bn, feat, max_label_length=64)
 
-#ms.load_model('save_models/' + sm251bn.get_model_name() + '.model.h5')
+# ms.load_model('save_models/' + sm251bn.get_model_name() + '.model.h5')
 ms.train_model(optimizer=opt, data_loader=train_data,
-    epochs=50, save_step=1, batch_size=16, last_epoch=0)
+               epochs=50, save_step=1, batch_size=16, last_epoch=0)
 ms.save_model('save_models/' + sm251bn.get_model_name())

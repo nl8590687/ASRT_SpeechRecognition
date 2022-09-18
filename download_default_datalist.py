@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Copyright 2016-2099 Ailemon.net
@@ -38,12 +38,12 @@ if not os.path.exists(DEFAULT_DATALIST_PATH):
 
 URL_DATALIST_INDEX = "https://d.ailemon.net/asrt_assets/datalist/index.json"
 rsp_index = requests.get(URL_DATALIST_INDEX)
-rsp_index.encoding='utf-8'
+rsp_index.encoding = 'utf-8'
 if rsp_index.ok:
     logging.info('Has connected to ailemon\'s download server...')
 else:
     logging.error('%s%s', 'Can not connected to ailemon\'s download server.',
-    'please check your network connection.')
+                  'please check your network connection.')
 
 index_json = json.loads(rsp_index.text)
 if index_json['status_code'] != 200:
@@ -62,10 +62,11 @@ if len(num) == 0:
 else:
     num = int(num)
 
+
 def deal_download(datalist_item, url_prefix_str, datalist_path):
-    '''
+    """
     to deal datalist file download
-    '''
+    """
     logging.info('%s%s', 'start to download datalist ', datalist_item['name'])
     save_path = os.path.join(datalist_path, datalist_item['name'])
     if not os.path.exists(save_path):
@@ -83,8 +84,9 @@ def deal_download(datalist_item, url_prefix_str, datalist_path):
             logging.info('%s `%s` %s', 'Download', filename, 'complete')
         else:
             logging.error('%s%s%s%s%s', 'Can not download ', filename,
-                        ' from ailemon\'s download server. ',
-                        'http status ok is ', str(rsp_listfile.ok))
+                          ' from ailemon\'s download server. ',
+                          'http status ok is ', str(rsp_listfile.ok))
+
 
 if num == len(body['datalist']):
     for i in range(len(body['datalist'])):
@@ -93,5 +95,5 @@ else:
     deal_download(body['datalist'][num], body['url_prefix'], DEFAULT_DATALIST_PATH)
 
 logging.info('%s%s%s', 'Datalist files download complete. ',
-    'Please remember to download these datasets from ',
-    body['dataset_download_page_url'])
+             'Please remember to download these datasets from ',
+             body['dataset_download_page_url'])

@@ -40,11 +40,11 @@ OUTPUT_SIZE = 1428
 sm251bn = SpeechModel251BN(
     input_shape=(AUDIO_LENGTH, AUDIO_FEATURE_LENGTH, CHANNELS),
     output_size=OUTPUT_SIZE
-    )
+)
 feat = Spectrogram()
 evalue_data = DataLoader('dev')
 ms = ModelSpeech(sm251bn, feat, max_label_length=64)
 
 ms.load_model('save_models/' + sm251bn.get_model_name() + '.model.h5')
 ms.evaluate_model(data_loader=evalue_data, data_count=-1,
-    out_report=True, show_ratio=True, show_per_step=100)
+                  out_report=True, show_ratio=True, show_per_step=100)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Copyright 2016-2099 Ailemon.net
@@ -29,10 +29,12 @@ import os
 
 from utils.ops import get_symbol_dict, get_language_model
 
+
 class ModelLanguage:
-    '''
+    """
     ASRT专用N-Gram语言模型
-    '''
+    """
+
     def __init__(self, model_path: str):
         self.model_path = model_path
         self.dict_pinyin = dict()
@@ -40,19 +42,19 @@ class ModelLanguage:
         self.model2 = dict()
 
     def load_model(self):
-        '''
+        """
         加载N-Gram语言模型到内存
-        '''
+        """
         self.dict_pinyin = get_symbol_dict('dict.txt')
         self.model1 = get_language_model(os.path.join(self.model_path, 'language_model1.txt'))
         self.model2 = get_language_model(os.path.join(self.model_path, 'language_model2.txt'))
-        model = (self.dict_pinyin, self.model1, self.model2 )
+        model = (self.dict_pinyin, self.model1, self.model2)
         return model
 
-    def pinyin_to_text(self, list_pinyin: list, beam_size: int=100) -> str:
-        '''
+    def pinyin_to_text(self, list_pinyin: list, beam_size: int = 100) -> str:
+        """
         拼音转文本，一次性取得全部结果
-        '''
+        """
         result = list()
         tmp_result_last = list()
         for item_pinyin in list_pinyin:
@@ -71,11 +73,11 @@ class ModelLanguage:
         return ''.join(result)
 
     def pinyin_stream_decode(self, temple_result: list,
-                            item_pinyin: str,
-                            beam_size: int = 100) -> list:
-        '''
+                             item_pinyin: str,
+                             beam_size: int = 100) -> list:
+        """
         拼音流式解码，逐字转换，每次返回中间结果
-        '''
+        """
         # 如果这个拼音不在汉语拼音字典里的话，直接返回空列表，不做decode
         if item_pinyin not in self.dict_pinyin:
             return []
@@ -100,19 +102,19 @@ class ModelLanguage:
                     # 如果2-gram子序列不存在
                     continue
                 # 计算状态转移概率
-                prob_origin = sequence[1] # 原始概率
-                count_two_word = float(self.model2[tuple2_word]) # 二字频数
-                count_one_word = float(self.model1[tuple2_word[-2]]) # 单字频数
+                prob_origin = sequence[1]  # 原始概率
+                count_two_word = float(self.model2[tuple2_word])  # 二字频数
+                count_one_word = float(self.model1[tuple2_word[-2]])  # 单字频数
                 cur_probility = prob_origin * count_two_word / count_one_word
-                new_result.append([sequence[0]+cur_word, cur_probility])
+                new_result.append([sequence[0] + cur_word, cur_probility])
 
-        new_result = sorted(new_result, key=lambda x:x[1], reverse=True)
+        new_result = sorted(new_result, key=lambda x: x[1], reverse=True)
         if len(new_result) > beam_size:
             return new_result[0:beam_size]
         return new_result
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     ml = ModelLanguage('model_language')
     ml.load_model()
 

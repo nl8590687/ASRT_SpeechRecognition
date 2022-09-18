@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Copyright 2016-2099 Ailemon.net
@@ -40,7 +40,7 @@ OUTPUT_SIZE = 1428
 sm251bn = SpeechModel251BN(
     input_shape=(AUDIO_LENGTH, AUDIO_FEATURE_LENGTH, CHANNELS),
     output_size=OUTPUT_SIZE
-    )
+)
 feat = Spectrogram()
 ms = ModelSpeech(sm251bn, feat, max_label_length=64)
 
@@ -52,4 +52,4 @@ ml = ModelLanguage('model_language')
 ml.load_model()
 str_pinyin = res
 res = ml.pinyin_to_text(str_pinyin)
-print('语音识别最终结果：\n',res)
+print('语音识别最终结果：\n', res)
