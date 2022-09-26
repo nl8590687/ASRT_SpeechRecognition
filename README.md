@@ -2,7 +2,7 @@
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![Stars](https://img.shields.io/github/stars/nl8590687/ASRT_SpeechRecognition)](https://github.com/nl8590687/ASRT_SpeechRecognition) 
-[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
+[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-2.5+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
 
@@ -40,7 +40,7 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 ### 软件
 * Linux: Ubuntu 18.04 + / CentOS 7 +
 * Python: 3.7 +
-* TensorFlow: 1.15, 2.x + (不建议使用最新版和大版本的x.x.0版)
+* TensorFlow: 2.5 +
 
 ## 快速开始
 
@@ -146,7 +146,7 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 
 ## Python依赖库
 
-* tensorFlow (1.15 - 2.x)
+* tensorFlow (2.5+)
 * numpy
 * wave
 * matplotlib

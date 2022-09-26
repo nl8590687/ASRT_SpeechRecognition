@@ -2,7 +2,7 @@
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![Stars](https://img.shields.io/github/stars/nl8590687/ASRT_SpeechRecognition)](https://github.com/nl8590687/ASRT_SpeechRecognition) 
-[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-1.15+-blue.svg)](https://www.tensorflow.org/) 
+[![TensorFlow Version](https://img.shields.io/badge/Tensorflow-2.5+-blue.svg)](https://www.tensorflow.org/) 
 [![Python Version](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
 
@@ -36,7 +36,7 @@ This project uses tensorFlow.keras based on deep convolutional neural network an
 ### Software
 * Linux: Ubuntu 18.04 + / CentOS 7 +
 * Python: 3.7 +
-* TensorFlow: 1.15, 2.x + (The latest and x.x.0 are deprecated)
+* TensorFlow: 2.5 +
 
 ## Quick Start
 Take the operation under the Linux system as an example:
@@ -144,7 +144,7 @@ At present, the best model can basically reach 85% of Pinyin correct rate on the
 
 ## Python Dependency Library
 
-* tensorFlow (1.15 - 2.x)
+* tensorFlow (2.5+)
 * numpy
 * wave
 * matplotlib
