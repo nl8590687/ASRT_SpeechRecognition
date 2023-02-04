@@ -54,12 +54,12 @@ class ModelSpeech:
         数据生成器函数，用于Keras的generator_fit训练
         batch_size: 一次产生的数据量
         """
-        labels = np.zeros((batch_size, 1), dtype=np.float)
+        labels = np.zeros((batch_size, 1), dtype=np.float64)
         data_count = data_loader.get_data_count()
         index = 0
 
         while True:
-            X = np.zeros((batch_size,) + self.speech_model.input_shape, dtype=np.float)
+            X = np.zeros((batch_size,) + self.speech_model.input_shape, dtype=np.float64)
             y = np.zeros((batch_size, self.max_label_length), dtype=np.int16)
             input_length = []
             label_length = []
@@ -233,7 +233,7 @@ class ModelSpeech:
         """
         # 获取输入特征
         data_input = self.speech_features.run(wavsignal, fs)
-        data_input = np.array(data_input, dtype=np.float)
+        data_input = np.array(data_input, dtype=np.float64)
         # print(data_input,data_input.shape)
         data_input = data_input.reshape(data_input.shape[0], data_input.shape[1], 1)
         r1 = self.predict(data_input)

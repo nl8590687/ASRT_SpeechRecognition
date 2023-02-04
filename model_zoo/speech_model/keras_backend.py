@@ -192,7 +192,7 @@ class SpeechModel251BN(BaseModel):
 
         in_len[0] = self.output_shape[0]
 
-        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float)
+        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float64)
 
         for i in range(batch_size):
             x_in[i, 0:len(data_input)] = data_input
@@ -298,10 +298,10 @@ class SpeechModel251(BaseModel):
 
         in_len[0] = self.output_shape[0]
 
-        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float)
+        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float64)
 
         for i in range(batch_size):
-            x_in[i,0:len(data_input)] = data_input
+            x_in[i, 0:len(data_input)] = data_input
 
         base_pred = self.model_base.predict(x = x_in)
         r = K.ctc_decode(base_pred, in_len, greedy=True, beam_width=100, top_paths=1)
@@ -398,13 +398,13 @@ class SpeechModel25(BaseModel):
 
         in_len[0] = self.output_shape[0]
 
-        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float)
+        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float64)
 
         for i in range(batch_size):
-            x_in[i,0:len(data_input)] = data_input
+            x_in[i, 0:len(data_input)] = data_input
 
-        base_pred = self.model_base.predict(x = x_in)
-        r = K.ctc_decode(base_pred, in_len, greedy = True, beam_width=100, top_paths=1)
+        base_pred = self.model_base.predict(x=x_in)
+        r = K.ctc_decode(base_pred, in_len, greedy=True, beam_width=100, top_paths=1)
 
         if tf.__version__[0:2] == '1.':
             r1 = r[0][0].eval(session=tf.compat.v1.Session())
@@ -469,7 +469,7 @@ class SpeechModel24(BaseModel):
         layer_h12 = Dense(output_size, use_bias=True, kernel_initializer='he_normal')(layer_h11) # 全连接层
         y_pred = Activation('softmax', name='Activation0')(layer_h12)
 
-        model_base = Model(inputs = input_data, outputs = y_pred)
+        model_base = Model(inputs=input_data, outputs=y_pred)
         # model_data.summary()
 
         labels = Input(name='the_labels', shape=[label_max_string_length], dtype='float32')
@@ -492,7 +492,7 @@ class SpeechModel24(BaseModel):
 
         in_len[0] = self.output_shape[0]
 
-        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float)
+        x_in = np.zeros((batch_size,) + self.input_shape, dtype=np.float64)
 
         for i in range(batch_size):
             x_in[i, 0:len(data_input)] = data_input

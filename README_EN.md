@@ -34,9 +34,9 @@ This project uses tensorFlow.keras based on deep convolutional neural network an
 * 硬盘: 500 GB HDD(or SSD)
 
 ### Software
-* Linux: Ubuntu 18.04 + / CentOS 7 +
-* Python: 3.7 +
-* TensorFlow: 2.5 +
+* Linux: Ubuntu 18.04 + / CentOS 7 + or Windows 10/11
+* Python: 3.7 - 3.10 and later
+* TensorFlow: 2.5 - 2.11 and later
 
 ## Quick Start
 Take the operation under the Linux system as an example:
@@ -144,7 +144,7 @@ At present, the best model can basically reach 85% of Pinyin correct rate on the
 
 ## Python Dependency Library
 
-* tensorFlow (2.5+)
+* tensorFlow (2.5-2.11+)
 * numpy
 * wave
 * matplotlib
@@ -155,7 +155,7 @@ At present, the best model can basically reach 85% of Pinyin correct rate on the
 * waitress
 * grpcio / grpcio-tools / protobuf
 
-If you have trouble when install those packages, please run the following script to do it as long as you have a GPU and CUDA 11.2 and cudnn 8.1 have been installed：
+If you have trouble when install those packages, please run the following script to do it as long as you have a GPU and python 3.9, CUDA 11.2 and cudnn 8.1 have been installed：
 
 ```shell
 $ pip install -r requirements.txt

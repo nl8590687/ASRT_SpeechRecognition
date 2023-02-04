@@ -79,7 +79,7 @@ class DataLoader:
         """
         return len(self.data_list)
 
-    def get_data(self, index:int) -> tuple:
+    def get_data(self, index: int) -> tuple:
         """
         按下标获取一条数据
         """

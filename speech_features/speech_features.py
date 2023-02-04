@@ -78,7 +78,7 @@ class MFCC(SpeechFeatureMeta):
 
         :returns: A numpy array of size (NUMFRAMES by numcep * 3) containing features. Each row holds 1 feature vector.
         """
-        wavsignal = np.array(wavsignal, dtype=np.float)
+        wavsignal = np.array(wavsignal, dtype=np.float64)
         # 获取输入特征
         feat_mfcc = mfcc(wavsignal[0], samplerate=self.framesamplerate, winlen=self.winlen,
                          winstep=self.winstep, numcep=self.numcep, nfilt=self.nfilt, preemph=self.preemph)
@@ -99,7 +99,7 @@ class Logfbank(SpeechFeatureMeta):
         super().__init__(framesamplerate)
 
     def run(self, wavsignal, fs=16000):
-        wavsignal = np.array(wavsignal, dtype=np.float)
+        wavsignal = np.array(wavsignal, dtype=np.float64)
         # 获取输入特征
         wav_feature = logfbank(wavsignal, fs, nfilt=self.nfilt)
         return wav_feature
@@ -140,8 +140,8 @@ class Spectrogram(SpeechFeatureMeta):
         # wav_length = wav_arr.shape[1]
 
         range0_end = int(len(wavsignal[0]) / fs * 1000 - time_window) // 10 + 1  # 计算循环终止的位置，也就是最终生成的窗数
-        data_input = np.zeros((range0_end, window_length // 2), dtype=np.float)  # 用于存放最终的频率特征数据
-        data_line = np.zeros((1, window_length), dtype=np.float)
+        data_input = np.zeros((range0_end, window_length // 2), dtype=np.float64)  # 用于存放最终的频率特征数据
+        data_line = np.zeros((1, window_length), dtype=np.float64)
 
         for i in range(0, range0_end):
             p_start = i * 160
@@ -192,8 +192,8 @@ class SpecAugment(SpeechFeatureMeta):
         # wav_length = wav_arr.shape[1]
 
         range0_end = int(len(wavsignal[0]) / fs * 1000 - time_window) // 10 + 1  # 计算循环终止的位置，也就是最终生成的窗数
-        data_input = np.zeros((range0_end, window_length // 2), dtype=np.float)  # 用于存放最终的频率特征数据
-        data_line = np.zeros((1, window_length), dtype=np.float)
+        data_input = np.zeros((range0_end, window_length // 2), dtype=np.float64)  # 用于存放最终的频率特征数据
+        data_line = np.zeros((1, window_length), dtype=np.float64)
 
         for i in range(0, range0_end):
             p_start = i * 160

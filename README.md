@@ -38,9 +38,9 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 * 硬盘: 500 GB 机械硬盘(或固态硬盘)
 
 ### 软件
-* Linux: Ubuntu 18.04 + / CentOS 7 +
-* Python: 3.7 +
-* TensorFlow: 2.5 +
+* Linux: Ubuntu 18.04 + / CentOS 7 + 或 Windows 10/11
+* Python: 3.7 - 3.10 及后续版本
+* TensorFlow: 2.5 - 2.11 及后续版本
 
 ## 快速开始
 
@@ -146,18 +146,17 @@ Github本仓库下[Releases](https://github.com/nl8590687/ASRT_SpeechRecognition
 
 ## Python依赖库
 
-* tensorFlow (2.5+)
+* tensorFlow (2.5-2.11+)
 * numpy
 * wave
 * matplotlib
-* math
 * scipy
 * requests
 * flask
 * waitress
 * grpcio / grpcio-tools / protobuf
 
-不会安装环境的同学请直接运行以下命令(前提是有GPU且已经安装好 CUDA 11.2 和 cudnn 8.1)：
+不会安装环境的同学请直接运行以下命令(前提是有GPU且已经安装好 Python3.9、CUDA 11.2 和 cudnn 8.1)：
 
 ```shell
 $ pip install -r requirements.txt
