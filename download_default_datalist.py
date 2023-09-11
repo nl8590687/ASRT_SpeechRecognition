@@ -27,6 +27,7 @@ import os
 import logging
 import json
 import requests
+import zipfile
 
 logging.basicConfig(
     format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s',
@@ -68,24 +69,28 @@ def deal_download(datalist_item, url_prefix_str, datalist_path):
     to deal datalist file download
     """
     logging.info('%s%s', 'start to download datalist ', datalist_item['name'])
-    save_path = os.path.join(datalist_path, datalist_item['name'])
+    save_path = datalist_path
     if not os.path.exists(save_path):
         os.makedirs(save_path)
         logging.info('%s`%s`', 'Created directory ', save_path)
 
-    for filename in datalist_item['filelist']:
-        tmp_url = url_prefix_str + datalist_item['name'] + '/' + filename
-        save_filename = os.path.join(save_path, filename)
-        rsp_listfile = requests.get(tmp_url)
+    zipfilename = datalist_item['zipfile']
+    tmp_url = url_prefix_str + zipfilename
+    save_filename = os.path.join(save_path, zipfilename)
+    rsp = requests.get(tmp_url)
+    with open(save_filename, "wb") as file_pointer:
+        file_pointer.write(rsp.content)
+    if rsp.ok:
+        logging.info('%s `%s` %s', 'Download', zipfilename, 'complete')
+    else:
+        logging.error('%s%s%s%s%s', 'Can not download ', zipfilename,
+                      ' from ailemon\'s download server. ',
+                      'http status ok is ', str(rsp.ok))
 
-        with open(save_filename, "wb") as file_pointer:
-            file_pointer.write(rsp_listfile.content)
-        if rsp_listfile.ok:
-            logging.info('%s `%s` %s', 'Download', filename, 'complete')
-        else:
-            logging.error('%s%s%s%s%s', 'Can not download ', filename,
-                          ' from ailemon\'s download server. ',
-                          'http status ok is ', str(rsp_listfile.ok))
+    f = zipfile.ZipFile(save_filename, 'r')  # 压缩文件位置
+    f.extractall(save_path)
+    f.close()
+    logging.info('%s `%s` %s', 'unzip', zipfilename, 'complete')
 
 
 if num == len(body['datalist']):
