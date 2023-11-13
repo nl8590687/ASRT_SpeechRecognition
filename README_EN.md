@@ -1,4 +1,4 @@
-![](https://res.ailemon.net/common/asrt_title_header_en.png)
+![](assets/asrt_title_header_en.png)
 
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![Stars](https://img.shields.io/github/stars/nl8590687/ASRT_SpeechRecognition)](https://github.com/nl8590687/ASRT_SpeechRecognition) 
