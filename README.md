@@ -174,7 +174,6 @@ $ pip install -r requirements.txt
 |ST-CMDS|100h|7.67G|[ST-CMDS-20170001_1-OS.tar.gz](<http://openslr.magicdatatech.com/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)|[ST-CMDS-20170001_1-OS.tar.gz](<http://www.openslr.org/resources/38/ST-CMDS-20170001_1-OS.tar.gz>)|
 |AIShell-1|178h|14.51G|[data_aishell.tgz](<http://openslr.magicdatatech.com/resources/33/data_aishell.tgz>)|[data_aishell.tgz](<http://www.openslr.org/resources/33/data_aishell.tgz>)|
 |Primewords|100h|8.44G|[primewords_md_2018_set1.tar.gz](<http://openslr.magicdatatech.com/resources/47/primewords_md_2018_set1.tar.gz>)|[primewords_md_2018_set1.tar.gz](<http://www.openslr.org/resources/47/primewords_md_2018_set1.tar.gz>)|
-|aidatatang_200zh|200h|17.47G|[aidatatang_200zh.tgz](<http://openslr.magicdatatech.com/resources/62/aidatatang_200zh.tgz>)|[aidatatang_200zh.tgz](<http://www.openslr.org/resources/62/aidatatang_200zh.tgz>)|
 |MagicData|755h|52G/1.0G/2.2G| [train_set.tar.gz](<http://openslr.magicdatatech.com/resources/68/train_set.tar.gz>) / [dev_set.tar.gz](<http://openslr.magicdatatech.com/resources/68/dev_set.tar.gz>) / [test_set.tar.gz](<http://openslr.magicdatatech.com/resources/68/test_set.tar.gz>)|[train_set.tar.gz](<http://www.openslr.org/resources/68/train_set.tar.gz>) / [dev_set.tar.gz](<http://www.openslr.org/resources/68/dev_set.tar.gz>) / [test_set.tar.gz](<http://www.openslr.org/resources/68/test_set.tar.gz>)|
 
   注：AISHELL-1 数据集解压方法
