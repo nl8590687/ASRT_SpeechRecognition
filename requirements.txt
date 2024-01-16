@@ -53,7 +53,7 @@ typing_extensions==4.4.0
 urllib3==1.26.14
 waitress==2.1.2
 Wave==0.0.2
-Werkzeug==2.2.2
+Werkzeug==2.2.3
 wincertstore==0.2
 wrapt==1.14.1
 zipp==3.12.0
