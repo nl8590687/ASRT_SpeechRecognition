@@ -20,7 +20,7 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 
 <center><img src="https://res.ailemon.net/common/ailemon-me-wechat-qrcode.jpg?x-oss-process=style/ailemon-blog-webp" height="100rem"/></center>
 
-提问前请仔细查看[项目文档](https://asrt.ailemon.net/docs/)、 
+提问前请仔细查看[项目文档](https://wiki.ailemon.net/docs/asrt-doc)、 
 [FAQ常见问题](https://wiki.ailemon.net/docs/asrt-doc/asrt-doc-1deoeud494h4f)
 以及[Issues](https://github.com/nl8590687/ASRT_SpeechRecognition/issues) 避免重复提问
 
