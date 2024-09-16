@@ -3,7 +3,7 @@
 [![GPL-3.0 Licensed](https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat)](https://opensource.org/licenses/GPL-3.0) 
 [![Stars](https://img.shields.io/github/stars/nl8590687/ASRT_SpeechRecognition)](https://github.com/nl8590687/ASRT_SpeechRecognition) 
 [![TensorFlow Version](https://img.shields.io/badge/Tensorflow-2.5+-blue.svg)](https://www.tensorflow.org/) 
-[![Python Version](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/) 
+[![Python Version](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5808434.svg)](https://doi.org/10.5281/zenodo.5808434)
 
 ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜欢，请点一个 **"Star"** 吧~
@@ -38,8 +38,8 @@ ASRT是一个基于深度学习的中文语音识别系统，如果您觉得喜�
 * 硬盘: 500 GB 机械硬盘(或固态硬盘)
 
 ### 软件
-* Linux: Ubuntu 18.04 + / CentOS 7 + 或 Windows 10/11
-* Python: 3.7 - 3.10 及后续版本
+* Linux: Ubuntu 20.04+ / CentOS 7+ (训练+推理) 或 Windows: 10/11(仅推理)
+* Python: 3.9 - 3.11 及后续版本
 * TensorFlow: 2.5 - 2.11 及后续版本
 
 ## 快速开始
