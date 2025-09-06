@@ -53,19 +53,19 @@ class SpeechDataset(Dataset):
 
         # 计算输入长度，确保不超出最大序列长度
         pool_size = self.input_shape[0] // (self.input_shape[0] // 8)
-        inlen = min(data_input.shape[0] // pool_size + data_input.shape[0] % pool_size, self.input_shape[0] // 8)
+        inlen = min(data_input.shape[0] // pool_size + (1 if data_input.shape[0] % pool_size else 0), self.input_shape[0] // 8)
 
         # 初始化输入特征数组，填充到 `input_shape` 大小
-        x = torch.zeros(self.input_shape)
-        x[:len(data_input)] = torch.tensor(data_input, dtype=torch.float32)
+        x = torch.zeros(self.input_shape, dtype=torch.bfloat16)
+        x[:len(data_input)] = torch.tensor(data_input, dtype=torch.bfloat16)
 
         # 初始化标签数组，填充到 `max_label_length` 大小
         y = torch.zeros(self.max_label_length, dtype=torch.int16)
         y[:len(data_labels)] = torch.tensor(data_labels, dtype=torch.int16) + 1
 
         # 转换为 PyTorch 张量
-        input_length = torch.tensor((inlen,), dtype=torch.float32)
-        label_length = torch.tensor((len(data_labels),), dtype=torch.float32)
+        input_length = torch.tensor((inlen,), dtype=torch.int16)
+        label_length = torch.tensor((len(data_labels),), dtype=torch.int16)
         return x, y, input_length, label_length
 
 
@@ -86,41 +86,48 @@ class ModelSpeech:
         print('[ASRT] torch model successfully initialized to device: {}'.format(device))
         data_loader = TorchDataLoader(speechdata, batch_size=batch_size, shuffle=True)
         model = self.speech_model
+        loss_smoother_list = []
         for epoch in range(epochs):
             print('[ASRT] Epoch {}/{}'.format(epoch + 1, epochs))
             epoch_loss = 0.0
             iter_index = 0
             t0 = time.time()
             for batch in data_loader:
+                step_start_time = time.time()
                 x, y, input_length, label_length = batch
                 x = x.to(device)
                 y = y.to(device)
                 input_length = input_length.to(device).long()
                 label_length = label_length.to(device).long()
 
-                optimizer.zero_grad()
                 y_pred = model(x)
                 loss = model.compute_loss(y_pred, y, input_length, label_length)
+                optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
 
-                epoch_loss += loss.item()
+                if len(loss_smoother_list) >= 100:
+                    del loss_smoother_list[0]
+                loss_smoother_list.append(loss.item())
                 iter_index += 1
                 t1 = time.time()
                 predict_total_time = (t1-t0)*len(data_loader)/iter_index
                 predict_remain_time = predict_total_time - (t1-t0)
                 cur_batch_loss = loss.item()
-                cur_avg_loss = epoch_loss / iter_index
-                print("[ASRT]", f"{predict_remain_time:.2f}/{predict_total_time:.2f} s,",
-                      f"step {iter_index}/{len(data_loader)},", f"current loss: {cur_batch_loss:.4f}",
-                      f"avg loss: {cur_avg_loss:.4f}", end="\r")
+                cur_avg_loss = sum(loss_smoother_list) / len(loss_smoother_list)
+                step_end_time = time.time()
+                print("[ASRT]", f"Epoch [{epoch + 1}/{epochs}] step {iter_index}/{len(data_loader)}",
+                                f"step_time: {step_end_time-step_start_time} s,",
+                                f"remain_time/total_time: {predict_remain_time:.2f}/{predict_total_time:.2f} s,",
+                                f"current_loss: {cur_batch_loss:.4f} avg_loss: {cur_avg_loss:.4f}",
+                                end="\r")
 
-            save_filename = os.path.join('save_models_torch', f"{self.speech_model.get_model_name()}_epoch{epoch+1}.pth")
+            save_filename = os.path.join('save_models', f"{self.speech_model.get_model_name()}_epoch{epoch+1}.pth")
             self.save_weight(save_filename)
             avg_loss = epoch_loss / len(data_loader)
             total_time = time.time()-t0
             avg_time_per_step = total_time / len(data_loader)
-            print("[ASRT]", f"epoch {epoch + 1}/{epochs},", f"time cost: {total_time:.2f} s,",
+            print("[ASRT]", f"epoch {epoch + 1}/{epochs},", f"epoch time cost: {total_time:.2f} s,",
                   f"{avg_time_per_step:.2f} s/step", f"avg loss: {avg_loss:.4f}")
 
     def save_weight(self, filename: str):

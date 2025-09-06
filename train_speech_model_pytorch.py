@@ -38,6 +38,6 @@ if __name__ == "__main__":
     print(model)
 
     # speechModel.load_weight(os.path.join('save_models_torch', model.get_model_name()+"_save.pth"))
-    speechModel.train(data_loader, epochs=10, batch_size=16, optimizer=optim.Adam(model.parameters(), lr=0.001),
+    speechModel.train(data_loader, epochs=10, batch_size=32, optimizer=optim.Adam(model.parameters(), lr=0.001),
                       device="cuda:0")
     speechModel.save_weight(model.get_model_name()+"_save")
