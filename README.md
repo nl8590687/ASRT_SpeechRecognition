@@ -235,3 +235,7 @@ ASRT训练和部署教程请看：
 [贡献者页面](https://github.com/nl8590687/ASRT_SpeechRecognition/graphs/contributors)
 
 @nl8590687 (repo owner)
+
+---
+
+*[Mukller](https://github.com/Mukller)*
